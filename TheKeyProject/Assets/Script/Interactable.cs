@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour {
 
     private void Update()
     {
-        if (isFocus && !hasInteracted)
+        if (isFocus && !hasInteracted && Input.GetKey(KeyCode.UpArrow))
         {
             float distance = Vector2.Distance(player.position, transform.position);
             if(distance <= radius)

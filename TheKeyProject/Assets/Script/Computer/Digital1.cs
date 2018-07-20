@@ -21,9 +21,6 @@ public class Digital1 : MonoBehaviour {
 
     public void isCorrect()
     {
-        Debug.Log(flowchart);
-        Debug.Log(gameManager);
-        Debug.Log("iscorrect");
         int a=  flowchart.GetIntegerVariable("數字1");
         int b = flowchart.GetIntegerVariable("數字2");
         int c = flowchart.GetIntegerVariable("數字3");

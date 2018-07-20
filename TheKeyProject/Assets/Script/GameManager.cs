@@ -5,9 +5,18 @@ using Fungus;
 
 public class GameManager : MonoBehaviour {
 
-    static GameManager instance;
+    public static GameManager instance = null;
     public int money;
     public bool game1 = false;
+    public bool first_game1 = false;
+    public bool first_game2 = false;
+    public bool first_game3 = false;
+    public bool first_game4 = false;
+    public bool first_game5 = false;
+    public bool first_game6 = false;
+    public bool first_game7 = false;
+    public bool first_game8 = false;
+    public bool first_game9 = false;
 
     private bool canMove = true;
 
