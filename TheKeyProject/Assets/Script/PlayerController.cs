@@ -5,20 +5,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody2D playerRigid2D;
-    public float maxSpeed;
+    private bool facingRight = true;
+    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
+    [SerializeField] private float horizontalDirection = 0f;
+    private Vector3 m_Velocity = Vector3.zero;
+
+    public float runSpeed = 100f;
     public Interactable focus;
 
     [Header("目前的水平數度")]
     public float speedX;
     [Header("目前的垂直數度")]
     public float speedY;
-    [Header("目前的水平方向")]
-    public float horizontalDirection;
-
-    [Range(10, 150)]
-    public float xForce;
+    
     [Range(500, 1000)]
-    public float yForce;
+    public float yForce = 800f;
 
     [Header("感應地板的距離")]
     [Range(0, 0.5f)]
@@ -31,19 +32,32 @@ public class PlayerController : MonoBehaviour {
     public LayerMask groundLayer;
 
     public bool grounded;
+    public bool jump;
 
     // Use this for initialization
-    void Start () {
+    void Awake ()
+    {
         playerRigid2D = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        horizontalDirection = Input.GetAxis("Horizontal") * runSpeed;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jump = true;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        horizontalDirection *= Time.fixedDeltaTime;
         if (GameManager.instance.CanMove)
         {
-            ControlSpeed();
             MoveX();
             Jump();
+            jump = false;
         }
     }
 
@@ -79,35 +93,31 @@ public class PlayerController : MonoBehaviour {
         focus = null;
 
     }
-
-    public void ControlSpeed()
-    {
-        speedX = playerRigid2D.velocity.x;
-        speedY = playerRigid2D.velocity.y;
-        float newSpeedX = Mathf.Clamp(speedX, -maxSpeed, maxSpeed);
-        playerRigid2D.velocity = new Vector2(newSpeedX, speedY);
-    }
-
+    
     public void MoveX()
     {
-        float horizontalDirection = Input.GetAxis("Horizontal");
-        playerRigid2D.AddForce(new Vector2(xForce * horizontalDirection, 0));
-    }
-
-    public bool JumpKey
-    {
-        get
+        Vector3 targetVelocity = new Vector2(horizontalDirection * 10f, playerRigid2D.velocity.y);
+        playerRigid2D.velocity = Vector3.SmoothDamp(playerRigid2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+        // If the input is moving the player right and the player is facing left...
+        if (horizontalDirection > 0 && !facingRight)
         {
-            return Input.GetKeyDown(KeyCode.Space);
-
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (horizontalDirection < 0 && facingRight)
+        {
+            // ... flip the player.
+            Flip();
         }
     }
+    
 
     void Jump()
     {
-        if (IsGrounded && JumpKey)
+        if (IsGrounded && jump)
         {
-            playerRigid2D.AddForce(Vector2.up * yForce);
+            playerRigid2D.AddForce(new Vector2(0f, yForce));
         }
     }
     
@@ -124,5 +134,16 @@ public class PlayerController : MonoBehaviour {
             return grounded;
 
         }
+    }
+
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        facingRight = !facingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
