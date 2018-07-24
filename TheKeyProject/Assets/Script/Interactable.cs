@@ -16,7 +16,7 @@ public class Interactable : MonoBehaviour {
         Debug.Log("Interating with " + transform.name);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isFocus  && Input.GetKey(KeyCode.UpArrow))
         {
