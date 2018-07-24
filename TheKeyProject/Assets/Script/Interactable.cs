@@ -7,24 +7,23 @@ public class Interactable : MonoBehaviour {
     public float radius = 3f;
 
     bool isFocus = false;
-    Transform player;
+    Transform player;                                 
 
-    bool hasInteracted = false;
+   
 
-    public virtual void Interact()
+    public virtual void Interact()                      
     {
         Debug.Log("Interating with " + transform.name);
     }
 
     private void FixedUpdate()
     {
-        if (isFocus && !hasInteracted && Input.GetKey(KeyCode.UpArrow))
+        if (isFocus  && Input.GetKey(KeyCode.UpArrow))
         {
             float distance = Vector2.Distance(player.position, transform.position);
             if(distance <= radius)
             {
                 Interact();
-                hasInteracted = true;
             }
         }
     }
@@ -39,13 +38,13 @@ public class Interactable : MonoBehaviour {
     {
         isFocus = true;
         player = playerTransform;
-        hasInteracted = false;
+       
     }
 
     public void OnDefoucused()
     {
         isFocus = false;
         player = null;
-        hasInteracted = false;
+       
     }
 }

@@ -5,20 +5,10 @@ using Fungus;
 public class Digital1 : MonoBehaviour {
     GameManager gameManager;
     public Flowchart flowchart;
-    // Use this for initialization
    
-
-
-
     void Start () {
         gameManager = FindObjectOfType<GameManager>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void isCorrect()
     {
         int a=  flowchart.GetIntegerVariable("數字1");
@@ -27,7 +17,7 @@ public class Digital1 : MonoBehaviour {
         int d = flowchart.GetIntegerVariable("數字4");
 
 
-        if ( ( a == 1)  && (b == 2) && (c==2) && (d==1) )
+        if ((a == 1)  && (b == 2) && (c==2) && (d==1))
         {
             
             Debug.Log("correct");
