@@ -147,7 +147,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 375642569}
+  m_Follow: {fileID: 1740603093}
   m_Lens:
     FieldOfView: 90
     OrthographicSize: 10
@@ -585,7 +585,7 @@ GameObject:
   m_Layer: 8
   m_Name: "\u5DE6\u5899\u58C1"
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -876,11 +876,6 @@ Transform:
   m_Father: {fileID: 150746228}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &375642569 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec,
-    type: 2}
-  m_PrefabInternal: {fileID: 393143771}
 --- !u!1001 &393143771
 Prefab:
   m_ObjectHideFlags: 0
@@ -1185,7 +1180,7 @@ GameObject:
   m_Layer: 8
   m_Name: "\u5730\u677F"
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1863,7 +1858,7 @@ GameObject:
   m_Layer: 8
   m_Name: "\u53F3\u5899\u58C1"
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2114,6 +2109,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &1740603093 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec,
+    type: 2}
+  m_PrefabInternal: {fileID: 393143771}
 --- !u!1 &1783467193
 GameObject:
   m_ObjectHideFlags: 0
