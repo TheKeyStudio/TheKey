@@ -1,7 +1,6 @@
 ﻿using Fungus;
 
 public class NextDoor : Door { 
-    public Flowchart flowchart;
 
     public override void Interact()
     {
