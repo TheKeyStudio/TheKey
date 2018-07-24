@@ -5,6 +5,7 @@ using Fungus;
 public class Digital : MonoBehaviour {
     GameManager gameManager;
     public Flowchart flowchart;
+    public GameObject Level1;
     public int num1;
     public int num2;
     public int num3;
@@ -27,6 +28,7 @@ public class Digital : MonoBehaviour {
             gameManager.game1 = true;
             gameManager.playerMove();
             gameObject.SetActive(false);
+            Level1.SetActive(true);
         }
     }
 

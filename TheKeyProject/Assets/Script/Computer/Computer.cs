@@ -5,7 +5,7 @@ public class Computer : Interactable {
     // Use this for initialization
 
     public GameObject question;
-
+    
     public override void Interact()
     {
         base.Interact();

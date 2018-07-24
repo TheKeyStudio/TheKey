@@ -8,15 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public int money;
     public bool game1 = false;                  //第一階段的關卡 全部破完 才能通往下一關;
-    public bool first_game1 = false;
-    public bool first_game2 = false;
-    public bool first_game3 = false;
-    public bool first_game4 = false;
-    public bool first_game5 = false;
-    public bool first_game6 = false;
-    public bool first_game7 = false;
-    public bool first_game8 = false;
-    public bool first_game9 = false;
+    public int stage1 = 0;
 
     private bool canMove = true;
 
