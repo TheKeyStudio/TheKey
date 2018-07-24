@@ -8,12 +8,15 @@ public class Inventory : MonoBehaviour {
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance == null)
         {
-            Debug.LogWarning("More than one instance of Inventory found!");
-            return;
+            instance = this;
+            DontDestroyOnLoad(this);
         }
-        instance = this;
+        else if (this != instance)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public delegate void OnItemChanged();
@@ -33,7 +36,7 @@ public class Inventory : MonoBehaviour {
                 return false;
             }
             items.Add(item);
-
+            Debug.Log("Adding " + item.name);
             if (onItemChangedCallBack != null)
                 onItemChangedCallBack.Invoke();
         }
