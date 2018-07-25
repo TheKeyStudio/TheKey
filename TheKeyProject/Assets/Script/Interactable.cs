@@ -6,11 +6,10 @@ public class Interactable : MonoBehaviour {
 
     public float radius = 3f;
 
+    public KeyCode interactKey;
     bool isFocus = false;
     Transform player;                                 
-
-   
-
+    
     public virtual void Interact()                      
     {
         Debug.Log("Interating with " + transform.name);
@@ -18,7 +17,7 @@ public class Interactable : MonoBehaviour {
 
     private void Update()
     {
-        if (isFocus  && Input.GetKey(KeyCode.UpArrow))
+        if (isFocus  && Input.GetKey(interactKey))
         {
             float distance = Vector2.Distance(player.position, transform.position);
             if(distance <= radius)

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using TMPro;
 
 public class Test1 : MonoBehaviour {
     GameManager gameManager;
-    public InputField Input;
+    public TMP_InputField Input;
     
-    public string character;
+    private string character;
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();

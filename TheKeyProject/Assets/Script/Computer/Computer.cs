@@ -3,9 +3,12 @@
 public class Computer : Interactable {
 
     // Use this for initialization
-
-    public GameObject question;
     
+    public GameObject question;
+    private void Start()
+    {
+        interactKey = KeyCode.UpArrow;
+    }
     public override void Interact()
     {
         base.Interact();

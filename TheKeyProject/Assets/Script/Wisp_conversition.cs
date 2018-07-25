@@ -4,36 +4,28 @@ using UnityEngine;
 using Fungus;
 
 
-public class Wisp_conversition : MonoBehaviour {
+public class Wisp_conversition : Interactable {
+    
+    private void Start()
+    {
+        interactKey = KeyCode.Z;
+      
+    }
 
-    // Update is called once per frame
-    void Update()
+    public override void Interact()
     {
-        if (Input.GetKey(KeyCode.Y))
-        {
-            Debug.Log("sad");
-            if (active)
-            {
-                Flowchart.BroadcastFungusMessage("關卡前");
-            }
-        }
+        base.Interact();
+        Open();
     }
-    private bool active = false;
-    private void OnTriggerEnter2D(Collider2D other)
+    void Open()
     {
-        if (other.CompareTag("玩家"))
-        {
-            active = true;
-            Debug.Log(active);
-        }
+       
+        int LevelKey = GameManager.instance.stage1 + 1;
+        string callMsg = "靈魂對話" + LevelKey.ToString();
+        Flowchart.BroadcastFungusMessage(callMsg);
+        Debug.Log(LevelKey);
+
     }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("玩家"))
-        {
-            active = false;
-            Debug.Log(active);
-        }
-    }
+
 
 }
