@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody2D playerRigid2D;
+    private Animator playerAnimator;
     private bool facingRight = true;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
     void Awake ()
     {
         playerRigid2D = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -110,6 +112,8 @@ public class PlayerController : MonoBehaviour {
             // ... flip the player.
             Flip();
         }
+        Debug.Log(Input.GetAxis("Horizontal"));
+        playerAnimator.SetFloat("Horizontal", Math.Abs(Input.GetAxis("Horizontal")));
     }
     
 
