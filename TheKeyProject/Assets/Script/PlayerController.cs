@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour {
             MoveX();
             Jump();
             jump = false;
+            playerAnimator.SetBool("Jump", !grounded);
         }
     }
 
@@ -112,7 +113,6 @@ public class PlayerController : MonoBehaviour {
             // ... flip the player.
             Flip();
         }
-        Debug.Log(Input.GetAxis("Horizontal"));
         playerAnimator.SetFloat("Horizontal", Math.Abs(Input.GetAxis("Horizontal")));
     }
     
@@ -122,6 +122,7 @@ public class PlayerController : MonoBehaviour {
         if (IsGrounded && jump)
         {
             playerRigid2D.AddForce(new Vector2(0f, yForce));
+            playerAnimator.SetBool("Jump", true);
         }
     }
     
