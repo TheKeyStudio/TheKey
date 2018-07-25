@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class NextDoor : Door {
     public int doorNumber;
+    
     public override void Interact()
     {
         base.Interact();

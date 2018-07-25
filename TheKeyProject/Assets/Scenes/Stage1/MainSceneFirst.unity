@@ -227,6 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactKey: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
   nextScene: Level1
   doorNumber: 1
 --- !u!1 &124748558
@@ -1119,7 +1121,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1199,11 +1201,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.600271
+      value: -11.517021
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2048292
+      value: 3.3298934
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2048,6 +2050,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   interactKey: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!58 &1536503536
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2165,6 +2169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactKey: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
   nextScene: Level3
   doorNumber: 3
 --- !u!61 &1628487082
@@ -2246,11 +2252,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.899996
+      value: -16.899998
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2754,6 +2760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactKey: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
   nextScene: Level2
   doorNumber: 2
 --- !u!61 &1956550789

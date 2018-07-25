@@ -5,10 +5,14 @@ public class Computer : Interactable {
     // Use this for initialization
     
     public GameObject question;
-    private void Start()
+
+    public override void Init()
     {
-        interactKey = KeyCode.UpArrow;
+        interactKey = KeyCode.Z;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
+
     public override void Interact()
     {
         base.Interact();

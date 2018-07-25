@@ -5,11 +5,22 @@ using Fungus;
 
 
 public class Wisp_conversition : Interactable {
-    
-    private void Start()
+
+    public override void Init()
     {
         interactKey = KeyCode.Z;
-      
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+    }
+
+    float elapsedTime;
+    public override void Update()
+    {
+        base.Update();
+        elapsedTime += Time.deltaTime;
+        float x = transform.position.x;
+        float y = 3f * Mathf.Sin(0.8f * elapsedTime);
+        transform.position = new Vector3(x, y, 0);
     }
 
     public override void Interact()
@@ -27,5 +38,9 @@ public class Wisp_conversition : Interactable {
 
     }
 
+    public override void Highlight()
+    {
+        spriteRenderer.color = new Color32(179, 221, 112, 255);
+    }
 
 }

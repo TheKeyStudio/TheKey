@@ -132,11 +132,15 @@ public class PlayerController : MonoBehaviour {
     {
         get
         {
+            grounded = GetComponent<CircleCollider2D>().IsTouchingLayers(groundLayer);
+            return grounded;
+            /*
             Vector2 start = groundCheck.position;
             Vector2 end = new Vector2(start.x, start.y - distance);
             Debug.DrawLine(start, end, Color.blue);
             grounded = Physics2D.Linecast(start, end, groundLayer);
             return grounded;
+            */
 
         }
     }

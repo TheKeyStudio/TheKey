@@ -5,6 +5,13 @@ public class ItemPickup : Interactable {
 
     public Item item;
 
+    public override void Init()
+    {
+        interactKey = KeyCode.Z;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+    }
+
     public override void Interact()
     {
         base.Interact();

@@ -8,9 +8,11 @@ public abstract class Door : Interactable {
     [Header("連接到某場景")]
     public string nextScene;
 
-    private void Start()
+    public override void Init()
     {
         interactKey = KeyCode.UpArrow;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     public void ToNextScene()

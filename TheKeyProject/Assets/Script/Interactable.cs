@@ -1,28 +1,51 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {
+public abstract class Interactable : MonoBehaviour {
 
     public float radius = 3f;
-
     public KeyCode interactKey;
+    public Color originalColor;
+    public SpriteRenderer spriteRenderer;
+
     bool isFocus = false;
-    Transform player;                                 
-    
+    Transform player;
+
+    private void Start()
+    {
+        Init();
+    }
+
+    public abstract void Init();
+
     public virtual void Interact()                      
     {
         Debug.Log("Interating with " + transform.name);
     }
 
-    private void Update()
+    public virtual void Highlight()
     {
-        if (isFocus  && Input.GetKey(interactKey))
+        spriteRenderer.color = Color.yellow;
+    }
+
+    public virtual void Update()
+    {
+        if (isFocus)
         {
             float distance = Vector2.Distance(player.position, transform.position);
             if(distance <= radius)
             {
-                Interact();
+                Highlight();
+                if (Input.GetKey(interactKey))
+                {
+                    Interact();
+                }
+            }
+            else
+            {
+                spriteRenderer.color = originalColor;
             }
         }
     }
