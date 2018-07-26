@@ -32,26 +32,19 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 
     public void OnSelect()
     {
-        if(currentIndex >= input_list.Count)
+        if (input_list[currentIndex].text.Length == input_list[currentIndex].characterLimit)
         {
-            currentIndex = input_list.Count - 1;
+            Debug.Log("Current index: " + currentIndex);
+            Debug.Log(input_list[currentIndex].text);
+            currentIndex++;
         }
-        else if(currentIndex < 0){
-            currentIndex = 0;
-        }
-        input_list[currentIndex].readOnly = false;
-        input_list[currentIndex].ActivateInputField();
+        ChangeActivateInputField();
     }
 
     public void OnValueChanged(TMP_InputField tmp_input)
     {
-        if (tmp_input.text.Length == tmp_input.characterLimit)
-        {
-            currentIndex++;
-            OnSelect();
-        }
-        Debug.Log("Current index: " + currentIndex);
-        Debug.Log(tmp_input.text);
+        tmp_input.text = tmp_input.text.ToUpper();
+        OnSelect();
     }
 
     public void Delete()
@@ -61,11 +54,11 @@ public class SingleInputFieldGenerator : MonoBehaviour {
             input_list[currentIndex].readOnly = true;
             currentIndex--;
         }
-        OnSelect();
+        ChangeActivateInputField();
         input_list[currentIndex].text = "";
     }
-
-    public void CheckAnswer()
+    
+    public void CheckAnswer(GameObject obj)
     {
         bool isEqual = true;
         for(int i = 0; i < answer.Length; i++)
@@ -76,7 +69,22 @@ public class SingleInputFieldGenerator : MonoBehaviour {
                 break;
             }
         }
+        obj.SetActive(!isEqual);
         Debug.Log("Answer is " + isEqual);
     }
     
+    private void ChangeActivateInputField()
+    {
+
+        if (currentIndex >= input_list.Count)
+        {
+            currentIndex = input_list.Count - 1;
+        }
+        else if (currentIndex < 0)
+        {
+            currentIndex = 0;
+        }
+        input_list[currentIndex].readOnly = false;
+        input_list[currentIndex].ActivateInputField();
+    }
 }
