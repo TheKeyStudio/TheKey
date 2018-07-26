@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Fungus;
 
 public class SingleInputFieldGenerator : MonoBehaviour {
 
@@ -69,7 +70,16 @@ public class SingleInputFieldGenerator : MonoBehaviour {
                 break;
             }
         }
-        obj.SetActive(!isEqual);
+        if (isEqual)
+        {
+            GameManager.instance.stage1++;
+            Flowchart.BroadcastFungusMessage("答對了");
+            obj.SetActive(false);
+        }
+        else
+        {
+            Flowchart.BroadcastFungusMessage("答錯了");
+        }
         Debug.Log("Answer is " + isEqual);
     }
     
