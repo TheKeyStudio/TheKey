@@ -19,7 +19,8 @@ public class Wisp_conversition : Interactable {
         base.Update();
         elapsedTime += Time.deltaTime;
         float x = transform.position.x;
-        float y = 3f * Mathf.Sin(0.8f * elapsedTime);
+        float y = (3f * Mathf.Sin(0.8f * elapsedTime)) + transform.position.y ;
+        Debug.Log(transform.position.y);
         transform.position = new Vector3(x, y, 0);
     }
 

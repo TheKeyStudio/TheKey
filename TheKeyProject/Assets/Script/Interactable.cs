@@ -43,10 +43,10 @@ public abstract class Interactable : MonoBehaviour {
                     Interact();
                 }
             }
-            else
-            {
-                spriteRenderer.color = originalColor;
-            }
+        }
+        else
+        {
+            spriteRenderer.color = originalColor;
         }
     }
 
