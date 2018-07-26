@@ -3,45 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class GM : MonoBehaviour {
+public class GM : Interactable
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKey(KeyCode.Y))
-        {
-            Debug.Log("answer");
-            if (active)
-            {
-                Flowchart.BroadcastFungusMessage("GM流程");
-            }
-        }
-    }
-
-    private bool active = false;
-    private void OnTriggerEnter2D(Collider2D other)
+    public override void Init()
     {
-        if (other.CompareTag("玩家"))
-        {
-            active = true;
-            Debug.Log(active);
-        }
+        interactKey = KeyCode.Z;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    // Update is called once per frame
+    public override void Interact()
     {
-        if (other.CompareTag("玩家"))
-        {
-            active = false;
-            Debug.Log(active);
-        }
+        base.Interact();
+        Open();
+    }
+    void Open()
+    {
+
+       
+        Flowchart.BroadcastFungusMessage("小丑流程");
+        
     }
 
-    
+
 
 
 
