@@ -7,9 +7,9 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D playerRigid2D;
     private Animator playerAnimator;
     private bool facingRight = true;
+    private Vector3 m_Velocity = Vector3.zero;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
-    private Vector3 m_Velocity = Vector3.zero;
 
     public float runSpeed = 100f;
     public Interactable focus;
