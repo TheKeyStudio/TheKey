@@ -671,6 +671,7 @@ GameObject:
   - component: {fileID: 209207710}
   - component: {fileID: 209207709}
   - component: {fileID: 209207708}
+  - component: {fileID: 209207714}
   m_Layer: 0
   m_Name: "\u9748\u9B42\u5C0D\u8A71"
   m_TagString: Untagged
@@ -784,7 +785,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 209207713}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 209207714}
   variables: []
   description: 
   stepPause: 0
@@ -1048,7 +1050,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 9
+  itemId: 15
   blockName: "\u9748\u9B42\u5C0D\u8A714"
   description: 
   eventHandler: {fileID: 209207708}
@@ -1112,12 +1114,30 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 9
+  itemId: 14
   blockName: "\u9748\u9B42\u5C0D\u8A713"
   description: 
   eventHandler: {fileID: 209207711}
   commandList:
   - {fileID: 209207712}
+  - {fileID: 209207714}
+--- !u!114 &209207714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209207693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  durationOLD: 0
 --- !u!1 &309249744
 GameObject:
   m_ObjectHideFlags: 0
