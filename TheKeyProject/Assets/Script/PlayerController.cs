@@ -21,15 +21,11 @@ public class PlayerController : MonoBehaviour {
     
     [Range(500, 1000)]
     public float yForce = 800f;
+    
 
-    [Header("感應地板的距離")]
-    [Range(0, 0.5f)]
-    public float distance;
-
-    [Header("偵測地板的射線起點")]
     public Transform groundCheck;
-
-    [Header("地面圖層")]
+    [Range(0, 0.5f)]
+    public float groundRadius = 0.2f;
     public LayerMask groundLayer;
 
     public bool grounded;
@@ -55,6 +51,7 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         horizontalDirection *= Time.fixedDeltaTime;
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
         if (GameManager.instance.CanMove)
         {
             MoveX();
@@ -116,35 +113,15 @@ public class PlayerController : MonoBehaviour {
         playerAnimator.SetFloat("Horizontal", Math.Abs(Input.GetAxis("Horizontal")));
     }
     
-
     void Jump()
     {
-        if (IsGrounded && jump)
+        if (grounded && jump)
         {
             playerRigid2D.AddForce(new Vector2(0f, yForce));
             playerAnimator.SetBool("Jump", true);
         }
     }
     
-    
-    //在玩家的底部射一條很短的射線 如果射線有打到地板 代表踩著地板
-    bool IsGrounded
-    {
-        get
-        {
-            grounded = GetComponent<CircleCollider2D>().IsTouchingLayers(groundLayer);
-            return grounded;
-            /*
-            Vector2 start = groundCheck.position;
-            Vector2 end = new Vector2(start.x, start.y - distance);
-            Debug.DrawLine(start, end, Color.blue);
-            grounded = Physics2D.Linecast(start, end, groundLayer);
-            return grounded;
-            */
-
-        }
-    }
-
     private void Flip()
     {
         // Switch the way the player is labelled as facing.

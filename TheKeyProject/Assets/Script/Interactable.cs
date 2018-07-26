@@ -30,6 +30,11 @@ public abstract class Interactable : MonoBehaviour {
         spriteRenderer.color = Color.yellow;
     }
 
+    public virtual void UnHighlight()
+    {
+        spriteRenderer.color = originalColor;
+    }
+
     public virtual void Update()
     {
         if (isFocus)
@@ -46,7 +51,7 @@ public abstract class Interactable : MonoBehaviour {
         }
         else
         {
-            spriteRenderer.color = originalColor;
+            UnHighlight();
         }
     }
 

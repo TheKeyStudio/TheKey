@@ -3,28 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class GM : Interactable
+public class GM : Npc
 {
-
-    public override void Init()
-    {
-        interactKey = KeyCode.Z;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
-    }
-
     // Update is called once per frame
     public override void Interact()
     {
         base.Interact();
-        Open();
+        Talk();
     }
-    void Open()
+    public override void Talk()
     {
-
-       
         Flowchart.BroadcastFungusMessage("小丑流程");
-        
     }
 
 

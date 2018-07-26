@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4106374340953762}
-  m_Layer: 0
-  m_Name: groundcheck
+  m_Layer: 11
+  m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -40,9 +40,9 @@ GameObject:
   - component: {fileID: 114762109875659156}
   - component: {fileID: 95857908970478640}
   - component: {fileID: 58156134864483374}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "\u73A9\u5BB6"
-  m_TagString: "\u73A9\u5BB6"
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,9 +53,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184056452582586}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -2.16, z: -0.08179078}
-  m_LocalScale: {x: 4.1601133, y: 4.5253534, z: 0.9305795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.067, y: -2.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4637399395388706}
   m_RootOrder: 0
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865823288027870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.7, y: 26.6, z: 0}
+  m_LocalPosition: {x: -125.43, y: 31.28, z: 0}
   m_LocalScale: {x: 2.5039496, y: 1.7203442, z: 1}
   m_Children:
   - {fileID: 4106374340953762}
@@ -106,9 +106,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -1.67}
+  m_Offset: {x: 0.1, y: -1.54}
   serializedVersion: 2
-  m_Radius: 0.3207062
+  m_Radius: 0.49
 --- !u!61 &61753807743030496
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -118,10 +118,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08839989, y: 0.020077348}
+  m_Offset: {x: 0.08839989, y: 0.4857968}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0225945, y: 4.451021}
+  m_Size: {x: 1.0225945, y: 3.519582}
   m_EdgeRadius: 0
 --- !u!95 &95857908970478640
 Animator:
@@ -170,8 +170,8 @@ MonoBehaviour:
   speedX: 0
   speedY: 0
   yForce: 800
-  distance: 0
   groundCheck: {fileID: 4106374340953762}
+  groundRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 256

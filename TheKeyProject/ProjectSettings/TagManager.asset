@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - "\u73A9\u5BB6"
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,9 +14,9 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
+  - Background
+  - NPC
+  - Player
   - 
   - 
   - 
@@ -42,9 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: "\u73A9\u5BB6"
+  - name: BackGround
+    uniqueID: 385660475
+    locked: 0
+  - name: ForeGround
+    uniqueID: 437722453
+    locked: 0
+  - name: NPC
+    uniqueID: 3314473005
+    locked: 0
+  - name: Item
+    uniqueID: 3402154885
+    locked: 0
+  - name: Player
     uniqueID: 993082725
     locked: 0
-  - name: item
-    uniqueID: 3402154885
+  - name: Light
+    uniqueID: 1243592071
+    locked: 0
+  - name: UI
+    uniqueID: 2338374781
     locked: 0
