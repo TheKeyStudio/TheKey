@@ -73,6 +73,7 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         if (isEqual)
         {
             GameManager.instance.stage1++;
+            GameManager.instance.playerMove();
             Flowchart.BroadcastFungusMessage("答對了");
             obj.SetActive(false);
         }

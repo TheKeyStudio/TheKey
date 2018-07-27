@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System;
+
 public enum FlipMode
 {
     RightToLeft,
@@ -69,7 +71,7 @@ public class Book : MonoBehaviour
 
     void Start()
     {
-        //bookPages = new List<Sprite>();
+        bookPages = new List<Sprite>();
         float scaleFactor = 1;
         if (canvas) scaleFactor = canvas.scaleFactor;
         float pageWidth = (BookPanel.rect.width* scaleFactor - 1) / 2;
@@ -108,7 +110,10 @@ public class Book : MonoBehaviour
         }
         //Debug.Log("mouse local pos:" + transformPoint(Input.mousePosition));
         //Debug.Log("mouse  pos:" + Input.mousePosition);
+        
     }
+
+
     public void UpdateBook()
     {
         f= Vector3.Lerp(f,transformPoint( Input.mousePosition), Time.deltaTime * 10);
@@ -409,9 +414,26 @@ public class Book : MonoBehaviour
             onFinish();
     }
 
-    public void AddPage(Sprite newPage)
+    public void Refresh()
     {
-        bookPages.Add(newPage);
+        BookManager bookManager = BookManager.instance;
+        if (bookManager != null)
+        {
+            Debug.Log("Refreshing");
+
+            Debug.Log("BookManager pages count " + bookManager.items.Count);
+            Debug.Log("Book pages count " + TotalPageCount);
+            if (bookManager.items.Count > TotalPageCount)
+            {
+                bookPages.Clear();
+                foreach (Item bookPage in BookManager.instance.items)
+                {
+                    Debug.Log("Book pages added " + bookPage.itemName);
+                    bookPages.Add(bookPage.icon);
+                    Debug.Log("Book pages count " + TotalPageCount);
+                }
+                UpdateSprites();
+            }
+        }
     }
-    
 }

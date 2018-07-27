@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour {
         {
             instance = this;
             DontDestroyOnLoad(this);
-            name = "最初的遊戲管理物件";
             
             Debug.Log(game1);
         }
