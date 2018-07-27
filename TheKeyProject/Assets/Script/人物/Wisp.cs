@@ -7,12 +7,20 @@ using Fungus;
 public class Wisp : Npc {
     
     float elapsedTime;
+    float original_y;
+
+    public override void Init()
+    {
+        base.Init();
+        original_y = transform.position.y;
+    }
+
     public override void Update()
     {
         base.Update();
         elapsedTime += Time.deltaTime;
         float x = transform.position.x;
-        float y = (3f * Mathf.Sin(0.8f * elapsedTime))  ;
+        float y = (3f * Mathf.Sin(0.8f * elapsedTime)) + original_y;
         Debug.Log(transform.position.y);
         transform.position = new Vector3(x, y, 0);
     }
