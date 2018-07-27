@@ -421,15 +421,15 @@ public class Book : MonoBehaviour
         {
             Debug.Log("Refreshing");
 
-            Debug.Log("BookManager pages count " + bookManager.items.Count);
+            Debug.Log("BookManager pages count " + bookManager.bookPages.Count);
             Debug.Log("Book pages count " + TotalPageCount);
-            if (bookManager.items.Count > TotalPageCount)
+            if (bookManager.bookPages.Count > TotalPageCount)
             {
                 bookPages.Clear();
-                foreach (Item bookPage in BookManager.instance.items)
+                foreach (HintCard bookPage in BookManager.instance.bookPages)
                 {
-                    Debug.Log("Book pages added " + bookPage.itemName);
-                    bookPages.Add(bookPage.icon);
+                    Debug.Log("Book pages added " + bookPage.hintCardName);
+                    bookPages.Add(bookPage.sprite);
                     Debug.Log("Book pages count " + TotalPageCount);
                 }
                 UpdateSprites();
