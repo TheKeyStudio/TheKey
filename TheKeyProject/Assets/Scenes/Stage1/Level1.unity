@@ -346,6 +346,37 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1358838640}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &487671790 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1592972290281474, guid: 861f16e36aae97c45af478676bb679fa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1235213932}
+--- !u!114 &487671791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487671790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 72
+  indentLevel: 0
+  storyText: "\u7B54\u5C0D\u4E86"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &522810989 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114600451421288926, guid: 861f16e36aae97c45af478676bb679fa,
@@ -482,6 +513,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 798947405}
+    - target: {fileID: 1640275968952494, guid: 82c84b8a43e572b48ac91d2c8fb3dbee, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82c84b8a43e572b48ac91d2c8fb3dbee, type: 2}
   m_IsPrefabParent: 0
@@ -1043,6 +1078,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1935432861}
     m_Modifications:
+    - target: {fileID: 114600451421288926, guid: 861f16e36aae97c45af478676bb679fa,
+        type: 2}
+      propertyPath: commandList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114068615984396040, guid: 861f16e36aae97c45af478676bb679fa,
+        type: 2}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4261013393456854, guid: 861f16e36aae97c45af478676bb679fa, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1180,6 +1225,11 @@ Prefab:
       propertyPath: selectedBlocks.Array.data[0]
       value: 
       objectReference: {fileID: 522810989}
+    - target: {fileID: 114600451421288926, guid: 861f16e36aae97c45af478676bb679fa,
+        type: 2}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 487671791}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 861f16e36aae97c45af478676bb679fa, type: 2}
   m_IsPrefabParent: 0
