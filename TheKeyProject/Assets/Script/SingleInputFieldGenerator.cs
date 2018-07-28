@@ -6,6 +6,7 @@ using Fungus;
 
 public class SingleInputFieldGenerator : MonoBehaviour {
 
+    public int levelNumber;
     public string answer;
     public GameObject inputPrefab;
 
@@ -22,7 +23,7 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 		for(int i = 0; i < numberOfField; i++)
         {
             GameObject obj = Instantiate(inputPrefab) as GameObject;
-            obj.transform.SetParent(transform, true);
+            obj.transform.SetParent(transform, false);
             TMP_InputField tmp_input = obj.GetComponent<TMP_InputField>();
             tmp_input.onSelect.AddListener(delegate { OnSelect(); });
             tmp_input.onValueChanged.AddListener(delegate { OnValueChanged(tmp_input); });
@@ -73,7 +74,7 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         if (isEqual)
         {
             GameManager.instance.stage1++;
-            GameManager.instance.playerMove();
+            GameManager.instance.ActiveMove();
             Flowchart.BroadcastFungusMessage("答對了");
             obj.SetActive(false);
         }

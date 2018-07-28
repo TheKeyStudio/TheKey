@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
     private Animator playerAnimator;
     private bool facingRight = true;
     private Vector3 m_Velocity = Vector3.zero;
+    private bool canMove = true;
+
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
 
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour {
     public bool grounded;
     public bool jump;
 
+
     // Use this for initialization
     void Awake ()
     {
@@ -42,6 +45,7 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
     {
         horizontalDirection = Input.GetAxis("Horizontal") * runSpeed;
+        canMove = GameManager.instance.CanPlayerMove;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
@@ -52,7 +56,7 @@ public class PlayerController : MonoBehaviour {
     {
         horizontalDirection *= Time.fixedDeltaTime;
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
-        if (GameManager.instance.CanMove)
+        if (canMove)
         {
             MoveX();
             Jump();

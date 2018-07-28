@@ -13,6 +13,7 @@ public abstract class Interactable : MonoBehaviour {
     bool isFocus = false;
     Transform player;
 
+
     private void Start()
     {
         Init();
@@ -74,4 +75,7 @@ public abstract class Interactable : MonoBehaviour {
         player = null;
        
     }
+    
+
+
 }

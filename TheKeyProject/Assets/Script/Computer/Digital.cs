@@ -26,7 +26,7 @@ public class Digital : MonoBehaviour {
             Debug.Log("correct");
             Flowchart.BroadcastFungusMessage("答對了");
             gameManager.game1 = true;
-            gameManager.playerMove();
+            gameManager.ActiveMove();
             gameObject.SetActive(false);
             Level1.SetActive(true);
         }

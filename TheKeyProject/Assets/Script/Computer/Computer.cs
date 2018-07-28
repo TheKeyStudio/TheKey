@@ -23,7 +23,7 @@ public class Computer : Interactable {
     private void Open()
     {
         Debug.Log("Opening question: " + question.name);
-        GameManager.instance.playerStop();
+        GameManager.instance.DeactiveMove();
         question.SetActive(true);
     }
 }

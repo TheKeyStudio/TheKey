@@ -6,6 +6,17 @@ using UnityEngine;
 public abstract class Npc : Interactable {
 
     public GameObject noticeIcon;
+    private bool talkAble = true;
+
+    public void ActiveTalk()
+    {
+        talkAble = true;
+    }
+
+    public void DeactiveTalk()
+    {
+        talkAble = false;
+    }
 
     public override void Init()
     {
@@ -17,7 +28,12 @@ public abstract class Npc : Interactable {
     public override void Interact()
     {
         base.Interact();
-        Talk();
+        if (talkAble)
+        {
+            GameManager.instance.DeactiveMove();
+            Talk();
+            DeactiveTalk();
+        }
     }
 
     public abstract void Talk();
@@ -33,4 +49,5 @@ public abstract class Npc : Interactable {
         base.UnHighlight();
         noticeIcon.SetActive(false);
     }
+    
 }
