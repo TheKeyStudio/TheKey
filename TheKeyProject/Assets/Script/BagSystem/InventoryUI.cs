@@ -11,7 +11,8 @@ public class InventoryUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         inventory = Inventory.instance;
-        if(inventory.onItemChangedCallBack == null)
+        Inventory.instance.onItemChangedCallBack = null;
+        if (inventory.onItemChangedCallBack == null)
             inventory.onItemChangedCallBack += UpdateUI;
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();

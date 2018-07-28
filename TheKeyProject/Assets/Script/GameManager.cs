@@ -10,12 +10,10 @@ public class GameManager : MonoBehaviour {
     public int stage1 = 0;
     [SerializeField]
     private bool canPlayerMove = true;
-    private PlayerController playerController;
 
 
     void Awake()
     {
-        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         if (instance == null)
         {
             instance = this;

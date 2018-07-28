@@ -18,7 +18,6 @@ public abstract class Door : Interactable {
     public void ToNextScene()
     {
         Debug.Log("Going to " + nextScene);
-        Inventory.instance.onItemChangedCallBack = null;
         SceneManager.LoadScene(nextScene);
     }
 }

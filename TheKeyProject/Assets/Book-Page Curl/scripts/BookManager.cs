@@ -6,7 +6,7 @@ public class BookManager : MonoBehaviour {
 
     public static BookManager instance;
 
-    public List<HintCard> bookPages = new List<HintCard>();
+    public List<Sprite> bookPages = new List<Sprite>();
 
     private void Awake()
     {
@@ -22,9 +22,9 @@ public class BookManager : MonoBehaviour {
     }
 
 
-    public void AddPage(HintCard item)
+    public void AddPage(Sprite bookpage)
     {   
-        bookPages.Add(item);
-        Debug.Log("Adding " + item.hintCardName);
+        bookPages.Add(bookpage);
+        Debug.Log("Adding " + bookpage.name);
     }
 }

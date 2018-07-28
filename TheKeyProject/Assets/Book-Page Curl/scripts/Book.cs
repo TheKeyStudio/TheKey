@@ -19,7 +19,7 @@ public class Book : MonoBehaviour
     RectTransform BookPanel;
     public Sprite background;
     //public Sprite[] bookPages;
-    public List<Sprite> bookPages;
+    public List<Sprite> bookPages = new List<Sprite>();
     public bool interactable=true;
     public bool enableShadowEffect=true;
     //represent the index of the sprite shown in the right page
@@ -71,7 +71,6 @@ public class Book : MonoBehaviour
 
     void Start()
     {
-        bookPages = new List<Sprite>();
         float scaleFactor = 1;
         if (canvas) scaleFactor = canvas.scaleFactor;
         float pageWidth = (BookPanel.rect.width* scaleFactor - 1) / 2;
@@ -110,7 +109,6 @@ public class Book : MonoBehaviour
         }
         //Debug.Log("mouse local pos:" + transformPoint(Input.mousePosition));
         //Debug.Log("mouse  pos:" + Input.mousePosition);
-        
     }
 
 
@@ -414,26 +412,11 @@ public class Book : MonoBehaviour
             onFinish();
     }
 
+    
     public void Refresh()
     {
-        BookManager bookManager = BookManager.instance;
-        if (bookManager != null)
-        {
-            Debug.Log("Refreshing");
-
-            Debug.Log("BookManager pages count " + bookManager.bookPages.Count);
-            Debug.Log("Book pages count " + TotalPageCount);
-            if (bookManager.bookPages.Count > TotalPageCount)
-            {
-                bookPages.Clear();
-                foreach (HintCard bookPage in BookManager.instance.bookPages)
-                {
-                    Debug.Log("Book pages added " + bookPage.hintCardName);
-                    bookPages.Add(bookPage.sprite);
-                    Debug.Log("Book pages count " + TotalPageCount);
-                }
-                UpdateSprites();
-            }
-        }
+        bookPages = BookManager.instance.bookPages;
+        UpdateSprites();
     }
+    
 }
