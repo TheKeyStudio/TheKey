@@ -12,6 +12,7 @@ public abstract class Interactable : MonoBehaviour {
 
     bool isFocus = false;
     Transform player;
+    protected PlayerController playerController;
 
 
     private void Start()
@@ -19,7 +20,11 @@ public abstract class Interactable : MonoBehaviour {
         Init();
     }
 
-    public abstract void Init();
+    public virtual void Init()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+    }
 
     public virtual void Interact()                      
     {
@@ -66,14 +71,14 @@ public abstract class Interactable : MonoBehaviour {
     {
         isFocus = true;
         player = playerTransform;
-       
+
+        playerController = player.GetComponent<PlayerController>();
     }
 
     public void OnDefoucused()
     {
         isFocus = false;
         player = null;
-       
     }
     
 

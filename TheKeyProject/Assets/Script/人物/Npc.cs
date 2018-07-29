@@ -6,7 +6,16 @@ using UnityEngine;
 public abstract class Npc : Interactable {
 
     public GameObject noticeIcon;
-    private bool talkAble = true;
+    [SerializeField] protected bool talkAble;
+
+    public override void Init()
+    {
+        base.Init();
+        interactKey = KeyCode.Z;
+
+
+        ActiveTalk();
+    }
 
     public void ActiveTalk()
     {
@@ -18,21 +27,16 @@ public abstract class Npc : Interactable {
         talkAble = false;
     }
 
-    public override void Init()
-    {
-        interactKey = KeyCode.Z;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
-    }
-    
     public override void Interact()
     {
         base.Interact();
+
         if (talkAble)
         {
-            GameManager.instance.DeactiveMove();
-            Talk();
+            Debug.Log("Talking with " + name);
+            playerController.DeactiveMove();
             DeactiveTalk();
+            Talk();
         }
     }
 

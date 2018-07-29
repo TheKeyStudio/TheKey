@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game1: 0
   stage1: 0
+  canPlayerMove: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ Prefab:
     - target: {fileID: 224057707596061344, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0000076293945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224057707596061344, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
         type: 2}
@@ -651,12 +652,27 @@ Prefab:
     - target: {fileID: 114103858498545096, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
         type: 2}
       propertyPath: m_Spacing
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224020361918987276, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114006236341552960, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
+        type: 2}
+      propertyPath: answerText
+      value: hack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114103858498545096, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
+        type: 2}
+      propertyPath: m_Padding.m_Left
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114103858498545096, guid: 82c84b8a43e572b48ac91d2c8fb3dbee,
+        type: 2}
+      propertyPath: m_Padding.m_Right
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82c84b8a43e572b48ac91d2c8fb3dbee, type: 2}

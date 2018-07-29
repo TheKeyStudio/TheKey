@@ -364,7 +364,10 @@ MonoBehaviour:
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 171139331}
+  talkAble: 1
   flowchart: {fileID: 209207698}
+  talkCoolDownTime: 2
+  startCoolDowmTime: 0
 --- !u!58 &161283919
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -415,7 +418,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -980494291
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300002, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -862,8 +865,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 209207710}
-  selectedCommands: []
+  - {fileID: 209207713}
+  selectedCommands:
+  - {fileID: 209207712}
   variables:
   - {fileID: 209207734}
   description: 
@@ -1056,8 +1060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 66.5
-    y: 134
+    x: 70.5
+    y: 129
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1105,7 +1109,7 @@ MonoBehaviour:
   storyText: "\u9748\u9B42:\u6211\u8A18\u5F97\u597D\u50CF\u67D0\u5929\u665A\u4E0A\u6709\u767C\u751F\u4E86\u4E00\u4E9B\u4E8B\u60C5\r{wc}\n\u73A9\u5BB6:\u662F11\u670815\u65E5\u90A3\u5929\u665A\u4E0A\u55CE?\r{wc}\n\u9748\u9B42:\u6C92\u932F!
     \u6211\u60F3\u8D77\u4F86\u4E86 \u6211\u9084\u8A18\u5F97\u90A3\u5929\u662F\u6211\u751F\u65E5\u7684\u524D\u4E00\u5929\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1850886662}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1169,9 +1173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: "\u9748\u9B42:\u6211\u7684\u7236\u6BCD\u5F88\u559C\u6B61\u628A\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u751F\u6D3B\u9EDE\u6EF4\u90FDPO\u5230\u793E\u7FA4\u7DB2\u7AD9\u4E0A\u4E26\u4E14\u548C\u670B\u53CB\r\n\u5206\u4EAB\uFF0C\u6BCF\u5929\u6211\u5011\u90FD\u904E\u5F97\u5F88\u5FEB\u6A02\u3002"
+  storyText: "\u6211\u7684\u7236\u6BCD\u5F88\u559C\u6B61\u628A\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u751F\u6D3B\u9EDE\u6EF4\u90FDPO\u5230\u793E\u7FA4\u7DB2\u7AD9\u4E0A\u4E26\u4E14\u548C\u670B\u53CB\r\n\u5206\u4EAB\uFF0C\u6BCF\u5929\u6211\u5011\u90FD\u904E\u5F97\u5F88\u5FEB\u6A02\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 870495110}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1195,7 +1199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 69.15427
+    x: 68.15427
     y: 202.75917
     width: 120
     height: 40
@@ -1426,7 +1430,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1850886662}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
+  portrait: {fileID: 21300002, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1675334869}
@@ -1569,7 +1573,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Evelyn? \u6C92\u932F \u6211\u60F3\u8D77\u4F86\u4E86\u6211\u7684\u540D\u5B57\u53EB\u505AEvelyn\uFF0C\u6211\u662F\u82F1\u570B\u4EBA\u3002"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1850886662}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1595,7 +1599,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u6211\u751F\u6D3B\u5728\u4E00\u500B\u5E78\u798F\u7684\u5BB6\u5EAD\uFF0C\u6211\u7684\u7238\u7238\u548C\u5ABD\u5ABD\u6642\u5E38\u8CB7\u96FB\u5B50\u73A9\u5177\u7D66\u6211\u73A9\r\n\uFF0C\u771F\u7684\u5F88\u597D\u73A9\u6211\u6BCF\u5929\u90FD\u5728\u73A9\u3002"
   description: 
-  character: {fileID: 1850886662}
+  character: {fileID: 870495110}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2728,6 +2732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626735237}
   - component: {fileID: 626735238}
+  - component: {fileID: 626735239}
   m_Layer: 0
   m_Name: "\u80CC\u666F"
   m_TagString: Untagged
@@ -2793,6 +2798,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!60 &626735239
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 626735236}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -9.599999, y: 5.4}
+      - {x: -9.599999, y: -5.4}
+      - {x: 9.599999, y: -5.4}
+      - {x: 9.599999, y: 5.4}
 --- !u!1 &754722707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,6 +2926,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.79, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &870495110 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114244634798583062, guid: f584d47274ed9e14ba7e5228fda03dbb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1850886661}
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
 --- !u!4 &954059997 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4241695864580534, guid: 85f93ada4952c5042a2fd50df015a5a1,
@@ -2907,15 +2946,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -127.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 31.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2940,7 +2979,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: field of view
-      value: 90
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
@@ -3647,7 +3686,7 @@ GameObject:
   - component: {fileID: 1175896433}
   - component: {fileID: 1175896435}
   - component: {fileID: 1175896434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u524D\u666F_0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4166,7 +4205,7 @@ Prefab:
         type: 2}
       propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 626735239}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
   m_IsPrefabParent: 0
@@ -4581,7 +4620,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &1850886662 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114244634798583062, guid: f584d47274ed9e14ba7e5228fda03dbb,
+  m_PrefabParentObject: {fileID: 114614540916204288, guid: f584d47274ed9e14ba7e5228fda03dbb,
     type: 2}
   m_PrefabInternal: {fileID: 1850886661}
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}

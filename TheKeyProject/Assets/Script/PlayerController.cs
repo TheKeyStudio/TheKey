@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
     {
         horizontalDirection = Input.GetAxis("Horizontal") * runSpeed;
-        canMove = GameManager.instance.CanPlayerMove;
+        //canMove = GameManager.instance.CanPlayerMove;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
@@ -135,5 +135,23 @@ public class PlayerController : MonoBehaviour {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    public void DeactiveMove()
+    {
+        canMove = false;
+    }
+
+    public void ActiveMove()
+    {
+        canMove = true;
+    }
+
+    public bool CanPlayerMove
+    {
+        get
+        {
+            return canMove;
+        }
     }
 }

@@ -7,9 +7,8 @@ public class ItemPickup : Interactable {
 
     public override void Init()
     {
+        base.Init();
         interactKey = KeyCode.Z;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
     }
 
     public override void Interact()

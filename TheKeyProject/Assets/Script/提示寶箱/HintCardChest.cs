@@ -18,11 +18,9 @@ public class HintCardChest : Interactable {
 
     public override void Init()
     {
+        base.Init();
         interactKey = KeyCode.Z;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
         animator = GetComponent<Animator>();
-        
         unlocked = HintCardManager.instance.IsUnlocked(hintCardCode);
     }
 
@@ -35,12 +33,14 @@ public class HintCardChest : Interactable {
     public void Open()
     {
         animator.SetBool("Opened", true);
+        playerController.DeactiveMove();
         chestUI.SetActive(true);
     }
 
     public void Close()
     {
         animator.SetBool("Opened", false);
+        playerController.ActiveMove();
         chestUI.SetActive(false);
     }
 
@@ -54,6 +54,7 @@ public class HintCardChest : Interactable {
             HintCardManager.instance.UnlockHintCard(hintCardCode);
             unlocked = true;
             Destroy(gameObject);
+            playerController.ActiveMove();
             Debug.Log("Unlocked " + hintCardCode);
         }
         else

@@ -10,9 +10,8 @@ public abstract class Door : Interactable {
 
     public override void Init()
     {
+        base.Init();
         interactKey = KeyCode.UpArrow;
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
     }
 
     public void ToNextScene()

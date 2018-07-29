@@ -6,7 +6,11 @@ using Fungus;
 
 public class Wisp : Npc {
 
+    //可以重複對話的NPC
+
     public Flowchart flowchart;
+    public float talkCoolDownTime = 2f;
+    public float startCoolDowmTime;
 
     float elapsedTime;
     float original_y;
@@ -25,21 +29,26 @@ public class Wisp : Npc {
         float y = (3f * Mathf.Sin(0.8f * elapsedTime)) + original_y;
         transform.position = new Vector3(x, y, 0);
 
-
-        if (!flowchart.GetBooleanVariable("Talking"))
+        if (!flowchart.GetBooleanVariable("Talking") && !talkAble)
         {
-            GameManager.instance.ActiveMove();
-            Invoke("ActiveTalk", 2f); //延遲大約1.5秒才可再次對話
+            startCoolDowmTime -= Time.deltaTime;
+            playerController.ActiveMove();
+            if (0 > startCoolDowmTime) //延遲大約x秒才可再次對話
+                ActiveTalk();
+
         }
+
     }
     
+
     public override void Talk()
     {
+        startCoolDowmTime = talkCoolDownTime;
+
         int LevelKey = GameManager.instance.stage1 + 1;
         string callMsg = "靈魂對話" + LevelKey.ToString();
         Flowchart.BroadcastFungusMessage(callMsg);
         Debug.Log(LevelKey);
-
     }
     
 

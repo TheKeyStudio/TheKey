@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -113, y: -5}
+  scrollPos: {x: 108, y: 9}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 396
@@ -420,7 +420,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 474591173}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 474591194}
   variables: []
   description: 
   stepPause: 0
@@ -487,7 +488,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 969332956}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &474591171
 MonoBehaviour:
@@ -502,9 +503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: "\u9019\u88E1\u662F\u54EA\u88E1?\u6211\u600E\u9EBC\u6703\u5728\u9019\u88E1?{wc}\n\u6211\u8A18\u5F97\u525B\u525B\u5728\u5716\u66F8\u9928\u627E\u95DC\u65BC\u5BC6\u78BC\u5B78\u7684\u66F8\u963F{wc}\n\u600E\u9EBC\u6703\u7A81\u7136\u51FA\u73FE\u5728\u9019\u88E1?
-    {wc}\n\u96E3\u9053\u90A3\u672C\u66F8\u6240\u5BEB\u7684\u6253\u958B\u9019\u672C\u66F8\u7684\u4EBA\u6703\u767C\u751F\u4EE4\u4EBA\u610F\u60F3\u4E0D\u5230\u7684\u4E8B\u5C31\u662F\u6307\u9019\u4EF6\u4E8B{wc}\n\u4E0D\u6703\u5427!\u600E\u9EBC\u8FA6
-    \u6211\u8981\u600E\u9EBC\u96E2\u958B\u9019\u88E1\u554A!! "
+  storyText: "\u9019\u88E1\u662F\u54EA\u88E1?\u6211\u600E\u9EBC\u6703\u5728\u9019\u88E1?{wc}\n\u6211\u8A18\u5F97\u525B\u525B\u5728\u5716\u66F8\u9928\u627E\u95DC\u65BC\u5BC6\u78BC\u5B78\u7684\u66F8\u554A...{wc}\n\u600E\u9EBC\u6703\u7A81\u7136\u51FA\u73FE\u5728\u9019\u88E1?
+    {wc}\n\u96E3\u9053\u90A3\u672C\u66F8\u6240\u5BEB\u7684\u201C\u6253\u958B\u9019\u672C\u66F8\u7684\u4EBA\u6703\u767C\u751F\u4EE4\u4EBA\u610F\u60F3\u4E0D\u5230\u7684\u4E8B\u201D\u5C31\u662F\u6307\u9019\u4EF6\u4E8B\uFF1F{wc}\n\u4E0D\u6703\u5427!\u6211\u8981\u600E\u9EBC\u96E2\u958B\u9019\u88E1\u554A!! "
   description: "\u5C0F\u660E"
   character: {fileID: 1095114416}
   portrait: {fileID: 0}
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: "\u563F\u563F\u563F.....(\u7ACA\u7B11)\n"
+  storyText: "\u563F\u563F\u563F.....\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: "\u9019\u4E0D\u662F\u5C0F\u83EF\u7D66\u6211\u7684\u7B46\u8A18\u672C\u55CE\uFF0C\u539F\u4F86\u5B83\u548C\u6211\u4E00\u8D77\u4F86\u5230\u9019\u88E1\u3002\n"
+  storyText: "\u9019\u4E0D\u662F\u5C0F\u83EF\u7D66\u6211\u7684\u7B46\u8A18\u672C\u55CE\uFF0C\u539F\u4F86\u5B83\u548C\u6211\u4E00\u8D77\u4F86\u5230\u9019\u88E1\u3002"
   description: 
   character: {fileID: 1095114416}
   portrait: {fileID: 0}
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  targetObject: {fileID: 1489086207}
+  targetObject: {fileID: 1433841976}
   methodName: DeactiveMove
   delay: 0
 --- !u!114 &474591194
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  targetObject: {fileID: 1489086207}
+  targetObject: {fileID: 1433841976}
   methodName: ActiveMove
   delay: 0
 --- !u!1 &476333340
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 615922599}
   - component: {fileID: 615922598}
   - component: {fileID: 615922597}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1340,7 +1340,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -980494291
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1383,6 +1383,8 @@ MonoBehaviour:
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 2102319776}
+  talkAble: 0
+  flowchartMsg: "\u5C0F\u4E11\u6D41\u7A0B"
 --- !u!58 &753121916
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1521,8 +1523,8 @@ Transform:
   m_LocalPosition: {x: -58.170586, y: 18.252523, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 979733061}
   - {fileID: 474591170}
+  - {fileID: 979733061}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1537,7 +1539,6 @@ GameObject:
   - component: {fileID: 979733057}
   - component: {fileID: 979733059}
   - component: {fileID: 979733058}
-  - component: {fileID: 979733060}
   - component: {fileID: 979733063}
   - component: {fileID: 979733064}
   - component: {fileID: 979733067}
@@ -1545,7 +1546,6 @@ GameObject:
   - component: {fileID: 979733066}
   - component: {fileID: 979733065}
   - component: {fileID: 979733068}
-  - component: {fileID: 979733069}
   - component: {fileID: 979733070}
   - component: {fileID: 979733071}
   - component: {fileID: 979733072}
@@ -1557,12 +1557,13 @@ GameObject:
   - component: {fileID: 979733080}
   - component: {fileID: 979733081}
   - component: {fileID: 979733082}
-  - component: {fileID: 979733074}
   - component: {fileID: 979733076}
   - component: {fileID: 979733083}
   - component: {fileID: 979733085}
   - component: {fileID: 979733084}
-  - component: {fileID: 979733086}
+  - component: {fileID: 979733069}
+  - component: {fileID: 979733060}
+  - component: {fileID: 979733074}
   m_Layer: 0
   m_Name: "\u5C0F\u4E11\u5C0D\u8A71"
   m_TagString: Untagged
@@ -1596,7 +1597,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 979733059}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 979733084}
   variables: []
   description: 
   stepPause: 0
@@ -1621,7 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "\u4F60\u597D \u521D\u6B21\u898B\u9762 \u6211\u662F\u5C0F\u4E11\u5148\u751F\uFF0C\u6B61\u8FCE\u4F60\u4F86\u5230\u5BC6\u78BC\u4E16\u754C\u3002\r\n"
+  storyText: "\u4F60\u597D\uFF0C\u521D\u6B21\u898B\u9762\uFF0C\u6211\u662F\u5C0F\u4E11\u5148\u751F\uFF0C\u6B61\u8FCE\u4F60\u4F86\u5230\u5BC6\u78BC\u4E16\u754C\u3002\r\n"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 0}
@@ -1648,7 +1650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 66
+    x: 64
     y: 70
     width: 120
     height: 40
@@ -1657,7 +1659,7 @@ MonoBehaviour:
   itemId: 0
   blockName: "\u5C0F\u4E11\u6D41\u7A0B"
   description: 
-  eventHandler: {fileID: 979733060}
+  eventHandler: {fileID: 979733069}
   commandList:
   - {fileID: 979733070}
   - {fileID: 979733058}
@@ -1676,8 +1678,7 @@ MonoBehaviour:
   - {fileID: 979733075}
   - {fileID: 979733074}
   - {fileID: 979733084}
-  - {fileID: 979733069}
-  - {fileID: 979733086}
+  - {fileID: 979733060}
 --- !u!114 &979733060
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1686,11 +1687,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 979733056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 979733059}
-  message: "\u5C0F\u4E11\u6D41\u7A0B"
+  itemId: 25
+  indentLevel: 0
+  targetObject: {fileID: 1433841976}
+  methodName: ActiveMove
+  delay: 0
 --- !u!4 &979733061
 Transform:
   m_ObjectHideFlags: 0
@@ -1698,11 +1702,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979733056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6705837, y: 2.2474618, z: 0}
+  m_LocalPosition: {x: 5.6705856, y: 2.2474613, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 969332956}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &979733062
 MonoBehaviour:
@@ -1857,15 +1861,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 979733056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 7
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 1
-  durationOLD: 0
+  parentBlock: {fileID: 979733059}
+  message: "\u5C0F\u4E11\u6D41\u7A0B"
 --- !u!114 &979733070
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1934,7 +1934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "\u6C92\u932F \u9019\u88E1\u662F\u5BC6\u78BC\u4E16\u754C\uFF0C\u6709\u8457\u8A31\u591A\u7684\u95DC\u5361\u7B49\u8457\u50CF\u4F60\u9019\u6A23\u7684\u6311\u6230\u8005\u4F86\u6311\u6230\u5462\r\n"
+  storyText: "\u6C92\u932F\uFF0C\u9019\u88E1\u662F\u5BC6\u78BC\u4E16\u754C\u3002\u6709\u8457\u8A31\u591A\u7684\u95DC\u5361\u7B49\u8457\u50CF\u4F60\u9019\u6A23\u7684\u6311\u6230\u8005\u4F86\u6311\u6230\u5462\u3002\r\n"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 0}
@@ -1960,7 +1960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: "\u7B49\u4E00\u4E0B \u4F60\u8AAA\u9019\u88E1\u662F\u5BC6\u78BC\u4E16\u754C?\r\n"
+  storyText: "\u7B49\u4E00\u4E0B\uFF0C\u4F60\u8AAA\u9019\u88E1\u662F\u5BC6\u78BC\u4E16\u754C?\r\n"
   description: 
   character: {fileID: 1095114416}
   portrait: {fileID: 0}
@@ -1984,10 +1984,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 26
   indentLevel: 0
-  storyText: "\u53EF\u60E1!  \u7167\u76EE\u524D\u60C5\u6CC1\u4F86\u770B\uFF0C\u53EA\u80FD\u5148\u6309\u7167\u5C0F\u4E11\u5148\u751F\u6240\u8AAA\u7684\u53BB\u505A\u4E86\u3002
-    \r\n"
+  storyText: "\u53EF\u60E1! \u7167\u76EE\u524D\u60C5\u6CC1\u4F86\u770B\uFF0C\u53EA\u80FD\u5148\u6309\u7167\u5C0F\u4E11\u5148\u751F\u6240\u8AAA\u7684\u53BB\u505A\u4E86\u3002
+    \r"
   description: 
   character: {fileID: 1095114416}
   portrait: {fileID: 0}
@@ -2013,8 +2013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: "\u5582!\u5225\u8D70  \u600E\u9EBC\u7A81\u7136\u6D88\u5931\u4E86\uFF0C\u6211\u9084\u6709\u5F88\u591A\u554F\u984C\u60F3\u554F\u5462\u3002
-    \r\n"
+  storyText: "\u5582\uFF0C\u5225\u8D70!{wc}\n\u600E\u9EBC\u7A81\u7136\u6D88\u5931\u4E86\uFF0C\u6211\u9084\u6709\u5F88\u591A\u554F\u984C\u60F3\u554F\u5462\u3002
+    \r"
   description: 
   character: {fileID: 1095114416}
   portrait: {fileID: 0}
@@ -2060,8 +2060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: "\u795D\u4F60\u597D\u904B \u5C0F\u5B50 \u5F88\u4E45\u6C92\u6709\u4EBA\u9032\u4F86\u5BC6\u78BC\u4E16\u754C\u4E86
-    \u671F\u5F85\u4F60\u7684\u8868\u73FE \u54C8\u54C8\u54C8\r\n"
+  storyText: "\u795D\u4F60\u597D\u904B\uFF0C\u5C0F\u5B50\u3002\u5F88\u4E45\u6C92\u6709\u4EBA\u9032\u4F86\u5BC6\u78BC\u4E16\u754C\u4E86{wc}\n\u671F\u5F85\u4F60\u7684\u8868\u73FE
+    \u54C8\u54C8\u54C8\r\n"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 0}
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: "\u54C8\u54C8 \u73FE\u5728\u7684\u4F60\u6C92\u8FA6\u6CD5\u56DE\u53BB\u5594
+  storyText: "\u54C8\u54C8\uFF0C\u73FE\u5728\u7684\u4F60\u6C92\u8FA6\u6CD5\u56DE\u53BB\u5594
     {wc} \u9664\u975E\u4F60\u628A\u5BC6\u78BC\u4E16\u754C\u7684\u95DC\u5361\u7834\u5B8C\u4E4B\u5F8C\u624D\u80FD\u56DE\u5230\u539F\u672C\u7684\u4E16\u754C\u5594\uFF0C\u5982\u679C\u4F60\u7121\u6CD5\u7834\u95DC\u7684\u8A71\uFF0C\u5C31\u8981\u6C38\u9060\u88AB\u56F0\u5728\u9019\u88E1\u4E86\u3002\r\n"
   description: 
   character: {fileID: 1137343945}
@@ -2292,22 +2292,6 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
---- !u!114 &979733086
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 979733056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 27
-  indentLevel: 0
-  targetObject: {fileID: 1489086207}
-  methodName: ActiveMove
-  delay: 0
 --- !u!4 &1002663693 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4106312007840852, guid: 0f983e18630353f49aac0aa05df299ec,
@@ -2622,7 +2606,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u7B46\u8A18\u672C\u767C\u73FE_\u4F4D\u7F6E_\u7D42\u9EDE"
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2815,6 +2799,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8d2d3a03f29be24bb7fcd123fa18e7d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1433841976 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1865823288027870, guid: 644c950d66d7ac047bb5d92be56d6fec,
+    type: 2}
+  m_PrefabInternal: {fileID: 174596049}
 --- !u!224 &1443965858 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22410280, guid: c6289d5f8fa843145a2355af9cb09719,
@@ -2862,11 +2851,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f584d47274ed9e14ba7e5228fda03dbb, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1489086207 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1553707401008526, guid: 4c546d4e290949f4793781ada13e88ce,
-    type: 2}
-  m_PrefabInternal: {fileID: 2042009593}
 --- !u!1001 &1491419794
 Prefab:
   m_ObjectHideFlags: 0
@@ -2962,6 +2946,10 @@ Prefab:
     - target: {fileID: 224138052112247626, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090583279496600, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3180,7 +3168,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u7B46\u8A18\u672C\u767C\u73FE_\u4F4D\u7F6E_\u8D77\u9EDE"
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3215,7 +3203,7 @@ GameObject:
   m_Layer: 8
   m_Name: "\u5730\u677F"
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3290,7 +3278,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 437722453
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: ca47f2b6304f11742be8edad5239a7af, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}

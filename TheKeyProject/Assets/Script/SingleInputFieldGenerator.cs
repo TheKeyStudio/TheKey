@@ -5,22 +5,45 @@ using TMPro;
 using Fungus;
 
 public class SingleInputFieldGenerator : MonoBehaviour {
+    
+    private class Answer
+    {
+        private int levelNumber;
+        private string answerText;
 
+        public Answer(int levelNumber, string answerText)
+        {
+            this.levelNumber = levelNumber;
+            this.answerText = answerText.ToUpper();
+        }
+
+        public int GetAnswerLength()
+        {
+            return answerText.Length;
+        }
+
+        public bool CheckAnswerText(string inputAnswer)
+        {
+            return answerText.Equals(inputAnswer);
+        }
+    }
+
+    [Header("Answer Information")]
     public int levelNumber;
-    public string answer;
+    public string answerText;
+
     public GameObject inputPrefab;
-
     public List<TMP_InputField> input_list;
+    public Computer computer;
 
-    private int numberOfField;
+    private Answer answer;
     private int currentIndex = 0;
 
 	// Use this for initialization
 	void Start () {
-        numberOfField = answer.Length;
-        answer = answer.ToUpper();
+        answer = new Answer(levelNumber, answerText);
         input_list = new List<TMP_InputField>();
-		for(int i = 0; i < numberOfField; i++)
+		for(int i = 0; i < answer.GetAnswerLength(); i++)
         {
             GameObject obj = Instantiate(inputPrefab) as GameObject;
             obj.transform.SetParent(transform, false);
@@ -60,29 +83,31 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         input_list[currentIndex].text = "";
     }
     
-    public void CheckAnswer(GameObject obj)
+    public void CheckAnswer()
     {
-        bool isEqual = true;
-        for(int i = 0; i < answer.Length; i++)
-        {
-            if (!input_list[i].text.Equals(answer[i].ToString()))
-            {
-                isEqual = false;
-                break;
-            }
-        }
-        if (isEqual)
+        bool isEqual = answer.CheckAnswerText(GetInputListForStringFormat());
+        
+        if (isEqual && GameManager.instance.stage1 < levelNumber)
         {
             GameManager.instance.stage1++;
-            GameManager.instance.ActiveMove();
             Flowchart.BroadcastFungusMessage("答對了");
-            obj.SetActive(false);
+            computer.Close();
         }
         else
         {
             Flowchart.BroadcastFungusMessage("答錯了");
         }
         Debug.Log("Answer is " + isEqual);
+    }
+
+    private string GetInputListForStringFormat()
+    {
+        string inputAnswer = "";
+        foreach (TMP_InputField aInput in input_list)
+        {
+            inputAnswer = string.Concat(inputAnswer, aInput.text);
+        }
+        return inputAnswer;
     }
     
     private void ChangeActivateInputField()

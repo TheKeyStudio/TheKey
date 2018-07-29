@@ -8,9 +8,8 @@ public class Computer : Interactable {
 
     public override void Init()
     {
+        base.Init();
         interactKey = KeyCode.Z;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color;
     }
 
     public override void Interact()
@@ -23,7 +22,14 @@ public class Computer : Interactable {
     private void Open()
     {
         Debug.Log("Opening question: " + question.name);
-        GameManager.instance.DeactiveMove();
+        playerController.DeactiveMove();
         question.SetActive(true);
+    }
+
+    public void Close()
+    {
+        Debug.Log("Closing question: " + question.name);
+        playerController.ActiveMove();
+        question.SetActive(false);
     }
 }
