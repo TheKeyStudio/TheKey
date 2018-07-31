@@ -43,6 +43,7 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 
     private Answer answer;
     private int currentIndex = 0;
+    private bool locked = true;
 
 	// Use this for initialization
 	void Start () {
@@ -59,6 +60,19 @@ public class SingleInputFieldGenerator : MonoBehaviour {
             input_list.Add(tmp_input);
         }
 	}
+
+    private void OnGUI()
+    {
+        locked = input_list[currentIndex].text.Length > 0;  
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace) && !locked)
+        {
+            Delete();
+        }
+    }
 
     public void OnSelect()
     {
@@ -79,11 +93,8 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 
     public void Delete()
     {
-        if (input_list[currentIndex].text.Equals(""))
-        {
-            input_list[currentIndex].readOnly = true;
-            currentIndex--;
-        }
+        input_list[currentIndex].readOnly = true;
+        currentIndex--;
         ChangeActivateInputField();
         input_list[currentIndex].text = "";
     }
