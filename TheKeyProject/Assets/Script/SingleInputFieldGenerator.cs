@@ -4,6 +4,11 @@ using UnityEngine;
 using TMPro;
 using Fungus;
 
+/*
+ * This class is low cohesion, need to refactor 
+ * 
+ */
+
 public class SingleInputFieldGenerator : MonoBehaviour {
     
     private class Answer

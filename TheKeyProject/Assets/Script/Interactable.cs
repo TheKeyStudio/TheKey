@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Code Smell, please clean it.
+ */
+
 public abstract class Interactable : MonoBehaviour {
 
     public float radius = 3f;

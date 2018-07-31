@@ -13,7 +13,6 @@ public abstract class Npc : Interactable {
         base.Init();
         interactKey = KeyCode.Z;
 
-
         ActiveTalk();
     }
 
@@ -34,7 +33,7 @@ public abstract class Npc : Interactable {
         if (talkAble)
         {
             Debug.Log("Talking with " + name);
-            playerController.DeactiveMove();
+            playerController.DeactiveMove(); //Probably use state pattern on playerController is better, like: Talking -> NoTalking
             DeactiveTalk();
             Talk();
         }

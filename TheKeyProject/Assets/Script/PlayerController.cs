@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     private bool facingRight = true;
     private Vector3 m_Velocity = Vector3.zero;
     private bool canMove = true;
+    
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
@@ -46,10 +47,12 @@ public class PlayerController : MonoBehaviour {
     {
         horizontalDirection = Input.GetAxis("Horizontal") * runSpeed;
         //canMove = GameManager.instance.CanPlayerMove;
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
         }
+        
     }
 
     private void FixedUpdate()
@@ -62,6 +65,10 @@ public class PlayerController : MonoBehaviour {
             Jump();
             jump = false;
             playerAnimator.SetBool("Jump", !grounded);
+        }
+        else
+        {
+            playerAnimator.SetFloat("Horizontal", 0);
         }
     }
 
@@ -154,4 +161,5 @@ public class PlayerController : MonoBehaviour {
             return canMove;
         }
     }
+    
 }

@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour {
     public bool game1 = false;                  //第一階段的關卡 全部破完 才能通往下一關;
     public int stage1 = 0;
 
-
     void Awake()
     {
         if (instance == null)
@@ -23,23 +22,4 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
-    /*
-    public bool CanPlayerMove
-    {
-        get
-        {
-            return canPlayerMove;
-        }
-    }
-    public void DeactiveMove()
-    {
-        canPlayerMove = false;
-    }
-
-    public void ActiveMove()
-    {
-        canPlayerMove = true;
-    }
-    */
 }
