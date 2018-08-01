@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Fungus;
 
 /*
  * This class is low cohesion, need to refactor 
@@ -11,45 +10,31 @@ using Fungus;
 
 public class SingleInputFieldGenerator : MonoBehaviour {
     
-    private class Answer
+
+    public GameObject inputPrefab;
+    public List<TMP_InputField> input_list = new List<TMP_InputField>();
+
+    private int currentIndex = 0;
+    private bool locked = true;
+    
+
+    private void OnGUI()
     {
-        private int levelNumber;
-        private string answerText;
+        if(input_list.Count > 0)
+            locked = input_list[currentIndex].text.Length > 0;  
+    }
 
-        public Answer(int levelNumber, string answerText)
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace) && !locked)
         {
-            this.levelNumber = levelNumber;
-            this.answerText = answerText.ToUpper();
-        }
-
-        public int GetAnswerLength()
-        {
-            return answerText.Length;
-        }
-
-        public bool CheckAnswerText(string inputAnswer)
-        {
-            return answerText.Equals(inputAnswer);
+            Delete();
         }
     }
 
-    [Header("Answer Information")]
-    public int levelNumber;
-    public string answerText;
-
-    public GameObject inputPrefab;
-    public List<TMP_InputField> input_list;
-    public Computer computer;
-
-    private Answer answer;
-    private int currentIndex = 0;
-    private bool locked = true;
-
-	// Use this for initialization
-	void Start () {
-        answer = new Answer(levelNumber, answerText);
-        input_list = new List<TMP_InputField>();
-		for(int i = 0; i < answer.GetAnswerLength(); i++)
+    public void CreateSingleInputField(int amount)
+    {
+        for (int i = 0; i < amount; i++)
         {
             GameObject obj = Instantiate(inputPrefab) as GameObject;
             obj.transform.SetParent(transform, false);
@@ -58,19 +43,6 @@ public class SingleInputFieldGenerator : MonoBehaviour {
             tmp_input.onValueChanged.AddListener(delegate { OnValueChanged(tmp_input); });
             tmp_input.readOnly = true;
             input_list.Add(tmp_input);
-        }
-	}
-
-    private void OnGUI()
-    {
-        locked = input_list[currentIndex].text.Length > 0;  
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Backspace) && !locked)
-        {
-            Delete();
         }
     }
 
@@ -98,25 +70,8 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         ChangeActivateInputField();
         input_list[currentIndex].text = "";
     }
-    
-    public void CheckAnswer()
-    {
-        bool isEqual = answer.CheckAnswerText(GetInputListForStringFormat());
-        
-        if (isEqual && GameManager.instance.stage1 < levelNumber)
-        {
-            GameManager.instance.stage1++;
-            Flowchart.BroadcastFungusMessage("答對了");
-            computer.Close();
-        }
-        else
-        {
-            Flowchart.BroadcastFungusMessage("答錯了");
-        }
-        Debug.Log("Answer is " + isEqual);
-    }
 
-    private string GetInputListForStringFormat()
+    public string GetInputListForStringFormat()
     {
         string inputAnswer = "";
         foreach (TMP_InputField aInput in input_list)
@@ -139,5 +94,10 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         }
         input_list[currentIndex].readOnly = false;
         input_list[currentIndex].ActivateInputField();
+    }
+
+    public void SetActive(bool flag)
+    {
+        gameObject.SetActive(flag);
     }
 }
