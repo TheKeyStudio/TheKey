@@ -747,6 +747,7 @@ GameObject:
   - component: {fileID: 209207740}
   - component: {fileID: 209207738}
   - component: {fileID: 209207737}
+  - component: {fileID: 209207714}
   m_Layer: 0
   m_Name: "\u9748\u9B42\u5C0D\u8A71"
   m_TagString: Untagged
@@ -821,7 +822,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 66
-    y: 69
+    y: 68
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -853,11 +854,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 29.34573, y: -24.75917}
+  scrollPos: {x: 55.174515, y: -102.81009}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 274
-  zoom: 1
+  zoom: 0.9100001
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -865,9 +866,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 209207713}
-  selectedCommands:
-  - {fileID: 209207712}
+  - {fileID: 209207710}
+  selectedCommands: []
   variables:
   - {fileID: 209207734}
   description: 
@@ -1145,6 +1145,7 @@ MonoBehaviour:
   eventHandler: {fileID: 209207708}
   commandList:
   - {fileID: 209207738}
+  - {fileID: 209207714}
   - {fileID: 209207709}
   - {fileID: 209207737}
 --- !u!114 &209207711
@@ -1215,6 +1216,35 @@ MonoBehaviour:
   - {fileID: 209207712}
   - {fileID: 209207723}
   - {fileID: 209207740}
+--- !u!114 &209207714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209207693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1850886662}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300002, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1675334869}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!114 &209207715
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1520,7 +1550,7 @@ MonoBehaviour:
   portrait: {fileID: 21300002, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
+  toPosition: {fileID: 1675334869}
   facing: 0
   useDefaultSettings: 1
   fadeDuration: 0.5
@@ -2946,15 +2976,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -117.8717
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 31.28
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2979,7 +3009,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: field of view
-      value: 40
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
@@ -5050,42 +5080,46 @@ Prefab:
     - target: {fileID: 224460819447903924, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 89.77338
+      value: 77.0124
       objectReference: {fileID: 0}
     - target: {fileID: 224460819447903924, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 221.68272
+      value: 182.17136
       objectReference: {fileID: 0}
     - target: {fileID: 224262109503775928, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 89.77338
+      value: 77.0124
       objectReference: {fileID: 0}
     - target: {fileID: 224262109503775928, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 221.68272
+      value: 182.17136
       objectReference: {fileID: 0}
     - target: {fileID: 224126222241668188, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 89.77338
+      value: 77.0124
       objectReference: {fileID: 0}
     - target: {fileID: 224126222241668188, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 221.68272
+      value: 182.17136
       objectReference: {fileID: 0}
     - target: {fileID: 224923561898597196, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 179.54675
+      value: 154.0248
       objectReference: {fileID: 0}
     - target: {fileID: 224923561898597196, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 347.36545
+      value: 289.9887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384760275771636, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e, type: 2}

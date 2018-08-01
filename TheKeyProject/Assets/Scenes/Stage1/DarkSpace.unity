@@ -419,9 +419,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 474591173}
+  - {fileID: 474591184}
   selectedCommands:
-  - {fileID: 474591194}
+  - {fileID: 474591191}
   variables: []
   description: 
   stepPause: 0
@@ -2324,7 +2324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 979733057}
+  selectedFlowchart: {fileID: 474591166}
 --- !u!4 &1041787349
 Transform:
   m_ObjectHideFlags: 1
@@ -2951,6 +2951,50 @@ Prefab:
     - target: {fileID: 1090583279496600, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224460819447903924, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 90.27056
+      objectReference: {fileID: 0}
+    - target: {fileID: 224460819447903924, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 204.73729
+      objectReference: {fileID: 0}
+    - target: {fileID: 224126222241668188, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 90.27056
+      objectReference: {fileID: 0}
+    - target: {fileID: 224126222241668188, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 204.73729
+      objectReference: {fileID: 0}
+    - target: {fileID: 224923561898597196, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 180.54112
+      objectReference: {fileID: 0}
+    - target: {fileID: 224923561898597196, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 331.1161
+      objectReference: {fileID: 0}
+    - target: {fileID: 224262109503775928, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 90.27056
+      objectReference: {fileID: 0}
+    - target: {fileID: 224262109503775928, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 204.73729
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754854037595022, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ebf71d3d2554974d8ea7e9a0bb0534e, type: 2}
