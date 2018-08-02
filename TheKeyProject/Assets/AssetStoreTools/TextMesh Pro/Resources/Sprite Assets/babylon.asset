@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2019389346, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Name: babylon
+  m_EditorClassIdentifier: 
+  hashCode: 753306863
+  material: {fileID: 21831840514992576}
+  materialHashCode: 0
+  spriteSheet: {fileID: 2800000, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  spriteInfoList:
+  - id: 0
+    x: 87
+    y: 644
+    width: 37
+    height: 33
+    xOffset: 7
+    yOffset: 28
+    xAdvance: 37
+    scale: 1
+    name: baby1
+    hashCode: 117436457
+    unicode: 0
+    pivot: {x: -18.5, y: 16.5}
+    sprite: {fileID: 21300000, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 1
+    x: 79
+    y: 576
+    width: 53
+    height: 34
+    xOffset: 5
+    yOffset: 30
+    xAdvance: 53
+    scale: 1
+    name: baby2
+    hashCode: 117436458
+    unicode: 0
+    pivot: {x: -26.5, y: 17}
+    sprite: {fileID: 21300002, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 2
+    x: 73
+    y: 506
+    width: 64
+    height: 40
+    xOffset: 5
+    yOffset: 30
+    xAdvance: 64
+    scale: 1
+    name: baby3
+    hashCode: 117436459
+    unicode: 0
+    pivot: {x: -32, y: 20}
+    sprite: {fileID: 21300004, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 3
+    x: 73
+    y: 435
+    width: 64
+    height: 46
+    xOffset: 5
+    yOffset: 35
+    xAdvance: 64
+    scale: 1
+    name: baby4
+    hashCode: 117436460
+    unicode: 0
+    pivot: {x: -32, y: 23}
+    sprite: {fileID: 21300006, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 4
+    x: 73
+    y: 368
+    width: 64
+    height: 46
+    xOffset: 5
+    yOffset: 35
+    xAdvance: 64
+    scale: 1
+    name: baby5
+    hashCode: 117436461
+    unicode: 0
+    pivot: {x: -32, y: 23}
+    sprite: {fileID: 21300008, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 5
+    x: 71
+    y: 299
+    width: 67
+    height: 49
+    xOffset: 5
+    yOffset: 35
+    xAdvance: 67
+    scale: 1
+    name: baby6
+    hashCode: 117436462
+    unicode: 0
+    pivot: {x: -33.5, y: 24.5}
+    sprite: {fileID: 21300010, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 6
+    x: 71
+    y: 234
+    width: 69
+    height: 44
+    xOffset: 5
+    yOffset: 35
+    xAdvance: 69
+    scale: 1
+    name: baby7
+    hashCode: 117436463
+    unicode: 0
+    pivot: {x: -34.5, y: 22}
+    sprite: {fileID: 21300012, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 7
+    x: 71
+    y: 166
+    width: 69
+    height: 45
+    xOffset: 5
+    yOffset: 35
+    xAdvance: 69
+    scale: 1
+    name: baby8
+    hashCode: 117436448
+    unicode: 0
+    pivot: {x: -34.5, y: 22.5}
+    sprite: {fileID: 21300014, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 8
+    x: 69
+    y: 96
+    width: 71
+    height: 51
+    xOffset: 5
+    yOffset: 40
+    xAdvance: 71
+    scale: 1
+    name: baby9
+    hashCode: 117436449
+    unicode: 0
+    pivot: {x: -35.5, y: 25.5}
+    sprite: {fileID: 21300016, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  - id: 9
+    x: 90
+    y: 34
+    width: 33
+    height: 39
+    xOffset: 5
+    yOffset: 30
+    xAdvance: 33
+    scale: 1
+    name: baby10
+    hashCode: -419564167
+    unicode: 0
+    pivot: {x: -16.5, y: 19.5}
+    sprite: {fileID: 21300018, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+  fallbackSpriteAssets: []
+--- !u!21 &21831840514992576
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TextMeshPro/Sprite
+  m_Shader: {fileID: 4800000, guid: 3a1c68c8292caf046bd21158886c5e40, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b047ea6390af96a44bb6f3684f3e68e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
