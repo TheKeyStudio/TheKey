@@ -66,7 +66,7 @@ public class TextLinkScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             if (linkIndex != -1 && linkIndex != m_selectedLink)
             {
                 m_selectedLink = linkIndex;
-
+                
                 // Debug.Log("Link ID: \"" + linkInfo.GetLinkID() + "\"   Link Text: \"" + linkInfo.GetLinkText() + "\""); // Example of how to retrieve the Link ID and Link Text.
 
                 Vector3 worldPointInRectangle = Vector3.zero;

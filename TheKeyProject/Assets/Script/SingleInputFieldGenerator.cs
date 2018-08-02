@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 /*
  * This class is low cohesion, need to refactor 
@@ -13,10 +14,25 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 
     public GameObject inputPrefab;
     public List<TMP_InputField> input_list = new List<TMP_InputField>();
+    
 
     private int currentIndex = 0;
     private bool locked = true;
-    
+
+    private bool doneAnswer = false;
+
+    public bool DoneAnswer
+    {
+        get
+        {
+            return doneAnswer;
+        }
+
+        set
+        {
+            doneAnswer = value;
+        }
+    }
 
     private void OnGUI()
     {
@@ -29,6 +45,10 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Backspace) && !locked)
         {
             Delete();
+        }
+        if (DoneAnswer)
+        {
+            input_list[input_list.Count].onEndEdit.RemoveAllListeners();
         }
     }
 
@@ -44,6 +64,13 @@ public class SingleInputFieldGenerator : MonoBehaviour {
             tmp_input.readOnly = true;
             input_list.Add(tmp_input);
         }
+        input_list[amount-1].onEndEdit.AddListener(delegate { OnEndEdit(); });
+    }
+
+    private void OnEndEdit()
+    {
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            this.transform.GetComponentInParent<AnswerGroup>().CheckAnswer();
     }
 
     public void OnSelect()
@@ -81,7 +108,7 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         return inputAnswer;
     }
     
-    private void ChangeActivateInputField()
+    public void ChangeActivateInputField()
     {
 
         if (currentIndex >= input_list.Count)
@@ -99,5 +126,13 @@ public class SingleInputFieldGenerator : MonoBehaviour {
     public void SetActive(bool flag)
     {
         gameObject.SetActive(flag);
+    }
+
+    public void DisableAllInputField()
+    {
+        foreach(TMP_InputField inputfield in input_list)
+        {
+            inputfield.interactable = false;
+        }
     }
 }

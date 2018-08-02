@@ -30,8 +30,10 @@ public class AnswerGroup : MonoBehaviour {
     [Header("Input Field Generator")]
     public GameObject answerInputFieldGeneratorPrefab;
     [SerializeField]private List<SingleInputFieldGenerator> singleInputFieldList;
+    private int currentIndex = -1;
 
     public Computer computer;
+    public GameObject submitButton;
 
     private void Start()
     {
@@ -44,35 +46,53 @@ public class AnswerGroup : MonoBehaviour {
             singleInputFieldScript.CreateSingleInputField(answer.GetAnswerLength());
             singleInputFieldList.Add(singleInputFieldScript);
         }
-        singleInputFieldList[0].SetActive(true); //show first one
+        singleInputFieldList[0].SetActive(true);
+        singleInputFieldList[0].ChangeActivateInputField();
+        currentIndex = 0;
     }
+    
 
-    public void CheckAnswerByIndex(int index)
+    public void CheckAnswer()
     {
-        string inputText = singleInputFieldList[index].GetInputListForStringFormat();
-        bool isEqual = answers[index].CheckAnswerText(inputText);
+        string inputText = singleInputFieldList[currentIndex].GetInputListForStringFormat();
+        bool isEqual = answers[currentIndex].CheckAnswerText(inputText);
 
         if (isEqual)
         {
             GameManager.instance.stage1++;
             Flowchart.BroadcastFungusMessage("答對了");
-            computer.Close();
+
+            Debug.Log("Answer is Corret");
+            submitButton.SetActive(false);
+            singleInputFieldList[currentIndex].DoneAnswer = true;
         }
         else
         {
+            Debug.Log("Answer is Wrong");
             Flowchart.BroadcastFungusMessage("答錯了");
         }
-        Debug.Log("Answer is " + isEqual);
     }
 
     public void ChangeInputFieldByIndex(int index)
     {
-        //deactive all and active the index
-        foreach(SingleInputFieldGenerator singleInput in singleInputFieldList)
+        //if wanna index is not equal current index, then disative current input field and active wanna input field
+        if(index != currentIndex)
         {
-            singleInput.SetActive(false);
+            singleInputFieldList[currentIndex].SetActive(false);
+            singleInputFieldList[index].SetActive(true);
+            singleInputFieldList[index].ChangeActivateInputField();
+            currentIndex = index;
         }
-        singleInputFieldList[index].SetActive(true);
+
+        //if already done answer, then set ative of submit button to false
+        if (singleInputFieldList[index].DoneAnswer)
+        {
+            submitButton.SetActive(false);
+        }
+        else
+        {
+            submitButton.SetActive(true);
+        }
     }
 
 }
