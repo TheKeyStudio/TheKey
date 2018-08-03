@@ -6,6 +6,9 @@ using Fungus;
 
 public class Wisp : Npc {
 
+    [Range(0.1f, 3f)] public float waveAmplitude = 0.5f;
+    [Range(0.1f, 3f)] public float waveSpeed = 1f;
+
     //可以重複對話的NPC
 
     public Flowchart flowchart;
@@ -26,7 +29,7 @@ public class Wisp : Npc {
         base.Update();
         elapsedTime += Time.deltaTime;
         float x = transform.position.x;
-        float y = (3f * Mathf.Sin(0.8f * elapsedTime)) + original_y;
+        float y = (waveAmplitude * Mathf.Sin(waveSpeed * elapsedTime)) + original_y;
         transform.position = new Vector3(x, y, 0);
 
         if (!flowchart.GetBooleanVariable("Talking") && !talkAble)

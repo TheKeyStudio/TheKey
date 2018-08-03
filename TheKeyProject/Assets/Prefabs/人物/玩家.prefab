@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865823288027870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70.4, y: 23.31, z: 0.03125}
-  m_LocalScale: {x: 2.5039496, y: 1.7203442, z: 1}
+  m_LocalPosition: {x: -4.08, y: -0.38, z: 0.03125}
+  m_LocalScale: {x: 0.632284, y: 0.632284, z: 0.632284}
   m_Children:
   - {fileID: 4106374340953762}
   m_Father: {fileID: 0}
@@ -165,13 +165,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
   horizontalDirection: 0
-  runSpeed: 100
+  runSpeed: 30
   focus: {fileID: 0}
   speedX: 0
   speedY: 0
-  yForce: 800
+  yForce: 500
   groundCheck: {fileID: 4106374340953762}
-  groundRadius: 0.5
+  groundRadius: 0.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d377190ba58cad4499e321d841dd0980, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -209,8 +209,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 993082725
-  m_SortingLayer: 5
+  m_SortingLayerID: -892812411
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300018, guid: ddd7fd01d33468b4588885883bfce403, type: 3}
   m_Color: {r: 0.9528302, g: 0.9459517, b: 0.9033909, a: 1}
