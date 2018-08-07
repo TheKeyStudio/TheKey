@@ -4,14 +4,14 @@ using UnityEngine;
 using Fungus;
 public class Drag_test : MonoBehaviour {
 
-    private bool Test1 = false;
+    public bool  Test1 = false;
     public bool  Test2 = false;
 
     public void setTest1T()
     {
         Test1 = true;
     }
-    public void setTest1F()
+    public void SetAllTestFalese()
     {
         Test1 = false;
     }
@@ -36,6 +36,13 @@ public class Drag_test : MonoBehaviour {
         }
     }
 
+    int[] array = new int[2];
+
+    public void SetTest(int i)
+    {
+        array[i] = 1;
+        Debug.Log(array[i]);
+    }
 
 
 }
