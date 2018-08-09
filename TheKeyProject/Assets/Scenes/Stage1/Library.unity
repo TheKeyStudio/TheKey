@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0900cc90c55ad5d4098786c2e37e7f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: DarkSpace
+  nextScene: Main1
 --- !u!1001 &1730505388
 Prefab:
   m_ObjectHideFlags: 0
@@ -1171,7 +1171,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1932326129}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1932326131}
   variables: []
   description: 
   stepPause: 0

@@ -2404,6 +2404,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114983591015059586, guid: 3e675a2881541ad4985376f31d204645,
         type: 2}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114983591015059586, guid: 3e675a2881541ad4985376f31d204645,
+        type: 2}
       propertyPath: selectedCommands.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -2591,6 +2596,16 @@ Prefab:
       propertyPath: commandList.Array.data[4]
       value: 
       objectReference: {fileID: 851516895}
+    - target: {fileID: 114669171010813932, guid: 3e675a2881541ad4985376f31d204645,
+        type: 2}
+      propertyPath: toPosition
+      value: 
+      objectReference: {fileID: 1240872594}
+    - target: {fileID: 114793157154265184, guid: 3e675a2881541ad4985376f31d204645,
+        type: 2}
+      propertyPath: toPosition
+      value: 
+      objectReference: {fileID: 1240872593}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e675a2881541ad4985376f31d204645, type: 2}
   m_IsPrefabParent: 0
@@ -2607,7 +2622,7 @@ GameObject:
   m_PrefabInternal: {fileID: 850561182}
 --- !u!114 &851516893
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851516892}
@@ -3739,6 +3754,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b76d8fc043c31046aead557f5553c81, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1240872593 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224285012653273402, guid: 4b76d8fc043c31046aead557f5553c81,
+    type: 2}
+  m_PrefabInternal: {fileID: 1240872592}
+--- !u!224 &1240872594 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224580856799646330, guid: 4b76d8fc043c31046aead557f5553c81,
+    type: 2}
+  m_PrefabInternal: {fileID: 1240872592}
 --- !u!1 &1245742087
 GameObject:
   m_ObjectHideFlags: 0
