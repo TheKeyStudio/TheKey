@@ -9,21 +9,15 @@ public class PlayerController : MonoBehaviour {
     private bool facingRight = true;
     private Vector3 m_Velocity = Vector3.zero;
     private bool canMove = true;
-    
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
 
     public float runSpeed = 100f;
     public Interactable focus;
-
-    [Header("目前的水平數度")]
-    public float speedX;
-    [Header("目前的垂直數度")]
-    public float speedY;
     
-    [Range(500, 1000)]
-    public float yForce = 800f;
+    [Range(300, 1000)]
+    public float yForce = 500f;
     
 
     public Transform groundCheck;
