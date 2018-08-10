@@ -5,7 +5,6 @@ using UnityEngine;
 
 public abstract class Npc : Interactable {
 
-    public GameObject noticeIcon;
     [SerializeField] protected bool talkAble;
 
     public override void Init()
@@ -40,17 +39,5 @@ public abstract class Npc : Interactable {
     }
 
     public abstract void Talk();
-
-    public override void Highlight()
-    {
-        noticeIcon.SetActive(true);
-        spriteRenderer.color = new Color32(179, 221, 112, 255);
-    }
-
-    public override void UnHighlight()
-    {
-        base.UnHighlight();
-        noticeIcon.SetActive(false);
-    }
     
 }

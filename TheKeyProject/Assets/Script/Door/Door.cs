@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 
 public abstract class Door : Interactable {
-
-    // Use this for initialization
+    
     [Header("連接到某場景")]
     public string nextScene;
 
@@ -18,5 +17,11 @@ public abstract class Door : Interactable {
     {
         Debug.Log("Going to " + nextScene);
         SceneManager.LoadScene(nextScene);
+    }
+
+    public void ToNextScene(string next)
+    {
+        Debug.Log("Going to " + next);
+        SceneManager.LoadScene(next);
     }
 }

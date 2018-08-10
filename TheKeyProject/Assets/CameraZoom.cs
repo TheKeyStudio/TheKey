@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class CameraZoom : MonoBehaviour {
 
+    public GameObject cameraObject;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,12 +21,16 @@ public class CameraZoom : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-
+            cameraObject.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
 
+        if (other.CompareTag("Player"))
+        {
+            cameraObject.SetActive(false);
+        }
     }
 }

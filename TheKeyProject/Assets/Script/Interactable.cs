@@ -8,11 +8,12 @@ using UnityEngine;
  */
 
 public abstract class Interactable : MonoBehaviour {
-
+    
     public float radius = 3f;
     public KeyCode interactKey;
     public Color originalColor;
     public SpriteRenderer spriteRenderer;
+    public GameObject noticeIcon;
 
     bool isFocus = false;
     Transform player;
@@ -37,12 +38,14 @@ public abstract class Interactable : MonoBehaviour {
 
     public virtual void Highlight()
     {
-        spriteRenderer.color = Color.yellow;
+        //spriteRenderer.color = Color.yellow;
+        noticeIcon.SetActive(true);
     }
 
     public virtual void UnHighlight()
     {
-        spriteRenderer.color = originalColor;
+        //spriteRenderer.color = originalColor;
+        noticeIcon.SetActive(false);
     }
 
     public virtual void Update()
@@ -85,6 +88,4 @@ public abstract class Interactable : MonoBehaviour {
         player = null;
     }
     
-
-
 }
