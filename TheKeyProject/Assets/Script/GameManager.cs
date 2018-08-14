@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public bool game1 = false;                  //第一階段的關卡 全部破完 才能通往下一關;
     public readonly int totalStage = 3;
+    public int stage1;
     public int[] stages;
     public bool dark;
 
