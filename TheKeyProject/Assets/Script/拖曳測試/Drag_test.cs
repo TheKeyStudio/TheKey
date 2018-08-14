@@ -11,7 +11,7 @@ public class Drag_test : MonoBehaviour {
     {
         Test1 = true;
     }
-    public void SetAllTestFalese()
+    public void SetTest1F()
     {
         Test1 = false;
     }

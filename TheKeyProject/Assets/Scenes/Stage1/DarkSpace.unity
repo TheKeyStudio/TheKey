@@ -428,8 +428,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 474591168}
-  selectedCommands:
-  - {fileID: 474591171}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1156,7 +1155,7 @@ MonoBehaviour:
   message: "\u958B\u9580"
 --- !u!114 &474591200
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
@@ -1389,7 +1388,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &615922599
 Transform:
@@ -1499,7 +1498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49695fa9f98f5549a823397db3f9a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
   interactKey: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
@@ -3661,7 +3659,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1001 &2042009593
 Prefab:
