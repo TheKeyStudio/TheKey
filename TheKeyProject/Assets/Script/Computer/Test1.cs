@@ -22,7 +22,7 @@ public class Test1 : MonoBehaviour {
         {
             
             Flowchart.BroadcastFungusMessage("答對了");
-            gameManager.stage1 += 1;
+            //gameManager.stage1 += 1;
             gameObject.SetActive(false);
         }
         else

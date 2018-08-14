@@ -48,7 +48,7 @@ public class Wisp : Npc {
     {
         startCoolDowmTime = talkCoolDownTime;
 
-        int LevelKey = GameManager.instance.stage1 + 1;
+        int LevelKey = GameManager.instance.GetStageLevel(1) + 1;
         string callMsg = "靈魂對話" + LevelKey.ToString();
         Flowchart.BroadcastFungusMessage(callMsg);
         Debug.Log(LevelKey);

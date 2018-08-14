@@ -60,7 +60,6 @@ public class AnswerGroup : MonoBehaviour {
 
         if (isEqual)
         {
-            GameManager.instance.stage1++;
             Flowchart.BroadcastFungusMessage("答對了");
 
             Debug.Log("Answer is Corret");
@@ -71,6 +70,13 @@ public class AnswerGroup : MonoBehaviour {
         {
             Debug.Log("Answer is Wrong");
             Flowchart.BroadcastFungusMessage("答錯了");
+        }
+
+        if (AllAnswerIsSolved())
+        {
+            GameManager.instance.NextLevel(stage);
+            Flowchart.BroadcastFungusMessage("全部答對了");
+            Debug.Log("全部答對了");
         }
     }
 
@@ -99,6 +105,16 @@ public class AnswerGroup : MonoBehaviour {
         {
             submitButton.SetActive(true);
         }
+    }
+
+    private bool AllAnswerIsSolved()
+    {
+        bool isSolved = true;
+        foreach(SingleInputFieldGenerator s in singleInputFieldList)
+        {
+            isSolved = isSolved && s.IsSolved;
+        }
+        return isSolved;
     }
 
 }

@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public bool game1 = false;                  //第一階段的關卡 全部破完 才能通往下一關;
     public readonly int totalStage = 3;
-    public int stage1;
-    public int[] stages;
+    [SerializeField]private int[] stages;
     public bool dark;
 
     void Awake()
@@ -18,6 +17,8 @@ public class GameManager : MonoBehaviour {
         {
             instance = this;
             dark = true;
+            stages = new int[totalStage];
+
             DontDestroyOnLoad(this);
 
             Debug.Log(game1);
@@ -33,5 +34,11 @@ public class GameManager : MonoBehaviour {
     {
         int index = stage - 1;
         stages[index]++;
+    }
+
+    public int GetStageLevel(int stage)
+    {
+        int index = stage - 1;
+        return stages[index];
     }
 }

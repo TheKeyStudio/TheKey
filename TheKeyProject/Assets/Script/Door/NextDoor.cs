@@ -6,6 +6,7 @@ public class NextDoor : Door {
     
     public override void Interact()
     {
+        /*
         base.Interact();
         int player_done_level = GameManager.instance.stage1;
         Debug.Log(player_done_level + ":" + doorNumber);
@@ -18,6 +19,7 @@ public class NextDoor : Door {
         {
             Flowchart.BroadcastFungusMessage("關卡未通關");
         }
+        */
     }
     
 }
