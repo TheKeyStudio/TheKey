@@ -24,6 +24,7 @@ public class AnswerGroup : MonoBehaviour {
     }
 
     [Header("Answer Information")]
+    public int stage;
     public int levelNumber;
     [SerializeField]private List<Answer> answers;
 
@@ -64,7 +65,7 @@ public class AnswerGroup : MonoBehaviour {
 
             Debug.Log("Answer is Corret");
             submitButton.SetActive(false);
-            singleInputFieldList[currentIndex].DoneAnswer = true;
+            singleInputFieldList[currentIndex].DoneAnswer();
         }
         else
         {
@@ -84,8 +85,13 @@ public class AnswerGroup : MonoBehaviour {
             currentIndex = index;
         }
 
+        CheckAnswerIsSolvedAndAction();
+    }
+
+    private void CheckAnswerIsSolvedAndAction()
+    {
         //if already done answer, then set ative of submit button to false
-        if (singleInputFieldList[index].DoneAnswer)
+        if (singleInputFieldList[currentIndex].IsSolved)
         {
             submitButton.SetActive(false);
         }

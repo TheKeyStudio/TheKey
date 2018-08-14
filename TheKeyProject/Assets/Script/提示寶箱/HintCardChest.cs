@@ -11,23 +11,25 @@ public class HintCardChest : Interactable {
     private Animator animator;
 
     [Header("Hint Card")]
-    public string hintCardCode;
-    public Sprite hintCardSprite;
-    public bool unlocked = false;
-    
+    [SerializeField] private HintCard hintCard;
 
     public override void Init()
     {
         base.Init();
         interactKey = KeyCode.Z;
         animator = GetComponent<Animator>();
-        unlocked = HintCardManager.instance.IsUnlocked(hintCardCode);
+        
+        if (hintCard.Unlocked)
+        {
+            animator.SetBool("Opened", true);
+        }
     }
 
     public override void Interact()
     {
         base.Interact();
-        Open();
+        if (!hintCard.Unlocked)
+            Open();
     }
 
     public void Open()
@@ -48,19 +50,20 @@ public class HintCardChest : Interactable {
     {
         string text = inputField.text;
         
-        if(!unlocked && text.Equals(hintCardCode, StringComparison.InvariantCultureIgnoreCase))
+        if(!hintCard.Unlocked && text.Equals(hintCard.HintCardCode, StringComparison.InvariantCultureIgnoreCase))
         {
-            BookManager.instance.AddPage(hintCardSprite);
-            HintCardManager.instance.UnlockHintCard(hintCardCode);
-            unlocked = true;
+            BookManager.instance.AddPage(hintCard.HintCardSprite);
+            HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
+            hintCard.Unlocked = true;
             Destroy(gameObject);
             playerController.ActiveMove();
-            Debug.Log("Unlocked " + hintCardCode);
+            Debug.Log("Unlocked " + hintCard.HintCardCode);
         }
         else
         {
-            Debug.Log("hint card not available" + hintCardCode);
+            Debug.Log("hint card not available" + hintCard.HintCardCode);
         }
+        
 
     }
     

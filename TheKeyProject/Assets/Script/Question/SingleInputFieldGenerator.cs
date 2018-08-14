@@ -18,19 +18,13 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 
     private int currentIndex = 0;
     private bool locked = true;
+    private bool isSolved = false;
 
-    private bool doneAnswer = false;
-
-    public bool DoneAnswer
+    public bool IsSolved
     {
         get
         {
-            return doneAnswer;
-        }
-
-        set
-        {
-            doneAnswer = value;
+            return isSolved;
         }
     }
 
@@ -45,10 +39,6 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Backspace) && !locked)
         {
             Delete();
-        }
-        if (DoneAnswer)
-        {
-            input_list[input_list.Count].onEndEdit.RemoveAllListeners();
         }
     }
 
@@ -134,5 +124,11 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         {
             inputfield.interactable = false;
         }
+    }
+
+    public void DoneAnswer()
+    {
+        input_list[input_list.Count - 1].onEndEdit.RemoveAllListeners();
+        isSolved = true;
     }
 }

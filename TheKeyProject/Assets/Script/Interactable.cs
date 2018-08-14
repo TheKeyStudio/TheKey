@@ -9,7 +9,6 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour {
     
-    public float radius = 3f;
     public KeyCode interactKey;
     public Color originalColor;
     public SpriteRenderer spriteRenderer;
@@ -52,26 +51,16 @@ public abstract class Interactable : MonoBehaviour {
     {
         if (isFocus)
         {
-            float distance = Vector2.Distance(player.position, transform.position);
-            if(distance <= radius)
+            Highlight();
+            if (Input.GetKey(interactKey))
             {
-                Highlight();
-                if (Input.GetKey(interactKey))
-                {
-                    Interact();
-                }
+                Interact();
             }
         }
         else
         {
             UnHighlight();
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 
     public void OnFocused(Transform playerTransform)
