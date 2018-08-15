@@ -766,7 +766,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.6058269
+      value: -3.775679
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1250,7 +1250,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.060001787
+      value: 0.060001906
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1553,6 +1553,96 @@ Prefab:
       propertyPath: levelNumber
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 21831840514992576, guid: 81a7997145057184e87c25caa098b769,
+        type: 2}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 21831840514992576, guid: 81a7997145057184e87c25caa098b769,
+        type: 2}
+    - target: {fileID: 114525060965300774, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: answers.Array.data[0].answerText
+      value: 1115
+      objectReference: {fileID: 0}
+    - target: {fileID: 114525060965300774, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: answers.Array.data[1].answerText
+      value: action
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_text
+      value: '<link><sprite="babylon" name="baby10"><sprite="babylon" name="baby1">
+        <sprite="babylon" name="baby10"><sprite="babylon" name="baby5"></link>
+
+        <link>.-  -.-.  -  ..  ---  -.</link>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288018587183210, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+      propertyPath: m_Name
+      value: TMP SubMeshUI [TextMeshPro/Sprite]
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_textInfo.linkCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 75b4f2e1845572d4d87e22ba04067207,
+        type: 2}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_spriteAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 81a7997145057184e87c25caa098b769,
+        type: 2}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_isDefaultMaterial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_textInfo.materialCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1321715869762034, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+      propertyPath: m_Name
+      value: TMP SubMeshUI [simhei SDF Material + LiberationSans SDF Atlas]
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
   m_IsPrefabParent: 0
@@ -1677,9 +1767,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1472097125}
   - component: {fileID: 1472097126}
-  - component: {fileID: 1472097129}
-  - component: {fileID: 1472097128}
-  - component: {fileID: 1472097127}
   m_Layer: 0
   m_Name: "\u6C99\u767C"
   m_TagString: Untagged
@@ -1746,51 +1833,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!58 &1472097127
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1472097124}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.85, y: 0.62}
-  serializedVersion: 2
-  m_Radius: 3
---- !u!114 &1472097128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1472097124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd6634adc5e41e45bf98bfe092c42cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  spriteRenderer: {fileID: 0}
-  noticeIcon: {fileID: 1262449640}
-  hintCard: {fileID: 1472097129}
---- !u!114 &1472097129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1472097124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7f5a55ad35c9748b16948766018e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hintCardCode: Morse
-  hintCardSprite: {fileID: 21300000, guid: 6c920b35b5ed69945bd374b4ab76617f, type: 3}
-  unlocked: 0
 --- !u!1001 &1472098035
 Prefab:
   m_ObjectHideFlags: 0

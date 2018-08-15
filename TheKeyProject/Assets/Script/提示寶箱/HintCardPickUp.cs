@@ -17,7 +17,6 @@ public class HintCardPickUp : Interactable {
     public override void Interact()
     {
         base.Interact();
-
         Pickup();
     }
 
@@ -29,6 +28,8 @@ public class HintCardPickUp : Interactable {
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
             Debug.Log("Unlocked " + hintCard.HintCardCode);
+            UnHighlight();
+            enabled = false;
         }
     }
 }

@@ -633,7 +633,7 @@ Transform:
   m_GameObject: {fileID: 678063094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.687, y: 3.711, z: 0}
-  m_LocalScale: {x: 0.36095122, y: 0.36095122, z: 0.36095122}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.36095122}
   m_Children: []
   m_Father: {fileID: 1808127174}
   m_RootOrder: 0
@@ -674,7 +674,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 11
   m_Sprite: {fileID: 21300002, guid: 2132821313c304540826711ce82ef680, type: 3}
-  m_Color: {r: 0.38679248, g: 0.3302332, b: 0.3302332, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -692,7 +692,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.6058269
+      value: -3.3192022
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1176,7 +1176,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.060001787
+      value: 0.060001668
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1420,116 +1420,6 @@ Prefab:
     - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_text
-      value: "\u6211\u8F15\u6613<link> ....  .-  -.-.  -.- </link>\u9032\u4E00\u5BB6\u516C\u53F8\u8CC7\u6599\u5EAB\u7ACA\u53D6\u4E86\u500B\u8CC7\uFF0C\n\u800C\u4E14\u6211\u767C\u73FE\u5230\u4E00\u500B\u6709\u9322\u4EBA\u7684\u5C0F\u5B69\u53EB\u4F5C<link>.
-        \ ...-  .  .-..  -.--  -.</link>"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114277983187244162, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114974429161510450, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114159844493198726, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1388438599086702, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114181689785255272, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1288018587183210, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
-      propertyPath: m_Name
-      value: TMP SubMeshUI [simhei SDF Material + LiberationSans SDF Atlas]
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_textInfo.characterCount
-      value: 81
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_textInfo.spaceCount
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_textInfo.wordCount
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_textInfo.linkCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_textInfo.materialCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975,
-        type: 2}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_spriteAsset
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_isDefaultMaterial
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_padding
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114525060965300774, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: answers.Array.data[0].answerText
-      value: hack
-      objectReference: {fileID: 0}
-    - target: {fileID: 114525060965300774, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: answers.Array.data[1].answerText
-      value: evelyn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
