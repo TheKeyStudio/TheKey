@@ -767,7 +767,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.775679
+      value: -3.3192022
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1251,7 +1251,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.060001906
+      value: 0.060001668
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1644,6 +1644,11 @@ Prefab:
         type: 2}
       propertyPath: answers.Array.data[1].answerText
       value: kidnap
+      objectReference: {fileID: 0}
+    - target: {fileID: 58939067558823126, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_Radius
+      value: 6.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
