@@ -16,7 +16,7 @@ public abstract class Door : Interactable {
     public void ToNextScene()
     {
         Debug.Log("Going to " + nextScene);
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
     }
 
     public void ToNextScene(string next)

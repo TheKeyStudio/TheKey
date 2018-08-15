@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelDoor : Door
+public class LevelDoor : Door   
 {
     public int passNumber;
     [SerializeField] private int stageNumber;
