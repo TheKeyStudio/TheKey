@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fungus;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class HintCardPickUp : Interactable {
 
     [Header("Hint Card")]
     [SerializeField] private HintCard hintCard;
+
+    public Flowchart getItemFlowchart;
 
     public override void Init()
     {
@@ -27,7 +30,8 @@ public class HintCardPickUp : Interactable {
             BookManager.instance.AddPage(hintCard.HintCardSprite);
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
-            Debug.Log("Unlocked " + hintCard.HintCardCode);
+            getItemFlowchart.SetStringVariable("itemName", hintCard.HintCardCode);
+            Flowchart.BroadcastFungusMessage("ItemGet");
             UnHighlight();
             enabled = false;
         }
