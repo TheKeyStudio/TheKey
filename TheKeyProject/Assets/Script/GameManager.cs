@@ -18,11 +18,7 @@ public class GameManager : MonoBehaviour {
             instance = this;
             dark = true;
             stages = new int[totalStage];
-
             DontDestroyOnLoad(this);
-
-            Debug.Log(game1);
-            Debug.Log("Dark: " + dark);
         }
         else if (this != instance)
         {
