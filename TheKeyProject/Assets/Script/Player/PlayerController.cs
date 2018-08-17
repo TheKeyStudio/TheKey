@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D playerRigid2D;
     private Animator playerAnimator;
     private bool facingRight = true;
-    private Vector3 m_Velocity = Vector3.zero;
+    public Vector3 m_Velocity = Vector3.zero;
     private bool canMove = true;
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
@@ -28,37 +28,33 @@ public class PlayerController : MonoBehaviour {
     public bool grounded;
     public bool jump;
 
-
-    // Use this for initialization
+    
     void Awake ()
     {
         playerRigid2D = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
         horizontalDirection = Input.GetAxis("Horizontal") * runSpeed;
-        //canMove = GameManager.instance.CanPlayerMove;
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
         }
-        
     }
 
     private void FixedUpdate()
     {
         horizontalDirection *= Time.fixedDeltaTime;
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        playerAnimator.SetBool("Jump", !grounded);
         if (canMove)
         {
             MoveX();
             Jump();
             jump = false;
-            playerAnimator.SetBool("Jump", !grounded);
         }
         else
         {
@@ -96,13 +92,13 @@ public class PlayerController : MonoBehaviour {
         if(focus!=null)
             focus.OnDefoucused();
         focus = null;
-
     }
     
     public void MoveX()
     {
         Vector3 targetVelocity = new Vector2(horizontalDirection * 10f, playerRigid2D.velocity.y);
         playerRigid2D.velocity = Vector3.SmoothDamp(playerRigid2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+        Debug.Log(playerRigid2D.velocity);
         // If the input is moving the player right and the player is facing left...
         if (horizontalDirection > 0 && !facingRight)
         {
@@ -140,6 +136,7 @@ public class PlayerController : MonoBehaviour {
 
     public void DeactiveMove()
     {
+        playerRigid2D.velocity = Vector3.zero;
         canMove = false;
     }
 
