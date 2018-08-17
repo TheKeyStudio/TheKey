@@ -98,7 +98,6 @@ public class PlayerController : MonoBehaviour {
     {
         Vector3 targetVelocity = new Vector2(horizontalDirection * 10f, playerRigid2D.velocity.y);
         playerRigid2D.velocity = Vector3.SmoothDamp(playerRigid2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-        Debug.Log(playerRigid2D.velocity);
         // If the input is moving the player right and the player is facing left...
         if (horizontalDirection > 0 && !facingRight)
         {

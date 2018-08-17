@@ -22,7 +22,7 @@ GameObject:
   m_Layer: 11
   m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1865823288027870}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f29b1242fe2e9c645a6e30b4532e7921, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -163,12 +163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555430595cb2be44db5d93b92521e630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Velocity: {x: 0, y: 0, z: 0}
   m_MovementSmoothing: 0.05
   horizontalDirection: 0
   runSpeed: 40
   focus: {fileID: 0}
-  speedX: 0
-  speedY: 0
   yForce: 500
   groundCheck: {fileID: 4106374340953762}
   groundRadius: 0.4
