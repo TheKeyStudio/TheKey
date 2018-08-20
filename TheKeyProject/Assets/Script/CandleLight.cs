@@ -4,44 +4,36 @@ using UnityEngine;
 
 public class CandleLight : MonoBehaviour {
     private Light lighter;
-    private float lightIntensity;
-    private float timeTemp;
+    private float originalIntensity;
+    private float nextLightIntensity;
+    public float smooth;
 
     [Range(0.5f, 3f)]
-    public float lightVolunm = 0.1f;
-
-    [Range(0.01f, 1f)]
-    public float lightTime = 0.3f;
-
-    [Range(0.01f, 1f)]
-    public float lightRate = 0.2f;
-
-
+    public float lightVolunm = 1f;
+    
+    
     // Use this for initialization
     void Start () {
         lighter = GetComponent<Light>();
-        lightIntensity = lighter.intensity;
+        originalIntensity = lighter.intensity;
 
-        InvokeRepeating("StartEmitt", lightTime, lightRate);
+        InvokeRepeating("RandomIntensity", 0.2f, 0.1f);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        timeTemp += Time.deltaTime;
+        StartEmitt();
     }
 
     private void StartEmitt()
     {
+        lighter.intensity = Mathf.Lerp(lighter.intensity, nextLightIntensity, smooth * Time.deltaTime);
+        Debug.Log(nextLightIntensity);
+    }
 
-        if (lighter.intensity >= lightIntensity - lightVolunm)
-        {
-            lighter.intensity = lightIntensity - timeTemp + Random.Range(0f, lightIntensity - lighter.intensity);
-        }
-        else
-        {
-            lighter.intensity = Random.Range(lighter.intensity, lightIntensity);
-            timeTemp = 0f;
-        }
+    private void RandomIntensity()
+    {
+        nextLightIntensity = Random.Range(lightVolunm, originalIntensity);
     }
 }
