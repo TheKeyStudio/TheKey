@@ -153,8 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9a8ece655f70e4dafc055790dd3088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage1FirstTimeGoInto: 0
   game1: 0
-  stage1: 0
+  stages: 
+  dark: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,61 +340,62 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 340.71402
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 149.46527
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 9.9375
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4285215650961184, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
+    - target: {fileID: 4584392771493310, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114567302921844360, guid: a95e3ca11a859f84ba1790502b93159f,
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114567302921844360, guid: a95e3ca11a859f84ba1790502b93159f,
+    - target: {fileID: 114091853301909048, guid: a95e3ca11a859f84ba1790502b93159f,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224967459328189654, guid: a95e3ca11a859f84ba1790502b93159f,
+    - target: {fileID: 114841630787267732, guid: a95e3ca11a859f84ba1790502b93159f,
         type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1388438599086702, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114552733001988886, guid: a95e3ca11a859f84ba1790502b93159f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: perCharacterSec
+      value: 0.025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a95e3ca11a859f84ba1790502b93159f, type: 2}

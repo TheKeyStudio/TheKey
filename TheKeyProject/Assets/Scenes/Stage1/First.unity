@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 220895020}
   - component: {fileID: 220894983}
   - component: {fileID: 220894993}
+  - component: {fileID: 220894994}
   m_Layer: 0
   m_Name: "\u5C0D\u8A71"
   m_TagString: Untagged
@@ -255,9 +256,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 220895009}
+  - {fileID: 220894992}
   selectedCommands:
-  - {fileID: 220895002}
+  - {fileID: 220894994}
   variables: []
   description: 
   stepPause: 0
@@ -596,6 +597,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 220894976}
   commandList:
+  - {fileID: 220894994}
   - {fileID: 220894991}
   - {fileID: 220894990}
   - {fileID: 220894989}
@@ -636,6 +638,19 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &220894994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 220894975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359b09a7ba2e4af981f07c07f8af85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 78
+  indentLevel: 0
 --- !u!114 &220894995
 MonoBehaviour:
   m_ObjectHideFlags: 2
