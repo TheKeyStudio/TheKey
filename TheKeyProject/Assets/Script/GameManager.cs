@@ -13,12 +13,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField]private int[] stages;
     public bool dark;
 
+    public bool level1FirstTimeGoInto { get; internal set; }
+
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
             stage1FirstTimeGoInto = false;
+            level1FirstTimeGoInto = false;
             dark = true;
             stages = new int[totalStage];
             DontDestroyOnLoad(this);
