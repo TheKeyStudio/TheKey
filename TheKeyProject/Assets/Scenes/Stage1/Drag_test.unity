@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14982214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.330055, y: 21.41007, z: 0}
+  m_LocalPosition: {x: -66.330055, y: 20.19, z: 0}
   m_LocalScale: {x: 13.929006, y: 2.6913981, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1015,8 +1015,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 322494349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66.33, y: 23.37, z: 0}
-  m_LocalScale: {x: 13.72123, y: 10.249444, z: 1}
+  m_LocalPosition: {x: -66.276, y: 23.179, z: 0}
+  m_LocalScale: {x: 12.994215, y: 10.880973, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1130,7 +1130,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 411498012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.2, y: 25.63, z: -0.5625}
+  m_LocalPosition: {x: -65.2, y: 24.40993, z: -0.5625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 64442373}
@@ -1636,7 +1636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807afb1b60acef348a1ef30be192b33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag_IsCorrect: {fileID: 0}
   Answer: 5
 --- !u!1 &835475126
 GameObject:
@@ -1824,7 +1823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807afb1b60acef348a1ef30be192b33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag_IsCorrect: {fileID: 0}
   Answer: 1
 --- !u!1 &923542401
 GameObject:
@@ -2323,7 +2321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807afb1b60acef348a1ef30be192b33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag_IsCorrect: {fileID: 0}
   Answer: 10
 --- !u!1 &1094291192
 GameObject:
@@ -2586,7 +2583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338.4, y: -132}
+  m_AnchoredPosition: {x: 334, y: -150}
   m_SizeDelta: {x: 170.3, y: 62.96}
   m_Pivot: {x: 1.7525302, y: 0.5}
 --- !u!114 &1323250354
@@ -2697,7 +2694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93, y: -132}
+  m_AnchoredPosition: {x: -75, y: -142}
   m_SizeDelta: {x: 170.3, y: 62.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540246774
@@ -3101,7 +3098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807afb1b60acef348a1ef30be192b33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag_IsCorrect: {fileID: 0}
   Answer: 10
 --- !u!1001 &2042009593
 Prefab:

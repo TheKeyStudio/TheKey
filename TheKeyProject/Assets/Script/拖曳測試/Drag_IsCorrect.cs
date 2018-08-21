@@ -10,8 +10,8 @@ public class Drag_IsCorrect : MonoBehaviour {
     {
         foreach(Drag_Answer answer in answers)  //判斷全部的答案是否正確
         {
-            Debug.Log(answer.IsAnswerEqual);
-            if (answer.IsAnswerEqual)           //判斷該物件的布林是不是=true  
+            Debug.Log(answer.IsAnswerEqual());
+            if (answer.IsAnswerEqual())           //判斷該物件的布林是不是=true  
             {
                 Finalanswer = true;
             }

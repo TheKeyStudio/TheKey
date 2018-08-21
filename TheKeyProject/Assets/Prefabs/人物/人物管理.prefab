@@ -151,8 +151,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1509863608370592}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.24556, y: 15.844074, z: 0.5945383}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -39.448387, y: 15.036612, z: 8.117976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4730748352516246}
@@ -224,6 +224,8 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
+  - {fileID: 21300002, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
+  - {fileID: 21300004, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -243,6 +245,8 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300002, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
+  - {fileID: 21300000, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
+  - {fileID: 21300004, guid: a53e990d4a70e6e4d83d9c865fd4e3ae, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -262,6 +266,7 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: a338dca6787f79f4183d452f3acea4dd, type: 3}
+  - {fileID: 21300000, guid: d7879245e3a05f1409d1f97f70bc4e4e, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
