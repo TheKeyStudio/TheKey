@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class AddtiveScene : MonoBehaviour {
 
-    public string otherSceneName;
+    public string[] otherScenesName;
 
 	// Use this for initialization
 	void Start () {
-        SceneManager.LoadScene(otherSceneName, LoadSceneMode.Additive);
+        foreach(string sceneName in otherScenesName)
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 
 }
