@@ -14,11 +14,11 @@ public class Darkspace : MonoBehaviour {
     {
         Debug.Log("Begin");
         
-        if (gameManager.dark)
+        if (gameManager.isFirstTimeGoIntoDarkSpace)
         {
             Debug.Log("開始");
             Flowchart.BroadcastFungusMessage("開始");
-            gameManager.dark = false;
+            gameManager.isFirstTimeGoIntoDarkSpace = false;
         }
         else
         {

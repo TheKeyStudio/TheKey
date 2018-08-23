@@ -36,10 +36,7 @@ public class LoadingScene : MonoBehaviour {
         SceneManager.LoadScene(sceneName);
         animator.SetBool("FadeOut", false);
     }
-
-    public void FadeIn()
-    {
-    }
+    
 
     public void PauseGame()
     {
