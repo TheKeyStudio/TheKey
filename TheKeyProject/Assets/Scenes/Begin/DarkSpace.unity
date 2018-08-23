@@ -313,9 +313,9 @@ GameObject:
   - component: {fileID: 474591197}
   - component: {fileID: 474591199}
   - component: {fileID: 474591200}
-  - component: {fileID: 474591185}
   - component: {fileID: 474591183}
   - component: {fileID: 474591180}
+  - component: {fileID: 474591185}
   m_Layer: 0
   m_Name: "\u958B\u59CB\u6D41\u7A0B"
   m_TagString: Untagged
@@ -756,25 +756,20 @@ MonoBehaviour:
   - {fileID: 474591185}
 --- !u!114 &474591185
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0729d4f369e6a4241a6e7e3b8b9c1933, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 38
+  itemId: 41
   indentLevel: 0
-  _animator:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  _parameterName:
-    stringRef: {fileID: 0}
-    stringVal: LootBook
-  animatorOLD: {fileID: 0}
-  parameterNameOLD: 
+  targetObject: {fileID: 1948367339}
+  methodName: StartAnimation
+  delay: 0
 --- !u!114 &474591186
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2465,6 +2460,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 692ddb9f9924d5d498d5632fbd587973, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1500575875
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 418.30475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 131.60571
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.9632928
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192117197438872, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940641078996898, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3ec506bb21f24084d9a54d4a764e82e0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1540093976
 Prefab:
   m_ObjectHideFlags: 0
@@ -2624,6 +2665,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1732993604 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1940641078996898, guid: 3ec506bb21f24084d9a54d4a764e82e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1500575875}
 --- !u!4 &1857995247 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec,
@@ -2640,8 +2686,9 @@ GameObject:
   - component: {fileID: 1948367343}
   - component: {fileID: 1948367342}
   - component: {fileID: 1948367341}
+  - component: {fileID: 1948367344}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2662,8 +2709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.5}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -27.3, y: 33.8}
-  m_SizeDelta: {x: 144.78, y: 139.37}
+  m_AnchoredPosition: {x: -172.8, y: 78.9}
+  m_SizeDelta: {x: 87.89, y: 84.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1948367341
 Animator:
@@ -2695,7 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5471698, g: 0.53426486, b: 0.53426486, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2716,6 +2763,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1948367339}
+--- !u!114 &1948367344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948367339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8f28ed9be95544ea8c7af3cbec3b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addtiveScene: {fileID: 1732993604}
 --- !u!1 &1948384928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2916,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1136318491321538, guid: 489d92202a4725e4c932bb8fa924492a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4530845982454564, guid: 489d92202a4725e4c932bb8fa924492a, type: 2}
       propertyPath: m_LocalScale.x
@@ -3004,7 +3063,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &2109490058
 RectTransform:
@@ -3018,7 +3077,7 @@ RectTransform:
   m_Children:
   - {fileID: 1948367340}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

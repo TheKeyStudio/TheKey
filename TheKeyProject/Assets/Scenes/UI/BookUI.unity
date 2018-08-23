@@ -264,17 +264,17 @@ Prefab:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: bookPages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300002, guid: fc12b48d194c1f244bd0707ef40c2895,
+      objectReference: {fileID: 21300000, guid: ac8dfd9f095d2e7439ab903acb336bb0,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: bookPages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 9f1ddd79b2fa5444b9f0150b809a8dd0,
+      objectReference: {fileID: 21300002, guid: fc12b48d194c1f244bd0707ef40c2895,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: bookPages.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: fca57dd61c151c649adcbc7ba39e71bb,
+      objectReference: {fileID: 21300000, guid: 18b7c0ba1c6cfd54f9f23c5be5fb0213,
         type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: bookPages.Array.data[3]
@@ -340,6 +340,10 @@ Prefab:
     - target: {fileID: 22447500, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
+      propertyPath: currentPage
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
@@ -772,7 +776,7 @@ Prefab:
     - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
         type: 2}
       propertyPath: bookPages.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4273991931033046, guid: c8d2d3a03f29be24bb7fcd123fa18e7d, type: 2}
       propertyPath: m_LocalPosition.x
@@ -810,13 +814,13 @@ Prefab:
         type: 2}
       propertyPath: bookPages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: b1bac3987b1ad064a80f72496ee46425,
+      objectReference: {fileID: 21300002, guid: fc12b48d194c1f244bd0707ef40c2895,
         type: 3}
     - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
         type: 2}
       propertyPath: bookPages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: fc12b48d194c1f244bd0707ef40c2895,
+      objectReference: {fileID: 21300000, guid: b1bac3987b1ad064a80f72496ee46425,
         type: 3}
     - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
         type: 2}
