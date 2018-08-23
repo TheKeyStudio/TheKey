@@ -5,14 +5,13 @@ using Fungus;
 public class Digital : MonoBehaviour {
     GameManager gameManager;
     public Flowchart flowchart;
-    public GameObject Level1;
     public int num1;
     public int num2;
     public int num3;
     public int num4;
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = GameManager.instance;
     }
 
     public void isCorrect()
@@ -25,10 +24,7 @@ public class Digital : MonoBehaviour {
         {
             Debug.Log("correct");
             Flowchart.BroadcastFungusMessage("答對了");
-            gameManager.game1 = true;
-            //gameManager.ActiveMove();
             gameObject.SetActive(false);
-            Level1.SetActive(true);
         }
     }
 
