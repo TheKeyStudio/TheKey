@@ -29,7 +29,6 @@ public class CandleLight : MonoBehaviour {
     private void StartEmitt()
     {
         lighter.intensity = Mathf.Lerp(lighter.intensity, nextLightIntensity, smooth * Time.deltaTime);
-        Debug.Log(nextLightIntensity);
     }
 
     private void RandomIntensity()

@@ -7,11 +7,10 @@ using Fungus;
 public class Begin : MonoBehaviour {
     [Header("連接到某場景")]
     public string nextScene;
-    
 
     public void ToNextScene()
     {
         Debug.Log("Going to " + nextScene);
-        SceneManager.LoadScene(nextScene);
+        LoadingScene.instance.FadeToScene(nextScene);
     }
 }
