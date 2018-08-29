@@ -43,4 +43,6 @@ public class GameManager : MonoBehaviour {
         int index = stage - 1;
         return stages[index];
     }
+
+    
 }

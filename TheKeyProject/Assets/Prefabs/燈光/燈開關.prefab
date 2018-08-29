@@ -86,8 +86,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625771117226766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.61, y: -2.39, z: -0.7660833}
-  m_LocalScale: {x: 0.56499666, y: 0.37633517, z: 3.17}
+  m_LocalPosition: {x: -6.25, y: -2.09, z: -0.7660833}
+  m_LocalScale: {x: 0.2954586, y: 0.14263791, z: 3.17}
   m_Children:
   - {fileID: 4335120812185536}
   m_Father: {fileID: 0}
@@ -105,18 +105,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.091631174, y: -0.18982267}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.99, y: 2.53}
+    oldSize: {x: 4.52, y: 12.28}
     newSize: {x: 1.99, y: 2.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.99, y: 2.53}
+  m_Size: {x: 4.189179, y: 12.399911}
   m_EdgeRadius: 0
 --- !u!114 &114099661532977156
 MonoBehaviour:
@@ -352,8 +352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 61.531258
-    y: 81.02002
+    x: 28.541542
+    y: 149.0613
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -507,7 +507,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 114945816131715192}
+  - {fileID: 114513491506385060}
   selectedCommands: []
   variables: []
   description: 
@@ -624,7 +624,7 @@ SpriteRenderer:
   m_SortingLayerID: 1243592071
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5fa66f41c2999c24f9c9e256cc0376bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd9a5af1f08a03b4f9de8eb67e148409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
