@@ -26,6 +26,10 @@ public class Digital : MonoBehaviour {
             Flowchart.BroadcastFungusMessage("答對了");
             gameObject.SetActive(false);
         }
+        else
+        {
+            Flowchart.BroadcastFungusMessage("答錯了");
+        }
     }
 
 
