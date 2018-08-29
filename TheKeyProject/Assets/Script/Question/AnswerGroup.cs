@@ -12,14 +12,22 @@ public class AnswerGroup : MonoBehaviour {
         [SerializeField]
         private string answerText;
 
+        public string AnswerText
+        {
+            get
+            {
+                return answerText;
+            }
+        }
+
         public int GetAnswerLength()
         {
-            return answerText.Length;
+            return AnswerText.Length;
         }
 
         public bool CheckAnswerText(string inputAnswer)
         {
-            return answerText.Equals(inputAnswer, StringComparison.OrdinalIgnoreCase);
+            return AnswerText.Equals(inputAnswer, StringComparison.OrdinalIgnoreCase);
         }
     }
 
@@ -44,7 +52,7 @@ public class AnswerGroup : MonoBehaviour {
             obj.transform.SetParent(transform, false);
             obj.SetActive(false);
             SingleInputFieldGenerator singleInputFieldScript = obj.GetComponent<SingleInputFieldGenerator>();
-            singleInputFieldScript.CreateSingleInputField(answer.GetAnswerLength());
+            singleInputFieldScript.SetAnswer(answer.AnswerText);
             singleInputFieldList.Add(singleInputFieldScript);
         }
         singleInputFieldList[0].SetActive(true);

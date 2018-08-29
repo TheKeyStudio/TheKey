@@ -14,16 +14,19 @@ public class SingleInputFieldGenerator : MonoBehaviour {
 
     public GameObject inputPrefab;
     public List<TMP_InputField> input_list = new List<TMP_InputField>();
-    
 
+    private string answer;
     private int currentIndex = 0;
     private bool locked = true;
     private bool isSolved = false;
+    private bool endEdit = false;
 
     public bool IsSolved
     {
         get
         {
+            isSolved = answer.Equals(GetInputListForStringFormat(), StringComparison.OrdinalIgnoreCase);
+            CheckIsSolved();
             return isSolved;
         }
     }
@@ -42,8 +45,24 @@ public class SingleInputFieldGenerator : MonoBehaviour {
         }
     }
 
-    public void CreateSingleInputField(int amount)
+    public void SetAnswer(string ans)
     {
+        this.answer = ans;
+        CreateSingleInputField(this.answer.Length);
+    }
+    
+
+    private void CheckIsSolved()
+    {
+        if (isSolved)
+        {
+            DoneAnswer();
+        }
+    }
+
+    private void CreateSingleInputField(int amount)
+    {
+        RemoveAllChild();
         for (int i = 0; i < amount; i++)
         {
             GameObject obj = Instantiate(inputPrefab) as GameObject;
@@ -54,13 +73,15 @@ public class SingleInputFieldGenerator : MonoBehaviour {
             tmp_input.readOnly = true;
             input_list.Add(tmp_input);
         }
-        input_list[amount-1].onEndEdit.AddListener(delegate { OnEndEdit(); });
     }
 
-    private void OnEndEdit()
+    private void RemoveAllChild()
     {
-        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            this.transform.GetComponentInParent<AnswerGroup>().CheckAnswer();
+        foreach(Transform child in transform)
+        {
+            Debug.Log("Removing " + child.name);
+            GameObject.Destroy(child.gameObject);
+        }
     }
 
     public void OnSelect()
