@@ -7,6 +7,8 @@ using TMPro;
 public class TerminalLoginPassword : MonoBehaviour {
 
     public GameObject loadingImg;
+    public GameObject submitButton;
+    public GameObject terminalUI;
     public TMP_Text messageText;
     public SingleInputFieldGenerator singleInputFieldGenerator;
 
@@ -49,11 +51,22 @@ public class TerminalLoginPassword : MonoBehaviour {
     private void UnLoading()
     {
         Debug.Log("Unloading");
+        goTerminal();
         onLoading = false;
         loadingImg.SetActive(false);
         singleInputFieldGenerator.SetActive(true);
+        submitButton.SetActive(true);
         RefreshMessageText();
         singleInputFieldGenerator.ChangeActivateInputField();
+    }
+
+    private void goTerminal()
+    {
+        if (isAnswerCorrect)
+        {
+            terminalUI.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 
     public void Loading()
@@ -62,6 +75,7 @@ public class TerminalLoginPassword : MonoBehaviour {
         CheckAnswer();
         onLoading = true;
         singleInputFieldGenerator.SetActive(false);
+        submitButton.SetActive(false);
         loadingImg.SetActive(true);
         loadingTime = Random.Range(0.5f, maxRandomLoadingSecond);
         ResetMessageText();

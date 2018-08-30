@@ -4,6 +4,5 @@ using UnityEngine;
 
 public abstract class TerminalFiles : ScriptableObject {
     public string fileName = "New File";
-
-    public abstract void Show();
+    public abstract void Open(TerminalController controller);
 }

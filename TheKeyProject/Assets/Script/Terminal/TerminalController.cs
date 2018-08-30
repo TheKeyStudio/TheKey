@@ -7,29 +7,33 @@ using TMPro;
 public class TerminalController : MonoBehaviour {
 
     public TMP_Text displayText;
-
     public TerminalInputCommand[] inputCmds;
-    public TerminalFiles[] files;
 
+    [TextArea(5, 99)]
+    public string welcomeText;
+
+    private TerminalFilesHandler filesHandler;
     private List<string> terminalLog = new List<string>();
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Start()
+    {
+        LogString(welcomeText);
+        DisplayLoggedText();
+    }
+
+    private void Awake()
+    {
+        filesHandler = GetComponent<TerminalFilesHandler>();
+    }
+
+    public void OpenFile(string fileName)
+    {
+        filesHandler.Open(fileName);
+    }
 
     public void ListAllFiles()
     {
-        string allFilesName = "";
-        foreach(TerminalFiles file in files)
-        {
-            allFilesName += file.fileName + " ";
-        }
+        string allFilesName = filesHandler.GetAllFilesName();
         LogString(allFilesName);
     }
 
@@ -38,7 +42,7 @@ public class TerminalController : MonoBehaviour {
         terminalLog.Add(stringToAdd + "\n");
     }
 
-    internal void DisplayLoggedText()
+    public void DisplayLoggedText()
     {
         string logAsText = string.Join("\n", terminalLog.ToArray());
 

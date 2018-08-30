@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 
     public bool game1 = false;                  //第一階段的關卡 全部破完 才能通往下一關;
     public readonly int totalStage = 3;
-    [SerializeField]private int[] stages;
+    [SerializeField] private int[] stages;
     public bool isFirstTimeGoIntoDarkSpace;
 
     public bool level1FirstTimeGoInto { get; internal set; }
@@ -43,6 +43,4 @@ public class GameManager : MonoBehaviour {
         int index = stage - 1;
         return stages[index];
     }
-
-    
 }
