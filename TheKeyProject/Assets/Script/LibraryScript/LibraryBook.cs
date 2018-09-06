@@ -4,7 +4,7 @@ using UnityEngine;
 using Fungus;
 using UnityEngine.SceneManagement;
 
-public class LibraryBook : Interactable
+public class LibraryBook : KeyboardInteractable
 {
     public Flowchart flowchart;
     public string nextScene;

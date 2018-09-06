@@ -1,7 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-public class ItemPickup : Interactable {
+public class ItemPickup : KeyboardInteractable
+{
 
     public Item item;
 

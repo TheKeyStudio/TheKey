@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * Code Smell, please clean it.
- */
-
-public abstract class Interactable : MonoBehaviour {
-    
+public class KeyboardInteractable : MonoBehaviour, Interactable{
     public KeyCode interactKey;
     public Color originalColor;
     public SpriteRenderer spriteRenderer;
@@ -30,23 +24,6 @@ public abstract class Interactable : MonoBehaviour {
         originalColor = spriteRenderer.color;
     }
 
-    public virtual void Interact()                      
-    {
-        Debug.Log("Interating with " + transform.name);
-    }
-
-    public virtual void Highlight()
-    {
-        //spriteRenderer.color = Color.yellow;
-        noticeIcon.SetActive(true);
-    }
-
-    public virtual void UnHighlight()
-    {
-        //spriteRenderer.color = originalColor;
-        noticeIcon.SetActive(false);
-    }
-
     public virtual void Update()
     {
         if (isFocus)
@@ -63,6 +40,23 @@ public abstract class Interactable : MonoBehaviour {
         }
     }
 
+    public virtual void Interact()
+    {
+        Debug.Log("Interating with " + transform.name);
+    }
+
+    public virtual void Highlight()
+    {
+        //spriteRenderer.color = Color.yellow;
+        noticeIcon.SetActive(true);
+    }
+
+    public virtual void UnHighlight()
+    {
+        //spriteRenderer.color = originalColor;
+        noticeIcon.SetActive(false);
+    }
+    
     public void OnFocused(Transform playerTransform)
     {
         isFocus = true;
@@ -76,5 +70,4 @@ public abstract class Interactable : MonoBehaviour {
         isFocus = false;
         player = null;
     }
-    
 }

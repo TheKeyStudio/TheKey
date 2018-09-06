@@ -2,7 +2,8 @@
 using UnityEngine.SceneManagement;
 
 
-public abstract class Door : Interactable {
+public abstract class Door : KeyboardInteractable
+{
     
     [Header("連接到某場景")]
     public string nextScene;

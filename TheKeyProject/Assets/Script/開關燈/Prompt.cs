@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Prompt : Interactable
+public class Prompt : KeyboardInteractable
 {               //提示圖案出現
 
     public override void Init()

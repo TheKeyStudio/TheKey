@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     private bool facingRight = true;
     public Vector3 m_Velocity = Vector3.zero;
     private bool canMove = true;
+    private bool autoMoveing = false;
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour {
     [Range(300, 1000)]
     public float yForce = 500f;
     
-
     public Transform groundCheck;
     [Range(0, 0.5f)]
     public float groundRadius = 0.2f;
@@ -37,11 +37,17 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update ()
     {
-        horizontalDirection = Input.GetAxis("Horizontal") * runSpeed;
+        if (!autoMoveing)
+            SetHorizontalDirection(Input.GetAxis("Horizontal"));
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            autoMoveing = true;
         }
     }
 
@@ -52,13 +58,23 @@ public class PlayerController : MonoBehaviour {
         playerAnimator.SetBool("Jump", !grounded);
         if (canMove)
         {
-            MoveX();
+            MoveX(horizontalDirection);
             Jump();
             jump = false;
         }
         else
         {
-            playerAnimator.SetFloat("Horizontal", 0);
+            SetMoveAnimation(false);
+        }
+
+        if (Math.Abs(Input.GetAxis("Horizontal")) < 0.1 && !autoMoveing)
+        {
+            SetMoveAnimation(false);
+        }
+
+        if (Math.Abs(Input.GetAxis("Horizontal")) > 0.1)
+        {
+            autoMoveing = false;
         }
     }
 
@@ -94,23 +110,28 @@ public class PlayerController : MonoBehaviour {
         focus = null;
     }
     
-    public void MoveX()
+    public void MoveX(float horizontal)
     {
-        Vector3 targetVelocity = new Vector2(horizontalDirection * 10f, playerRigid2D.velocity.y);
+        Vector3 targetVelocity = new Vector2(horizontal * 10f, playerRigid2D.velocity.y);
         playerRigid2D.velocity = Vector3.SmoothDamp(playerRigid2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         // If the input is moving the player right and the player is facing left...
-        if (horizontalDirection > 0 && !facingRight)
+        if (horizontal > 0 && !facingRight)
         {
             // ... flip the player.
             Flip();
         }
         // Otherwise if the input is moving the player left and the player is facing right...
-        else if (horizontalDirection < 0 && facingRight)
+        else if (horizontal < 0 && facingRight)
         {
             // ... flip the player.
             Flip();
         }
-        playerAnimator.SetFloat("Horizontal", Math.Abs(Input.GetAxis("Horizontal")));
+        SetMoveAnimation(true);
+    }
+
+    void SetMoveAnimation(bool flag)
+    {
+        playerAnimator.SetBool("Move", flag);
     }
     
     void Jump()
@@ -151,5 +172,21 @@ public class PlayerController : MonoBehaviour {
             return canMove;
         }
     }
-    
+
+    public bool AutoMoveing
+    {
+        get
+        {
+            return autoMoveing;
+        }
+        set
+        {
+            autoMoveing = value;
+        }
+    }
+
+    public void SetHorizontalDirection(float horizontal)
+    {
+        horizontalDirection = horizontal * runSpeed;
+    }
 }

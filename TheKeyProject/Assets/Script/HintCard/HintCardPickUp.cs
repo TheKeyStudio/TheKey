@@ -4,7 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HintCardPickUp : Interactable {
+public class HintCardPickUp : KeyboardInteractable
+{
 
     [Header("Hint Card")]
     [SerializeField] private HintCard hintCard;

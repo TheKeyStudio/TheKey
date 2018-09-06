@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Npc : Interactable {
+public abstract class Npc : KeyboardInteractable {
 
     [SerializeField] protected bool talkAble;
 

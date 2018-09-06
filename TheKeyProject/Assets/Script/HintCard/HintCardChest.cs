@@ -4,7 +4,8 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class HintCardChest : Interactable {
+public class HintCardChest : KeyboardInteractable
+{
     
     public GameObject chestUI;
 

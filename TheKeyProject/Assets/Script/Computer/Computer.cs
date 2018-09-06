@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class Computer : Interactable {
+public class Computer : KeyboardInteractable
+{
 
     // Use this for initialization
     

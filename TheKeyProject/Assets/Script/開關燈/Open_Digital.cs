@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
-public class Open_Digital : Interactable
+public class Open_Digital : KeyboardInteractable
 {
 
     public override void Init()
