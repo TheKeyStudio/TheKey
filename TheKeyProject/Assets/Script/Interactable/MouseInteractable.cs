@@ -10,7 +10,7 @@ public class MouseInteractable : Clickable2D{
     PlayerAuto playerAuto;
     Collider2D collider2d;
 
-    private void Start()
+    protected virtual void Start()
     {
         playerAuto = PlayerAuto.instance;
         collider2d = GetComponent<Collider2D>();
@@ -22,6 +22,7 @@ public class MouseInteractable : Clickable2D{
         {
             playerAuto.until = false;
             base.DoPointerClick();
+            HookInteract();
         }
     }
 
@@ -29,5 +30,10 @@ public class MouseInteractable : Clickable2D{
     {
         Debug.Log(collider2d.bounds.center.x);
         playerAuto.AutoMoveXTo(collider2d.bounds.center.x, interactDistance);
+    }
+
+    protected virtual void HookInteract()
+    {
+
     }
 }

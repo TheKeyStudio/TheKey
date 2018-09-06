@@ -37,9 +37,10 @@ GameObject:
   - component: {fileID: 212362398540449114}
   - component: {fileID: 50548200186870866}
   - component: {fileID: 61753807743030496}
-  - component: {fileID: 114762109875659156}
-  - component: {fileID: 95857908970478640}
   - component: {fileID: 58156134864483374}
+  - component: {fileID: 95857908970478640}
+  - component: {fileID: 114762109875659156}
+  - component: {fileID: 114590214846594818}
   m_Layer: 11
   m_Name: "\u73A9\u5BB6"
   m_TagString: Player
@@ -152,6 +153,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114590214846594818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1865823288027870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f86beeec1372449918c96d6fed4522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  until: 0
 --- !u!114 &114762109875659156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +180,6 @@ MonoBehaviour:
   m_MovementSmoothing: 0.05
   horizontalDirection: 0
   runSpeed: 40
-  focus: {fileID: 0}
   yForce: 500
   groundCheck: {fileID: 4106374340953762}
   groundRadius: 0.4

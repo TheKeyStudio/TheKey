@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class HintCard : MonoBehaviour {
 
+    [SerializeField] private string codeName;
     [SerializeField] private string hintCardCode;
     [SerializeField] private Sprite hintCardSprite;
     [SerializeField] private bool unlocked = false;
@@ -34,6 +35,19 @@ public class HintCard : MonoBehaviour {
         set
         {
             unlocked = value;
+        }
+    }
+
+    public string CodeName
+    {
+        get
+        {
+            return codeName;
+        }
+
+        set
+        {
+            codeName = value;
         }
     }
 

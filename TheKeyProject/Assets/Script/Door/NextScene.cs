@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fungus;
 
-public class Begin : MonoBehaviour {
+public class NextScene : MonoBehaviour {
     [Header("連接到某場景")]
     public string nextScene;
 

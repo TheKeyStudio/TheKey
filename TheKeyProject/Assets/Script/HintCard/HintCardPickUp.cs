@@ -4,36 +4,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HintCardPickUp : KeyboardInteractable
+public class HintCardPickUp : MonoBehaviour
 {
-
-    [Header("Hint Card")]
-    [SerializeField] private HintCard hintCard;
-
+    private HintCard hintCard;
     public Flowchart getItemFlowchart;
 
-    public override void Init()
+    public void Start()
     {
-        base.Init();
-        interactKey = KeyCode.Z;
+        hintCard = GetComponent<HintCard>();
     }
 
-    public override void Interact()
-    {
-        base.Interact();
-        Pickup();
-    }
-
-    private void Pickup()
+    public void Pickup()
     {
         if (!hintCard.Unlocked)
         {
             BookManager.instance.AddPage(hintCard.HintCardSprite);
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
-            getItemFlowchart.SetStringVariable("itemName", hintCard.HintCardCode);
+            getItemFlowchart.SetStringVariable("itemName", hintCard.CodeName);
             Flowchart.BroadcastFungusMessage("ItemGet");
-            UnHighlight();
             enabled = false;
         }
     }

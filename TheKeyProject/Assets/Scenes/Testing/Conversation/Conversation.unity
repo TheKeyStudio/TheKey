@@ -3764,6 +3764,9 @@ GameObject:
   - component: {fileID: 1542792500}
   - component: {fileID: 1542792499}
   - component: {fileID: 1542792498}
+  - component: {fileID: 1542792507}
+  - component: {fileID: 1542792506}
+  - component: {fileID: 1542792505}
   m_Layer: 0
   m_Name: "\u9EDE\u64CA\u7269\u54C1\u7684\u5C0D\u8A71"
   m_TagString: Untagged
@@ -4083,8 +4086,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1542792504}
-  selectedCommands:
-  - {fileID: 1542792501}
+  selectedCommands: []
   variables:
   - {fileID: 1542792494}
   description: 
@@ -4112,7 +4114,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1542792498
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4126,7 +4128,7 @@ MonoBehaviour:
   waitFrames: 1
 --- !u!114 &1542792499
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4139,7 +4141,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &1542792500
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4202,7 +4204,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1542792501
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4228,7 +4230,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1542792502
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4291,7 +4293,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1542792503
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4354,7 +4356,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1542792504
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792487}
@@ -4381,6 +4383,63 @@ MonoBehaviour:
   - {fileID: 1542792501}
   - {fileID: 1542792500}
   - {fileID: 1542792499}
+--- !u!114 &1542792505
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542792487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4da378c47144a86979765ac5e9690c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  key: New Label
+--- !u!114 &1542792506
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542792487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9ac2fcbd1d542619ab0bc7549fb264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  _targetLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  targetLabelOLD: {fileID: 0}
+--- !u!114 &1542792507
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542792487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 474
+    y: 86
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 13
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1542792506}
+  - {fileID: 1542792505}
 --- !u!1 &1547164209
 GameObject:
   m_ObjectHideFlags: 0
@@ -5160,12 +5219,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1810047016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Script: {fileID: 11500000, guid: abd39f204f904a64396953b7f9c2fe1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
+  interactDistance: 3
 --- !u!61 &1810047020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5178,7 +5238,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.72097754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5189,7 +5249,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.33, y: 11.260001}
+  m_Size: {x: 11.33, y: 12.701965}
   m_EdgeRadius: 0
 --- !u!1 &1843756988 stripped
 GameObject:
