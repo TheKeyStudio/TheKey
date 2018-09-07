@@ -3,26 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAuto : MonoBehaviour {
-
-    public static PlayerAuto instance = null;
+    
     [HideInInspector] public bool until = false;
     PlayerController playerController;
     float directionX;
     float deviation;
-
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else if (this != instance)
-        {
-            Destroy(gameObject);
-        }
-    }
-
+    
     private void Start()
     {
         playerController = GetComponent<PlayerController>();

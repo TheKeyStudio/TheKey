@@ -14,7 +14,7 @@ public class MouseInteractable : Clickable2D{
 
     protected virtual void Start()
     {
-        playerAuto = PlayerAuto.instance;
+        playerAuto = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAuto>();
         collider2d = GetComponent<Collider2D>();
     }
 

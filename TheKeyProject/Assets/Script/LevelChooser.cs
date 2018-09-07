@@ -11,7 +11,7 @@ public class LevelChooser : MonoBehaviour {
 
     public LevelDoor levelDoor;
 
-    private void Start()
+    private void Awake()
     {
         buttons = gameObject.transform.GetComponentsInChildren<Button>();
 
