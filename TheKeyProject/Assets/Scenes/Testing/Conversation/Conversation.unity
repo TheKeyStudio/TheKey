@@ -3229,11 +3229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6634adc5e41e45bf98bfe092c42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  spriteRenderer: {fileID: 0}
-  noticeIcon: {fileID: 1262449640}
-  hintCard: {fileID: 1472097129}
   getItemFlowchart: {fileID: 217313638}
 --- !u!114 &1472097129
 MonoBehaviour:
@@ -3246,6 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7f5a55ad35c9748b16948766018e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codeName: 
   hintCardCode: Morse
   hintCardSprite: {fileID: 21300000, guid: 6c920b35b5ed69945bd374b4ab76617f, type: 3}
   unlocked: 0
@@ -3764,9 +3760,6 @@ GameObject:
   - component: {fileID: 1542792500}
   - component: {fileID: 1542792499}
   - component: {fileID: 1542792498}
-  - component: {fileID: 1542792507}
-  - component: {fileID: 1542792506}
-  - component: {fileID: 1542792505}
   m_Layer: 0
   m_Name: "\u9EDE\u64CA\u7269\u54C1\u7684\u5C0D\u8A71"
   m_TagString: Untagged
@@ -4084,8 +4077,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1542792504}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1542792494}
@@ -4383,63 +4375,6 @@ MonoBehaviour:
   - {fileID: 1542792501}
   - {fileID: 1542792500}
   - {fileID: 1542792499}
---- !u!114 &1542792505
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1542792487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea4da378c47144a86979765ac5e9690c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 15
-  indentLevel: 0
-  key: New Label
---- !u!114 &1542792506
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1542792487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9ac2fcbd1d542619ab0bc7549fb264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 14
-  indentLevel: 0
-  _targetLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  targetLabelOLD: {fileID: 0}
---- !u!114 &1542792507
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1542792487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 474
-    y: 86
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 13
-  blockName: New Block
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1542792506}
-  - {fileID: 1542792505}
 --- !u!1 &1547164209
 GameObject:
   m_ObjectHideFlags: 0
