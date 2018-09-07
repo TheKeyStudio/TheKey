@@ -11,6 +11,6 @@ public class NextLevelFiles : TerminalFiles
     {
         GameManager gameManager = GameManager.instance;
         gameManager.NextLevel(stage);
-        controller.LogString("Opened " + (gameManager.GetStageLevel(stage) + 1).ToString());
+        controller.LogString("Opened " + (gameManager.GetStageLevel(stage)).ToString());
     }
 }

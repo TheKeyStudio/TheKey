@@ -16,10 +16,11 @@ public class TerminalFilesHandler : MonoBehaviour
 
     public string GetAllFilesName()
     {
-        string allFilesName = "";
+        string allFilesName = "Listed All files:\n";
         foreach (TerminalFiles file in files)
         {
-            allFilesName += file.fileName + " ";
+            allFilesName += "* " + "<#" + ColorUtility.ToHtmlStringRGB(file.fileNameColor) + ">" +
+                file.fileName + "</color>" + "\n";
         }
         return allFilesName;
     }

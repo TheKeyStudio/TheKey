@@ -50,6 +50,6 @@ public class GameManager : MonoBehaviour {
     public int GetStageLevel(int stage)
     {
         int index = stage - 1;
-        return stages[index];
+        return stages[index] + 1;
     }
 }
