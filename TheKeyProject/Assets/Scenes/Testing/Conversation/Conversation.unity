@@ -1086,6 +1086,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114861638790184422, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+        type: 2}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114861638790184422, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+        type: 2}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4665781743299964, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.218
@@ -1122,7 +1132,7 @@ Prefab:
         type: 2}
       propertyPath: _targetGameObject.gameObjectVal
       value: 
-      objectReference: {fileID: 1851035597}
+      objectReference: {fileID: 0}
     - target: {fileID: 114488284116585694, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
         type: 2}
       propertyPath: _targetGameObject.gameObjectVal
@@ -1147,7 +1157,7 @@ Prefab:
         type: 2}
       propertyPath: _targetGameObject.gameObjectVal
       value: 
-      objectReference: {fileID: 1851035597}
+      objectReference: {fileID: 0}
     - target: {fileID: 114739035982104290, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
         type: 2}
       propertyPath: _targetGameObject.gameObjectVal
@@ -1180,6 +1190,21 @@ Prefab:
       propertyPath: m_Size.x
       value: 8.060188
       objectReference: {fileID: 0}
+    - target: {fileID: 114861638790184422, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+        type: 2}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 672515307}
+    - target: {fileID: 114861638790184422, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+        type: 2}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 672515306}
+    - target: {fileID: 114607657727681440, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+        type: 2}
+      propertyPath: nodeRect.y
+      value: 141.11343
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615, type: 2}
   m_IsPrefabParent: 0
@@ -1208,6 +1233,24 @@ MonoBehaviour:
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 1547164209}
+--- !u!114 &672515306 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114236662033945734, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+    type: 2}
+  m_PrefabInternal: {fileID: 672515302}
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+--- !u!114 &672515307 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114945816131715192, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+    type: 2}
+  m_PrefabInternal: {fileID: 672515302}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+--- !u!114 &672515308 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114861638790184422, guid: ec89f5ea7ae1f9a4fa4a9fc383bc4615,
+    type: 2}
+  m_PrefabInternal: {fileID: 672515302}
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
 --- !u!1 &675494422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1542792496}
+  selectedFlowchart: {fileID: 672515308}
 --- !u!4 &1056384688
 Transform:
   m_ObjectHideFlags: 1
@@ -5191,11 +5234,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1865823288027870, guid: 644c950d66d7ac047bb5d92be56d6fec,
     type: 2}
   m_PrefabInternal: {fileID: 1500372303}
---- !u!1 &1851035597 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1273012432311074, guid: 6b5eb9c77c9c9d548925223fca357ec6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1289024370}
 --- !u!1001 &1857727976
 Prefab:
   m_ObjectHideFlags: 0

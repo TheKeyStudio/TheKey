@@ -14,7 +14,7 @@ public class Drag_IsCorrect : MonoBehaviour {
             if (answer.IsAnswerEqual())           //判斷該物件的布林是不是=true  
             {
                 Finalanswer = true;
-                Debug.Log("有直行到");
+          
             }
             else
             {
