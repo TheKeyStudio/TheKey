@@ -6,7 +6,6 @@ public class PlayerAuto : MonoBehaviour {
 
     public static PlayerAuto instance = null;
     [HideInInspector] public bool until = false;
-
     PlayerController playerController;
     float directionX;
     float deviation;
@@ -55,5 +54,10 @@ public class PlayerAuto : MonoBehaviour {
         until = false;
         this.directionX = directionX;
         this.deviation = deviation;
+    }
+
+    public bool IsAutoMoving()
+    {
+        return playerController.AutoMoveing;
     }
 }

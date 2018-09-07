@@ -6,7 +6,9 @@ using UnityEngine;
 public class MouseInteractable : Clickable2D{
 
     public float interactDistance = 3f;
-    bool startMove = false;
+    //This locked is important, because every Mouse interactable object will check is player until the
+    //range of object, we need this lock to avoid all of the object being trigger in the same time.
+    bool locked = true; 
     PlayerAuto playerAuto;
     Collider2D collider2d;
 
@@ -18,9 +20,10 @@ public class MouseInteractable : Clickable2D{
 
     private void Update()
     {
-        if (playerAuto.until)
+        if (playerAuto.until && !locked)
         {
             playerAuto.until = false;
+            locked = true;
             base.DoPointerClick();
             HookInteract();
         }
@@ -28,6 +31,7 @@ public class MouseInteractable : Clickable2D{
 
     protected override void DoPointerClick()
     {
+        locked = false;
         Debug.Log(collider2d.bounds.center.x);
         playerAuto.AutoMoveXTo(collider2d.bounds.center.x, interactDistance);
     }
