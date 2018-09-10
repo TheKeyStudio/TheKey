@@ -50,5 +50,4 @@ public class TerminalFilesHandler : MonoBehaviour
         }
         return exist;
     }
-    
 }
