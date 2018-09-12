@@ -7,6 +7,17 @@ public class ListFilesCmd : TerminalInputCommand
 {
     public override void Respond(TerminalController controller, string[] separatedInputWords)
     {
-        controller.ListAllFiles();
+        if(separatedInputWords.Length == 1)
+        {
+            controller.ListAllFiles();
+        }
+        else
+        {
+            string errorMsg = "\"List\"  have not \"" + 
+                separatedInputWords[1].ToString() + 
+                "\" argument, please enter \"help list\" to see more"; 
+
+            controller.LogString(errorMsg);
+        }
     }
 }

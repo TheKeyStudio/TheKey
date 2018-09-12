@@ -13,6 +13,17 @@ public class TerminalController : MonoBehaviour {
     public string welcomeText;
 
     private TerminalFilesHandler filesHandler;
+
+    internal void ListAllCommands()
+    {
+        string allCommandsKeyword = "";
+        foreach(TerminalInputCommand cmd in inputCmds)
+        {
+            allCommandsKeyword += cmd.keyword + " - " + cmd.description + "\n";
+        }
+        LogString(allCommandsKeyword);
+    }
+
     private List<string> terminalLog = new List<string>();
 
     private void Start()
