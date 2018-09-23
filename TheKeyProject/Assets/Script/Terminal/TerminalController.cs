@@ -7,7 +7,9 @@ using TMPro;
 public class TerminalController : MonoBehaviour {
 
     public TMP_Text displayText;
+
     public TerminalInputCommand[] inputCmds;
+    private InputStrategy inputStrategy;
 
     [TextArea(5, 99)]
     public string welcomeText;
@@ -26,6 +28,19 @@ public class TerminalController : MonoBehaviour {
 
     private List<string> terminalLog = new List<string>();
 
+    internal InputStrategy InputStrategy
+    {
+        get
+        {
+            return inputStrategy;
+        }
+
+        set
+        {
+            inputStrategy = value;
+        }
+    }
+
     private void Start()
     {
         LogString(welcomeText);
@@ -35,6 +50,7 @@ public class TerminalController : MonoBehaviour {
     private void Awake()
     {
         filesHandler = GetComponent<TerminalFilesHandler>();
+        inputStrategy = new CommandInput();
     }
 
     public void OpenFile(string fileName)
@@ -59,4 +75,15 @@ public class TerminalController : MonoBehaviour {
 
         displayText.text = logAsText;
     }
+
+    public void DoInput(string userInput)
+    {
+        inputStrategy.DoInput(userInput, this);
+    }
+
+    public void inputPassword(string password)
+    {
+        filesHandler.CheckPasswordAndOpen(password);
+    }
+
 }

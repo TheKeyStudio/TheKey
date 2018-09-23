@@ -8,7 +8,10 @@ public class TerminalFilesHandler : MonoBehaviour
 
     private TerminalFiles currentFile;
     private TerminalController controller;
+
+    private string inputPassword;
     
+
     private void Awake()
     {
         controller = GetComponent<TerminalController>();
@@ -27,17 +30,19 @@ public class TerminalFilesHandler : MonoBehaviour
 
     public void Open(string fileName)
     {
-        if (IsFileNameExist(fileName))
+        CheckFileNameExistAndChangeCurrent(fileName);
+        if (currentFile.hasPassword)
         {
-            currentFile.Open(controller);
+            controller.InputStrategy = new PasswordInput();
+            controller.LogString("Please Enter password: ");
         }
         else
         {
-            controller.LogString("\"" + fileName + "\"" + " doesn't exist");
+            currentFile.Open(controller);
         }
     }
 
-    public bool IsFileNameExist(string fileName)
+    private void CheckFileNameExistAndChangeCurrent(string fileName)
     {
         bool exist = false;
         foreach (TerminalFiles file in files)
@@ -48,6 +53,24 @@ public class TerminalFilesHandler : MonoBehaviour
                 exist = true;
             }
         }
-        return exist;
+
+        if (!exist)
+        {
+            controller.LogString("\"" + fileName + "\"" + " doesn't exist");
+            return;
+        }
+    }
+
+    public void CheckPasswordAndOpen(string password)
+    {
+        this.inputPassword = password;
+        if (currentFile.password.Equals(password))
+        {
+            currentFile.Open(controller);
+        }
+        else
+        {
+            controller.LogString("Wrong password. Try again");
+        }
     }
 }
