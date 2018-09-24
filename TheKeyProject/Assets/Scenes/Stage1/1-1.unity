@@ -272,6 +272,11 @@ GameObject:
   - component: {fileID: 217313634}
   - component: {fileID: 217313640}
   - component: {fileID: 217313639}
+  - component: {fileID: 217313642}
+  - component: {fileID: 217313644}
+  - component: {fileID: 217313641}
+  - component: {fileID: 217313643}
+  - component: {fileID: 217313645}
   m_Layer: 0
   m_Name: "\u6C99\u767C-\u63D0\u793A\u5361"
   m_TagString: Untagged
@@ -398,8 +403,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 217313637}
-  selectedCommands: []
+  - {fileID: 217313642}
+  selectedCommands:
+  - {fileID: 217313641}
   variables:
   - {fileID: 217313634}
   description: 
@@ -444,6 +450,104 @@ MonoBehaviour:
   targetObject: {fileID: 1843756988}
   methodName: DeactiveMove
   delay: 0
+--- !u!114 &217313641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  storyText: "\u5728\u9019\u88E1\u767C\u73FE\u6469\u65AF\u5BC6\u78BC\u7684\u5C0D\u7167\u5716...\u96D6\u7136\u6211\u628A\u5B83\u593E\u5728\u7B46\u8A18\u672C\u4E0A\uFF0C\u4F46\u6703\u7528\u5F97\u4E0A\u55CE\uFF1F"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &217313642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 220.28378
+    y: 72.81633
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 8
+  blockName: ItemGone
+  description: 
+  eventHandler: {fileID: 217313645}
+  commandList:
+  - {fileID: 217313644}
+  - {fileID: 217313641}
+  - {fileID: 217313643}
+--- !u!114 &217313643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  targetObject: {fileID: 1843756988}
+  methodName: ActiveMove
+  delay: 0
+--- !u!114 &217313644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  targetObject: {fileID: 1843756988}
+  methodName: DeactiveMove
+  delay: 0
+--- !u!114 &217313645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 217313642}
+  message: ItemGone
 --- !u!1001 &245106746
 Prefab:
   m_ObjectHideFlags: 0
@@ -1835,7 +1939,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 808630133}
   selectedCommands: []
   variables:
   - {fileID: 808630153}
@@ -4525,7 +4630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 808630123}
+  selectedFlowchart: {fileID: 217313638}
 --- !u!4 &1056384688
 Transform:
   m_ObjectHideFlags: 1

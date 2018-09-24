@@ -19,18 +19,24 @@ public class TerminalFilesHandler : MonoBehaviour
 
     public string GetAllFilesName()
     {
-        string allFilesName = "Listed All files:\n";
+        List<string> allFilesName = new List<string>();
+        allFilesName.Add("Listed All files:");
         foreach (TerminalFiles file in files)
         {
-            allFilesName += "* " + "<#" + ColorUtility.ToHtmlStringRGB(file.fileNameColor) + ">" +
-                file.fileName + "</color>" + "\n";
+            allFilesName.Add("* " + "<#" + ColorUtility.ToHtmlStringRGB(file.fileNameColor) + ">" +
+                file.fileName + "</color>");
         }
-        return allFilesName;
+        
+        return string.Join("\n", allFilesName.ToArray());
     }
 
     public void Open(string fileName)
     {
         CheckFileNameExistAndChangeCurrent(fileName);
+        if(currentFile == null)
+        {
+            return;
+        }
         if (currentFile.hasPassword)
         {
             controller.InputStrategy = new PasswordInput();
@@ -38,7 +44,7 @@ public class TerminalFilesHandler : MonoBehaviour
         }
         else
         {
-            currentFile.Open(controller);
+            OpenCurrentFileAndClear();
         }
     }
 
@@ -66,11 +72,17 @@ public class TerminalFilesHandler : MonoBehaviour
         this.inputPassword = password;
         if (currentFile.password.Equals(password))
         {
-            currentFile.Open(controller);
+            OpenCurrentFileAndClear();
         }
         else
         {
             controller.LogString("Wrong password. Try again");
         }
+    }
+
+    public void OpenCurrentFileAndClear()
+    {
+        currentFile.Open(controller);
+        currentFile = null;
     }
 }

@@ -12,6 +12,7 @@ public class HintCardPickUp : MonoBehaviour
     public void Start()
     {
         hintCard = GetComponent<HintCard>();
+        getItemFlowchart.SetStringVariable("itemName", hintCard.CodeName);
     }
 
     public void Pickup()
@@ -21,9 +22,11 @@ public class HintCardPickUp : MonoBehaviour
             BookManager.instance.AddPage(hintCard.HintCardSprite);
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
-            getItemFlowchart.SetStringVariable("itemName", hintCard.CodeName);
             Flowchart.BroadcastFungusMessage("ItemGet");
-            enabled = false;
+        }
+        else
+        {
+            Flowchart.BroadcastFungusMessage("ItemGone");
         }
     }
 }

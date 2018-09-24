@@ -18,12 +18,13 @@ public class TerminalController : MonoBehaviour {
 
     internal void ListAllCommands()
     {
-        string allCommandsKeyword = "";
+        List<string> allCommandsKeyword = new List<string>();
         foreach(TerminalInputCommand cmd in inputCmds)
         {
-            allCommandsKeyword += cmd.keyword + " - " + cmd.description + "\n";
+            allCommandsKeyword.Add(cmd.keyword + " - " + cmd.description);
         }
-        LogString(allCommandsKeyword);
+        string logAsText = string.Join("\n", allCommandsKeyword.ToArray());
+        LogString(logAsText);
     }
 
     private List<string> terminalLog = new List<string>();
@@ -67,6 +68,11 @@ public class TerminalController : MonoBehaviour {
     public void LogString(string stringToAdd)
     {
         terminalLog.Add(stringToAdd + "\n");
+    }
+
+    public void LogUserInputString(string stringToAdd)
+    {
+        terminalLog.Add("$> " + stringToAdd);
     }
 
     public void DisplayLoggedText()

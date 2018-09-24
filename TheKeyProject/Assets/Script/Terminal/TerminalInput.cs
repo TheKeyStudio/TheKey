@@ -38,7 +38,7 @@ public class TerminalInput : MonoBehaviour {
 
     void AcceptStringInput(string userInput)
     {
-        controller.LogString(userInput);
+        controller.LogUserInputString(userInput);
         controller.DoInput(userInput);
 
         InputComplete();
