@@ -25,11 +25,19 @@ public class Digital : MonoBehaviour {
             Debug.Log("correct");
             Flowchart.BroadcastFungusMessage("答對了");
             gameObject.SetActive(false);
+            Flowchart.BroadcastFungusMessage("開啟寶相");
         }
         else
         {
             Flowchart.BroadcastFungusMessage("答錯了");
         }
+    }
+
+
+    public void Close()
+    {
+        gameObject.SetActive(false);
+        Flowchart.BroadcastFungusMessage("取消按鈕");
     }
 
 

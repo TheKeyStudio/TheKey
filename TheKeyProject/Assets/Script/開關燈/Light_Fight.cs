@@ -10,3 +10,4 @@ public class Light_Fight : MonoBehaviour {
         Flowchart.BroadcastFungusMessage("燈光晃動");
     }
 }
+
