@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -70,7 +71,7 @@ public class TerminalFilesHandler : MonoBehaviour
     public void CheckPasswordAndOpen(string password)
     {
         this.inputPassword = password;
-        if (currentFile.password.Equals(password))
+        if (currentFile.password.Equals(password, StringComparison.OrdinalIgnoreCase))
         {
             OpenCurrentFileAndClear();
         }

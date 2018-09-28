@@ -15,6 +15,9 @@ public class TerminalController : MonoBehaviour {
     public string welcomeText;
 
     private TerminalFilesHandler filesHandler;
+    private TerminalInput terminalInput;
+
+    public TerminalImageControl imageControl;
 
     internal void ListAllCommands()
     {
@@ -26,6 +29,7 @@ public class TerminalController : MonoBehaviour {
         string logAsText = string.Join("\n", allCommandsKeyword.ToArray());
         LogString(logAsText);
     }
+
 
     private List<string> terminalLog = new List<string>();
 
@@ -51,6 +55,7 @@ public class TerminalController : MonoBehaviour {
     private void Awake()
     {
         filesHandler = GetComponent<TerminalFilesHandler>();
+        terminalInput = GetComponent<TerminalInput>();
         inputStrategy = new CommandInput();
     }
 
@@ -92,4 +97,14 @@ public class TerminalController : MonoBehaviour {
         filesHandler.CheckPasswordAndOpen(password);
     }
 
+    public void ShowImage(Sprite sprite)
+    {
+        imageControl.ShowImage(sprite, this);
+    }
+
+
+    public void SetInputFieldActive(bool flag)
+    {
+        terminalInput.SetInputFieldActive(flag);
+    }
 }
