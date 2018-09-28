@@ -50,4 +50,9 @@ public class TerminalInput : MonoBehaviour {
         inputField.ActivateInputField();
         inputField.text = null;
     }
+
+    public void SetInputFieldActive(bool flag)
+    {
+        inputField.enabled = flag;
+    }
 }
