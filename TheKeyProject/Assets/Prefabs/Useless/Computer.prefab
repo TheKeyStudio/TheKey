@@ -68,10 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f23d5e573664443887961b73d71b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   interactKey: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
+  noticeIcon: {fileID: 0}
   question: {fileID: 0}
 --- !u!212 &212732989673153744
 SpriteRenderer:
@@ -116,5 +116,5 @@ SpriteRenderer:
   m_Size: {x: 0.59, y: 0.81}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0

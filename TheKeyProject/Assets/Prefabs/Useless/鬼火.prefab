@@ -736,12 +736,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81b10e0d0203744886758cc4837b622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
   interactKey: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 1930343776774848}
   talkAble: 1
+  waveAmplitude: 0.5
+  waveSpeed: 1
   flowchart: {fileID: 114983591015059586}
   talkCoolDownTime: 2
   startCoolDowmTime: 0
