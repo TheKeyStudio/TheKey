@@ -31,7 +31,7 @@ public class LevelDoor : Door
     {
         if (levelNumber < passNumber)
         {
-            nextScene = stageNumber.ToString() + "-" + levelNumber.ToString();
+            nextScene = "L" + stageNumber.ToString() + "-" + levelNumber.ToString();
             Debug.Log("To next scene : " + nextScene);
             ToNextScene();
         }

@@ -13,11 +13,6 @@ public class AddtiveSceneManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else if (this != instance)
-        {
-            Destroy(gameObject);
         }
     }
 

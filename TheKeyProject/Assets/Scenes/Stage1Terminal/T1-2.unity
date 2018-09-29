@@ -239,7 +239,7 @@ Prefab:
     - target: {fileID: 114486984349265082, guid: f421481d36a421c498768621872e403f,
         type: 2}
       propertyPath: files.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4814797979836970, guid: f421481d36a421c498768621872e403f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -289,13 +289,13 @@ Prefab:
         type: 2}
       propertyPath: files.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 2b43baac071d97f40ad1f798ee6d1f84,
+      objectReference: {fileID: 11400000, guid: 8b771b2828ad9c14387793744e0971d3,
         type: 2}
     - target: {fileID: 114486984349265082, guid: f421481d36a421c498768621872e403f,
         type: 2}
       propertyPath: files.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f7686bd64f9df91468573480ac51f6cc,
+      objectReference: {fileID: 11400000, guid: 6d0461914a7541341bec57249fe81a22,
         type: 2}
     - target: {fileID: 114852190945622178, guid: f421481d36a421c498768621872e403f,
         type: 2}
@@ -312,6 +312,21 @@ Prefab:
       propertyPath: imageControl
       value: 
       objectReference: {fileID: 861465531}
+    - target: {fileID: 114797978179111478, guid: f421481d36a421c498768621872e403f,
+        type: 2}
+      propertyPath: terminalLogin
+      value: 
+      objectReference: {fileID: 1142643849}
+    - target: {fileID: 114797978179111478, guid: f421481d36a421c498768621872e403f,
+        type: 2}
+      propertyPath: terminalUI
+      value: 
+      objectReference: {fileID: 1653978204}
+    - target: {fileID: 114797978179111478, guid: f421481d36a421c498768621872e403f,
+        type: 2}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f421481d36a421c498768621872e403f, type: 2}
   m_IsPrefabParent: 0
@@ -459,6 +474,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 871b3bcb303a8f64e958277f5fc7b98d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1142643849 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1063679484861176, guid: 871b3bcb303a8f64e958277f5fc7b98d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1142643848}
 --- !u!114 &1382108620 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114285533209502408, guid: 51fa71017b97fb647b7ec79d7b0ded22,

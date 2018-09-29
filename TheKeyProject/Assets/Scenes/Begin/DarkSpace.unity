@@ -1151,6 +1151,21 @@ GameObject:
   m_PrefabParentObject: {fileID: 1136318491321538, guid: 489d92202a4725e4c932bb8fa924492a,
     type: 2}
   m_PrefabInternal: {fileID: 2010857577}
+--- !u!114 &753121917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 753121912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd39f204f904a64396953b7f9c2fe1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
+  interactDistance: 3
 --- !u!1 &808397468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,10 +1340,10 @@ GameObject:
   - component: {fileID: 979733083}
   - component: {fileID: 979733085}
   - component: {fileID: 979733084}
-  - component: {fileID: 979733069}
   - component: {fileID: 979733060}
   - component: {fileID: 979733074}
   - component: {fileID: 979733086}
+  - component: {fileID: 979733069}
   m_Layer: 0
   m_Name: "\u5C0F\u4E11\u5C0D\u8A71"
   m_TagString: Untagged
@@ -1620,17 +1635,18 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &979733069
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979733056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: a49012bdc794e429686c1eff7d9ced90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 979733059}
-  message: "\u5C0F\u4E11\u6D41\u7A0B"
+  clickableObject: {fileID: 753121917}
+  waitFrames: 1
 --- !u!114 &979733070
 MonoBehaviour:
   m_ObjectHideFlags: 2
