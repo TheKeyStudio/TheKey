@@ -257,9 +257,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 220894992}
+  - {fileID: 220895009}
   selectedCommands:
-  - {fileID: 220895020}
+  - {fileID: 220895004}
   variables: []
   description: 
   stepPause: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 45
   indentLevel: 0
-  storyText: "{s} {s=25}{color=blue}\u5C0F\u660E\u79C0\u984C\u76EE\u7D66\u5C0F\u83EF\u770B"
+  storyText: "{s} {s=25}{color=yellow}\u5C0F\u660E\u79C0\u984C\u76EE\u7D66\u5C0F\u83EF\u770B"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   - {fileID: 220895000}
 --- !u!114 &220895010
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 220894975}
@@ -1588,8 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 114983591015059586, guid: 3e675a2881541ad4985376f31d204645,
-    type: 2}
+  selectedFlowchart: {fileID: 220894979}
 --- !u!4 &1041787349
 Transform:
   m_ObjectHideFlags: 1
