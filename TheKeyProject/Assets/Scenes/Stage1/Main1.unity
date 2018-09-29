@@ -2034,7 +2034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504035254}
   m_Layer: 0
-  m_Name: StartPoint
+  m_Name: DarkSpace
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6374,7 +6374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880116110}
   m_Layer: 0
-  m_Name: DoorPoint
+  m_Name: L
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -8607,6 +8607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 195428276}
+  defaultPoint: {fileID: 504035254}
   points:
   - {fileID: 504035254}
   - {fileID: 880116110}
