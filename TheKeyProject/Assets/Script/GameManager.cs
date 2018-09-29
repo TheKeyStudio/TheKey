@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
         stages[index]++;
     }
 
-    public int GetStageLevel(int stage)
+    public int GetStageCurrentLevel(int stage)
     {
         int index = stage - 1;
         return stages[index] + 1;
