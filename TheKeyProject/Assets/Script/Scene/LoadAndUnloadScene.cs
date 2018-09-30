@@ -25,12 +25,13 @@ public class LoadAndUnloadScene : MonoBehaviour {
 
     public void Open()
     {
-        addtiveSceneMgr.LoadScene(sceneName);
+        addtiveSceneMgr.LoadAndChangeActiveScene(sceneName);
         opened = true;
     }
 
     public void Close()
     {
+        addtiveSceneMgr.RestoreLastActiveScene();
         addtiveSceneMgr.UnloadScene(sceneName);
     }
 }
