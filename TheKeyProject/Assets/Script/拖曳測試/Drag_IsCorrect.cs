@@ -30,6 +30,7 @@ public class Drag_IsCorrect : MonoBehaviour {
     }
     public void Iscorrect()             //答案驗證
     {
+        
         if (Finalanswer)
         {
             Flowchart.BroadcastFungusMessage("答對了");

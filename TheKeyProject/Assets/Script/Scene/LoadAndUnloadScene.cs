@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Fungus;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,5 +34,6 @@ public class LoadAndUnloadScene : MonoBehaviour {
     {
         addtiveSceneMgr.RestoreLastActiveScene();
         addtiveSceneMgr.UnloadScene(sceneName);
+        Flowchart.BroadcastFungusMessage("取消");
     }
 }

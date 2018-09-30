@@ -9,7 +9,7 @@ public class PositionSetter : MonoBehaviour {
     private Dictionary<string, Vector3> position = new Dictionary<string, Vector3>();
     private GameManager gameManager;
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         gameManager = GameManager.instance;
 
         foreach (Transform point in points)
