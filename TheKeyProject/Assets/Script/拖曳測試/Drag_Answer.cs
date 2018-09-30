@@ -31,6 +31,7 @@ public class Drag_Answer : MonoBehaviour
     public bool IsAnswerEqual()                         //判斷答案正不正確
     {
         Drag_Object obj = drag_Object.GetComponent<Drag_Object>();
+        Debug.Log("答案" + obj.Number);
         Debug.Log("答案" + Answer.Equals(obj.Number)); 
         return Answer.Equals(obj.Number);                  //答案編號是否等於物件的編號  回傳布林值
     }
