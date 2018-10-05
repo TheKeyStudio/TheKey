@@ -233,6 +233,8 @@ GameObject:
   - component: {fileID: 217313641}
   - component: {fileID: 217313643}
   - component: {fileID: 217313645}
+  - component: {fileID: 217313647}
+  - component: {fileID: 217313646}
   m_Layer: 0
   m_Name: "\u6C99\u767C-\u63D0\u793A\u5361"
   m_TagString: Untagged
@@ -331,6 +333,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 217313636}
   commandList:
+  - {fileID: 217313647}
   - {fileID: 217313640}
   - {fileID: 217313635}
   - {fileID: 217313639}
@@ -360,8 +363,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 217313642}
-  selectedCommands:
-  - {fileID: 217313641}
+  selectedCommands: []
   variables:
   - {fileID: 217313634}
   description: 
@@ -445,7 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 220.28378
+    x: 221.38269
     y: 72.81633
     width: 120
     height: 40
@@ -456,6 +458,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 217313645}
   commandList:
+  - {fileID: 217313646}
   - {fileID: 217313644}
   - {fileID: 217313641}
   - {fileID: 217313643}
@@ -504,6 +507,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 217313642}
   message: ItemGone
+--- !u!114 &217313646
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 106
+  indentLevel: 0
+  sayDialog: {fileID: 651104064}
+--- !u!114 &217313647
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217313632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 105
+  indentLevel: 0
+  sayDialog: {fileID: 651104064}
 --- !u!1001 &245106746
 Prefab:
   m_ObjectHideFlags: 0
@@ -1944,8 +1975,16 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 808630141}
+  selectedCommands:
+  - {fileID: 808630176}
+  - {fileID: 808630171}
+  - {fileID: 808630175}
+  - {fileID: 808630174}
+  - {fileID: 808630142}
+  - {fileID: 808630173}
+  - {fileID: 808630172}
   variables:
   - {fileID: 808630153}
   description: 
@@ -1971,7 +2010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 1
-  storyText: "\u73FE\u5728\u6642\u9593 10:18\u5206"
+  storyText: "{s} {s=25}\u73FE\u5728\u6642\u9593 11:15\u5206"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2161,7 +2200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 1
-  storyText: "\u9019\u53EA\u662F\u4E00\u74F6\u559D\u5149\u7684\u9152\u74F6"
+  storyText: "{s} {s=25}\u9019\u53EA\u662F\u4E00\u74F6\u559D\u5149\u7684\u9152\u74F6"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2233,7 +2272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 1
-  storyText: "\u62BD\u5C5C\u88E1\u9762\u6C92\u6709\u4EFB\u4F55\u6771\u897F"
+  storyText: "{s} {s=25}\u62BD\u5C5C\u88E1\u9762\u6C92\u6709\u4EFB\u4F55\u6771\u897F"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2305,7 +2344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 1
-  storyText: "\u96FB\u8166\u958B\u6A5F\u4E2D\uFF0C\u9280\u5E55\u597D\u50CF\u986F\u793A\u4E86\u67D0\u4E9B\u8A0A\u606F"
+  storyText: "{s} {s=25}\u96FB\u8166\u958B\u6A5F\u4E2D\uFF0C\u9280\u5E55\u597D\u50CF\u986F\u793A\u4E86\u67D0\u4E9B\u8A0A\u606F"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2378,7 +2417,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -39.34433
-    y: 167.5268
+    y: 168.6257
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2409,7 +2448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 103
   indentLevel: 1
-  storyText: "\u6AAF\u71C8\u6B63\u7167\u4EAE\u8457\u623F\u9593"
+  storyText: "{s} {s=25}\u6AAF\u71C8\u6B63\u7167\u4EAE\u8457\u623F\u9593"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2889,7 +2928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 292.4951
+    x: 293.594
     y: 172.83528
     width: 120
     height: 40
@@ -4051,7 +4090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 98
   indentLevel: 1
-  storyText: "\u5764\u6210\u8AAA:\u73FE\u5728\u4E0D\u80FD\u958B\u555F \u4E0D\u670D\u4F86\u8FAF "
+  storyText: "{s} {s=25}\u5764\u6210\u8AAA:\u73FE\u5728\u4E0D\u80FD\u958B\u555F \u4E0D\u670D\u4F86\u8FAF "
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4219,7 +4258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 214.94548
+    x: 216.04439
     y: 76.7912
     width: 120
     height: 40
@@ -5312,7 +5351,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d377190ba58cad4499e321d841dd0980, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7189,7 +7228,7 @@ SpriteRenderer:
   m_SortingLayerID: -892812411
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300020, guid: fd9a5af1f08a03b4f9de8eb67e148409, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d81c997e116cc241ae52a57b02879da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7206,8 +7245,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1810047016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.886742, y: -11.162933, z: 10.3671875}
-  m_LocalScale: {x: 0.10096074, y: 0.10096074, z: 0.10096074}
+  m_LocalPosition: {x: 11.84, y: -10.67, z: 10.3671875}
+  m_LocalScale: {x: 0.2482954, y: 0.2482954, z: 0.2482954}
   m_Children: []
   m_Father: {fileID: 419210904}
   m_RootOrder: 5
@@ -7239,18 +7278,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000004053116, y: -0.080367684}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.33, y: 11.260001}
+    oldSize: {x: 6.3, y: 6.3}
     newSize: {x: 11.33, y: 11.260001}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.33, y: 11.260001}
+  m_Size: {x: 6.5079703, y: 6.5986967}
   m_EdgeRadius: 0
 --- !u!1 &1843756988 stripped
 GameObject:
@@ -7385,7 +7424,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d377190ba58cad4499e321d841dd0980, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

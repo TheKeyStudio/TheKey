@@ -2119,6 +2119,7 @@ GameObject:
   - component: {fileID: 1021750569}
   - component: {fileID: 1021750568}
   - component: {fileID: 1021750567}
+  - component: {fileID: 1021750571}
   m_Layer: 0
   m_Name: "\u5224\u65B7\u6B63\u78BA"
   m_TagString: Untagged
@@ -2197,7 +2198,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1021750592}
   selectedCommands:
-  - {fileID: 1021750556}
+  - {fileID: 1021750571}
   variables:
   - {fileID: 1021750570}
   description: 
@@ -2568,6 +2569,24 @@ MonoBehaviour:
   scope: 0
   key: Talking
   value: 0
+--- !u!114 &1021750571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021750553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43743931d28f43f89eced820d907351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 0
+  messageTarget: 1
+  _message:
+    stringRef: {fileID: 0}
+    stringVal: Lock_box_complete
+  messageOLD: 
 --- !u!114 &1021750587
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2700,6 +2719,7 @@ MonoBehaviour:
   - {fileID: 1021750554}
   - {fileID: 1021750590}
   - {fileID: 1021750556}
+  - {fileID: 1021750571}
 --- !u!1 &1041787347
 GameObject:
   m_ObjectHideFlags: 1
