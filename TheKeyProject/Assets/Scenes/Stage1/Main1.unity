@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 674076232}
+  selectedFlowchart: {fileID: 851516916}
 --- !u!4 &462335465
 Transform:
   m_ObjectHideFlags: 1
@@ -4057,7 +4057,6 @@ GameObject:
   - component: {fileID: 850561184}
   - component: {fileID: 851516924}
   - component: {fileID: 851516923}
-  - component: {fileID: 851516922}
   - component: {fileID: 851516921}
   - component: {fileID: 851516920}
   - component: {fileID: 851516919}
@@ -4784,11 +4783,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 81.19967, y: 89.171486}
+  scrollPos: {x: 48.87651, y: -159.4347}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 419
-  zoom: 0.49000052
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -4796,8 +4795,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 851516954}
-  selectedCommands: []
+  - {fileID: 851516970}
+  selectedCommands:
+  - {fileID: 851516986}
   variables:
   - {fileID: 850561184}
   description: 
@@ -5051,70 +5051,6 @@ MonoBehaviour:
   booleanData:
     booleanRef: {fileID: 0}
     booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &851516922
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 114150592701054358, guid: 3e675a2881541ad4985376f31d204645,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851516892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 38
-  indentLevel: 0
-  variable: {fileID: 850561184}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
   integerData:
     integerRef: {fileID: 0}
     integerVal: 0
@@ -5895,7 +5831,6 @@ MonoBehaviour:
   eventHandler: {fileID: 851516944}
   commandList:
   - {fileID: 851516907}
-  - {fileID: 851516922}
   - {fileID: 851517006}
   - {fileID: 851517005}
   - {fileID: 851517004}
@@ -6290,8 +6225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 87
   indentLevel: 1
-  storyText: "{s}{s=25}{color=yellow}\u6211\u7684\u7236\u6BCD\u5F88\u559C\u6B61\u628A\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u751F\u6D3B\u9EDE\u6EF4\u90FDPO\u5230\u793E\u7FA4\u7DB2\u7AD9\u4E0A\n\u4E26\u4E14\u548C\u670B\u53CB\u5206\u4EAB\uFF0C\u6BCF\u5929\u6211\u5011\u90FD\u904E\u5F97\u5F88\u5FEB\u6A02\u3002
-    //\u51FA\u73FEfb\u5716\u7247 EvelyN\u4E00\u5BB6\u4EBA\u7684\u5716\u7247"
+  storyText: "{s}{s=25}{color=yellow}\u6211\u7684\u7236\u6BCD\u5F88\u559C\u6B61\u628A\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u751F\u6D3B\u9EDE\u6EF4\u90FDPO\u5230\u793E\u7FA4\u7DB2\u7AD9\u4E0A\n\u4E26\u4E14\u548C\u670B\u53CB\u5206\u4EAB\uFF0C\u6BCF\u5929\u6211\u5011\u90FD\u904E\u5F97\u5F88\u5FEB\u6A02\u3002 "
   description: 
   character: {fileID: 157533866}
   portrait: {fileID: 0}
@@ -6317,7 +6251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 88
   indentLevel: 1
-  storyText: "{s} {s=25}{color=yellow}\u6709{wc} \n\u6211\u6709\u5F88\u68D2\u7684\u7238\u7238\u5ABD\u5ABD\uFF0C\u4ED6\u5011\u77E5\u9053\u6211\u5F88\u559C\u6B61\u73A9\u73A9\u5177\uFF0C{wc}\n\u6240\u4EE5\u6211\u7684\u7238\u7238\u548C\u5ABD\u5ABD\u6642\u5E38\u8CB7\u96FB\u5B50\u73A9\u5177\u7D66\u6211\u73A9\uFF0C\u73A9\u5177\u771F\u7684\u5F88\u597D\u73A9\u6211\u6BCF\u5929\u90FD\u5728\u73A9\u3002\r{wc}\n\u800C\u4E14\u6BCF\u6B21\u5230\u4E86\u9031\u672B\u7684\u6642\u5019\uFF0C\u6211\u5011\u5168\u5BB6\u4EBA\u90FD\u6703\u5230\u90CA\u5916\u65C5\u904A\uFF0C\u4E26\u62CD\u4E0B\u7F8E\u597D\u7684\u56DE\u61B6\u3002\r\n"
+  storyText: "{s}{s=25}{color=yellow}\u6709,\u6211\u6709\u5F88\u68D2\u7684\u7238\u7238\u5ABD\u5ABD\uFF0C\u4ED6\u5011\u77E5\u9053\u6211\u5F88\u559C\u6B61\u73A9\u73A9\u5177\uFF0C{wc}\n\u6240\u4EE5\u6211\u7684\u7238\u7238\u548C\u5ABD\u5ABD\u6642\u5E38\u8CB7\u96FB\u5B50\u73A9\u5177\u7D66\u6211\u73A9\uFF0C\u73A9\u5177\u771F\u7684\u5F88\u597D\u73A9\u6211\u6BCF\u5929\u90FD\u5728\u73A9\u3002\r{wc}\n\u800C\u4E14\u6BCF\u6B21\u5230\u4E86\u9031\u672B\u7684\u6642\u5019\uFF0C\u6211\u5011\u5168\u5BB6\u4EBA\u90FD\u6703\u5230\u90CA\u5916\u65C5\u904A\uFF0C\u4E26\u62CD\u4E0B\u7F8E\u597D\u7684\u56DE\u61B6\u3002\r\n"
   description: 
   character: {fileID: 157533866}
   portrait: {fileID: 0}
@@ -15441,15 +15375,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -34.379997
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9.96875
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15474,17 +15408,17 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: field of view
-      value: 40
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: near clip plane
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}

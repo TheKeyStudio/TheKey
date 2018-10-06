@@ -51,6 +51,7 @@ public class Drag_Object : MonoBehaviour
         {
             Enter = true;
             answerBox = other.GetComponent<Drag_Answer>();
+            Debug.Log("Entering: " + gameObject.name);
         }
     }
     private void OnTriggerExit2D(Collider2D other)       // 判斷物件是否離開答案框  
