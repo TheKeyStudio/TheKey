@@ -48,12 +48,10 @@ public class LevelChooser : MonoBehaviour {
     {
         for(int i = 0; i < number; i++)
         {
-            childImgs[i].color = Color.red;
             buttons[i].interactable = true;
         }
         for(int i = number; i < childImgs.Length; i++)
         {
-            childImgs[i].color = Color.white;
             buttons[i].interactable = false;
         }
     }
