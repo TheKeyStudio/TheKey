@@ -7,6 +7,13 @@ public class OpenFilesCmd : TerminalInputCommand
 {
     public override void Respond(TerminalController controller, string[] separatedInputWords)
     {
-        controller.OpenFile(separatedInputWords[1]);
+        try
+        {
+            controller.OpenFile(separatedInputWords[1]);
+        }
+        catch
+        {
+            controller.LogString("\'open\' is unavaiable, please make sure you have input file name.");
+        }
     }
 }
