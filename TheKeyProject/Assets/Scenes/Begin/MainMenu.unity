@@ -762,8 +762,9 @@ GameObject:
   - component: {fileID: 1021750556}
   - component: {fileID: 1021750555}
   - component: {fileID: 1021750554}
+  - component: {fileID: 1021750559}
   m_Layer: 0
-  m_Name: "\u6050\u6016\u97F3\u6548"
+  m_Name: "\u80CC\u666F\u97F3\u6A02"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,10 +783,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: e27da0f6b0268494d9f50e10278e7cb8, type: 3}
+  musicClip: {fileID: 8300000, guid: 31c02edda3436ac41b2fa45b77496261, type: 3}
   atTime: 0
   loop: 1
-  fadeDuration: 1
+  fadeDuration: 0
 --- !u!114 &1021750555
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -825,6 +826,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1021750555}
   commandList:
+  - {fileID: 1021750559}
   - {fileID: 1021750554}
 --- !u!114 &1021750557
 MonoBehaviour:
@@ -850,8 +852,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1021750556}
+  selectedCommands:
+  - {fileID: 1021750559}
   variables: []
   description: 
   stepPause: 0
@@ -876,6 +880,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1021750559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021750553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4015e84616cc45cfb498561373899d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  volume: 0.7
+  fadeDuration: 0
+  waitUntilFinished: 0
 --- !u!1 &1041787347
 GameObject:
   m_ObjectHideFlags: 1
