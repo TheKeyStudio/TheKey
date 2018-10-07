@@ -21,7 +21,7 @@ public class Digital1 : MonoBehaviour {
         {
             
             Debug.Log("correct");
-            gameManager.game1 = true;
+           // gameManager.game1 = true;
             //gameManager.ActiveMove();
         }
     }

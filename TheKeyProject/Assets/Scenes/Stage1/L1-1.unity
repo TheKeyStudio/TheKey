@@ -1437,6 +1437,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078976167475388, guid: ec82e1aefe9e0e541ae7048be59f9122, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec82e1aefe9e0e541ae7048be59f9122, type: 2}
   m_IsPrefabParent: 0
@@ -1791,15 +1795,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.033994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.33008748
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.96875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1843,7 +1847,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
@@ -1964,11 +1968,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 119.01056, y: 45.51641}
+  scrollPos: {x: 50.226707, y: 35.11087}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 403
-  zoom: 0.9100001
+  zoom: 0.8500002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1977,14 +1981,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 808630141}
-  selectedCommands:
-  - {fileID: 808630176}
-  - {fileID: 808630171}
-  - {fileID: 808630175}
-  - {fileID: 808630174}
-  - {fileID: 808630142}
-  - {fileID: 808630173}
-  - {fileID: 808630172}
+  selectedCommands: []
   variables:
   - {fileID: 808630153}
   description: 
@@ -2370,7 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 490.62067
+    x: 491.79715
     y: 74.776115
     width: 120
     height: 40
@@ -2416,8 +2413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -39.34433
-    y: 168.6257
+    x: 17.126244
+    y: 166.27277
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2928,8 +2925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 293.594
-    y: 172.83528
+    x: 215.94696
+    y: 171.65881
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3049,8 +3046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 443.54987
-    y: 172.94525
+    x: 381.19687
+    y: 183.53346
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4949,8 +4946,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168501078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.301, y: -14.209, z: 0}
-  m_LocalScale: {x: 7.555319, y: 3.0295105, z: 1}
+  m_LocalPosition: {x: 15.307, y: -14.258, z: 0}
+  m_LocalScale: {x: 7.524426, y: 3.0051627, z: 1}
   m_Children: []
   m_Father: {fileID: 888629733}
   m_RootOrder: 0
@@ -5825,7 +5822,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeName: "\u6469\u65AF\u5BC6\u78BC"
   hintCardCode: Morse
-  hintCardSprite: {fileID: 21300002, guid: ff4282128456946489652a7206318a15, type: 3}
+  hintCardSprite: {fileID: 21300002, guid: 2e6680d50b0d55e4482b1b0fe7b3a235, type: 3}
+  hintCardDescriptSprite: {fileID: 21300004, guid: 2e6680d50b0d55e4482b1b0fe7b3a235,
+    type: 3}
   unlocked: 0
 --- !u!114 &1472097130
 MonoBehaviour:

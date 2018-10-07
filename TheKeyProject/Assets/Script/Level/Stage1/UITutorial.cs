@@ -34,7 +34,7 @@ public class UITutorial : MonoBehaviour {
     private void DoneTalking()
     {
         player.ActiveMove();
-        GameManager.instance.level1FirstTimeGoInto = true;
+        GameManager.instance.stage1level1FirstTimeGoInto = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,7 +51,7 @@ public class UITutorial : MonoBehaviour {
 
     private void DestorySelfIfDone()
     {
-        if (GameManager.instance.level1FirstTimeGoInto)
+        if (GameManager.instance.stage1level1FirstTimeGoInto)
         {
             Destroy(gameObject);
         }

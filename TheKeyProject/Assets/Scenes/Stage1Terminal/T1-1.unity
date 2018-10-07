@@ -518,6 +518,16 @@ Prefab:
       propertyPath: imageControl
       value: 
       objectReference: {fileID: 861465531}
+    - target: {fileID: 114797978179111478, guid: f421481d36a421c498768621872e403f,
+        type: 2}
+      propertyPath: terminalLogin
+      value: 
+      objectReference: {fileID: 1142643850}
+    - target: {fileID: 114797978179111478, guid: f421481d36a421c498768621872e403f,
+        type: 2}
+      propertyPath: terminalUI
+      value: 
+      objectReference: {fileID: 1653978204}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f421481d36a421c498768621872e403f, type: 2}
   m_IsPrefabParent: 0
@@ -674,7 +684,7 @@ Prefab:
     - target: {fileID: 224348196115355304, guid: 871b3bcb303a8f64e958277f5fc7b98d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224853308693005162, guid: 871b3bcb303a8f64e958277f5fc7b98d,
         type: 2}
@@ -722,6 +732,11 @@ Prefab:
 --- !u!224 &1142643849 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224754182649549088, guid: 871b3bcb303a8f64e958277f5fc7b98d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1142643848}
+--- !u!1 &1142643850 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1063679484861176, guid: 871b3bcb303a8f64e958277f5fc7b98d,
     type: 2}
   m_PrefabInternal: {fileID: 1142643848}
 --- !u!114 &1382108620 stripped

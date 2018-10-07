@@ -20,6 +20,7 @@ public class HintCardPickUp : MonoBehaviour
         if (!hintCard.Unlocked)
         {
             BookManager.instance.AddPage(hintCard.HintCardSprite);
+            BookManager.instance.AddPage(hintCard.HintCardDescriptSprite);
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
             Flowchart.BroadcastFungusMessage("ItemGet");

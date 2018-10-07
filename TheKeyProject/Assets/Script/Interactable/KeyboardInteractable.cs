@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyboardInteractable : MonoBehaviour, Interactable{
     public KeyCode interactKey;
+    public string interactButton;
     public Color originalColor;
     public SpriteRenderer spriteRenderer;
     public GameObject noticeIcon;
@@ -29,7 +30,7 @@ public class KeyboardInteractable : MonoBehaviour, Interactable{
         if (isFocus)
         {
             Highlight();
-            if (Input.GetKey(interactKey))
+            if (Input.GetButtonDown(interactButton))
             {
                 Interact();
             }

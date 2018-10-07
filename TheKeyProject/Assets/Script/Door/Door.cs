@@ -12,6 +12,7 @@ public abstract class Door : KeyboardInteractable
     {
         base.Init();
         interactKey = KeyCode.UpArrow;
+        interactButton = "EnterDoor";
     }
 
     public void ToNextScene()

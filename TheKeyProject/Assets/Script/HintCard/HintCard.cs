@@ -8,6 +8,7 @@ public class HintCard : MonoBehaviour {
     [SerializeField] private string codeName;
     [SerializeField] private string hintCardCode;
     [SerializeField] private Sprite hintCardSprite;
+    [SerializeField] private Sprite hintCardDescriptSprite;
     [SerializeField] private bool unlocked = false;
 
     public string HintCardCode
@@ -48,6 +49,19 @@ public class HintCard : MonoBehaviour {
         set
         {
             codeName = value;
+        }
+    }
+
+    public Sprite HintCardDescriptSprite
+    {
+        get
+        {
+            return hintCardDescriptSprite;
+        }
+
+        set
+        {
+            hintCardDescriptSprite = value;
         }
     }
 
