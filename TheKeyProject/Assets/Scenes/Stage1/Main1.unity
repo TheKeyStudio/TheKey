@@ -904,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactKey: 0
+  interactButton: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 334847650}
@@ -4796,8 +4797,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 851516970}
-  selectedCommands:
-  - {fileID: 851516986}
+  selectedCommands: []
   variables:
   - {fileID: 850561184}
   description: 
@@ -10022,6 +10022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactKey: 0
+  interactButton: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 643422637}

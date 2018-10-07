@@ -13,6 +13,7 @@ public class StageComplete : TerminalFiles
         GameManager gameManager = GameManager.instance;
         if (!gameManager.IsStageComplete(completedStage))
         {
+            gameManager.NextLevel(completedStage);
             gameManager.SetStageComplete(completedStage);
             controller.LogString("Opened Stage " + (completedStage + 1) + ". Good luck kid.");
         }
