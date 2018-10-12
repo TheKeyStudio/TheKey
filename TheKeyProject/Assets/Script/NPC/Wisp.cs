@@ -31,7 +31,7 @@ public class Wisp : Npc {
         float x = transform.position.x;
         float y = (waveAmplitude * Mathf.Sin(waveSpeed * elapsedTime)) + original_y;
         transform.position = new Vector3(x, y, 0);
-
+        /*
         if (!flowchart.GetBooleanVariable("Talking") && !talkAble)
         {
             startCoolDowmTime -= Time.deltaTime;
@@ -40,6 +40,7 @@ public class Wisp : Npc {
                 ActiveTalk();
 
         }
+        */
 
     }
     

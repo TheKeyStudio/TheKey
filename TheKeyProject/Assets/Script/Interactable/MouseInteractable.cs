@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MouseInteractable : Clickable2D{
 
@@ -20,6 +21,10 @@ public class MouseInteractable : Clickable2D{
 
     private void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (playerAuto.until && !locked)
         {
             playerAuto.until = false;

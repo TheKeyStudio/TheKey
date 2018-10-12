@@ -45,7 +45,7 @@ public class TerminalFilesHandler : MonoBehaviour
         }
         else
         {
-            OpenCurrentFileAndClear();
+            OpenCurrentFile();
         }
     }
 
@@ -73,17 +73,17 @@ public class TerminalFilesHandler : MonoBehaviour
         this.inputPassword = password;
         if (currentFile.password.Equals(password, StringComparison.OrdinalIgnoreCase))
         {
-            OpenCurrentFileAndClear();
+            OpenCurrentFile();
         }
         else
         {
             controller.LogString("Wrong password. Try again");
         }
+        currentFile = null;
     }
 
-    public void OpenCurrentFileAndClear()
+    public void OpenCurrentFile()
     {
         currentFile.Open(controller);
-        currentFile = null;
     }
 }

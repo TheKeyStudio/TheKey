@@ -46,6 +46,10 @@ namespace Fungus
 
         protected virtual void DoPointerEnter()
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
             ChangeCursor(hoverCursor);
         }
 

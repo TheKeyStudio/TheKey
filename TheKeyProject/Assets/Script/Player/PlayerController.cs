@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
         if (!autoMoveing)
             SetHorizontalDirection(Input.GetAxis("Horizontal"));
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             jump = true;
         }

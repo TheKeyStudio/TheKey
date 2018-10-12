@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class BagButton : MonoBehaviour {
 
-    public GameObject inventory;
+    public GameObject book;
 
 	public void BagButtonOnClick()
     {
-        Debug.Log("Bag button clicked");
-        inventory.SetActive(!inventory.activeSelf);
+        Debug.Log("Book button clicked");
+        if (!book.activeSelf)
+        { 
+            Time.timeScale = 0;
+            Debug.Log("Pause");
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Debug.Log("Resume");
+        }
+        book.SetActive(!book.activeSelf);
     }
 }
