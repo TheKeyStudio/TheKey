@@ -156,11 +156,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -66.17
+      value: -65.96
       objectReference: {fileID: 0}
     - target: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.39
+      value: 16.07
       objectReference: {fileID: 0}
     - target: {fileID: 4637399395388706, guid: 644c950d66d7ac047bb5d92be56d6fec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -208,15 +208,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -65.96
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 16.07
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9.96875
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -241,7 +241,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: field of view
-      value: 40
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
@@ -276,7 +276,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
@@ -951,7 +951,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4583217226280342, guid: fb56be14399da28449820cc3017383f9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -5.02
       objectReference: {fileID: 0}
     - target: {fileID: 4583217226280342, guid: fb56be14399da28449820cc3017383f9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1332,7 +1332,6 @@ GameObject:
   - component: {fileID: 979733075}
   - component: {fileID: 979733077}
   - component: {fileID: 979733078}
-  - component: {fileID: 979733079}
   - component: {fileID: 979733080}
   - component: {fileID: 979733081}
   - component: {fileID: 979733082}
@@ -1381,7 +1380,7 @@ MonoBehaviour:
   scrollPos: {x: -221.62892, y: 25.750353}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 309
+  blockViewHeight: 555
   zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
@@ -1390,8 +1389,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 979733088}
-  selectedCommands: []
+  - {fileID: 979733059}
+  selectedCommands:
+  - {fileID: 979733086}
   variables:
   - {fileID: 979733087}
   description: 
@@ -1467,7 +1467,6 @@ MonoBehaviour:
   - {fileID: 979733082}
   - {fileID: 979733081}
   - {fileID: 979733080}
-  - {fileID: 979733079}
   - {fileID: 979733078}
   - {fileID: 979733077}
   - {fileID: 979733085}
@@ -1888,33 +1887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 1
-  storyText: "{s}{s=25}{color=yellow}\u5F80\u524D\u8D70\u4F60\u5C07\u6703\u770B\u5230\u4E09\u9053\u9580\uFF0C\u6BCF\u4E00\u9053\u9580\u4EE3\u8868\u5176\u4E2D\u4E00\u500B\u968E\u6BB5\u3002\r\n"
-  description: 
-  character: {fileID: 1137343945}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &979733079
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 979733056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 15
-  indentLevel: 1
-  storyText: "{s}{s=25}{color=yellow}\u6BCF\u500B\u968E\u6BB5\u90FD\u6709\u8A31\u591A\u95DC\u5361\uFF0C\u4F46\u662F\u53EA\u8981\u5728\u7B2C\u4E00\u968E\u6BB5\u7834\u5B8C5\u95DC\u5C31\u80FD\u9032\u5165\u5230\u4E0B\u4E00\u968E\u6BB5{wc}\n{s}{s=25}\u7B2C\u4E8C\u968E\u6BB5\u662F\u7834\u5B8C4\u95DC\uFF0C\u7B2C\u4E09\u968E\u6BB5\u7834\u5B8C3\u95DC\u4E4B\u5F8C\u4F60\u5C31\u80FD\u56DE\u5230\u4F60\u7684\u4E16\u754C\u4E86\u3002\r\n"
+  storyText: "{s}{s=25}{color=yellow}\u5F80\u524D\u8D70\u4F60\u5C07\u6703\u770B\u5230\u4E00\u9053\u9580\u3002\r\n"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 0}
@@ -1940,7 +1913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 1
-  storyText: "{s}{s=25}{color=yellow}\u5BC6\u78BC\u4E16\u754C\u7E3D\u5171\u5206\u70BA\u4E09\u968E\u6BB5\u7684\uFF0C\u6BCF\u4E00\u968E\u6BB5\u7684\u95DC\u5361\u4F3C\u4E4E\u90FD\u96B1\u85CF\u4E00\u4E9B\u8A0A\u606F\n\u800C\u4E14\u95DC\u5361\u90FD\u662F\u548C\u5BC6\u78BC\u5B78\u76F8\u95DC\u7684"
+  storyText: "{s}{s=25}{color=yellow}\u5BC6\u78BC\u4E16\u754C\u7E3D\u5171\u5206\u70BA\u4E94\u500B\u95DC\u5361\uFF0C\u6BCF\u500B\u95DC\u5361\u4F3C\u4E4E\u90FD\u96B1\u85CF\u4E00\u4E9B\u8A0A\u606F\n\u800C\u4E14\u95DC\u5361\u90FD\u662F\u548C\u5BC6\u78BC\u5B78\u76F8\u95DC\u7684"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 0}
@@ -3308,11 +3281,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -66.17
+      value: -65.96
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.39
+      value: 16.07
       objectReference: {fileID: 0}
     - target: {fileID: 4098170139644636, guid: a5dc8e4c6a6a93b4eb850f5e569a58a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3579,7 +3552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4530845982454564, guid: 489d92202a4725e4c932bb8fa924492a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.64
+      value: 15.81
       objectReference: {fileID: 0}
     - target: {fileID: 4530845982454564, guid: 489d92202a4725e4c932bb8fa924492a, type: 2}
       propertyPath: m_LocalPosition.z
