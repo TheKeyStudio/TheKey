@@ -20,11 +20,11 @@ public class PlayerAuto : MonoBehaviour {
         {
             if (transform.position.x > directionX + deviation)
             {
-                playerController.SetHorizontalDirection(-1);
+                //playerController.SetHorizontalDirection(-1);
             }
             else if (transform.position.x < directionX - deviation)
             {
-                playerController.SetHorizontalDirection(1);
+                //playerController.SetHorizontalDirection(1);
             }
             else
             {

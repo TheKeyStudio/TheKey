@@ -9,7 +9,7 @@ public class MouseInteractable : Clickable2D{
     public float interactDistance = 3f;
     //This locked is important, because every Mouse interactable object will check is player until the
     //range of object, we need this lock to avoid all of the object being trigger in the same time.
-    bool locked = true; 
+    bool locked = true;
     PlayerAuto playerAuto;
     Collider2D collider2d;
 
@@ -45,4 +45,5 @@ public class MouseInteractable : Clickable2D{
     {
 
     }
+    
 }
