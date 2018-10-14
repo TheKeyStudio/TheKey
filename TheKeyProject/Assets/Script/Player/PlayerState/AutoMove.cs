@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fungus;
 using UnityEngine;
 
 public class AutoMove : PlayerState {
@@ -21,9 +22,11 @@ public class AutoMove : PlayerState {
         this.deviation = deviation;
     }
 
-    public override void Interaction()
+    public override IEnumerator Interact(Flowchart flowChart)
     {
-        return;
+        yield return null;
+        controller.PlayerState = new Talking(controller);
+        controller.Interact(flowChart);
     }
 
     public override void Move()
@@ -47,7 +50,6 @@ public class AutoMove : PlayerState {
         }
         else
         {
-            controller.SetMoveAnimation(false);
             controller.PlayerState = new Talking(controller);
             controller.Interact();
         }
@@ -56,6 +58,7 @@ public class AutoMove : PlayerState {
 
     public override void ReadBook()
     {
+        controller.RemoveFocus();
         controller.PlayerState = new Reading(controller);
     }
 }

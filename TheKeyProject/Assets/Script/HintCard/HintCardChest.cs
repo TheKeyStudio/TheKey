@@ -36,14 +36,12 @@ public class HintCardChest : KeyboardInteractable
     public void Open()
     {
         animator.SetBool("Opened", true);
-        playerController.DeactiveMove();
         chestUI.SetActive(true);
     }
 
     public void Close()
     {
         animator.SetBool("Opened", false);
-        playerController.ActiveMove();
         chestUI.SetActive(false);
     }
 
@@ -57,7 +55,6 @@ public class HintCardChest : KeyboardInteractable
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
             Destroy(gameObject);
-            playerController.ActiveMove();
             Debug.Log("Unlocked " + hintCard.HintCardCode);
         }
         else

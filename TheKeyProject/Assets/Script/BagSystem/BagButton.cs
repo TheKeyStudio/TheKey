@@ -11,15 +11,7 @@ public class BagButton : MonoBehaviour {
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         Debug.Log("Book button clicked");
-        if (!book.activeSelf)
-        {
-            playerController.ReadBook(true);
-        }
-        else
-        {
-            Time.timeScale = 1;
-            Debug.Log("Resume");
-        }
+        playerController.ReadBook();
         book.SetActive(!book.activeSelf);
     }
 }

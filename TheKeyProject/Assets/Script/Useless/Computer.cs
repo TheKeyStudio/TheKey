@@ -23,14 +23,12 @@ public class Computer : KeyboardInteractable
     private void Open()
     {
         Debug.Log("Opening question: " + question.name);
-        playerController.DeactiveMove();
         question.SetActive(true);
     }
 
     public void Close()
     {
         Debug.Log("Closing question: " + question.name);
-        playerController.ActiveMove();
         question.SetActive(false);
     }
 }

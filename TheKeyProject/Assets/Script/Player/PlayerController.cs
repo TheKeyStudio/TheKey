@@ -5,27 +5,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+
     private Rigidbody2D playerRigid2D;
     private Animator playerAnimator;
-    private bool canMove = true;
-    public bool talking = false;
-
+    
     public Flowchart flowChart;
 
-    [Range(300, 1000)]
-    public float yForce = 500f;
     
-    public Transform groundCheck;
-    [Range(0, 0.5f)]
-    public float groundRadius = 0.2f;
-    public LayerMask groundLayer;
-
-    public bool grounded;
-    public bool jump;
-
     private PlayerState playerState;
     private PlayerMotor playerMotor;
-    [SerializeField] private MouseInteractable focusing;
+    [SerializeField] private Interactable focusing;
 
     public string playerStateName;
 
@@ -44,20 +33,13 @@ public class PlayerController : MonoBehaviour {
 
     void Update ()
     {
-        if (Input.GetButton("Jump"))
-        {
-            jump = true;
-        }
         playerStateName = playerState.GetType().ToString();
     }
 
     private void FixedUpdate()
     {
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
         Move();
-        if(jump)
-            Jump();
-        SetJumpAnimation(!grounded);
+       // SetJumpAnimation(!grounded);
     }
     
     public void Move()
@@ -68,30 +50,29 @@ public class PlayerController : MonoBehaviour {
     
     public void Interact()
     {
-        talking = true;
+        Interact(flowChart);
+    }
+
+    public void Interact(Flowchart newflowChart)
+    {
+        StartCoroutine(playerState.Interact(newflowChart));
         focusing.Interact();
-        StartCoroutine(Talk());
     }
 
-    IEnumerator Talk()
+    public void Interact(Flowchart newflowChart, Interactable newFocus)
     {
-        bool flowChartTalking = flowChart.GetBooleanVariable("Talking");
-        while (talking || flowChartTalking)
-        {
-            flowChartTalking = flowChart.GetBooleanVariable("Talking");
-
-            if (flowChartTalking && talking)
-                talking = false;
-
-            yield return null;
-        }
-        Debug.Log("Done talk");
-        playerState.Interaction();
+        SetFocus(newFocus);
+        Interact(newflowChart);
+    }
+    
+    public void ReadBook()
+    {
+        playerState.ReadBook();
     }
 
-    public void AutoMoveToX(float directionX, float deviation, MouseInteractable interactable)
+    public void AutoMoveToX(float directionX, float deviation, Interactable interactable)
     {
-        this.focusing = interactable;
+        SetFocus(interactable);
         playerState.AutoMoveToX(directionX, deviation);
     }
 
@@ -105,15 +86,6 @@ public class PlayerController : MonoBehaviour {
         playerAnimator.SetBool("Jump", flag);
     }
 
-    void Jump()
-    {
-        if (grounded && jump)
-        {
-            jump = false;
-            playerRigid2D.AddForce(new Vector2(0f, yForce));
-            playerAnimator.SetBool("Jump", true);
-        }
-    }
 
     public PlayerState PlayerState
     {
@@ -132,21 +104,16 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void DeactiveMove()
+    public void RemoveFocus()
     {
-        canMove = false;
+        focusing = null;
     }
-
-    public void ActiveMove()
+    
+    public void SetFocus(Interactable newFocus)
     {
-        canMove = true;
-    }
-
-    public bool CanPlayerMove
-    {
-        get
+        if(newFocus != focusing)
         {
-            return canMove;
+            focusing = newFocus;
         }
     }
 }

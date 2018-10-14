@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MouseInteractable : Clickable2D{
+public class MouseInteractable : Clickable2D, Interactable{
 
     public float interactDistance = 3f;
     PlayerController playerController;

@@ -10,7 +10,6 @@ public class GM : Npc
     
     public override void Talk()
     {
-        playerController.DeactiveMove();
         Flowchart.BroadcastFungusMessage(flowchartMsg);
     }
 

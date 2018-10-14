@@ -32,7 +32,6 @@ public abstract class Npc : KeyboardInteractable {
         if (talkAble)
         {
             Debug.Log("Talking with " + name);
-            playerController.DeactiveMove(); //Probably use state pattern on playerController is better, like: Talking -> NoTalking
             DeactiveTalk();
             Talk();
         }

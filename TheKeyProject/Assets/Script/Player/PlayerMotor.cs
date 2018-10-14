@@ -13,10 +13,18 @@ public class PlayerMotor : MonoBehaviour {
     [SerializeField] private float horizontalDirection = 0f;
 
     public float runSpeed = 100f;
-
+    
     [Range(300, 1000)]
     public float yForce = 500f;
-    
+
+    public Transform groundCheck;
+    [Range(0, 0.5f)]
+    public float groundRadius = 0.2f;
+
+    public LayerMask groundLayer;
+
+    public bool grounded;
+    public bool jump;
 
     void Awake()
     {
@@ -29,13 +37,29 @@ public class PlayerMotor : MonoBehaviour {
 
     void Update()
     {
-        
+        if (Input.GetButton("Jump"))
+        {
+            jump = true;
+        }
     }
 
     private void FixedUpdate()
     {
         horizontalDirection *= Time.fixedDeltaTime;
-        
+
+        if (jump)
+            Jump();
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+    }
+
+    void Jump()
+    {
+        if (grounded && jump)
+        {
+            jump = false;
+            playerRigid2D.AddForce(new Vector2(0f, yForce));
+           // playerAnimator.SetBool("Jump", true);
+        }
     }
 
     public void Move()

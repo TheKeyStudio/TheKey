@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UITutorial : MonoBehaviour {
+public class UITutorial : MonoBehaviour, Interactable {
     public Flowchart flowChart;
     public string fungusMsgName;
     public Sound sound;
@@ -24,17 +24,12 @@ public class UITutorial : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (flowChart.GetBooleanVariable("isDone"))
-        {
-            DoneTalking();
-            DestorySelfIfDone();
-        }
     }
 
-    private void DoneTalking()
+    public void DoneTalking()
     {
-        player.ActiveMove();
         GameManager.instance.stage1level1FirstTimeGoInto = true;
+        DestorySelfIfDone();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,10 +37,9 @@ public class UITutorial : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             player = other.GetComponent<PlayerController>();
-            player.DeactiveMove();
             sound.source.Play();
 
-            Flowchart.BroadcastFungusMessage(fungusMsgName);
+            player.Interact(flowChart, this);
         }
     }
 
@@ -55,5 +49,10 @@ public class UITutorial : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
+
+    public void Interact()
+    {
+        Flowchart.BroadcastFungusMessage(fungusMsgName);
     }
 }

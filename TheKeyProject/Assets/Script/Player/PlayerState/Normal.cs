@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fungus;
 using UnityEngine;
 
 public class Normal : PlayerState
@@ -15,10 +16,13 @@ public class Normal : PlayerState
         controller.PlayerState = new AutoMove(directionX, deviation, controller);
     }
 
-    public override void Interaction()
+    public override IEnumerator Interact(Flowchart flowChart)
     {
-        return;
+        yield return null;
+        controller.PlayerState = new Talking(controller);
+        controller.Interact(flowChart);
     }
+    
 
     public override void Move()
     {
@@ -37,6 +41,6 @@ public class Normal : PlayerState
 
     public override void ReadBook()
     {
-        throw new System.NotImplementedException();
+        controller.PlayerState = new Reading(controller);
     }
 }
