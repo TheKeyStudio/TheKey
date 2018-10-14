@@ -5,14 +5,15 @@ using UnityEngine;
 public class BagButton : MonoBehaviour {
 
     public GameObject book;
+    PlayerController playerController;
 
-	public void BagButtonOnClick()
+    public void BagButtonOnClick()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         Debug.Log("Book button clicked");
         if (!book.activeSelf)
-        { 
-            Time.timeScale = 0;
-            Debug.Log("Pause");
+        {
+            playerController.ReadBook(true);
         }
         else
         {

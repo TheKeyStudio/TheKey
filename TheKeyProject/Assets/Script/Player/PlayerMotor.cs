@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerMotor : MonoBehaviour {
 
     private Rigidbody2D playerRigid2D;
-    private Animator playerAnimator;
     private bool facingRight = true;
     public Vector3 m_Velocity = Vector3.zero;
 
@@ -22,7 +21,6 @@ public class PlayerMotor : MonoBehaviour {
     void Awake()
     {
         playerRigid2D = GetComponent<Rigidbody2D>();
-        playerAnimator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -37,6 +35,7 @@ public class PlayerMotor : MonoBehaviour {
     private void FixedUpdate()
     {
         horizontalDirection *= Time.fixedDeltaTime;
+        
     }
 
     public void Move()

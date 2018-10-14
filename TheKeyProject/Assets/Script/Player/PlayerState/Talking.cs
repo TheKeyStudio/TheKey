@@ -10,21 +10,21 @@ public class Talking : PlayerState
 
     public override void AutoMoveToX(float directionX, float deviation)
     {
-        throw new System.NotImplementedException();
+        return;
     }
 
     public override void Interaction()
     {
-        throw new System.NotImplementedException();
+        controller.PlayerState = new Normal(controller);
     }
 
     public override void Move()
     {
-        throw new System.NotImplementedException();
+        return;
     }
 
     public override void ReadBook()
     {
-        throw new System.NotImplementedException();
+        return;
     }
 }

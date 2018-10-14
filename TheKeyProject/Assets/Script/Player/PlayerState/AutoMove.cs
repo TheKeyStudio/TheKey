@@ -23,11 +23,17 @@ public class AutoMove : PlayerState {
 
     public override void Interaction()
     {
-        controller.PlayerState = new Talking(controller);
+        return;
     }
 
     public override void Move()
     {
+        float horizonatal = Input.GetAxis("Horizontal");
+        if (Math.Abs(horizonatal) > 0.1)
+        {
+            controller.PlayerState = new Normal(controller);
+        }
+
         Transform transform = controller.transform;
         PlayerMotor motor = controller.PlayerMotor;
         controller.SetMoveAnimation(true);
@@ -41,15 +47,11 @@ public class AutoMove : PlayerState {
         }
         else
         {
-            Interaction();
             controller.SetMoveAnimation(false);
+            controller.PlayerState = new Talking(controller);
+            controller.Interact();
         }
-
-
-        if (Math.Abs(Input.GetAxis("Horizontal")) > 0.1)
-        {
-            controller.PlayerState = new Normal(controller);
-        }
+        
     }
 
     public override void ReadBook()

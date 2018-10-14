@@ -20,7 +20,9 @@ public class Reading : PlayerState
 
     public override void Move()
     {
-        throw new System.NotImplementedException();
+
+        PlayerMotor motor = controller.PlayerMotor;
+        motor.SetHorizontalDirection(Input.GetAxis("Horizontal"));
     }
 
     public override void ReadBook()
