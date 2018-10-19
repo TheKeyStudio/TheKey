@@ -16,6 +16,7 @@ public class TerminalController : MonoBehaviour {
 
     private TerminalFilesHandler filesHandler;
     private TerminalInput terminalInput;
+    private InputHistory inputHistory;
 
     public TerminalImageControl imageControl;
 
@@ -102,9 +103,30 @@ public class TerminalController : MonoBehaviour {
         imageControl.ShowImage(sprite, this);
     }
 
-
     public void SetInputFieldActive(bool flag)
     {
         terminalInput.SetInputFieldActive(flag);
+    }
+
+    public void InsertNewHistory(string newHistory)
+    {
+        if(inputHistory == null)
+        {
+            inputHistory = new InputHistory(newHistory);
+        }
+        else
+        {
+            inputHistory.InsertNewHistory(newHistory);
+        }
+    }
+
+    public string GetNextHistory()
+    {
+        return inputHistory.GetNextHistory();
+    }
+
+    public string GetPreviousHistory()
+    {
+        return inputHistory.GetPreviousHistory();
     }
 }

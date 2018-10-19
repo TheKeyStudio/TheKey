@@ -20,6 +20,27 @@ public class TerminalInput : MonoBehaviour {
         {
             inputField.ActivateInputField();
         }
+
+        if (inputField.isFocused){
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                SetNextHistory();
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                SetPreviousHistory();
+            }
+        }
+    }
+
+    private void SetPreviousHistory()
+    {
+        inputField.text = controller.GetPreviousHistory();
+    }
+
+    private void SetNextHistory()
+    {
+        inputField.text = controller.GetNextHistory();
     }
 
     void FilterStringInput(string userInput)

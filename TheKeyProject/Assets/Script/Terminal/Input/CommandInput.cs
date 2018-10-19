@@ -4,11 +4,14 @@ public class CommandInput : InputStrategy {
 
     public void DoInput(string userInput, TerminalController controller)
     {
-       // userInput = userInput.ToLower();
+        // userInput = userInput.ToLower();
+        controller.InsertNewHistory(userInput);
 
         char[] delimiterCharacters = { ' ' };
-        string[] separatedInputWords = userInput.Split(delimiterCharacters);
+        string[] separatedInputWords = userInput.Split(delimiterCharacters, 2);
+
         separatedInputWords[0] = separatedInputWords[0].ToLower();
+
         bool isRespond = false;
         for (int i = 0; i < controller.inputCmds.Length; i++)
         {
