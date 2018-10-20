@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 674076232}
+  selectedFlowchart: {fileID: 851516916}
 --- !u!4 &462335465
 Transform:
   m_ObjectHideFlags: 1
@@ -4462,7 +4462,7 @@ MonoBehaviour:
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 48
-  blockName: "\u65B9\u6CD5\u5F97\u9023\u63A5"
+  blockName: "\u65B9\u6CD5\u7684\u9023\u63A5"
   description: 
   eventHandler: {fileID: 851516902}
   commandList:
@@ -4942,11 +4942,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 104.21241, y: 75.02706}
+  scrollPos: {x: 55.584164, y: 58.987034}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 419
-  zoom: 0.85000014
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -4955,8 +4955,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 851516954}
-  selectedCommands:
-  - {fileID: 851516924}
+  selectedCommands: []
   variables:
   - {fileID: 850561184}
   description: 
@@ -10026,7 +10025,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000038146973, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4
 --- !u!114 &1310936459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10038,17 +10037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81b10e0d0203744886758cc4837b622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 0
-  interactButton: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 643422637}
-  talkAble: 1
   waveAmplitude: 0.5
   waveSpeed: 1
-  flowchart: {fileID: 851516916}
-  talkCoolDownTime: 2
-  startCoolDowmTime: 0
 --- !u!114 &1310936460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15705,7 +15698,7 @@ GameObject:
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1766231518
 MonoBehaviour:
   m_ObjectHideFlags: 0

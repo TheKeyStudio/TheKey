@@ -3,38 +3,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Npc : KeyboardInteractable {
+public abstract class Npc : MonoBehaviour
+{
+    public Color originalColor;
+    public SpriteRenderer spriteRenderer;
+    public GameObject noticeIcon;
 
-    [SerializeField] protected bool talkAble;
-
-    public override void Init()
+    private void Start()
     {
-        base.Init();
-        interactKey = KeyCode.Z;
-
-        ActiveTalk();
+        Init();
     }
 
-    public void ActiveTalk()
+    public virtual void Init()
     {
-        talkAble = true;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+
     }
 
-    public void DeactiveTalk()
+    public virtual void Update()
     {
-        talkAble = false;
     }
 
-    public override void Interact()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        base.Interact();
-
-        if (talkAble)
+        if (collision.tag.Equals("Player"))
         {
-            Debug.Log("Talking with " + name);
-            DeactiveTalk();
-            Talk();
+            Highlight();
         }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        UnHighlight();
+    }
+
+    public virtual void Highlight()
+    {
+        //spriteRenderer.color = Color.yellow;
+        noticeIcon.SetActive(true);
+    }
+
+    public virtual void UnHighlight()
+    {
+        //spriteRenderer.color = originalColor;
+        noticeIcon.SetActive(false);
     }
 
     public abstract void Talk();
