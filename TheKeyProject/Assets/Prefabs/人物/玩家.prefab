@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 58156134864483374}
   - component: {fileID: 95857908970478640}
   - component: {fileID: 114762109875659156}
-  - component: {fileID: 114590214846594818}
+  - component: {fileID: 114939141910330918}
   m_Layer: 11
   m_Name: "\u73A9\u5BB6"
   m_TagString: Player
@@ -153,18 +153,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114590214846594818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1865823288027870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9f86beeec1372449918c96d6fed4522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  until: 0
 --- !u!114 &114762109875659156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,16 +164,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555430595cb2be44db5d93b92521e630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flowChart: {fileID: 0}
+  playerStateName: 
+--- !u!114 &114939141910330918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1865823288027870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f840cdb997e1ef94bbef9b3e0f4b68ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Velocity: {x: 0, y: 0, z: 0}
-  m_MovementSmoothing: 0.05
+  m_MovementSmoothing: 0.07
   horizontalDirection: 0
-  runSpeed: 100
-  yForce: 500
+  runSpeed: 40
+  yForce: 300
   groundCheck: {fileID: 4106374340953762}
-  groundRadius: 0.4
+  groundRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   grounded: 0
   jump: 0
 --- !u!212 &212362398540449114

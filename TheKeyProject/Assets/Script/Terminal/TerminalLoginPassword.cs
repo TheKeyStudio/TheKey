@@ -64,6 +64,7 @@ public class TerminalLoginPassword : MonoBehaviour {
     {
         if (isAnswerCorrect)
         {
+            GameManager.instance.TerminalLogin += 1;
             terminalUI.SetActive(true);
             Destroy(gameObject);
         }

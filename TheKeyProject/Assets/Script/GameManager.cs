@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public readonly int totalStage = 3; //總共有三個階段
     [SerializeField] private int[] stages; //記錄每個階段的關卡，例如stages[0]儲存第一階段的關卡，stages[1]儲存第二階段的關卡
+    [SerializeField] private int terminalLogin; //記錄每個Terminal Login，初始值為0
     [SerializeField] private bool[] stagesComplete;  //儲存每個stage是否完成，true為完成，false為未完成
 
     //Dark space
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour {
             return currentSceneName;
         }
     }
+
 
     void Awake()
     {
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour {
         stage1level1FirstTimeGoInto = false;
         isFirstTimeGoIntoDarkSpace = true;
         stages = new int[totalStage];
+        terminalLogin = 0;
         stagesComplete = new bool[totalStage];
     }
 
@@ -79,5 +82,19 @@ public class GameManager : MonoBehaviour {
     {
         int index = stage - 1;
         stagesComplete[index] = true;
+    }
+
+
+    public int TerminalLogin
+    {
+        get
+        {
+            return terminalLogin;
+        }
+
+        set
+        {
+            terminalLogin = value;
+        }
     }
 }

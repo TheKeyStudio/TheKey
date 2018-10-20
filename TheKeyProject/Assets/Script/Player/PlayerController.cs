@@ -47,24 +47,30 @@ public class PlayerController : MonoBehaviour {
         playerMotor.Move();
         playerState.Move();
     }
-    
+
+    public void Interact(Flowchart flowChart)
+    {
+        StartCoroutine(playerState.Interact(flowChart));
+    }
+
+    //For automove
     public void Interact()
     {
         Interact(flowChart);
     }
 
-    public void Interact(Flowchart newflowChart)
-    {
-        StartCoroutine(playerState.Interact(newflowChart));
-        focusing.Interact();
-    }
-
-    public void Interact(Flowchart newflowChart, Interactable newFocus)
+    //For trigger event
+    public void TriggerEvent(Flowchart newflowChart, Interactable newFocus)
     {
         SetFocus(newFocus);
         Interact(newflowChart);
     }
     
+    public void InteractTheFocusing()
+    {
+        focusing.Interact();
+    }
+
     public void ReadBook()
     {
         playerState.ReadBook();

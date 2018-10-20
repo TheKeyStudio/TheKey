@@ -12,15 +12,10 @@ public class IsLoginSolved : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameManager = GameManager.instance;
-        if(level < gameManager.GetStageCurrentLevel(stage))
+        if(level < gameManager.TerminalLogin)
         {
             Destroy(terminalLogin);
             terminalUI.SetActive(true);
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }

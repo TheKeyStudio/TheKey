@@ -29,6 +29,7 @@ public class Talking : PlayerState
     public override IEnumerator Interact(Flowchart flowChart)
     {
         controller.SetMoveAnimation(false);
+        controller.InteractTheFocusing();
         bool flowChartTalking = flowChart.GetBooleanVariable("Talking");
         talking = true;
         while (talking || flowChartTalking)
