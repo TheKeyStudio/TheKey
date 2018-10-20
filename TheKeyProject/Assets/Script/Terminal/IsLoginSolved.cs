@@ -12,7 +12,7 @@ public class IsLoginSolved : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameManager = GameManager.instance;
-        if(level < gameManager.TerminalLogin)
+        if(level <= gameManager.TerminalLogin)
         {
             Destroy(terminalLogin);
             terminalUI.SetActive(true);
