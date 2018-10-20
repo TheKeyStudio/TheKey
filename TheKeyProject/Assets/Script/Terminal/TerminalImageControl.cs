@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TerminalImageControl : MonoBehaviour {
+public class TerminalImageControl : MonoBehaviour, EscClose {
 
     public Image image;
     private TerminalController controller;
@@ -15,11 +15,13 @@ public class TerminalImageControl : MonoBehaviour {
         controller.SetInputFieldActive(false);
         image.sprite = sprite;
         gameObject.SetActive(true);
+        EscStack.instance.Push(this);
     }
 
-    public void CloseImage()
+    public void Close()
     {
         controller.SetInputFieldActive(true);
         gameObject.SetActive(false);
     }
+    
 }

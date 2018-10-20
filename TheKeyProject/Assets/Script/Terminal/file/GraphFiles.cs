@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class GraphFiles : TerminalFiles {
 
     public Sprite sprite;
-
     public override void Open(TerminalController controller)
     {
         controller.ShowImage(sprite);
     }
+
 }
