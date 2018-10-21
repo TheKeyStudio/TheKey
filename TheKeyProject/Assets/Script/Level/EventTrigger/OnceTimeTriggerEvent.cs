@@ -3,13 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class OnceTimeTriggerEvent : MonoBehaviour, Interactable
+public abstract class OnceTimeTriggerEvent : ChatEvent
 {
-    public Flowchart flowChart;
-    public string fungusMsgName;
     public Sound sound;
 
-    PlayerController player;
 
     // Use this for initialization
     void Start()
@@ -22,16 +19,7 @@ public abstract class OnceTimeTriggerEvent : MonoBehaviour, Interactable
         sound.source.pitch = sound.pitch;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (flowChart.GetBooleanVariable("isDone"))
-        {
-            DoneTalking();
-        }
-    }
 
-    protected abstract void DoneTalking();
     protected abstract void DestorySelfIfDone();
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,12 +29,12 @@ public abstract class OnceTimeTriggerEvent : MonoBehaviour, Interactable
             player = other.GetComponent<PlayerController>();
             sound.source.Play();
 
-            player.TriggerEvent(flowChart, this);
+            ChatTrigger();
         }
     }
 
 
-    public void Interact()
+    public override void Interact()
     {
         Flowchart.BroadcastFungusMessage(fungusMsgName);
     }
