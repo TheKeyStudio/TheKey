@@ -22,7 +22,6 @@ public class LootBookAnimation : MonoBehaviour {
     public void DoneAnimation()
     {
         Flowchart.BroadcastFungusMessage("LootedBook");
-        addtiveScene.SetActive(true);
         Destroy(gameObject);
     }
 }

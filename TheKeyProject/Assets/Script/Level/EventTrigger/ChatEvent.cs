@@ -5,7 +5,6 @@ using Fungus;
 
 public abstract class ChatEvent : MonoBehaviour, Interactable
 {
-
     [SerializeField] protected Flowchart flowChart;
     [SerializeField] protected string fungusMsgName;
     protected PlayerController player;
@@ -28,6 +27,10 @@ public abstract class ChatEvent : MonoBehaviour, Interactable
         player.TriggerEvent(flowChart, this);
     }
 
+    public void Interact()
+    {
+        Flowchart.BroadcastFungusMessage(fungusMsgName);
+    }
+
     protected abstract void DoneTalking();
-    public abstract void Interact();
 }

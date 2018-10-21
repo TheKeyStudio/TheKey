@@ -9,13 +9,13 @@ public class FirstTimeAutoTalkPoint : OnceTimeTriggerEvent
 
     protected override void DoneTalking()
     {
-        GameManager.instance.stage1FirstTimeGoInto = true;
+        GameManager.instance.sawTheGhost = true;
         DestorySelfIfDone();
     }
 
-    protected override void DestorySelfIfDone()
+    public override void DestorySelfIfDone()
     {
-        if (GameManager.instance.stage1FirstTimeGoInto)
+        if (GameManager.instance.sawTheGhost)
         {
             Destroy(gameObject);
         }

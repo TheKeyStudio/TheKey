@@ -39,6 +39,11 @@ public class Talking : PlayerState
             if (flowChartTalking && talking)
                 talking = false;
 
+            if (flowChart == null)
+            {
+                controller.PlayerState = new Normal(controller);
+                break;
+            }
             yield return null;
         }
         Debug.Log("Done talk");

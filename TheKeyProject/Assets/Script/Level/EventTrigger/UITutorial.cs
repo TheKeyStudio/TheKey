@@ -8,13 +8,13 @@ public class UITutorial : OnceTimeTriggerEvent
 
     protected override void DoneTalking()
     {
-        GameManager.instance.stage1level1FirstTimeGoInto = true;
+        GameManager.instance.getTutorial = true;
         DestorySelfIfDone();
     }
 
-    protected override void DestorySelfIfDone()
+    public override void DestorySelfIfDone()
     {
-        if (GameManager.instance.stage1level1FirstTimeGoInto)
+        if (GameManager.instance.getTutorial)
         {
             Destroy(gameObject);
         }

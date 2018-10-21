@@ -11,11 +11,6 @@ public class GameStartChat : ChatEvent {
         ChatTrigger();
     }
 
-    public override void Interact()
-    {
-        Flowchart.BroadcastFungusMessage(fungusMsgName);
-    }
-
     protected override void DoneTalking()
     {
         return;

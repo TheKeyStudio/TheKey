@@ -29,21 +29,31 @@ public class KeyboardInteractable : MonoBehaviour, Interactable{
     {
         if (isFocus)
         {
-            Highlight();
             if (Input.GetButtonDown(interactButton))
             {
                 Interact();
             }
-        }
-        else
-        {
-            UnHighlight();
         }
     }
 
     public virtual void Interact()
     {
         Debug.Log("Interating with " + transform.name);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Player"))
+        {
+            Highlight();
+            isFocus = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        UnHighlight();
+        isFocus = false;
     }
 
     public virtual void Highlight()
@@ -58,17 +68,4 @@ public class KeyboardInteractable : MonoBehaviour, Interactable{
         noticeIcon.SetActive(false);
     }
     
-    public void OnFocused(Transform playerTransform)
-    {
-        isFocus = true;
-        player = playerTransform;
-
-        playerController = player.GetComponent<PlayerController>();
-    }
-
-    public void OnDefoucused()
-    {
-        isFocus = false;
-        player = null;
-    }
 }

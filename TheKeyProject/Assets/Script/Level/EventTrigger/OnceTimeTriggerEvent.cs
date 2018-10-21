@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class OnceTimeTriggerEvent : ChatEvent
+public abstract class OnceTimeTriggerEvent : ChatEvent, OnceTimeEvent
 {
     public Sound sound;
 
-
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
         DestorySelfIfDone();
 
@@ -18,9 +17,6 @@ public abstract class OnceTimeTriggerEvent : ChatEvent
         sound.source.volume = sound.volume;
         sound.source.pitch = sound.pitch;
     }
-
-
-    protected abstract void DestorySelfIfDone();
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -33,9 +29,5 @@ public abstract class OnceTimeTriggerEvent : ChatEvent
         }
     }
 
-
-    public override void Interact()
-    {
-        Flowchart.BroadcastFungusMessage(fungusMsgName);
-    }
+    public abstract void DestorySelfIfDone();
 }
