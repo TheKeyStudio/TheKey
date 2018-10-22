@@ -66,4 +66,9 @@ public class AutoMove : PlayerState {
         controller.RemoveFocus();
         controller.PlayerState = new Reading(controller);
     }
+    public override void Jump()
+    {
+        PlayerMotor motor = controller.PlayerMotor;
+        motor.Jump();
+    }
 }

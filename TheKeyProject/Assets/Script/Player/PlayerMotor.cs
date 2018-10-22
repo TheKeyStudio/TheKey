@@ -7,58 +7,43 @@ public class PlayerMotor : MonoBehaviour {
 
     private Rigidbody2D playerRigid2D;
     private bool facingRight = true;
-    public Vector3 m_Velocity = Vector3.zero;
+    private Vector3 m_Velocity = Vector3.zero;
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private float horizontalDirection = 0f;
 
-    public float runSpeed = 100f;
+    [SerializeField] private float runSpeed = 100f;
     
-    [Range(300, 1000)]
-    public float yForce = 500f;
+    [Range(300, 800)] [SerializeField] private float yForce = 500f;
 
     public Transform groundCheck;
-    [Range(0, 0.5f)]
-    public float groundRadius = 0.2f;
-
-    public LayerMask groundLayer;
-
-    public bool grounded;
-    public bool jump;
+    [Range(0, 0.5f)] [SerializeField] private float groundRadius = 0.2f;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private bool grounded;
 
     void Awake()
     {
         playerRigid2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
-    {
-    }
-
-    void Update()
-    {
-        if (Input.GetButton("Jump"))
-        {
-            jump = true;
-        }
-    }
-
     private void FixedUpdate()
     {
         horizontalDirection *= Time.fixedDeltaTime;
 
-        if (jump)
-            Jump();
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
     }
 
-    void Jump()
+    public bool IsGrounded()
     {
-        if (grounded && jump)
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        return grounded;
+    }
+
+    public void Jump()
+    {
+        if (grounded)
         {
-            jump = false;
             playerRigid2D.AddForce(new Vector2(0f, yForce));
-           // playerAnimator.SetBool("Jump", true);
         }
     }
 
@@ -79,7 +64,6 @@ public class PlayerMotor : MonoBehaviour {
             Flip();
         }
     }
-    
 
     private void Flip()
     {
@@ -91,7 +75,6 @@ public class PlayerMotor : MonoBehaviour {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    
 
     public void SetHorizontalDirection(float horizontal)
     {

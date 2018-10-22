@@ -16,6 +16,6 @@ public abstract class PlayerState {
     public abstract void ReadBook();
     public abstract IEnumerator Interact(Flowchart flowChart);
     public abstract void Enter();
-
+    public abstract void Jump();
 
 }

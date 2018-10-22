@@ -47,4 +47,9 @@ public class Normal : PlayerState
     {
         controller.PlayerState = new Reading(controller);
     }
+    public override void Jump()
+    {
+        PlayerMotor motor = controller.PlayerMotor;
+        motor.Jump();
+    }
 }

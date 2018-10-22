@@ -54,4 +54,8 @@ public class Talking : PlayerState
     {
         return;
     }
+    public override void Jump()
+    {
+        return;
+    }
 }

@@ -27,6 +27,11 @@ public class Reading : PlayerState
         yield return null;
     }
 
+    public override void Jump()
+    {
+        return;
+    }
+
     public override void Move()
     {
         controller.SetMoveAnimation(false);

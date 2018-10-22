@@ -33,4 +33,8 @@ public class Entering : PlayerState
     {
         return;
     }
+    public override void Jump()
+    {
+        return;
+    }
 }

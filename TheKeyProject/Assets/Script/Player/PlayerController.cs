@@ -34,12 +34,17 @@ public class PlayerController : MonoBehaviour {
     void Update ()
     {
         playerStateName = playerState.GetType().ToString();
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            playerState.Jump();
+        }
     }
 
     private void FixedUpdate()
     {
         Move();
-       // SetJumpAnimation(!grounded);
+        SetJumpAnimation(!playerMotor.IsGrounded());
     }
     
     public void Move()
@@ -102,7 +107,6 @@ public class PlayerController : MonoBehaviour {
     {
         playerAnimator.SetBool("Jump", flag);
     }
-
 
     public PlayerState PlayerState
     {
