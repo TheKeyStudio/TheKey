@@ -76,6 +76,17 @@ public class PlayerController : MonoBehaviour {
         playerState.ReadBook();
     }
 
+    public void Enter(Interactable newFocus)
+    {
+        SetFocus(newFocus);
+        Enter();
+    }
+
+    public void Enter()
+    {
+        playerState.Enter();
+    }
+
     public void AutoMoveToX(float directionX, float deviation, Interactable interactable)
     {
         SetFocus(interactable);

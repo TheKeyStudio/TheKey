@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
 
@@ -8,12 +7,17 @@ public class Normal : PlayerState
 {
     public Normal(PlayerController controller) : base(controller)
     {
-        Debug.Log("Changing to normal state");
     }
 
     public override void AutoMoveToX(float directionX, float deviation)
     {
         controller.PlayerState = new AutoMove(directionX, deviation, controller);
+    }
+
+    public override void Enter()
+    {
+        controller.PlayerState = new Entering(controller);
+        controller.Enter();
     }
 
     public override IEnumerator Interact(Flowchart flowChart)

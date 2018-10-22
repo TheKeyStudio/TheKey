@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
 
@@ -20,6 +19,12 @@ public class AutoMove : PlayerState {
     {
         this.directionX = directionX;
         this.deviation = deviation;
+    }
+
+    public override void Enter()
+    {
+        controller.PlayerState = new Entering(controller);
+        controller.Enter();
     }
 
     public override IEnumerator Interact(Flowchart flowChart)

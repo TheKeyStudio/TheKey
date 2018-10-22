@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
 
-public class Reading : PlayerState
+public class Entering : PlayerState
 {
-    PlayerMotor motor;
-
-    public Reading(PlayerController controller) : base(controller)
+    public Entering(PlayerController controller) : base(controller)
     {
-        return;
     }
 
     public override void AutoMoveToX(float directionX, float deviation)
@@ -19,7 +16,7 @@ public class Reading : PlayerState
 
     public override void Enter()
     {
-        return;
+        controller.InteractTheFocusing();
     }
 
     public override IEnumerator Interact(Flowchart flowChart)
@@ -34,7 +31,6 @@ public class Reading : PlayerState
 
     public override void ReadBook()
     {
-        //ReadBook() had been called when the player is reading, means close the book
-        controller.PlayerState = new Normal(controller);
+        return;
     }
 }

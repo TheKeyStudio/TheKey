@@ -40,8 +40,7 @@ public class AnswerGroup : MonoBehaviour {
     public GameObject answerInputFieldGeneratorPrefab;
     [SerializeField]private List<SingleInputFieldGenerator> singleInputFieldList;
     private int currentIndex = -1;
-
-    public Computer computer;
+    
     public GameObject submitButton;
 
     private void Start()

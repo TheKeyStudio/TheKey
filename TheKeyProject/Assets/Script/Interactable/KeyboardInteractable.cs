@@ -27,11 +27,11 @@ public class KeyboardInteractable : MonoBehaviour, Interactable{
 
     public virtual void Update()
     {
-        if (isFocus)
+        if (isFocus)    
         {
             if (Input.GetButtonDown(interactButton))
             {
-                Interact();
+                playerController.Enter(this);
             }
         }
     }
@@ -45,6 +45,7 @@ public class KeyboardInteractable : MonoBehaviour, Interactable{
     {
         if (collision.tag.Equals("Player"))
         {
+            playerController = collision.GetComponent<PlayerController>();
             Highlight();
             isFocus = true;
         }

@@ -18,7 +18,7 @@ public class Talking : PlayerState
 
     public override void Move()
     {
-        return;
+        controller.SetMoveAnimation(false);
     }
 
     public override void ReadBook()
@@ -28,7 +28,6 @@ public class Talking : PlayerState
 
     public override IEnumerator Interact(Flowchart flowChart)
     {
-        controller.SetMoveAnimation(false);
         controller.InteractTheFocusing();
         bool flowChartTalking = flowChart.GetBooleanVariable("Talking");
         talking = true;
@@ -49,5 +48,10 @@ public class Talking : PlayerState
         Debug.Log("Done talk");
         controller.RemoveFocus();
         controller.PlayerState = new Normal(controller);
+    }
+
+    public override void Enter()
+    {
+        return;
     }
 }

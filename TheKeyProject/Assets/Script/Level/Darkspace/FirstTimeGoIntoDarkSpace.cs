@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Fungus;
+﻿using UnityEngine;
+
 public class FirstTimeGoIntoDarkSpace : OnceTimeGameStart {
     public GameObject addtiveScene;
 
