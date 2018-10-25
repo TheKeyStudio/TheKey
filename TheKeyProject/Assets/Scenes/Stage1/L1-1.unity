@@ -1817,11 +1817,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.0897784
+      value: 0.060001787
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.33039266
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6808,18 +6808,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f840cdb997e1ef94bbef9b3e0f4b68ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Velocity: {x: 0, y: 0, z: 0}
   m_MovementSmoothing: 0.05
   horizontalDirection: 0
   runSpeed: 100
-  yForce: 300
+  yForce: 500
   groundCheck: {fileID: 228208685}
   groundRadius: 0.4
   groundLayer:
     serializedVersion: 2
-    m_Bits: 2304
+    m_Bits: 256
   grounded: 0
-  jump: 0
 --- !u!1001 &1857727976
 Prefab:
   m_ObjectHideFlags: 0

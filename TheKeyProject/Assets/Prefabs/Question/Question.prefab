@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 4627876506866502}
   - component: {fileID: 212619462837577580}
   - component: {fileID: 58939067558823126}
-  - component: {fileID: 114588747570237626}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -785,7 +784,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114588747570237626}
+      - m_Target: {fileID: 0}
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -817,7 +816,6 @@ MonoBehaviour:
   answerInputFieldGeneratorPrefab: {fileID: 1472347831084876, guid: a5673888a079295419456d87c25019bd,
     type: 2}
   singleInputFieldList: []
-  computer: {fileID: 114588747570237626}
   submitButton: {fileID: 1082555813526424}
 --- !u!114 &114552733001988886
 MonoBehaviour:
@@ -847,22 +845,6 @@ MonoBehaviour:
   m_canvasRenderer: {fileID: 222398386426549290}
   m_TextComponent: {fileID: 114091853301909048}
   m_materialReferenceIndex: 1
---- !u!114 &114588747570237626
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1371443276287350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49f23d5e573664443887961b73d71b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  spriteRenderer: {fileID: 0}
-  noticeIcon: {fileID: 1392294293262206}
-  question: {fileID: 1388438599086702}
 --- !u!114 &114598351495628990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -953,6 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4c662632e3ab0458600efbc7ce9ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perCharacterSec: 0.025
 --- !u!114 &114877750409146552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -985,7 +968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5346be9e137c43e4f9679bc367e946b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  computerGameObj: {fileID: 1371443276287350}
 --- !u!114 &114933906537015178
 MonoBehaviour:
   m_ObjectHideFlags: 1
