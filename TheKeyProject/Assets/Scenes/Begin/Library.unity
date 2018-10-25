@@ -838,6 +838,16 @@ Prefab:
       propertyPath: flowChart
       value: 
       objectReference: {fileID: 415484023}
+    - target: {fileID: 114939141910330918, guid: 644c950d66d7ac047bb5d92be56d6fec,
+        type: 2}
+      propertyPath: grounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114939141910330918, guid: 644c950d66d7ac047bb5d92be56d6fec,
+        type: 2}
+      propertyPath: groundLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644c950d66d7ac047bb5d92be56d6fec, type: 2}
   m_IsPrefabParent: 0
@@ -3007,11 +3017,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19.209997
+      value: -13.160248
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.77
+      value: -1.2936182
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z

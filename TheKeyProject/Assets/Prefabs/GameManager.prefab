@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798089697453014}
   - component: {fileID: 114686693134681022}
+  - component: {fileID: 114974205293415782}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51,5 +52,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9a8ece655f70e4dafc055790dd3088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game1: 0
-  stage1: 0
+  level: 0
+  terminalLogin: 0
+  isFirstTimeGoIntoDarkSpace: 1
+  talkedWithClown: 0
+  sawTheGhost: 0
+  getTutorial: 0
+--- !u!114 &114974205293415782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553707401008526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828373cea8bd013498c8aac4b8eb6f6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

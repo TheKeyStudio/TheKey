@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f840cdb997e1ef94bbef9b3e0f4b68ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Velocity: {x: 0, y: 0, z: 0}
   m_MovementSmoothing: 0.07
   horizontalDirection: 0
   runSpeed: 40
@@ -186,9 +185,8 @@ MonoBehaviour:
   groundRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   grounded: 0
-  jump: 0
 --- !u!212 &212362398540449114
 SpriteRenderer:
   m_ObjectHideFlags: 1
