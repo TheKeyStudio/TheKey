@@ -17,8 +17,6 @@ public class Drag_Answer : MonoBehaviour
         drag_Object = obj;                                                          //物件(一開始為null)=移動中的物件
     }
 
-  
-
     private void OnTriggerExit2D(Collider2D other)     //離開答案框
     {
         if (GameObject.ReferenceEquals(other.gameObject, drag_Object))
