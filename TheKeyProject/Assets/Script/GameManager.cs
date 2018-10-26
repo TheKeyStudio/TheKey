@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
+    [SerializeField] private int totalLevel;
     [SerializeField] private int level = 0; //記錄每個關卡是否已經被解了，例如第一關解題成功，level = 0 + 1
     [SerializeField] private int terminalLogin = 0; //記錄每個Terminal Login，初始值為0
 
@@ -54,30 +55,21 @@ public class GameManager : MonoBehaviour {
         RefreshSceneName();
     }
 
-    public void NextLevel(int stage)
+    public void NextLevel()
     {
-        int index = stage - 1;
         level++;
     }
 
-    public int GetStageCurrentLevel(int stage)
+    public int GetCurrentLevel()
     {
-        int index = stage - 1;
         return level + 1;
     }
 
-    public bool IsStageComplete(int stage)
+    public bool IsGameComplete()
     {
-        int index = stage - 1;
-        return true;
+        return totalLevel == level;
     }
-
-    public void SetStageComplete(int stage)
-    {
-        int index = stage - 1;
-    }
-
-
+    
     public int TerminalLogin
     {
         get

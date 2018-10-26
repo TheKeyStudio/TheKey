@@ -11,10 +11,10 @@ public class NextLevelFiles : TerminalFiles
     public override void Open(TerminalController controller)
     {
         GameManager gameManager = GameManager.instance;
-        if (gameManager.GetStageCurrentLevel(stage) < openLevel)
+        if (gameManager.GetCurrentLevel() < openLevel)
         {
-            gameManager.NextLevel(stage);
-            controller.LogString("Opened " + (gameManager.GetStageCurrentLevel(stage)).ToString());
+            gameManager.NextLevel();
+            controller.LogString("Opened " + (gameManager.GetCurrentLevel()).ToString());
         }
         else
         {

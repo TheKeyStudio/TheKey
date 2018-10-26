@@ -16,7 +16,7 @@ public class LevelDoor : Door
     {
         base.Init();
         levelChooser = levelChooserObj.GetComponent<LevelChooser>();
-        currentLevel = GameManager.instance.GetStageCurrentLevel(stageNumber);
+        currentLevel = GameManager.instance.GetCurrentLevel();
     }
 
     public override void Interact()

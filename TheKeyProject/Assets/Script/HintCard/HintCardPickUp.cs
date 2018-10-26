@@ -7,12 +7,10 @@ using UnityEngine;
 public class HintCardPickUp : MonoBehaviour
 {
     private HintCard hintCard;
-    public Flowchart getItemFlowchart;
 
     public void Start()
     {
         hintCard = GetComponent<HintCard>();
-        getItemFlowchart.SetStringVariable("itemName", hintCard.CodeName);
     }
 
     public void Pickup()

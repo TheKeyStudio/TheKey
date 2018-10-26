@@ -11,10 +11,9 @@ public class StageComplete : TerminalFiles
     public override void Open(TerminalController controller)
     {
         GameManager gameManager = GameManager.instance;
-        if (!gameManager.IsStageComplete(completedStage))
+        if (!gameManager.IsGameComplete())
         {
-            gameManager.NextLevel(completedStage);
-            gameManager.SetStageComplete(completedStage);
+            gameManager.NextLevel();
             controller.LogString("Opened Stage " + (completedStage + 1) + ". Good luck kid.");
         }
         else

@@ -81,7 +81,7 @@ public class AnswerGroup : MonoBehaviour {
 
         if (AllAnswerIsSolved())
         {
-            GameManager.instance.NextLevel(stage);
+            GameManager.instance.NextLevel();
             Flowchart.BroadcastFungusMessage("全部答對了");
             Debug.Log("全部答對了");
         }

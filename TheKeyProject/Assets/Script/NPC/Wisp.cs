@@ -34,7 +34,7 @@ public class Wisp : Npc
 
     public override void Talk()
     {
-        int LevelKey = GameManager.instance.GetStageCurrentLevel(1);
+        int LevelKey = GameManager.instance.GetCurrentLevel();
         string callMsg = "靈魂對話" + LevelKey.ToString();
         Flowchart.BroadcastFungusMessage(callMsg);
         Debug.Log(LevelKey);
