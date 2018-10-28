@@ -2,16 +2,23 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Babylon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField] private int number;
     public static GameObject itemBeingDragged;
-    Vector3 startPostition;
     Transform startParent;
+
+    public int Number
+    {
+        get
+        {
+            return number;
+        }
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         itemBeingDragged = gameObject;
-        startPostition = transform.position;
         startParent = transform.parent;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
@@ -27,7 +34,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         if (transform.parent == startParent)
         {
-            transform.position = startPostition;
+            Destroy(gameObject);
         }
     }
 }

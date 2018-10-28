@@ -1,27 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class BabylonSlot : MonoBehaviour, IDropHandler {
-    public GameObject Item
-    {
-        get
-        {
-            if(transform.childCount > 0)
-            {
-                return transform.GetChild(0).gameObject;
-            }
-            return null;
-        }
+public class BabylonSlot : Slot {
+    public GameObject babylonPrefab;
+	
+	// Update is called once per frame
+	void Update () {
+        AutoBuildIfChildIsNull();
     }
 
-    public void OnDrop(PointerEventData eventData)
+    void AutoBuildIfChildIsNull()
     {
-        if (Item != null)
+        if (Item == null)
         {
-            Destroy(transform.GetChild(0).gameObject);
+            GameObject newBabylon = Instantiate(babylonPrefab, transform);
         }
-        DragHandler.itemBeingDragged.transform.SetParent(transform);
     }
 }

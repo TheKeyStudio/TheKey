@@ -30,9 +30,11 @@ public class EscStack : MonoBehaviour {
 
     public void Pop()
     {
-        EscClose gonnaCloseItem = stack.First.Value;
-        if (gonnaCloseItem == null)
+        if (stack.Count == 0)
             return;
+
+
+        EscClose gonnaCloseItem = stack.First.Value;
 
         stack.RemoveFirst();
 
