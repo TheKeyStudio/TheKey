@@ -5,7 +5,6 @@ using UnityEngine;
 public class IsLoginSolved : MonoBehaviour {
     public GameObject terminalLogin;
     public GameObject terminalUI;
-    public int stage;
     public int level;
 
     GameManager gameManager;

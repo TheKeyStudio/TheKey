@@ -6,19 +6,35 @@ using TMPro;
 
 public class TerminalController : MonoBehaviour {
 
-    public TMP_Text displayText;
+    private TerminalFilesHandler filesHandler;
+    private TerminalImageControl imageControl;
+    private BruteForceController bruteForceCtrler;
+    private TerminalInput terminalInput;
+    private InputHistory inputHistory;
+    private InputStrategy inputStrategy;
+    private List<string> terminalLog = new List<string>();
 
     public TerminalInputCommand[] inputCmds;
-    private InputStrategy inputStrategy;
+
+    public TMP_Text displayText;
 
     [TextArea(5, 99)]
     public string welcomeText;
 
-    private TerminalFilesHandler filesHandler;
-    private TerminalInput terminalInput;
-    private InputHistory inputHistory;
 
-    public TerminalImageControl imageControl;
+    private void Start()
+    {
+        LogString(welcomeText);
+        DisplayLoggedText();
+    }
+
+    private void Awake()
+    {
+        filesHandler = GetComponent<TerminalFilesHandler>();
+        terminalInput = GetComponent<TerminalInput>();
+        bruteForceCtrler = GetComponent<BruteForceController>();
+        inputStrategy = new CommandInput();
+    }
 
     internal void ListAllCommands()
     {
@@ -30,9 +46,6 @@ public class TerminalController : MonoBehaviour {
         string logAsText = string.Join("\n", allCommandsKeyword.ToArray());
         LogString(logAsText);
     }
-
-
-    private List<string> terminalLog = new List<string>();
 
     internal InputStrategy InputStrategy
     {
@@ -47,33 +60,33 @@ public class TerminalController : MonoBehaviour {
         }
     }
 
-    private void Start()
+    public TerminalFilesHandler FilesHandler
     {
-        LogString(welcomeText);
-        DisplayLoggedText();
+        get
+        {
+            return filesHandler;
+        }
     }
 
-    private void Awake()
+    public TerminalImageControl ImageControl
     {
-        filesHandler = GetComponent<TerminalFilesHandler>();
-        terminalInput = GetComponent<TerminalInput>();
-        inputStrategy = new CommandInput();
+        get
+        {
+            return imageControl;
+        }
     }
 
-    public void OpenFile(string fileName)
+    public BruteForceController BruteForceCtrler
     {
-        filesHandler.Open(fileName);
-    }
-
-    public void ListAllFiles()
-    {
-        string allFilesName = filesHandler.GetAllFilesName();
-        LogString(allFilesName);
+        get
+        {
+            return bruteForceCtrler;
+        }
     }
 
     public void LogString(string stringToAdd)
     {
-        terminalLog.Add(stringToAdd + "\n");
+        terminalLog.Add(stringToAdd);
     }
 
     public void LogUserInputString(string stringToAdd)
@@ -93,14 +106,9 @@ public class TerminalController : MonoBehaviour {
         inputStrategy.DoInput(userInput, this);
     }
 
-    public void inputPassword(string password)
+    public void InputPassword(string password)
     {
         filesHandler.CheckPasswordAndOpen(password);
-    }
-
-    public void ShowImage(Sprite sprite)
-    {
-        imageControl.ShowImage(sprite, this);
     }
 
     public void SetInputFieldActive(bool flag)

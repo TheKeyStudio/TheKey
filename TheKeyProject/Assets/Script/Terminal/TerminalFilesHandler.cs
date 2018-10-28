@@ -51,21 +51,34 @@ public class TerminalFilesHandler : MonoBehaviour
 
     private void CheckFileNameExistAndChangeCurrent(string fileName)
     {
-        bool exist = false;
-        foreach (TerminalFiles file in files)
+        TerminalFiles file = GetFileByName(fileName);
+        if (GetFileByName(fileName) != null)
         {
-            if (file.fileName.Equals(fileName))
-            {
-                currentFile = file;
-                exist = true;
-            }
+            SetCurrentFile(file);
         }
-
-        if (!exist)
+        else
         {
             controller.LogString("\"" + fileName + "\"" + " doesn't exist");
             return;
         }
+    }
+
+    public TerminalFiles GetFileByName(string fileName)
+    {
+        TerminalFiles foundFile = null;
+        foreach (TerminalFiles file in files)
+        {
+            if (file.fileName.Equals(fileName))
+            {
+                foundFile = file;
+            }
+        }
+        return foundFile;
+    }
+
+    public void SetCurrentFile(TerminalFiles newFile)
+    {
+        currentFile = newFile;
     }
 
     public void CheckPasswordAndOpen(string password)

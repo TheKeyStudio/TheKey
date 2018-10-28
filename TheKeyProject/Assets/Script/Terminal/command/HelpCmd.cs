@@ -13,7 +13,7 @@ public class HelpCmd : TerminalInputCommand
         }
         else
         {
-
+            controller.LogString("Help don't not support argurment");
         }
     }
 }

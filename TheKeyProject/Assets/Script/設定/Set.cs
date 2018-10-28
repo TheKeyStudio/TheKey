@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Set : MonoBehaviour {
 
-    public GameObject gameObject;
+    public GameObject settingObj;
     
 	public void Open()
     {
-        gameObject.active = true;
+        settingObj.active = true;
     }
 
     public void Close()
     {
-        gameObject.active = false;
+        settingObj.active = false;
     }
 
     public void Exit()
