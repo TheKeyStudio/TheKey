@@ -6,6 +6,7 @@ using TMPro;
 
 public class TerminalController : MonoBehaviour {
 
+    private TerminalObjControl objControl;
     private TerminalFilesHandler filesHandler;
     private TerminalImageControl imageControl;
     private BruteForceController bruteForceCtrler;
@@ -30,7 +31,9 @@ public class TerminalController : MonoBehaviour {
 
     private void Awake()
     {
+        objControl = GetComponent<TerminalObjControl>();
         filesHandler = GetComponent<TerminalFilesHandler>();
+        imageControl = GetComponent<TerminalImageControl>();
         terminalInput = GetComponent<TerminalInput>();
         bruteForceCtrler = GetComponent<BruteForceController>();
         inputStrategy = new CommandInput();
@@ -81,6 +84,14 @@ public class TerminalController : MonoBehaviour {
         get
         {
             return bruteForceCtrler;
+        }
+    }
+
+    public TerminalObjControl ObjControl
+    {
+        get
+        {
+            return objControl;
         }
     }
 

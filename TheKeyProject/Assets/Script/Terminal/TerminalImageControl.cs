@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TerminalImageControl : MonoBehaviour, EscClose {
 
+    public GameObject panel;
     public Image image;
     private TerminalController controller;
 
@@ -14,14 +15,14 @@ public class TerminalImageControl : MonoBehaviour, EscClose {
         this.controller = controller;
         controller.SetInputFieldActive(false);
         image.sprite = sprite;
-        gameObject.SetActive(true);
+        panel.SetActive(true);
         EscStack.instance.Push(this);
     }
 
     public void Close()
     {
         controller.SetInputFieldActive(true);
-        gameObject.SetActive(false);
+        panel.SetActive(false);
     }
     
 }

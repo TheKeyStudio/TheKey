@@ -52,15 +52,11 @@ public class TerminalFilesHandler : MonoBehaviour
     private void CheckFileNameExistAndChangeCurrent(string fileName)
     {
         TerminalFiles file = GetFileByName(fileName);
-        if (GetFileByName(fileName) != null)
-        {
-            SetCurrentFile(file);
-        }
-        else
+        if (file == null)
         {
             controller.LogString("\"" + fileName + "\"" + " doesn't exist");
-            return;
         }
+        SetCurrentFile(file);
     }
 
     public TerminalFiles GetFileByName(string fileName)

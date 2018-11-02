@@ -14,7 +14,7 @@ public class BabylonSlot : Slot {
     {
         if (Item == null)
         {
-            GameObject newBabylon = Instantiate(babylonPrefab, transform);
+            Instantiate(babylonPrefab, transform);
         }
     }
 }

@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
-    private Rigidbody2D playerRigid2D;
+    
     private Animator playerAnimator;
     
     public Flowchart flowChart;
@@ -20,7 +19,6 @@ public class PlayerController : MonoBehaviour {
 
     void Awake ()
     {
-        playerRigid2D = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerMotor = GetComponent<PlayerMotor>();
 

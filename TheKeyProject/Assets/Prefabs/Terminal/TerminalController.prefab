@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114852190945622178}
   - component: {fileID: 114674567295373036}
   - component: {fileID: 114486984349265082}
+  - component: {fileID: 114705231159983860}
+  - component: {fileID: 114536266340730162}
   - component: {fileID: 114797978179111478}
   m_Layer: 0
   m_Name: TerminalController
@@ -59,6 +61,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 213309e508c27114fa02e36d4c3d3023, type: 2}
   - {fileID: 11400000, guid: ad33f8f8c19e08645be8a895361bf935, type: 2}
   - {fileID: 11400000, guid: 06d2f29256482f64aaddb1a47e05b284, type: 2}
+--- !u!114 &114536266340730162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626730018725490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06160952fdcb334ca1719ce02c39805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!114 &114674567295373036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,14 +84,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912b093506dc99043a566144684ff2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: {fileID: 0}
   inputCmds:
   - {fileID: 11400000, guid: 18231633b0e283b43aa3a6d31d7b1b29, type: 2}
   - {fileID: 11400000, guid: 26b30425fb2e2464b866a3a2d0634e23, type: 2}
   - {fileID: 11400000, guid: 17be8b5783df4ce478161a75fdb06e48, type: 2}
   - {fileID: 11400000, guid: cb761514439c9ed4f8953201427e0af6, type: 2}
+  displayText: {fileID: 0}
   welcomeText: Enter "help" to get help !
-  imageControl: {fileID: 0}
+--- !u!114 &114705231159983860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626730018725490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056c2dcc841c764997892447a2fdc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  image: {fileID: 0}
 --- !u!114 &114797978179111478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terminalLogin: {fileID: 0}
   terminalUI: {fileID: 0}
-  stage: 1
   level: 1
 --- !u!114 &114852190945622178
 MonoBehaviour:

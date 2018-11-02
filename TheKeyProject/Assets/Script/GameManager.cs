@@ -19,7 +19,11 @@ public class GameManager : MonoBehaviour {
     public bool sawTheGhost = false; //在Main中看見靈魂的觸發事件
     public bool getTutorial = false; //在第一關第一次進入如觸發提醒
 
+    //L1-0
+    public bool benGameLoggedIn = false; //是否已經進入Ben的遊戲賬號
+
     private string currentSceneName; //當前的SceneName，主要用於玩家位置的設定
+
 
 
     public string CurrentSceneName
