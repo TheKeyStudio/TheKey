@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "SocialMedia/SocialMediaUser")]
 public class SocialMediaUser : ScriptableObject
 {
-    public Image profilePic;
+    public Sprite profilePic;
     public string userName;
     public string email;
     public string birthday;

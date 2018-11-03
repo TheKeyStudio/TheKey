@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SocialMediaController : MonoBehaviour {
-    public SocialMediaUser[] users;
+    [SerializeField]private SocialMediaUser[] users;
+
+    public GameObject userProfilePrefab;
+    private GameObject currentUserProfile;
+
+    public SocialMediaSearch socialSearch;
     
     public SocialMediaUser GetUserByEmail(string email)
     {
@@ -16,5 +21,27 @@ public class SocialMediaController : MonoBehaviour {
             }
         }
         return foundUser;
+    }
+
+    public void CreateUserProfile(SocialMediaUser user)
+    {
+        PageToProfile();
+
+        SocialMediaUserProfile userInformation;
+        currentUserProfile = Instantiate(userProfilePrefab, transform);
+        userInformation = currentUserProfile.GetComponent<SocialMediaUserProfile>();
+
+        userInformation.SetUser(user, this);
+    }
+
+    public void PageToProfile()
+    {
+        socialSearch.gameObject.SetActive(false);
+    }
+
+    public void PageToSearch()
+    {
+        Destroy(currentUserProfile);
+        socialSearch.gameObject.SetActive(true);
     }
 }

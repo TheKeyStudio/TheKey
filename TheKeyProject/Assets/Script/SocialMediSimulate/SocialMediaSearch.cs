@@ -4,14 +4,20 @@ using UnityEngine;
 using TMPro;
 
 public class SocialMediaSearch : MonoBehaviour {
+    public TMP_InputField searchInputField;
+    public SocialMediaController controller;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void SearchUser()
+    {
+        string email = searchInputField.text.Trim();
+        SocialMediaUser user = controller.GetUserByEmail(email);
+        if(user != null)
+        {
+            controller.CreateUserProfile(user);
+        }
+        else
+        {
+            Debug.Log("email not found");
+        }
+    }
 }
