@@ -148,4 +148,10 @@ public class TerminalController : MonoBehaviour {
     {
         return inputHistory.GetPreviousHistory();
     }
+
+    public void ClearLog()
+    {
+        terminalLog.Clear();
+        displayText.text = "";
+    }
 }
