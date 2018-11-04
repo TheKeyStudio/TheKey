@@ -9,7 +9,7 @@ public class BruteForceController: MonoBehaviour {
     private void Start()
     {
         controller = GetComponent<TerminalController>();
-        loadingTime = Random.Range(0.2f, 1.3f);
+        loadingTime = Random.Range(1f, 3f);
     }
 
     public void BruteForce(string fileName, string passwordFile)
@@ -42,25 +42,28 @@ public class BruteForceController: MonoBehaviour {
 
     IEnumerator Loading(string[] passwordTexts, TerminalFiles file)
     {
+        string startStr = "<size=-4>";
+        string endStr = "</size>";
         foreach (string password in passwordTexts)
         {
-            controller.LogString("Trying password: " + password);
+            controller.LogString(startStr + "Trying password: " + password + endStr);
+            controller.DisplayLoggedText();
             Debug.Log(loadingTime);
             yield return new WaitForSeconds(loadingTime);
             if (password.Equals(file.password))
             {
                 Debug.Log("Password Found");
-                controller.LogString("Password Found: " + password);
+                controller.LogString(startStr + "<color=red>Password Found: " + password + "</color>" + endStr);
                 controller.DisplayLoggedText();
                 break;
             }
             else
             {
                 Debug.Log("Wrong Password");
-                controller.LogString("Wrong Password.");
+                controller.LogString(startStr + "Wrong Password." + endStr);
             }
             controller.DisplayLoggedText();
-            loadingTime = Random.Range(0.3f, 1.9f);
+            loadingTime = Random.Range(1f, 3f);
         }
     }
 }

@@ -12,4 +12,5 @@ public class GameUser : ScriptableObject
     public string birthday;
     public string icNumber;
     public string country;
+    public string point;
 }

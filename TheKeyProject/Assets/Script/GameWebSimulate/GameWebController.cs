@@ -39,6 +39,7 @@ public class GameWebController : MonoBehaviour
 
     public void PageToUserInformation()
     {
+        gameWebLogin.Clear();
         gameWebLogin.gameObject.SetActive(false);
     }
 

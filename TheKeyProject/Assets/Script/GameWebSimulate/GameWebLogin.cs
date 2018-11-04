@@ -27,4 +27,10 @@ public class GameWebLogin : MonoBehaviour {
             Debug.Log("Fail to login");
         }
     }
+
+    public void Clear()
+    {
+        acc_inputField.text = "";
+        pwd_inputField.text = "";
+    }
 }

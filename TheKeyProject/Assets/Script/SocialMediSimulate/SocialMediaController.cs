@@ -36,6 +36,7 @@ public class SocialMediaController : MonoBehaviour {
 
     public void PageToProfile()
     {
+        socialSearch.Clear();
         socialSearch.gameObject.SetActive(false);
     }
 

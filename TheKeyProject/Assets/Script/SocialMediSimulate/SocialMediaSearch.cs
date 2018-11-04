@@ -20,4 +20,9 @@ public class SocialMediaSearch : MonoBehaviour {
             Debug.Log("email not found");
         }
     }
+
+    public void Clear()
+    {
+        searchInputField.text = "";
+    }
 }
