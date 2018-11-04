@@ -6,6 +6,7 @@ using TMPro;
 
 public class TerminalController : MonoBehaviour {
 
+    private EscStackByButton escStackByButton;
     private TerminalObjControl objControl;
     private TerminalFilesHandler filesHandler;
     private TerminalImageControl imageControl;
@@ -31,6 +32,7 @@ public class TerminalController : MonoBehaviour {
 
     private void Awake()
     {
+        escStackByButton = GetComponent<EscStackByButton>();
         objControl = GetComponent<TerminalObjControl>();
         filesHandler = GetComponent<TerminalFilesHandler>();
         imageControl = GetComponent<TerminalImageControl>();
@@ -153,5 +155,10 @@ public class TerminalController : MonoBehaviour {
     {
         terminalLog.Clear();
         displayText.text = "";
+    }
+
+    public void Close()
+    {
+        escStackByButton.Close();
     }
 }
