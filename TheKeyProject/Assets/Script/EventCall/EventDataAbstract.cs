@@ -5,10 +5,9 @@ using UnityEngine;
 public abstract class EventDataAbstract : MonoBehaviour {
 
     public string eventName;
-    protected EventDataManager eventDataMgr;
 
     void Awake()
     {
-        eventDataMgr = GameManager.instance.EventDataManager;
+        Debug.Log("event data bstract");
     }
 }

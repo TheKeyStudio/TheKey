@@ -23,14 +23,14 @@ public class EventDataManager : MonoBehaviour {
         return eventDataDict[key];
     }
 
-    public void SetDataOrNew(string key)
+    public void SetDataOrNew(string key, int newValue)
     {
         if (!eventDataDict.ContainsKey(key))
         {
             NewEventData(key, 0);
         }
 
-        eventDataDict[key] += 1;
+        eventDataDict[key] = newValue;
     }
 
 

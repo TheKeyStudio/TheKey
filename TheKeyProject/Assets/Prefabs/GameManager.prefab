@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4798089697453014}
   - component: {fileID: 114686693134681022}
   - component: {fileID: 114974205293415782}
+  - component: {fileID: 114413432449609468}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114413432449609468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553707401008526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3051ed66d1b95d429720b8ebd2801be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114686693134681022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9a8ece655f70e4dafc055790dd3088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalLevel: 0
   level: 0
   terminalLogin: 0
   isFirstTimeGoIntoDarkSpace: 1
