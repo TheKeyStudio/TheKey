@@ -18,7 +18,7 @@ public class SetActive : MonoBehaviour {
     private void Init()
     {
         int eventCode = eventDataGetter.GetData();
-        if (eventCode > active.Length || eventCode < 0)
+        if (eventCode >= active.Length || eventCode < 0)
         {
             return;
         }

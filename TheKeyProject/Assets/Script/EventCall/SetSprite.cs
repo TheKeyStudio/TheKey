@@ -2,33 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetPosition : MonoBehaviour {
-    
-    public Transform[] points;
+public class SetSprite : MonoBehaviour {
+    public Sprite[] sprites;
 
     private EventDataGetter eventDataGetter;
+    private SpriteRenderer spriteRender;
 
     // Use this for initialization
-    void Awake () {
+    void Awake()
+    {
         eventDataGetter = GetComponent<EventDataGetter>();
+        spriteRender = GetComponent<SpriteRenderer>();
         Init();
-	}
+    }
 
     private void Init()
     {
         int eventCode = eventDataGetter.GetData();
-        if (eventCode >= points.Length || eventCode < 0)
+        if (eventCode >= sprites.Length || eventCode < 0)
         {
             return;
         }
-        while(points[eventCode] == null)
+
+        while (sprites[eventCode] == null)
         {
             eventCode--;
-            if(eventCode == 0)
+            if (eventCode == 0)
             {
                 break;
             }
         }
-        this.transform.position = points[eventCode].position;
+        spriteRender.sprite = sprites[eventCode];
     }
 }
