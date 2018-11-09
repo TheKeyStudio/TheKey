@@ -4,7 +4,7 @@ using UnityEngine;
 using Fungus;
 
 
-public class Wisp : Npc
+public abstract class Wisp : Npc
 {
     [Range(0.1f, 3f)] public float waveAmplitude = 0.5f;
     [Range(0.1f, 3f)] public float waveSpeed = 1f;
@@ -12,10 +12,13 @@ public class Wisp : Npc
     float elapsedTime;
     float original_y;
 
+    protected EventDataGetter eventDataGetter;
+
     public override void Init()
     {
         base.Init();
         original_y = transform.position.y;
+        eventDataGetter = GetComponent<EventDataGetter>();
     }
 
     public override void Update()
@@ -32,11 +35,5 @@ public class Wisp : Npc
         transform.position = new Vector3(x, y, 0);
     }
 
-    public override void Talk()
-    {
-        int LevelKey = GameManager.instance.GetCurrentLevel();
-        string callMsg = "靈魂對話" + LevelKey.ToString();
-        Flowchart.BroadcastFungusMessage(callMsg);
-        Debug.Log(LevelKey);
-    }
+
 }

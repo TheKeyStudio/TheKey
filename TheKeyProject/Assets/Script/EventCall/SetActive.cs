@@ -18,6 +18,10 @@ public class SetActive : MonoBehaviour {
     private void Init()
     {
         int eventCode = eventDataGetter.GetData();
+        if (eventCode > active.Length || eventCode < 0)
+        {
+            return;
+        }
         this.gameObject.SetActive(active[eventCode]);
     }
 }
