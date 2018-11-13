@@ -11,10 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdc580b6e0467548b6c2195fe4b09f7, type: 3}
   m_Name: ActiveLv4.exe
   m_EditorClassIdentifier: 
-  fileName: ActiveLv3.exe
+  fileName: ActiveLv4.exe
   fileNameColor: {r: 0, g: 1, b: 0, a: 1}
   hasPassword: 1
-  password: email
+  password: birthday
   openLevel: 4
-  eventCodes: 
-  eventNames: []
+  eventCodes: 0300000003000000
+  eventNames:
+  - Evelyn
+  - Ben

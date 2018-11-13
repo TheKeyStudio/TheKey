@@ -27,6 +27,11 @@ public class KeyboardInteractable : MonoBehaviour, Interactable{
 
     public virtual void Update()
     {
+        if(Time.timeScale == 0f)
+        {
+            return;
+        }
+
         if (isFocus)    
         {
             if (Input.GetButtonDown(interactButton))
