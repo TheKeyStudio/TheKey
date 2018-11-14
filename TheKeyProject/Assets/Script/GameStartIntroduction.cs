@@ -17,15 +17,11 @@ public class GameStartIntroduction : MonoBehaviour
         audioData = GetComponent<AudioSource>();
     }
 
-
     void Start()
     {
         StartCoroutine(RevealCharacters(m_TextComponent));
-        //StartCoroutine(RevealWords(m_TextComponent));
-
         audioData.Play();
     }
-
 
     void OnEnable()
     {
