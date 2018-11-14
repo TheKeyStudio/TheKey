@@ -7,6 +7,8 @@ using UnityEngine;
 public class HintCardPickUp : MonoBehaviour
 {
     private HintCard hintCard;
+    public string itemGetMsgReceivedName = "ItemGet";
+    public string itemGoneMsgReceivedName = "ItemGone";
 
     public void Start()
     {
@@ -21,11 +23,11 @@ public class HintCardPickUp : MonoBehaviour
             BookManager.instance.AddPage(hintCard.HintCardDescriptSprite);
             HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
             hintCard.Unlocked = true;
-            Flowchart.BroadcastFungusMessage("ItemGet");
+            Flowchart.BroadcastFungusMessage(itemGetMsgReceivedName);
         }
         else
         {
-            Flowchart.BroadcastFungusMessage("ItemGone");
+            Flowchart.BroadcastFungusMessage(itemGoneMsgReceivedName);
         }
     }
 }

@@ -21,7 +21,7 @@ public abstract class Wisp : Npc
         eventDataGetter = GetComponent<EventDataGetter>();
     }
 
-    public override void Update()
+    protected override void Update()
     {
         base.Update();
         Floating();

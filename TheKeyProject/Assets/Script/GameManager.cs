@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     [SerializeField] private EventDataManager eventDataManager;
     [SerializeField] private int totalLevel;
-    [SerializeField] private int level = 0; //記錄每個關卡是否已經被解了，例如第一關解題成功，level = 0 + 1
+    [SerializeField] private int level = 1; //記錄每個關卡是否已經被解了，例如第一關解題成功，level = 0 + 1
     [SerializeField] private int terminalLogin = 0; //記錄每個Terminal Login，初始值為0
 
     //Dark space

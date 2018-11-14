@@ -3,8 +3,8 @@ using Fungus;
 
 public class Evelyn : Wisp {
 
-    
-    public override void Talk()
+
+    protected override void HookInteract()
     {
         int eventCode = eventDataGetter.GetData();
         string callMsg = "Evelyn" + eventCode.ToString();

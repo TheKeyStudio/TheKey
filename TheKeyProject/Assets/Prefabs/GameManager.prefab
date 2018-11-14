@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3051ed66d1b95d429720b8ebd2801be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventDataDictLength: 0
 --- !u!114 &114686693134681022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,7 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9a8ece655f70e4dafc055790dd3088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLevel: 0
+  eventDataManager: {fileID: 0}
+  totalLevel: 7
   level: 0
   terminalLogin: 0
   isFirstTimeGoIntoDarkSpace: 1

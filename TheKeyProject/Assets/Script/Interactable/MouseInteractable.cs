@@ -11,10 +11,10 @@ public class MouseInteractable : Clickable2D, Interactable{
     protected virtual void Start()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        collider2d = GetComponent<Collider2D>();
+        collider2d = gameObject.GetComponent<Collider2D>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {

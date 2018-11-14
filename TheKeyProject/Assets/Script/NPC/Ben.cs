@@ -3,11 +3,11 @@ using Fungus;
 
 public class Ben : Wisp {
 
-    public override void Talk()
+    protected override void HookInteract()
     {
         int eventCode = eventDataGetter.GetData();
         string callMsg = "Ben" + eventCode.ToString();
-        Flowchart.BroadcastFungusMessage(callMsg);
         Debug.Log("Calling Talk: " + callMsg);
+        Flowchart.BroadcastFungusMessage(callMsg);
     }
 }

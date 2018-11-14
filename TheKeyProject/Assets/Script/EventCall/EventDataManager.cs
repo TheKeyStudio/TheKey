@@ -6,14 +6,15 @@ public class EventDataManager : MonoBehaviour {
 
 
     private Dictionary<string, int> eventDataDict = new Dictionary<string, int>();
-    
+    public int eventDataDictLength;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	public int GetDataOrNew(string key)
+    private void Update()
+    {
+        eventDataDictLength = eventDataDict.Count;
+    }
+
+
+    public int GetDataOrNew(string key)
     {
         if (!eventDataDict.ContainsKey(key))
         {

@@ -3,14 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Npc : MonoBehaviour
+public abstract class Npc : MouseInteractable
 {
     public Color originalColor;
     public SpriteRenderer spriteRenderer;
     public GameObject noticeIcon;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         Init();
     }
 
@@ -20,10 +21,7 @@ public abstract class Npc : MonoBehaviour
         originalColor = spriteRenderer.color;
 
     }
-
-    public virtual void Update()
-    {
-    }
+    
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -49,7 +47,6 @@ public abstract class Npc : MonoBehaviour
         //spriteRenderer.color = originalColor;
         noticeIcon.SetActive(false);
     }
-
-    public abstract void Talk();
+    
     
 }

@@ -6,7 +6,7 @@ using Fungus;
 public class OnceTimeGM : Npc
 {
 
-    public override void Talk()
+    protected override void HookInteract()
     {
         return;
     }

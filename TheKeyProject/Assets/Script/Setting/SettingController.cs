@@ -11,17 +11,6 @@ public class SettingController : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (GameIsPaused)
-            {
-                CloseMenu();
-            }
-            else
-            {
-                OpenMenu();
-            }
-        }
     }
 
     public void OpenMenu()
