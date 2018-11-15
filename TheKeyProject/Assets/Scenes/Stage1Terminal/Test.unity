@@ -219,28 +219,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1715174017}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &361181684 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1626730018725490, guid: f421481d36a421c498768621872e403f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1072472019}
---- !u!114 &361181694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 361181684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ba20f14a07c2244b16f6ca913214ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cmds: []
-  files: []
-  foundItems: []
-  separatedInputWords: []
-  currentIndex: 0
-  filling: 0
 --- !u!224 &448868966 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224850587186683478, guid: b86c4d3fc5d84814da8b633c09601c65,
@@ -961,7 +939,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030513365
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 114498704083369924, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
@@ -1021,7 +999,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 14.999977
+      value: 14.999964
       objectReference: {fileID: 0}
     - target: {fileID: 1066685077457524, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}
       propertyPath: m_IsActive

@@ -42,6 +42,7 @@ public class TabAutoFillInputText : MonoBehaviour {
         }
     }
 
+
     public void FillInput(string inputText)
     {
         char[] delimiterCharacters = { ' ' };
@@ -61,7 +62,7 @@ public class TabAutoFillInputText : MonoBehaviour {
 
     private void Next()
     {
-        if(separatedInputWords.Length != 0)
+        if(separatedInputWords.Length != 0 && foundItems.Count != 0)
         {
             int lastIndex = GetSeparatedInputWordsLastIndex();
             separatedInputWords[lastIndex] = foundItems[currentIndex];
