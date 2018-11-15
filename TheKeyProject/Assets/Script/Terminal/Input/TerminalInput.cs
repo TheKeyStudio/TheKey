@@ -8,9 +8,11 @@ public class TerminalInput : MonoBehaviour {
     public TMP_InputField inputField;
 
     private TerminalController controller;
+    private TabAutoFillInputText tabAutoFill;
     
 	void Awake () {
         controller = GetComponent<TerminalController>();
+        tabAutoFill = GetComponent<TabAutoFillInputText>();
         inputField.onEndEdit.AddListener(FilterStringInput);
 	}
 
@@ -22,14 +24,33 @@ public class TerminalInput : MonoBehaviour {
         }
 
         if (inputField.isFocused){
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                SetNextHistory();
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                SetPreviousHistory();
-            }
+            HistoryKeyDown();
+            AutoFillInputKeyDown();
+        }
+    }
+
+    private void HistoryKeyDown()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            SetNextHistory();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            SetPreviousHistory();
+        }
+    }
+
+    private void AutoFillInputKeyDown()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            inputField.text = tabAutoFill.Tabbed(inputField.text);
+            inputField.MoveTextEnd(false);
+        }
+        else if (Input.anyKeyDown)
+        {
+            tabAutoFill.UnTabbed();
         }
     }
 

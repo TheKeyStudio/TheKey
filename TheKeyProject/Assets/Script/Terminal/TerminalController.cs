@@ -161,4 +161,16 @@ public class TerminalController : MonoBehaviour {
     {
         escStackByButton.Close();
     }
+
+    public List<string> GetAllCmdsNameByArray()
+    {
+        List<string> allCmdsName = new List<string>();
+        foreach (TerminalInputCommand cmd in inputCmds)
+        {
+            allCmdsName.Add(cmd.keyword);
+        }
+
+        return allCmdsName;
+    }
+
 }

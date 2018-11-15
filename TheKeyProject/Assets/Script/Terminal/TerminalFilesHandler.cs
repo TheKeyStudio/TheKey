@@ -18,7 +18,7 @@ public class TerminalFilesHandler : MonoBehaviour
         controller = GetComponent<TerminalController>();
     }
 
-    public string GetAllFilesName()
+    public string GetAllFilesNameByString()
     {
         List<string> allFilesName = new List<string>();
         allFilesName.Add("Listed All files:");
@@ -30,6 +30,18 @@ public class TerminalFilesHandler : MonoBehaviour
         
         return string.Join("\n", allFilesName.ToArray());
     }
+
+    public List<string> GetAllFilesNameByArray()
+    {
+        List<string> allFilesName = new List<string>();
+        foreach (TerminalFiles file in files)
+        {
+            allFilesName.Add(file.fileName);
+        }
+
+        return allFilesName;
+    }
+
 
     public void Open(string fileName)
     {

@@ -10,7 +10,7 @@ public class ListFilesCmd : TerminalInputCommand
         if(separatedInputWords.Length == 1)
         {
             TerminalFilesHandler filesHandler = controller.FilesHandler;
-            string allFilesName = filesHandler.GetAllFilesName();
+            string allFilesName = filesHandler.GetAllFilesNameByString();
             controller.LogString(allFilesName);
         }
         else
