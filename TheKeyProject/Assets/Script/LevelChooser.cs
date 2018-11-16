@@ -35,7 +35,7 @@ public class LevelChooser : MonoBehaviour {
             Debug.Log(index + ":" + buttons[index].name);
         }
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     private void OnClick(int index)
