@@ -7,14 +7,13 @@ using UnityEngine.UI;
 public class TerminalImageControl : MonoBehaviour, EscClose {
 
     public GameObject panel;
-    public Image image;
     private TerminalController controller;
 
-    public void ShowImage(Sprite sprite, TerminalController controller)
+    public void ShowImage(GameObject imagePrefab, TerminalController controller)
     {
         this.controller = controller;
         controller.SetInputFieldActive(false);
-        image.sprite = sprite;
+        GameObject image = Instantiate(imagePrefab, panel.transform);
         panel.SetActive(true);
         EscStack.instance.Push(this);
     }

@@ -116,6 +116,22 @@ GameObject:
   - component: {fileID: 4843511209964928}
   - component: {fileID: 114664681977240252}
   m_Layer: 0
+  m_Name: "\u5929\u660E\u4EBA\u7269\u5C0D\u8A71\u5C08\u7528"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1768407303610766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4132508329139906}
+  - component: {fileID: 114276776070483082}
+  m_Layer: 0
   m_Name: "\u5929\u660E\u4EBA\u7269"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,6 +166,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4743777348859148}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4132508329139906
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768407303610766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 37.24556, y: -15.844074, z: -0.5945383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4743777348859148}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4379609904029144
 Transform:
@@ -209,17 +238,18 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1509863608370592}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.028038, y: 5.871964, z: 0.24435708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.24556, y: 15.844074, z: 0.5945383}
   m_LocalScale: {x: 0.4110031, y: 0.4110031, z: 0.4110031}
   m_Children:
   - {fileID: 4730748352516246}
-  - {fileID: 4843511209964928}
+  - {fileID: 4132508329139906}
   - {fileID: 4994702792411496}
   - {fileID: 4696997454011984}
   - {fileID: 4061388572092640}
   - {fileID: 4379609904029144}
   - {fileID: 4648182117904178}
+  - {fileID: 4843511209964928}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,10 +261,10 @@ Transform:
   m_GameObject: {fileID: 1626051231546482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 37.24556, y: -15.844074, z: -0.5945383}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9999924, y: 0.9999924, z: 0.9999924}
   m_Children: []
   m_Father: {fileID: 4743777348859148}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4994702792411496
 Transform:
@@ -291,6 +321,35 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
+--- !u!114 &114276776070483082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768407303610766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: "\u5929\u660E"
+  nameColor: {r: 0.10588236, g: 0.10588236, b: 0.13725491, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: a338dca6787f79f4183d452f3acea4dd, type: 3}
+  - {fileID: 21300000, guid: d7879245e3a05f1409d1f97f70bc4e4e, type: 3}
+  - {fileID: 21300000, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300002, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300006, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300010, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300012, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300014, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300016, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300018, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300020, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!114 &114521021117776156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: "\u5C0F\u4E11\u5148\u751F"
-  nameColor: {r: 0.6392157, g: 0.2784314, b: 0.078431375, a: 1}
+  nameColor: {r: 0.07843137, g: 0.6392157, b: 0.28241974, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
@@ -350,17 +409,9 @@ MonoBehaviour:
   nameColor: {r: 0.10588236, g: 0.10588236, b: 0.13725491, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: a338dca6787f79f4183d452f3acea4dd, type: 3}
-  - {fileID: 21300000, guid: d7879245e3a05f1409d1f97f70bc4e4e, type: 3}
-  - {fileID: 21300000, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300002, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300006, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300010, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300012, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300014, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300016, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300018, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
-  - {fileID: 21300020, guid: fa88d331a1efcfe4d9de745d57b3e209, type: 3}
+  - {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  - {fileID: 21300000, guid: ef4048e73fafd8d429d381cb2fbe7fd4, type: 3}
+  - {fileID: 21300000, guid: 04e61c80c05c4084890709a1f2dcad7a, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -376,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: "\u9326\u83EF"
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameColor: {r: 1, g: 1, b: 0.50980395, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 90fd059960fd7eb488e1e0dad753ba4a, type: 3}
@@ -395,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: "Ben\u5148\u751F"
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 362008ec0f3682f44a701c1e4aacf99d, type: 3}

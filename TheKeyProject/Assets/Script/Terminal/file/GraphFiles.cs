@@ -6,11 +6,11 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Terminal/Files/GraphFiles")]
 public class GraphFiles : TerminalFiles {
 
-    public Sprite sprite;
+    public GameObject imagePrefab;
     public override void Open(TerminalController controller)
     {
         TerminalImageControl imageControl = controller.ImageControl;
-        imageControl.ShowImage(sprite, controller);
+        imageControl.ShowImage(imagePrefab, controller);
     }
 
 }
