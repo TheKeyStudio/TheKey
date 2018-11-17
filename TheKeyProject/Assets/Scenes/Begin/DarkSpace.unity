@@ -322,7 +322,6 @@ GameObject:
   - component: {fileID: 474591190}
   - component: {fileID: 474591189}
   - component: {fileID: 474591167}
-  - component: {fileID: 474591191}
   m_Layer: 0
   m_Name: "\u958B\u59CB\u6D41\u7A0B"
   m_TagString: Untagged
@@ -343,11 +342,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -112.3765, y: -6.980345}
+  scrollPos: {x: -79.37653, y: -14.9803505}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 309
-  zoom: 0.9999999
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -355,9 +354,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 474591173}
+  - {fileID: 474591184}
   selectedCommands:
-  - {fileID: 474591181}
+  - {fileID: 474591185}
   variables:
   - {fileID: 474591175}
   - {fileID: 474591188}
@@ -463,7 +462,6 @@ MonoBehaviour:
   - {fileID: 474591167}
   - {fileID: 474591171}
   - {fileID: 474591172}
-  - {fileID: 474591191}
 --- !u!114 &474591169
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -555,8 +553,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 439.53162
-    y: 81.73418
+    x: 402.53162
+    y: 94.73418
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1009,32 +1007,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &474591191
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 474591165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 46
-  indentLevel: 0
-  storyText: "\u9019\u88E1\u600E\u9EBC\u6703\u6709\u4E00\u672C\u7B46\u8A18\u672C?"
-  description: 
-  character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &474591196
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1553,7 +1525,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 979733059}
   selectedCommands:
-  - {fileID: 979733074}
+  - {fileID: 979733080}
   variables:
   - {fileID: 979733087}
   - {fileID: 979733060}
@@ -1956,7 +1928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u5BC6\u78BC\u4E16\u754C\u7E3D\u5171\u5206\u70BA\u4E94\u500B\u95DC\u5361\uFF0C\u6BCF\u500B\u95DC\u5361\u4F3C\u4E4E\u90FD\u96B1\u85CF\u4E00\u4E9B\u8A0A\u606F\n\u800C\u4E14\u95DC\u5361\u90FD\u662F\u548C\u5BC6\u78BC\u5B78\u76F8\u95DC\u7684"
+  storyText: "{s}{s=25}{color=yellow}\u5BC6\u78BC\u4E16\u754C\u7E3D\u5171\u5206\u70BA\u4E03\u500B\u95DC\u5361\uFF0C\u6BCF\u500B\u95DC\u5361\u4F3C\u4E4E\u90FD\u96B1\u85CF\u4E00\u4E9B\u8A0A\u606F\n\u800C\u4E14\u95DC\u5361\u90FD\u662F\u548C\u5BC6\u78BC\u5B78\u76F8\u95DC\u7684"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 21300000, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
@@ -2337,7 +2309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 979733057}
+  selectedFlowchart: {fileID: 474591166}
 --- !u!4 &1041787349
 Transform:
   m_ObjectHideFlags: 1

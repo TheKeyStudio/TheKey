@@ -213,12 +213,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b86c4d3fc5d84814da8b633c09601c65, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &321472251 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114498704083369924, guid: 12c158a5c04e58143a2d56248b70df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 1715174017}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!224 &448868966 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224850587186683478, guid: b86c4d3fc5d84814da8b633c09601c65,
@@ -444,7 +438,7 @@ Prefab:
         type: 2}
       propertyPath: image
       value: 
-      objectReference: {fileID: 321472251}
+      objectReference: {fileID: 0}
     - target: {fileID: 114797978179111478, guid: f421481d36a421c498768621872e403f,
         type: 2}
       propertyPath: terminalLogin
@@ -932,7 +926,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00002707768
+      value: -0.000014735995
       objectReference: {fileID: 0}
     - target: {fileID: 114498704083369924, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
@@ -1037,6 +1031,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: -5.040039
+      objectReference: {fileID: 0}
+    - target: {fileID: 224135809479772268, guid: 12c158a5c04e58143a2d56248b70df05,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.9998474
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114221629359093332, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}

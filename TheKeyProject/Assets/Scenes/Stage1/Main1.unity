@@ -1217,6 +1217,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   noticeIcon: {fileID: 334847650}
   nextScene: 
+  color: {r: 0, g: 0, b: 0, a: 1}
+  fadeDamp: 0.5
   passNumber: 7
   stageNumber: 1
   levelChooserObj: {fileID: 1962604592}
@@ -8927,8 +8929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeName: "\u51F1\u85A9\u5BC6\u78BC"
   hintCardCode: Caesar
-  hintCardSprite: {fileID: 21300002, guid: f86c8a12b5aca494b80696a66278df58, type: 3}
-  hintCardDescriptSprite: {fileID: 21300000, guid: f86c8a12b5aca494b80696a66278df58,
+  hintCardSprite: {fileID: 21300000, guid: f86c8a12b5aca494b80696a66278df58, type: 3}
+  hintCardDescriptSprite: {fileID: 21300002, guid: f86c8a12b5aca494b80696a66278df58,
     type: 3}
   unlocked: 0
 --- !u!212 &868739287
@@ -9994,8 +9996,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048282116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.06, y: 0.85, z: 0}
-  m_LocalScale: {x: 0.7609706, y: 0.7609706, z: 0.66856605}
+  m_LocalPosition: {x: 28.36, y: 0.06, z: 0}
+  m_LocalScale: {x: 0.46496385, y: 0.46192518, z: 0.66856605}
   m_Children: []
   m_Father: {fileID: 47892256}
   m_RootOrder: 0
@@ -11982,8 +11984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeName: "\u7DAD\u5409\u5C3C\u723E"
   hintCardCode: Viginier
-  hintCardSprite: {fileID: 21300002, guid: aa9ef8cb47ae37742abd8053c3cd77ad, type: 3}
-  hintCardDescriptSprite: {fileID: 21300000, guid: aa9ef8cb47ae37742abd8053c3cd77ad,
+  hintCardSprite: {fileID: 21300000, guid: aa9ef8cb47ae37742abd8053c3cd77ad, type: 3}
+  hintCardDescriptSprite: {fileID: 21300002, guid: aa9ef8cb47ae37742abd8053c3cd77ad,
     type: 3}
   unlocked: 0
 --- !u!212 &1393775415

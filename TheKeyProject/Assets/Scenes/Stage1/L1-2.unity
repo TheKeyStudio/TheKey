@@ -5019,6 +5019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6634adc5e41e45bf98bfe092c42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemGetMsgReceivedName: ItemGet
+  itemGoneMsgReceivedName: ItemGone
 --- !u!114 &1472097129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5032,8 +5034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeName: "\u6469\u65AF\u5BC6\u78BC"
   hintCardCode: Morse
-  hintCardSprite: {fileID: 21300002, guid: 2e6680d50b0d55e4482b1b0fe7b3a235, type: 3}
-  hintCardDescriptSprite: {fileID: 21300004, guid: 2e6680d50b0d55e4482b1b0fe7b3a235,
+  hintCardSprite: {fileID: 21300004, guid: 2e6680d50b0d55e4482b1b0fe7b3a235, type: 3}
+  hintCardDescriptSprite: {fileID: 21300002, guid: 2e6680d50b0d55e4482b1b0fe7b3a235,
     type: 3}
   unlocked: 0
 --- !u!114 &1472097130
