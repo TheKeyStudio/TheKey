@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4969369709803198}
   - component: {fileID: 212347528805614730}
   - component: {fileID: 58033921601457126}
-  - component: {fileID: 114532622952104504}
   m_Layer: 10
   m_Name: "\u9B3C\u706B"
   m_TagString: Untagged
@@ -725,27 +724,6 @@ MonoBehaviour:
   eventHandler: {fileID: 114695059403861062}
   commandList:
   - {fileID: 114577596096082084}
---- !u!114 &114532622952104504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1356806849701794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81b10e0d0203744886758cc4837b622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  spriteRenderer: {fileID: 0}
-  noticeIcon: {fileID: 1930343776774848}
-  talkAble: 1
-  waveAmplitude: 0.5
-  waveSpeed: 1
-  flowchart: {fileID: 114983591015059586}
-  talkCoolDownTime: 2
-  startCoolDowmTime: 0
 --- !u!114 &114566293563638910
 MonoBehaviour:
   m_ObjectHideFlags: 2

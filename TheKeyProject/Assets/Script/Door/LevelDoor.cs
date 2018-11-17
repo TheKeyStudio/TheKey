@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelDoor : Door   
+public class LevelDoor : Door, EscClose
 {
     public int passNumber;
     [SerializeField] private int stageNumber;
     private int currentLevel;
-
+    
     public GameObject levelChooserObj;
 
     private LevelChooser levelChooser;
@@ -15,7 +15,7 @@ public class LevelDoor : Door
     public override void Init()
     {
         base.Init();
-        levelChooser = levelChooserObj.GetComponent<LevelChooser>();
+        levelChooser = levelChooserObj.GetComponentInChildren<LevelChooser>();
         currentLevel = GameManager.instance.GetCurrentLevel();
     }
 
@@ -24,7 +24,7 @@ public class LevelDoor : Door
         base.Interact();
         levelChooserObj.SetActive(true);
         levelChooser.AvailableButton(currentLevel);
-
+        EscStack.instance.Push(this);
     }
 
     public void ToLevel(int levelNumber)
@@ -35,5 +35,12 @@ public class LevelDoor : Door
             Debug.Log("To next scene : " + nextScene);
             ToNextScene();
         }
+    }
+
+    public void Close()
+    {
+        levelChooserObj.SetActive(false);
+        PlayerController playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerController.PlayerState = new Normal(playerController);
     }
 }

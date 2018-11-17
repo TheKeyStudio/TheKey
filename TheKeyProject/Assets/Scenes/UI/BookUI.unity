@@ -658,7 +658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.1100006, y: 0.89001465}
+  m_AnchoredPosition: {x: 3.1099854, y: 0.89001465}
   m_SizeDelta: {x: 20.46, y: 17.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859809947
@@ -731,7 +731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.1100006, y: -3.8899536}
+  m_AnchoredPosition: {x: -1.1100159, y: -3.8899536}
   m_SizeDelta: {x: -128.45999, y: -46.093998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2008264228
@@ -889,7 +889,7 @@ Prefab:
         type: 2}
       propertyPath: bookPages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300002, guid: fc12b48d194c1f244bd0707ef40c2895,
+      objectReference: {fileID: 21300000, guid: f86c8a12b5aca494b80696a66278df58,
         type: 3}
     - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
         type: 2}
@@ -901,7 +901,31 @@ Prefab:
         type: 2}
       propertyPath: bookPages.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: b0c18c676ab4d4343adc234472e1d618,
+      objectReference: {fileID: 21300002, guid: f86c8a12b5aca494b80696a66278df58,
+        type: 3}
+    - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
+        type: 2}
+      propertyPath: bookPages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: aa9ef8cb47ae37742abd8053c3cd77ad,
+        type: 3}
+    - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
+        type: 2}
+      propertyPath: bookPages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300002, guid: aa9ef8cb47ae37742abd8053c3cd77ad,
+        type: 3}
+    - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
+        type: 2}
+      propertyPath: bookPages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e6680d50b0d55e4482b1b0fe7b3a235,
+        type: 3}
+    - target: {fileID: 114253405006723410, guid: c8d2d3a03f29be24bb7fcd123fa18e7d,
+        type: 2}
+      propertyPath: bookPages.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300010, guid: 2e6680d50b0d55e4482b1b0fe7b3a235,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8d2d3a03f29be24bb7fcd123fa18e7d, type: 2}

@@ -7,6 +7,8 @@ public class EscStack : MonoBehaviour {
     public static EscStack instance = null;
     LinkedList<EscClose> stack = new LinkedList<EscClose>();
 
+    public int stackLength;
+
     void Awake()
     {
         if (instance == null)
@@ -21,11 +23,14 @@ public class EscStack : MonoBehaviour {
         {
             Pop();
         }
+
+        stackLength = stack.Count;
     }
 
     public void Push(EscClose escClose)
     {
-        stack.AddFirst(escClose);
+        if(!stack.Contains(escClose))
+            stack.AddFirst(escClose);
     }
 
     public void Pop()

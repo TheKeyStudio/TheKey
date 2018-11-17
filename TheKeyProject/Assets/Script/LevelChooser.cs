@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelChooser : MonoBehaviour {
+public class LevelChooser : MonoBehaviour
+{
     
     private Image[] childImgs;
     private Button[] buttons;
@@ -34,8 +35,7 @@ public class LevelChooser : MonoBehaviour {
 
             Debug.Log(index + ":" + buttons[index].name);
         }
-
-        //gameObject.SetActive(false);
+        
     }
 
     private void OnClick(int index)
@@ -55,4 +55,5 @@ public class LevelChooser : MonoBehaviour {
             buttons[i].interactable = false;
         }
     }
+    
 }

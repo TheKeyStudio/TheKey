@@ -99,7 +99,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4186465037601574}
-  - component: {fileID: 114230921535203196}
   - component: {fileID: 58983860410148302}
   m_Layer: 0
   m_Name: "\u5C0F\u5973\u5B69"
@@ -612,27 +611,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &114230921535203196
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1457859721491672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81b10e0d0203744886758cc4837b622, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  spriteRenderer: {fileID: 0}
-  noticeIcon: {fileID: 1624782952197038}
-  talkAble: 1
-  waveAmplitude: 0.5
-  waveSpeed: 1
-  flowchart: {fileID: 114848501513489914}
-  talkCoolDownTime: 2
-  startCoolDowmTime: 0
 --- !u!114 &114257791618266852
 MonoBehaviour:
   m_ObjectHideFlags: 1
