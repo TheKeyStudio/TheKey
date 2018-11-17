@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114536266340730162}
   - component: {fileID: 114797978179111478}
   - component: {fileID: 114625889802360690}
-  - component: {fileID: 114861097435973760}
   - component: {fileID: 114706838636077590}
   m_Layer: 0
   m_Name: TerminalController
@@ -116,7 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 0}
-  image: {fileID: 0}
 --- !u!114 &114706838636077590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,14 +152,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 0}
---- !u!114 &114861097435973760
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626730018725490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d93b082240bd9dd418844406bef619fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

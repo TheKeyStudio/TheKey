@@ -8,12 +8,13 @@ public class TerminalImageControl : MonoBehaviour, EscClose {
 
     public GameObject panel;
     private TerminalController controller;
+    private GameObject imageObj;
 
     public void ShowImage(GameObject imagePrefab, TerminalController controller)
     {
         this.controller = controller;
         controller.SetInputFieldActive(false);
-        GameObject image = Instantiate(imagePrefab, panel.transform);
+        imageObj = Instantiate(imagePrefab, panel.transform);
         panel.SetActive(true);
         EscStack.instance.Push(this);
     }
@@ -21,7 +22,9 @@ public class TerminalImageControl : MonoBehaviour, EscClose {
     public void Close()
     {
         controller.SetInputFieldActive(true);
+        Destroy(imageObj);
         panel.SetActive(false);
+        
     }
     
 }

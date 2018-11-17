@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EscStackByButton : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class EscStackByButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         escStack = EscStack.instance;
+        Button btn = GetComponent<Button>();
+        btn.onClick.AddListener(Close);
 	}
 	
 	public void Close()

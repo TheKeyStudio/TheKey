@@ -34,10 +34,12 @@ public class TerminalInput : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             SetNextHistory();
+            inputField.MoveTextEnd(false);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             SetPreviousHistory();
+            inputField.MoveTextEnd(false);
         }
     }
 

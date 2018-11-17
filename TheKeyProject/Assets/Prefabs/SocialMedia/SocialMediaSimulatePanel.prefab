@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 222266577364275758}
   - component: {fileID: 114442667928671384}
   - component: {fileID: 114679301124875356}
+  - component: {fileID: 114146822917846988}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -210,7 +211,6 @@ GameObject:
   - component: {fileID: 224679064454834808}
   - component: {fileID: 222546936915003886}
   - component: {fileID: 114962260706357376}
-  - component: {fileID: 114897726790680942}
   - component: {fileID: 114167388059545980}
   m_Layer: 5
   m_Name: SocialMediaSimulatePanel
@@ -444,6 +444,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114146822917846988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911769869327892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93b082240bd9dd418844406bef619fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114167388059545980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,18 +728,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114442667928671384}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114897726790680942}
-        m_MethodName: Close
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114713425709047016
@@ -871,17 +871,6 @@ MonoBehaviour:
   m_canvasRenderer: {fileID: 222049010220256578}
   m_TextComponent: {fileID: 114378145046888280}
   m_materialReferenceIndex: 1
---- !u!114 &114897726790680942
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1914364439471252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d93b082240bd9dd418844406bef619fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114920218343719982
 MonoBehaviour:
   m_ObjectHideFlags: 1

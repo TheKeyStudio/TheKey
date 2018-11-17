@@ -6,7 +6,7 @@ using TMPro;
 
 public class TerminalController : MonoBehaviour {
 
-    private EscStackByButton escStackByButton;
+    private EscStack escStack;
     private TerminalObjControl objControl;
     private TerminalFilesHandler filesHandler;
     private TerminalImageControl imageControl;
@@ -32,7 +32,7 @@ public class TerminalController : MonoBehaviour {
 
     private void Awake()
     {
-        escStackByButton = GetComponent<EscStackByButton>();
+        escStack = EscStack.instance;
         objControl = GetComponent<TerminalObjControl>();
         filesHandler = GetComponent<TerminalFilesHandler>();
         imageControl = GetComponent<TerminalImageControl>();
@@ -159,7 +159,7 @@ public class TerminalController : MonoBehaviour {
 
     public void Close()
     {
-        escStackByButton.Close();
+        escStack.Pop();
     }
 
     public List<string> GetAllCmdsNameByArray()
