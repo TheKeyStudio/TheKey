@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SocialMediaSearch : MonoBehaviour {
+public class SocialMediaSearch : MonoBehaviour
+{
+    public TMP_Text textField;
     public TMP_InputField searchInputField;
     public SocialMediaController controller;
 
@@ -17,12 +19,14 @@ public class SocialMediaSearch : MonoBehaviour {
         }
         else
         {
+            textField.text = "Email not found";
             Debug.Log("email not found");
         }
     }
 
     public void Clear()
     {
+        textField.text = "";
         searchInputField.text = "";
     }
 }

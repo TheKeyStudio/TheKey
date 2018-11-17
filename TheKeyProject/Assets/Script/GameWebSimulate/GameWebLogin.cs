@@ -7,6 +7,7 @@ public class GameWebLogin : MonoBehaviour {
 
     public TMP_InputField acc_inputField;
     public TMP_InputField pwd_inputField;
+    public TMP_Text errorText;
 
     private GameWebController controller;
 
@@ -24,6 +25,7 @@ public class GameWebLogin : MonoBehaviour {
         }
         else
         {
+            errorText.text = "Account or Password Incorrect";
             Debug.Log("Fail to login");
         }
     }
