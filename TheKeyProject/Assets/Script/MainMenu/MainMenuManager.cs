@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour {
 
-    public string startGameScene;
+    public string sceneName;
+    public Color color = Color.black;
+    public float fadeDamp = 0.5f;
+
     public EaseUI easeComponent;
     private bool started = false;
 
@@ -31,7 +34,6 @@ public class MainMenuManager : MonoBehaviour {
 
     public void ToNextScene()
     {
-        Debug.Log("Going to " + startGameScene);
-        SceneManager.LoadScene(startGameScene);
+        Initiate.Fade(sceneName, color, fadeDamp);
     }
 }

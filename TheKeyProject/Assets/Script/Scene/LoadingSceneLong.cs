@@ -7,12 +7,9 @@ public class LoadingSceneLong : MonoBehaviour {
 
     public string sceneName;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.anyKeyDown)
-        {
-            LoadLevel();
-        }
+        LoadLevel();
     }
 
     public void LoadLevel()
@@ -28,6 +25,7 @@ public class LoadingSceneLong : MonoBehaviour {
 
     IEnumerator LoadAsync(string sceneName)
     {
+        yield return new WaitForSeconds(2f);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
         while (!operation.isDone)

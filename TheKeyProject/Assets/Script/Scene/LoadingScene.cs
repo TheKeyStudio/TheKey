@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadingScene : MonoBehaviour {
 
     public static LoadingScene instance;
+    
 
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class LoadingScene : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
+    
 
     public void FadeToScene(string sceneName, Color color, float fadeDamp)
     {
