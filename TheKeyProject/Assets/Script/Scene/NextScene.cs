@@ -7,6 +7,8 @@ using Fungus;
 public class NextScene : MonoBehaviour {
     [Header("連接到某場景")]
     public string nextScene;
+    public Color color = Color.black;
+    public float fadeDamp = 0.5f;
     private LoadingScene loadingScene;
 
     private void Start()
@@ -17,7 +19,7 @@ public class NextScene : MonoBehaviour {
     public void ToNextSceneWithFade()
     {
         Debug.Log("Going to " + nextScene);
-        loadingScene.FadeToScene(nextScene);
+        loadingScene.FadeToScene(nextScene,color,fadeDamp);
     }
 
     public void ToNextScene()

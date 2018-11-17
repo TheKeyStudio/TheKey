@@ -7,6 +7,8 @@ public abstract class Door : KeyboardInteractable
     
     [Header("連接到某場景")]
     public string nextScene;
+    public Color color = Color.black;
+    public float fadeDamp = 0.5f;
 
     public override void Init()
     {
@@ -18,6 +20,6 @@ public abstract class Door : KeyboardInteractable
     public void ToNextScene()
     {
         Debug.Log("Going to " + nextScene);
-        LoadingScene.instance.FadeToScene(nextScene);
+        LoadingScene.instance.FadeToScene(nextScene, color, fadeDamp);
     }
 }

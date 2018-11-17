@@ -7,15 +7,11 @@ public class LoadingScene : MonoBehaviour {
 
     public static LoadingScene instance;
 
-    private Animator animator;
-    private string sceneName;
-
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            animator = gameObject.GetComponent<Animator>();
             DontDestroyOnLoad(this);
         }
         else if (this != instance)
@@ -25,26 +21,9 @@ public class LoadingScene : MonoBehaviour {
     }
 
 
-    public void FadeToScene(string sceneName)
+    public void FadeToScene(string sceneName, Color color, float fadeDamp)
     {
-        this.sceneName = sceneName;
-        animator.SetBool("FadeOut", true);
-    }
-
-    public void OnFadeComplete()
-    {
-        SceneManager.LoadScene(sceneName);
-        animator.SetBool("FadeOut", false);
+        Initiate.Fade(sceneName, color, fadeDamp);
     }
     
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-    }
-
-    public void ResumeGame()
-    {
-        Time.timeScale = 1;
-    }
 }
