@@ -63,7 +63,7 @@ public class BruteForceController: MonoBehaviour {
                 controller.LogString(startStr + "Wrong Password." + endStr);
             }
             controller.DisplayLoggedText();
-            loadingTime = Random.Range(1f, 3f);
+            loadingTime = Random.Range(0.5f, 2f);
         }
     }
 }

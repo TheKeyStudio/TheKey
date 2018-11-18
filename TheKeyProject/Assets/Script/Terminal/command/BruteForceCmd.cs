@@ -16,7 +16,7 @@ public class BruteForceCmd : TerminalInputCommand
         }
         else
         {
-            controller.LogString("Smthing wrong");
+            controller.LogString("Error. Please ensure you have enter file name and password file name correctly.");
         }
     }
 }
