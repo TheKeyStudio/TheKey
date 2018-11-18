@@ -1746,8 +1746,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447028143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.418, y: -1.186, z: 0}
-  m_LocalScale: {x: 5.3155684, y: 2.5538092, z: 2.335571}
+  m_LocalPosition: {x: -11.48, y: -1.186, z: 0}
+  m_LocalScale: {x: 7.9052, y: 2.5538092, z: 2.335571}
   m_Children: []
   m_Father: {fileID: 1823593340}
   m_RootOrder: 1
@@ -3040,7 +3040,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.160248
+      value: -18.40151
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4117,6 +4117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: DarkSpace
+  color: {r: 0, g: 0, b: 0, a: 1}
+  fadeDamp: 0.5
 --- !u!1 &2000063176
 GameObject:
   m_ObjectHideFlags: 0
