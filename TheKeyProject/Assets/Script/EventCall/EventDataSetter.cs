@@ -11,7 +11,6 @@ public class EventDataSetter : MonoBehaviour
     private void Awake()
     {
         eventDataMgr = GameManager.instance.EventDataManager;
-        SetData();
     }
     public void SetData()
     {

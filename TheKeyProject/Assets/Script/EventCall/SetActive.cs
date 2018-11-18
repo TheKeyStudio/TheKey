@@ -2,20 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetActive : MonoBehaviour {
+public class SetActive : EventDataTrigger {
 
     public bool[] active;
 
-    private EventDataGetter eventDataGetter;
-
-    // Use this for initialization
-    void Awake()
-    {
-        eventDataGetter = GetComponent<EventDataGetter>();
-        Init();
-    }
-
-    private void Init()
+    protected override void Init()
     {
         int eventCode = eventDataGetter.GetData();
         if (eventCode >= active.Length || eventCode < 0)

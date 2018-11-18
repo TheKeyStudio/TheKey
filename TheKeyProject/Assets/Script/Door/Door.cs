@@ -22,4 +22,9 @@ public abstract class Door : KeyboardInteractable
         Debug.Log("Going to " + nextScene);
         LoadingScene.instance.FadeToScene(nextScene, color, fadeDamp);
     }
+
+    protected void ToNextScene(string sceneName)
+    {
+        LoadingScene.instance.FadeToScene(sceneName, color, fadeDamp);
+    }
 }

@@ -16,13 +16,16 @@ public class LevelDoor : Door, EscClose
     {
         base.Init();
         levelChooser = levelChooserObj.GetComponentInChildren<LevelChooser>();
+
         currentLevel = GameManager.instance.GetCurrentLevel();
     }
+    
 
     public override void Interact()
     {
         base.Interact();
         levelChooserObj.SetActive(true);
+        currentLevel = GameManager.instance.GetCurrentLevel();
         levelChooser.AvailableButton(currentLevel);
         EscStack.instance.Push(this);
     }

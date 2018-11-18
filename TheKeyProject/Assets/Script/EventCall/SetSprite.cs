@@ -2,22 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetSprite : MonoBehaviour {
+public class SetSprite : EventDataTrigger {
+
     public Sprite[] sprites;
 
-    private EventDataGetter eventDataGetter;
     private SpriteRenderer spriteRender;
 
-    // Use this for initialization
-    void Awake()
+    protected override void Init()
     {
-        eventDataGetter = GetComponent<EventDataGetter>();
         spriteRender = GetComponent<SpriteRenderer>();
-        Init();
-    }
-
-    private void Init()
-    {
         int eventCode = eventDataGetter.GetData();
         if (eventCode >= sprites.Length || eventCode < 0)
         {
@@ -35,3 +28,4 @@ public class SetSprite : MonoBehaviour {
         spriteRender.sprite = sprites[eventCode];
     }
 }
+
