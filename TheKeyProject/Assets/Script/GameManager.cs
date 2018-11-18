@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour {
     //Event
     public bool sawTheGhost = false; //在Main中看見靈魂的觸發事件
     public bool getTutorial = false; //在第一關第一次進入如觸發提醒
-    
 
-    private string currentSceneName; //當前的SceneName，主要用於玩家位置的設定
+
+    [SerializeField] private string currentSceneName; //當前的SceneName，主要用於玩家位置的設定
 
 
 
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
     }
 
     public void RefreshSceneName()
