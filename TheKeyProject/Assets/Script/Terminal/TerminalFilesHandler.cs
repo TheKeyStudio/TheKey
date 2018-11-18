@@ -24,8 +24,9 @@ public class TerminalFilesHandler : MonoBehaviour
         allFilesName.Add("Listed All files:");
         foreach (TerminalFiles file in files)
         {
-            allFilesName.Add("* " + "<#" + ColorUtility.ToHtmlStringRGB(file.fileNameColor) + ">" +
-                file.fileName + "</color>");
+            allFilesName.Add("<size=-3>* " 
+                + "<#" + ColorUtility.ToHtmlStringRGB(file.fileNameColor) + ">" +
+                file.fileName + "</color></size>");
         }
         
         return string.Join("\n", allFilesName.ToArray());

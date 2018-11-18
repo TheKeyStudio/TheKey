@@ -46,7 +46,8 @@ public class TerminalController : MonoBehaviour {
         List<string> allCommandsKeyword = new List<string>();
         foreach(TerminalInputCommand cmd in inputCmds)
         {
-            allCommandsKeyword.Add(cmd.keyword + " - " + cmd.description);
+            allCommandsKeyword.Add("<size=-3><color=yellow>" + cmd.keyword + 
+                "</color> - <color=white>" + cmd.description + "</color></size>");
         }
         string logAsText = string.Join("\n", allCommandsKeyword.ToArray());
         LogString(logAsText);

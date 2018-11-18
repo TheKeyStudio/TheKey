@@ -5,10 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Terminal/InputCommand/Help")]
 public class HelpCmd : TerminalInputCommand
 {
+    [TextArea(10, 20)]
+    public string explainText;
     public override void Respond(TerminalController controller, string[] separatedInputWords)
     {
         if (separatedInputWords.Length == 1)
         {
+            controller.LogString(explainText);
             controller.ListAllCommands();
         }
         else
