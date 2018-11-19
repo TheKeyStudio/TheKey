@@ -19,19 +19,19 @@ public class BruteForceController: MonoBehaviour {
         TextFiles pwdFile = (TextFiles)fileHandler.GetFileByName(passwordFile);
         if (file == null)
         {
-            controller.LogString("Error: File Name not found.");
+            controller.LogString("<size=-3><color=red>Error: File Name not found.</color></size>");
             return;
         }
 
         if (pwdFile == null || pwdFile.hasPassword)
         {
-            controller.LogString("Error: Password file not found.");
+            controller.LogString("<size=-3><color=red>Error: Password file not found.</color></size>");
             return;
         }
 
         if (!file.hasPassword)
         {
-            controller.LogString("Error: This file doesn't need password.");
+            controller.LogString("<size=-3><color=red>Error: This file doesn't need password.</color></size>");
             return;
         }
 
@@ -46,21 +46,21 @@ public class BruteForceController: MonoBehaviour {
         string endStr = "</size>";
         foreach (string password in passwordTexts)
         {
-            controller.LogString(startStr + "Trying password: " + password + endStr);
+            controller.LogString(startStr + "<color=white>Trying password: " + password + "</color>" + endStr);
             controller.DisplayLoggedText();
             Debug.Log(loadingTime);
             yield return new WaitForSeconds(loadingTime);
             if (password.Equals(file.password))
             {
                 Debug.Log("Password Found");
-                controller.LogString(startStr + "<color=red>Password Found: " + password + "</color>" + endStr);
+                controller.LogString(startStr + "<color=yellow>Password Found: " + password + "</color>" + endStr);
                 controller.DisplayLoggedText();
                 break;
             }
             else
             {
                 Debug.Log("Wrong Password");
-                controller.LogString(startStr + "Wrong Password." + endStr);
+                controller.LogString(startStr + "<color=red>Wrong Password.</color>" + endStr);
             }
             controller.DisplayLoggedText();
             loadingTime = Random.Range(0.5f, 2f);

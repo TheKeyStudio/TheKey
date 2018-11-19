@@ -80,11 +80,12 @@ MonoBehaviour:
   eventDataManager: {fileID: 0}
   totalLevel: 7
   level: 0
-  terminalLogin: 0
+  terminalLogin: 1
   isFirstTimeGoIntoDarkSpace: 1
   talkedWithClown: 0
   sawTheGhost: 0
   getTutorial: 0
+  currentSceneName: 
 --- !u!114 &114974205293415782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,3 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828373cea8bd013498c8aac4b8eb6f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stackLength: 0

@@ -18,7 +18,7 @@ public class NextLevelFiles : TerminalFiles
             SetData();
 
             gameManager.NextLevel();
-            controller.LogString("Opened " + (gameManager.GetCurrentLevel()).ToString());
+            controller.LogString("Next level is opened.");
         }
         else
         {
