@@ -47,7 +47,15 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        
+    }
 
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.KeypadPlus))
+        {
+            NextLevel();
+        }
     }
 
     public void RefreshSceneName()

@@ -12,23 +12,23 @@ public class Pallax : MonoBehaviour {
                                     //Is called before Start(). Great for references.
     void Awake()
     {
+        // set up camera the reference
+        cam = Camera.main.transform;
+        // asigning coresponding parallaxScales
+        parallaxScales = new float[backgrounds.Length];
     }
     // Use this for initialization
     void Start()
     {
-        // set up camera the reference
-        cam = Camera.main.transform;
         // The previous frame had the current frame's camera position
         previousCamPos = cam.position;
-        // asigning coresponding parallaxScales
-        parallaxScales = new float[backgrounds.Length];
         for (int i = 0; i < backgrounds.Length; i++)
         {
             parallaxScales[i] = backgrounds[i].position.z * -1;
         }
     }
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         // for each background
         for (int i = 0; i < backgrounds.Length; i++)
