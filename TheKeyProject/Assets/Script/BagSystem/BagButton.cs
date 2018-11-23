@@ -16,16 +16,16 @@ public class BagButton : MonoBehaviour, EscClose {
         if (!book.activeSelf)
         {
             EscStack.instance.Push(this);
-            book.SetActive(true);
         }
         else
         {
             EscStack.instance.Pop();
         }
+        book.SetActive(!book.activeSelf);
     }
 
     public void Close()
     {
-        book.SetActive(false);
+        BagButtonOnClick();
     }
 }
