@@ -11,21 +11,22 @@ public class BagButton : MonoBehaviour, EscClose {
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         Debug.Log("Book button clicked");
-        playerController.ReadBook();
         Debug.Log(book.activeSelf);
         if (!book.activeSelf)
         {
             EscStack.instance.Push(this);
+            playerController.ReadBook();
+            book.SetActive(true);
         }
         else
         {
             EscStack.instance.Pop();
         }
-        book.SetActive(!book.activeSelf);
     }
 
     public void Close()
     {
-        BagButtonOnClick();
+        playerController.ReadBook();
+        book.SetActive(false);
     }
 }
