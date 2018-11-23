@@ -34,5 +34,6 @@ public class GameWebLogin : MonoBehaviour {
     {
         acc_inputField.text = "";
         pwd_inputField.text = "";
+        errorText.text = "";
     }
 }
