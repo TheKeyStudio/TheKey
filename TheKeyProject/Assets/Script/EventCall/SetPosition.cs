@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SetPosition : EventDataTrigger {
     
@@ -14,14 +12,7 @@ public class SetPosition : EventDataTrigger {
         {
             return;
         }
-        while(points[eventCode] == null)
-        {
-            eventCode--;
-            if(eventCode == 0)
-            {
-                break;
-            }
-        }
+
         this.transform.position = points[eventCode].position;
     }
 }

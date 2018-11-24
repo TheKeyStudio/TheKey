@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BruteForceController: MonoBehaviour {
     private TerminalController controller;
+    private BruteForceCmd cmd;
     private float loadingTime = 0f;
     
     private void Start()
@@ -12,8 +13,9 @@ public class BruteForceController: MonoBehaviour {
         loadingTime = Random.Range(1f, 3f);
     }
 
-    public void BruteForce(string fileName, string passwordFile)
+    public void BruteForce(string fileName, string passwordFile, BruteForceCmd cmd)
     {
+        this.cmd = cmd;
         TerminalFilesHandler fileHandler = controller.FilesHandler;
         TerminalFiles file = fileHandler.GetFileByName(fileName);
         TextFiles pwdFile = (TextFiles)fileHandler.GetFileByName(passwordFile);
@@ -55,6 +57,7 @@ public class BruteForceController: MonoBehaviour {
                 Debug.Log("Password Found");
                 controller.LogString(startStr + "<color=yellow>Password Found: " + password + "</color>" + endStr);
                 controller.DisplayLoggedText();
+                cmd.SetData();
                 break;
             }
             else
@@ -63,7 +66,7 @@ public class BruteForceController: MonoBehaviour {
                 controller.LogString(startStr + "<color=red>Wrong Password.</color>" + endStr);
             }
             controller.DisplayLoggedText();
-            loadingTime = Random.Range(0.5f, 2f);
+            loadingTime = Random.Range(0.5f, 1.5f);
         }
     }
 }

@@ -19,7 +19,7 @@ public class TextFiles : TerminalFiles
         string richTextContext = "<#" + ColorUtility.ToHtmlStringRGB(contentFontColor) + ">" +
             "<size=" + (contentFontSizeMultiple * 100f).ToString() + "%>" + content + 
             "</size>" + "</color>";
-
+        SetData();
         controller.LogString(richTextContext);
     }
 }

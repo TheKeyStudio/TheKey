@@ -9,6 +9,7 @@ public class ExitCmd : TerminalInputCommand
     {
         if (separatedInputWords.Length == 1)
         {
+            setter.SetData();
             controller.Close();
         }
         else

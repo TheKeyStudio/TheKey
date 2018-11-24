@@ -33,6 +33,7 @@ public class BabylonAnswerChecker : MonoBehaviour {
         }
         else
         {
+            img.color = Color.red;
             Flowchart.BroadcastFungusMessage("strong_box_wrong_answer");
         }
     }

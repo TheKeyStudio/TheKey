@@ -9,6 +9,7 @@ public class GraphFiles : TerminalFiles {
     public GameObject imagePrefab;
     public override void Open(TerminalController controller)
     {
+        SetData();
         TerminalImageControl imageControl = controller.ImageControl;
         imageControl.ShowImage(imagePrefab, controller);
     }

@@ -12,11 +12,17 @@ public class BruteForceCmd : TerminalInputCommand
         {
             Debug.Log("Brute force");
             BruteForceController ctrler = controller.BruteForceCtrler;
-            ctrler.BruteForce(separatedInputWords[0], separatedInputWords[1]);
+            ctrler.BruteForce(separatedInputWords[0], separatedInputWords[1], this);
         }
         else
         {
             controller.LogString("Error. Please ensure you have enter file name and password file name correctly.");
         }
+    }
+
+    public void SetData()
+    {
+        setter.SetData();
+        Debug.Log("set data");
     }
 }

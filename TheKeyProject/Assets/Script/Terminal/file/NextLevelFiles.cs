@@ -7,9 +7,6 @@ public class NextLevelFiles : TerminalFiles
 {
     public int openLevel;
 
-    [SerializeField] private int[] eventCodes;
-    [SerializeField] string[] eventNames;
-
     public override void Open(TerminalController controller)
     {
         GameManager gameManager = GameManager.instance;
@@ -26,13 +23,5 @@ public class NextLevelFiles : TerminalFiles
         }
     }
 
-    private void SetData()
-    {
-        EventDataManager eventDataMgr;
-        eventDataMgr = GameManager.instance.EventDataManager;
-        for (int i = 0; i < eventCodes.Length; i++)
-        {
-            eventDataMgr.SetDataOrNew(eventNames[i], eventCodes[i]);
-        }
-    }
+    
 }

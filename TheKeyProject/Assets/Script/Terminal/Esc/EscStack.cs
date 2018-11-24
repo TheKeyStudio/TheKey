@@ -9,6 +9,8 @@ public class EscStack : MonoBehaviour {
 
     public int stackLength;
 
+    public bool popAble = true;
+
     void Awake()
     {
         if (instance == null)
@@ -35,7 +37,7 @@ public class EscStack : MonoBehaviour {
 
     public void Pop()
     {
-        if (stack.Count == 0)
+        if (stack.Count == 0 || !popAble)
             return;
 
 

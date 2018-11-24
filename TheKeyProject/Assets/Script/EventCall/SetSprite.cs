@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SetSprite : EventDataTrigger {
 
@@ -16,15 +14,7 @@ public class SetSprite : EventDataTrigger {
         {
             return;
         }
-
-        while (sprites[eventCode] == null)
-        {
-            eventCode--;
-            if (eventCode == 0)
-            {
-                break;
-            }
-        }
+        
         spriteRender.sprite = sprites[eventCode];
     }
 }

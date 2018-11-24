@@ -11,6 +11,7 @@ public class OpenFilesCmd : TerminalInputCommand
         {
             TerminalFilesHandler filesHandler = controller.FilesHandler;
             filesHandler.Open(separatedInputWords[1]);
+            setter.SetData();
         }
         else
         {

@@ -12,6 +12,7 @@ public class ListFilesCmd : TerminalInputCommand
             TerminalFilesHandler filesHandler = controller.FilesHandler;
             string allFilesName = filesHandler.GetAllFilesNameByString();
             controller.LogString(allFilesName);
+            setter.SetData();
         }
         else
         {

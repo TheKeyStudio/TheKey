@@ -13,6 +13,7 @@ public class HelpCmd : TerminalInputCommand
         {
             controller.LogString(explainText);
             controller.ListAllCommands();
+            setter.SetData();
         }
         else
         {

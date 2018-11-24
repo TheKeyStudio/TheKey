@@ -8,6 +8,7 @@ public class GameObjectFiles : TerminalFiles
     public GameObject obj;
     public override void Open(TerminalController controller)
     {
+        SetData();
         TerminalObjControl objControl = controller.ObjControl;
         objControl.ShowGameObj(obj);
     }

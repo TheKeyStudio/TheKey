@@ -128,6 +128,7 @@ public class TerminalController : MonoBehaviour {
     public void SetInputFieldActive(bool flag)
     {
         terminalInput.SetInputFieldActive(flag);
+
     }
 
     public void InsertNewHistory(string newHistory)

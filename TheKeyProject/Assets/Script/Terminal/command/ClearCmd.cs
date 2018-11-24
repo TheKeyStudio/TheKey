@@ -10,6 +10,7 @@ public class ClearCmd : TerminalInputCommand
         if (separatedInputWords.Length == 1)
         {
             controller.ClearLog();
+            setter.SetData();
         }
         else
         {
