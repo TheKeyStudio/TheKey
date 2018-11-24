@@ -634,6 +634,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 805921371}
+  - component: {fileID: 805921372}
   m_Layer: 0
   m_Name: SetGMpopAble
   m_TagString: Untagged
@@ -654,6 +655,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &805921372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805921370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0894969558fbf14f99b7ca17d0d87f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &826282194
 Prefab:
   m_ObjectHideFlags: 0
@@ -1570,7 +1582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 179.18292
+    x: 180.18292
     y: 183.86584
     width: 120
     height: 40
@@ -1612,7 +1624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 114
   indentLevel: 0
-  storyText: "{s}{s=25}\u4ED6\u7684email\u662F{color=yellow}ben19790421@gmail.com{/color}...\n{wc}\u4E0D\u5982\u62FF\u9019\u500Bemail\u5230GreenBook\u67E5\u67E5\u770B\u9019\u4F4D\u201C\u65BD\u4E3B\u201D\u662F\u500B\u4EC0\u9EBC\u6A23\u7684\u4EBA\u597D\u4E86"
+  storyText: "{s}{s=25}\u4ED6\u7684email\u662F{color=yellow}ben19790421@gmail.com{/color}...\n{wc}\u4E0D\u5982\u62FF\u9019\u500Bemail\u5230GreenBook\u67E5\u770B\u9019\u4F4D\u201C\u65BD\u4E3B\u201D\u662F\u500B\u4EC0\u9EBC\u6A23\u7684\u4EBA\u597D\u4E86"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2082,8 +2094,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1705812768}
-  selectedCommands: []
+  - {fileID: 1705812749}
+  selectedCommands:
+  - {fileID: 1705812746}
   variables: []
   description: 
   stepPause: 0
@@ -2607,17 +2620,17 @@ Prefab:
     - target: {fileID: 224093966242895216, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224093966242895216, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000005524438
+      value: -0.000005770778
       objectReference: {fileID: 0}
     - target: {fileID: 114498704083369924, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
@@ -2677,7 +2690,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.00002670288
+      value: 14.999986
       objectReference: {fileID: 0}
     - target: {fileID: 1066685077457524, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}
       propertyPath: m_IsActive
@@ -2762,6 +2775,10 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229665062233386, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114221629359093332, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}
