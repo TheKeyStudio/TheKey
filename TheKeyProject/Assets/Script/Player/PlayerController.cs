@@ -1,14 +1,16 @@
 ﻿using Fungus;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DigitalRuby.SoundManagerNamespace;
 
 public class PlayerController : MonoBehaviour {
     
     private Animator playerAnimator;
     
     public Flowchart flowChart;
+
+    public AudioSource[] footSteps;
 
     
     private PlayerState playerState;
@@ -134,5 +136,12 @@ public class PlayerController : MonoBehaviour {
         {
             focusing = newFocus;
         }
+    }
+
+    public void PlayFootStepSound()
+    {
+        int randomIndex = Random.Range(0, footSteps.Length);
+        footSteps[randomIndex].PlayOneShotSoundManaged(footSteps[randomIndex].clip);
+        
     }
 }

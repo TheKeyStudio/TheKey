@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowChart: {fileID: 0}
+  footSteps: []
   playerStateName: 
 --- !u!114 &114939141910330918
 MonoBehaviour:
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.07
   horizontalDirection: 0
-  runSpeed: 100
+  runSpeed: 65
   yForce: 580
   groundCheck: {fileID: 4106374340953762}
   groundRadius: 0.2
