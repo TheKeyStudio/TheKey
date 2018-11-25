@@ -5698,8 +5698,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -2, y: -2}
-      - {x: -1.9898245, y: -0.12180639}
-      - {x: 0.90694135, y: -0.17108932}
+      - {x: -1.9833345, y: -0.56071144}
+      - {x: 0.93939096, y: -0.6099944}
       - {x: 1.2800837, y: 0.5677474}
       - {x: 1.5390592, y: 0.8789861}
       - {x: 1.9993496, y: 0.81096154}
@@ -6337,7 +6337,7 @@ Transform:
   m_GameObject: {fileID: 1810047016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.84, y: -10.67, z: 10.3671875}
-  m_LocalScale: {x: 0.24829544, y: 0.24829544, z: 0.24829544}
+  m_LocalScale: {x: 0.31036925, y: 0.31036925, z: 0.2482954}
   m_Children: []
   m_Father: {fileID: 419210904}
   m_RootOrder: 5
@@ -6366,10 +6366,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.22569275, y: -0.056423664}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6380,7 +6380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.49341, y: 6.8591948}
+  m_Size: {x: 5.04, y: 5.04}
   m_EdgeRadius: 0
 --- !u!1 &1830633754
 GameObject:

@@ -52,7 +52,7 @@ public class BruteForceController: MonoBehaviour {
             controller.DisplayLoggedText();
             Debug.Log(loadingTime);
             yield return new WaitForSeconds(loadingTime);
-            if (password.Equals(file.password))
+            if (password.Equals(file.password, System.StringComparison.OrdinalIgnoreCase))
             {
                 Debug.Log("Password Found");
                 controller.LogString(startStr + "<color=yellow>Password Found: " + password + "</color>" + endStr);

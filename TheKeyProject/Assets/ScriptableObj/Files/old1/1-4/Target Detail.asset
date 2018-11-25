@@ -8,14 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbdc580b6e0467548b6c2195fe4b09f7, type: 3}
-  m_Name: ActiveLv3.exe
+  m_Script: {fileID: 11500000, guid: 18ce409846b850244839aea644535794, type: 3}
+  m_Name: Target Detail
   m_EditorClassIdentifier: 
-  fileName: ActiveLv3.exe
-  fileNameColor: {r: 1, g: 1, b: 0, a: 1}
+  fileName: Target Detail
+  fileNameColor: {r: 0.9150943, g: 0.09927912, b: 0.09927912, a: 1}
   hasPassword: 1
   password: evelyn
-  eventCodes: 02000000
-  eventNames:
-  - Evelyn
-  openLevel: 3
+  imagePrefab: {fileID: 1331353197336688, guid: 8bc6f2071dcc59f49b688f8fd0e7788f,
+    type: 2}
