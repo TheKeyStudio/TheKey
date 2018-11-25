@@ -14,6 +14,7 @@ public class EventDataSetter : MonoBehaviour
     }
     public void SetData()
     {
+        Debug.Log("Setting data : " + eventName + " - " + eventCode);
         eventDataMgr.SetDataOrNew(eventName, eventCode);
     }
 }

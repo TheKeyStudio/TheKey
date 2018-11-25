@@ -20,8 +20,8 @@ public class Pallax : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
         // The previous frame had the current frame's camera position
-        previousCamPos = cam.position;
         for (int i = 0; i < backgrounds.Length; i++)
         {
             parallaxScales[i] = backgrounds[i].position.z * -1;
@@ -30,6 +30,10 @@ public class Pallax : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(previousCamPos == null)
+        {
+            previousCamPos = cam.position;
+        }
         // for each background
         for (int i = 0; i < backgrounds.Length; i++)
         {
