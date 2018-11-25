@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using EaseTools;
 public class BagButton : MonoBehaviour, EscClose {
 
     public GameObject book;
@@ -29,4 +29,5 @@ public class BagButton : MonoBehaviour, EscClose {
         playerController.ReadBook();
         book.SetActive(false);
     }
+    
 }

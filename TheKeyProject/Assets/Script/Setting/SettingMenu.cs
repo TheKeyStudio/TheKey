@@ -22,7 +22,7 @@ public class SettingMenu : MonoBehaviour {
 
     public void MuteVolume()
     {
-        audioMixer.SetFloat("volume", 0f);
+        audioMixer.SetFloat("volume", -80f);
     }
 
     public void QuitGame()

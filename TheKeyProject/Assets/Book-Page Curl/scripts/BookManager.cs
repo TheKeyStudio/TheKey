@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EaseTools;
 
 public class BookManager : MonoBehaviour {
 
+    public EaseUI component;
     public static BookManager instance;
 
     public List<Sprite> bookPages = new List<Sprite>();
@@ -20,11 +22,29 @@ public class BookManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
+    private void Update()
+    {
+    }
 
     public void AddPage(Sprite bookpage)
     {   
         bookPages.Add(bookpage);
         Debug.Log("Adding " + bookpage.name);
+    }
+
+    public void PlayAnimation()
+    {
+        Debug.Log("Playing book animation");
+        StartCoroutine(StartAnimation());
+    }
+
+    IEnumerator StartAnimation()
+    {
+        component.ScaleIn();
+        while (component.IsScaling())
+        {
+            yield return null;
+        }
+        component.ScaleOut();
     }
 }

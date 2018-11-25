@@ -1365,6 +1365,8 @@ GameObject:
   - component: {fileID: 808630191}
   - component: {fileID: 808630192}
   - component: {fileID: 808630150}
+  - component: {fileID: 808630198}
+  - component: {fileID: 808630199}
   m_Layer: 0
   m_Name: "\u6240\u6709\u7269\u54C1\u7684\u5C0D\u8A71"
   m_TagString: Untagged
@@ -1399,7 +1401,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 808630128}
   selectedCommands:
-  - {fileID: 808630152}
+  - {fileID: 808630198}
   variables:
   - {fileID: 808630153}
   - {fileID: 808630173}
@@ -1523,6 +1525,8 @@ MonoBehaviour:
   - {fileID: 808630154}
   - {fileID: 808630152}
   - {fileID: 808630150}
+  - {fileID: 808630199}
+  - {fileID: 808630198}
   - {fileID: 808630130}
 --- !u!114 &808630129
 MonoBehaviour:
@@ -3818,6 +3822,42 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &808630198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 808630122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 165
+  indentLevel: 0
+  targetObject: {fileID: 1053282147}
+  methodName: PlayAnimation
+  delay: 0
+--- !u!114 &808630199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 808630122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 166
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1915695924}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &808630212
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4359,6 +4399,46 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1053282147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1053282149}
+  - component: {fileID: 1053282148}
+  m_Layer: 0
+  m_Name: BookAnimationCaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1053282148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053282147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73744d628730c244a3b2e0e7f0617b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1053282149
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053282147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 281.87466, y: 90.93672, z: -5.2384057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1056384686
 GameObject:
   m_ObjectHideFlags: 1
@@ -6529,7 +6609,7 @@ MonoBehaviour:
   hintCardSprite: {fileID: 21300002, guid: 2e6680d50b0d55e4482b1b0fe7b3a235, type: 3}
   hintCardDescriptSprite: {fileID: 21300004, guid: 2e6680d50b0d55e4482b1b0fe7b3a235,
     type: 3}
-  unlocked: 1
+  unlocked: 0
 --- !u!58 &1915695929
 CircleCollider2D:
   m_ObjectHideFlags: 0
