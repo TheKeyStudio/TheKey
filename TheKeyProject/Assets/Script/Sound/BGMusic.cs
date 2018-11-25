@@ -4,21 +4,25 @@ using UnityEngine;
 using DigitalRuby.SoundManagerNamespace;
 
 public class BGMusic : MonoBehaviour {
-    public GameObject bgmPrefab;
+    [Range(0.05f, 1f)]
+    public float volumeScale = 1f;
     [Range(0f, 5f)]
-    public float fadeTime;
+    public float fadeTime = 1f;
     public bool persist = true;
+    public bool autoStart = true;
 
     private AudioSource bgm;
 
     public void Awake()
     {
-        bgm = Instantiate(bgmPrefab).GetComponent<AudioSource>();
-        StartBGM();
+        bgm = GetComponent<AudioSource>();
+        if(autoStart)
+            StartBGM();
     }
 
     public void StartBGM()
     {
-        bgm.PlayLoopingMusicManaged(1f, fadeTime, persist);
+        bgm.PlayLoopingMusicManaged(volumeScale, fadeTime, persist);
     }
+    
 }

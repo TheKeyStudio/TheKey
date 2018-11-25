@@ -140,8 +140,10 @@ public class PlayerController : MonoBehaviour {
 
     public void PlayFootStepSound()
     {
-        int randomIndex = Random.Range(0, footSteps.Length);
-        footSteps[randomIndex].PlayOneShotSoundManaged(footSteps[randomIndex].clip);
-        
+        if(footSteps.Length > 0)
+        {
+            int randomIndex = Random.Range(0, footSteps.Length);
+            footSteps[randomIndex].PlayOneShotSoundManaged(footSteps[randomIndex].clip);
+        }
     }
 }
