@@ -22,9 +22,6 @@ public class BookManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    private void Update()
-    {
-    }
 
     public void AddPage(Sprite bookpage)
     {   
@@ -35,6 +32,7 @@ public class BookManager : MonoBehaviour {
     public void PlayAnimation()
     {
         Debug.Log("Playing book animation");
+        component = GameObject.Find("BookButton").GetComponent<EaseUI>();
         StartCoroutine(StartAnimation());
     }
 

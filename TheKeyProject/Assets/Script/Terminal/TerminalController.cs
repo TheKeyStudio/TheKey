@@ -113,6 +113,16 @@ public class TerminalController : MonoBehaviour {
         string logAsText = string.Join("\n", terminalLog.ToArray());
 
         displayText.text = logAsText;
+
+        ScrollToBottom();
+    }
+
+    public void ScrollToBottom()
+    {
+        RectTransform content = displayText.transform.parent.GetComponent<RectTransform>();
+        Vector2 position = content.anchoredPosition;
+        content.anchoredPosition = new Vector2(position.x, 0f);
+
     }
 
     public void DoInput(string userInput)

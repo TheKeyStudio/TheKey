@@ -38,6 +38,7 @@ public class BruteForceController: MonoBehaviour {
         }
 
         string[] passwordTexts = pwdFile.content.Split('\n');
+        controller.SetInputFieldActive(false);
         StartCoroutine(Loading(passwordTexts, file));
     }
 
@@ -46,6 +47,7 @@ public class BruteForceController: MonoBehaviour {
     {
         string startStr = "<size=-4>";
         string endStr = "</size>";
+        bool found = false;
         foreach (string password in passwordTexts)
         {
             controller.LogString(startStr + "<color=white>Trying password: " + password + "</color>" + endStr);
@@ -58,6 +60,7 @@ public class BruteForceController: MonoBehaviour {
                 controller.LogString(startStr + "<color=yellow>Password Found: " + password + "</color>" + endStr);
                 controller.DisplayLoggedText();
                 cmd.SetData();
+                found = true;
                 break;
             }
             else
@@ -66,7 +69,13 @@ public class BruteForceController: MonoBehaviour {
                 controller.LogString(startStr + "<color=red>Wrong Password.</color>" + endStr);
             }
             controller.DisplayLoggedText();
-            loadingTime = Random.Range(0.5f, 1.5f);
+            loadingTime = Random.Range(0.3f, 1.2f);
+        }
+        controller.SetInputFieldActive(true);
+        if (!found)
+        {
+            controller.LogString(startStr + "<color=yellow>Fail to brute force this file.</color>" + endStr);
+
         }
     }
 }
