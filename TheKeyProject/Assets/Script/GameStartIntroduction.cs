@@ -67,7 +67,7 @@ public class GameStartIntroduction : MonoBehaviour
             {
                 audioData.Stop();
                 yield return new WaitForSeconds(3.0f);
-                SceneManager.LoadScene("MainMenu");
+                NextScene();
             }
 
             textComponent.maxVisibleCharacters = visibleCount; // How many characters should TextMeshPro display?
@@ -78,5 +78,8 @@ public class GameStartIntroduction : MonoBehaviour
         }
     }
     
-
+    public void NextScene()
+    {
+        Initiate.Fade("MainMenu", Color.black, 2f);
+    }
 }
