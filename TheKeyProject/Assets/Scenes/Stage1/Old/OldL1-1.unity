@@ -1329,15 +1329,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.089779
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.33039272
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9.96875
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1381,7 +1381,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
@@ -1507,11 +1507,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 157.69221, y: 37.63937}
+  scrollPos: {x: 222.39304, y: -142.38156}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 403
-  zoom: 0.82000005
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 808630171}
   selectedCommands:
-  - {fileID: 808630170}
+  - {fileID: 808630176}
   variables:
   - {fileID: 808630153}
   - {fileID: 808630173}
@@ -2827,7 +2827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 69.18004
+    x: 70.18004
     y: 255.94843
     width: 120
     height: 40
@@ -3297,7 +3297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 78.72687
+    x: 79.72687
     y: 304.17645
     width: 120
     height: 40
@@ -6130,7 +6130,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1716565764}
   selectedCommands:
-  - {fileID: 1716565767}
+  - {fileID: 1716565763}
   variables:
   - {fileID: 1716565762}
   - {fileID: 1716565779}
@@ -6193,7 +6193,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 67
-    y: 73
+    y: 72
     width: 130
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6627,7 +6627,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &1716565780
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1716565760}

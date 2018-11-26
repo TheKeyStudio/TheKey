@@ -22,7 +22,7 @@ public class BGMusic : MonoBehaviour {
 
     public void StartBGM()
     {
-        bgm.StopLoopingMusicManaged();
+        //bgm.StopLoopingMusicManaged();
         bgm.PlayLoopingMusicManaged(volumeScale, fadeTime, persist);
     }
     

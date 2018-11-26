@@ -42,6 +42,10 @@ public class LevelDoor : Door, EscClose
 
     public void Close()
     {
+        if(levelChooserObj == null)
+        {
+            return;
+        }
         levelChooserObj.SetActive(false);
         PlayerController playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         playerController.PlayerState = new Normal(playerController);
