@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f44c26ae4dea984b95d4a16076fbd13, type: 3}
+  m_Name: Help_withoutExit
+  m_EditorClassIdentifier: 
+  keyword: help
+  description: Get HELP!
+  setter:
+    eventCodes: 
+    eventNames: []
+  explainText: '<color=white><size=-3><b>How to use Terminal:</b>
+
+    <color=yellow>Tab</color> : Autocomplete the command and file name
+
+    <color=yellow>Up & Down Arrow Key</color> : The previous command you entered
+
+
+    <b>Commands:</b></size></color>'

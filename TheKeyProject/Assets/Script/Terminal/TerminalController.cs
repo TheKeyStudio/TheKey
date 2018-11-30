@@ -176,6 +176,7 @@ public class TerminalController : MonoBehaviour {
     {
         terminalLog.Clear();
         displayText.text = "";
+        LogString(welcomeText);
     }
 
     public void Close()

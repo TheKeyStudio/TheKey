@@ -21,19 +21,19 @@ public class BruteForceController: MonoBehaviour {
         TextFiles pwdFile = (TextFiles)fileHandler.GetFileByName(passwordFile);
         if (file == null)
         {
-            controller.LogString("<size=-3><color=red>Error: File Name not found.</color></size>");
+            controller.LogString("Error: File Name not found.", "red", "3");
             return;
         }
 
         if (pwdFile == null || pwdFile.hasPassword)
         {
-            controller.LogString("<size=-3><color=red>Error: Password file not found.</color></size>");
+            controller.LogString("Error: Password file not found.", "red", "3");
             return;
         }
 
         if (!file.hasPassword)
         {
-            controller.LogString("<size=-3><color=red>Error: This file doesn't need password.</color></size>");
+            controller.LogString("Error: This file doesn't need password.", "red", "3");
             return;
         }
 
@@ -45,19 +45,17 @@ public class BruteForceController: MonoBehaviour {
 
     IEnumerator Loading(string[] passwordTexts, TerminalFiles file)
     {
-        string startStr = "<size=-4>";
-        string endStr = "</size>";
         bool found = false;
         foreach (string password in passwordTexts)
         {
-            controller.LogString(startStr + "<color=white>Trying password: " + password + "</color>" + endStr);
+            controller.LogString("Trying password: " + password, "red", "3");
             controller.DisplayLoggedText();
             Debug.Log(loadingTime);
             yield return new WaitForSeconds(loadingTime);
             if (password.Equals(file.password, System.StringComparison.OrdinalIgnoreCase))
             {
                 Debug.Log("Password Found");
-                controller.LogString(startStr + "<color=yellow>Password Found: " + password + "</color>" + endStr);
+                controller.LogString("Password Found: " + password, "yellow", "3");
                 controller.DisplayLoggedText();
                 cmd.SetData();
                 found = true;
@@ -66,7 +64,7 @@ public class BruteForceController: MonoBehaviour {
             else
             {
                 Debug.Log("Wrong Password");
-                controller.LogString(startStr + "<color=red>Wrong Password.</color>" + endStr);
+                controller.LogString("Wrong Password.", "red", "3");
             }
             controller.DisplayLoggedText();
             loadingTime = Random.Range(0.3f, 1.2f);
@@ -74,8 +72,9 @@ public class BruteForceController: MonoBehaviour {
         controller.SetInputFieldActive(true);
         if (!found)
         {
-            controller.LogString(startStr + "<color=yellow>Fail to brute force this file.</color>" + endStr);
+            controller.LogString("Fail to brute force this file.", "yellow", "3");
 
+            controller.DisplayLoggedText();
         }
     }
 }

@@ -14,7 +14,7 @@ public class ExitCmd : TerminalInputCommand
         }
         else
         {
-            controller.LogString("Exit don't not support argurment");
+            controller.LogString("Exit don't not support argurment", "red", "3");
         }
     }
 }

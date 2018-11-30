@@ -13,6 +13,7 @@ public class SetActive : EventDataTrigger {
         {
             return;
         }
+        Debug.Log("Setting active: " + active[eventCode]);
         this.gameObject.SetActive(active[eventCode]);
     }
 }

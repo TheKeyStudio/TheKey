@@ -16,11 +16,9 @@ public class ListFilesCmd : TerminalInputCommand
         }
         else
         {
-            string errorMsg = "\"List\"  have not \"" + 
-                separatedInputWords[1].ToString() + 
-                "\" argument, please enter \"help list\" to see more"; 
+            string errorMsg = "List don't not support argurment"; 
 
-            controller.LogString(errorMsg);
+            controller.LogString(errorMsg, "red", "3");
         }
     }
     

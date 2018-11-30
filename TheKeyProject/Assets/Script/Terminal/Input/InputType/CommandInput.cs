@@ -26,7 +26,7 @@ public class CommandInput : InputStrategy {
         if (!isRespond)
         {
             controller.LogString(separatedInputWords[0] +
-                    " is unable, please type \"help\" to see all the commands.");
+                    " is unable, please type \"help\" to see all the commands.", "red", "3");
         }
     }
     

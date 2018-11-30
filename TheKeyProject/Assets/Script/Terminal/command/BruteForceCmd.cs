@@ -7,10 +7,12 @@ public class BruteForceCmd : TerminalInputCommand
 {
     public override void Respond(TerminalController controller, string[] separatedInputWords)
     {
-        if (separatedInputWords.Length == 2)
+        if(separatedInputWords.Length != 1)
         {
             separatedInputWords = separatedInputWords[1].Split(' ');
-            Debug.Log("Brute force");
+        }
+        if (separatedInputWords.Length == 2)
+        {
             BruteForceController ctrler = controller.BruteForceCtrler;
             ctrler.BruteForce(separatedInputWords[0], separatedInputWords[1], this);
         }

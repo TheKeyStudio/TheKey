@@ -15,7 +15,7 @@ public class OpenFilesCmd : TerminalInputCommand
         }
         else
         {
-            controller.LogString("\'open\' is unavaiable, please make sure you have input file name.");
+            controller.LogString("Error, please make sure you have input file name.", "red", "3");
         }
     }
 }

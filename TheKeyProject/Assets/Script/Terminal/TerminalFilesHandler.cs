@@ -54,7 +54,7 @@ public class TerminalFilesHandler : MonoBehaviour
         if (currentFile.hasPassword)
         {
             controller.InputStrategy = new PasswordInput();
-            controller.LogString("Please Enter password: ");
+            controller.LogString("Please Enter password: ", "yellow", "2");
         }
         else
         {
@@ -67,7 +67,7 @@ public class TerminalFilesHandler : MonoBehaviour
         TerminalFiles file = GetFileByName(fileName);
         if (file == null)
         {
-            controller.LogString("\"" + fileName + "\"" + " doesn't exist");
+            controller.LogString("<color=white>\"" + fileName + "\"</color>" + " doesn't exist", "red", "3");
         }
         SetCurrentFile(file);
     }
@@ -77,7 +77,7 @@ public class TerminalFilesHandler : MonoBehaviour
         TerminalFiles foundFile = null;
         foreach (TerminalFiles file in files)
         {
-            if (file.fileName.Equals(fileName))
+            if (file.fileName.Equals(fileName, StringComparison.OrdinalIgnoreCase))
             {
                 foundFile = file;
             }
@@ -99,7 +99,7 @@ public class TerminalFilesHandler : MonoBehaviour
         }
         else
         {
-            controller.LogString("Wrong password. Try again");
+            controller.LogString("Wrong password. Please open the file and try again.", "red", "3");
         }
         currentFile = null;
     }
