@@ -102,11 +102,20 @@ public class TerminalController : MonoBehaviour {
     {
         terminalLog.Add(stringToAdd);
     }
+    public void LogString(string stringToAdd, string color)
+    {
+        LogString("<color=" + color + ">" +stringToAdd + "</color>");
+    }
+    public void LogString(string stringToAdd, string color, string minusSize)
+    {
+        LogString("<size=-" + minusSize + "><color=" + color + ">" + stringToAdd + "</color></size>");
+    }
 
     public void LogUserInputString(string stringToAdd)
     {
         terminalLog.Add("$> " + stringToAdd);
     }
+
 
     public void DisplayLoggedText()
     {

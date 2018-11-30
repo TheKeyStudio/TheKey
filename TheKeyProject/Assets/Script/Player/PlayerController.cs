@@ -76,9 +76,9 @@ public class PlayerController : MonoBehaviour {
         focusing.Interact();
     }
 
-    public void ReadBook()
+    public bool ReadBook()
     {
-        playerState.ReadBook();
+        return playerState.ReadBook();
     }
 
     public void Enter(Interactable newFocus)

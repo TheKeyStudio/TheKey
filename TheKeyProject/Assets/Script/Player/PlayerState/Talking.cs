@@ -21,9 +21,9 @@ public class Talking : PlayerState
         controller.SetMoveAnimation(false);
     }
 
-    public override void ReadBook()
+    public override bool ReadBook()
     {
-        return;
+        return false;
     }
 
     public override IEnumerator Interact(Flowchart flowChart)

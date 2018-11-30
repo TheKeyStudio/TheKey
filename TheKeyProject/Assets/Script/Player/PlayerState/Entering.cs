@@ -29,9 +29,9 @@ public class Entering : PlayerState
         controller.SetMoveAnimation(false);
     }
 
-    public override void ReadBook()
+    public override bool ReadBook()
     {
-        return;
+        return false;
     }
     public override void Jump()
     {

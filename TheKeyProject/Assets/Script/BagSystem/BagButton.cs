@@ -14,9 +14,11 @@ public class BagButton : MonoBehaviour, EscClose {
         Debug.Log(book.activeSelf);
         if (!book.activeSelf)
         {
-            EscStack.instance.Push(this);
-            playerController.ReadBook();
-            book.SetActive(true);
+            if (playerController.ReadBook())
+            {
+                EscStack.instance.Push(this);
+                book.SetActive(true);
+            }
         }
         else
         {
@@ -26,8 +28,10 @@ public class BagButton : MonoBehaviour, EscClose {
 
     public void Close()
     {
-        playerController.ReadBook();
-        book.SetActive(false);
+        if (playerController.ReadBook())
+        {
+            book.SetActive(false);
+        }
     }
     
 }

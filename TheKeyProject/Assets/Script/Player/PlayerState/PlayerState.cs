@@ -13,7 +13,7 @@ public abstract class PlayerState {
 
     public abstract void AutoMoveToX(float directionX, float deviation);
     public abstract void Move();
-    public abstract void ReadBook();
+    public abstract bool ReadBook();
     public abstract IEnumerator Interact(Flowchart flowChart);
     public abstract void Enter();
     public abstract void Jump();

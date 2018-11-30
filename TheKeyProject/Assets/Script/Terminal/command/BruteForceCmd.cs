@@ -7,16 +7,17 @@ public class BruteForceCmd : TerminalInputCommand
 {
     public override void Respond(TerminalController controller, string[] separatedInputWords)
     {
-        separatedInputWords = separatedInputWords[1].Split(' ');
         if (separatedInputWords.Length == 2)
         {
+            separatedInputWords = separatedInputWords[1].Split(' ');
             Debug.Log("Brute force");
             BruteForceController ctrler = controller.BruteForceCtrler;
             ctrler.BruteForce(separatedInputWords[0], separatedInputWords[1], this);
         }
         else
         {
-            controller.LogString("Error. Please ensure you have enter file name and password file name correctly.");
+            controller.LogString("Error. Please ensure you have enter " +
+                "file name and password file name correctly.", "red", "3");
         }
     }
 

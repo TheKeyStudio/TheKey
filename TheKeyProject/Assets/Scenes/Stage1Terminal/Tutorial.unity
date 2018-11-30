@@ -941,7 +941,7 @@ Prefab:
     - target: {fileID: 114674567295373036, guid: f421481d36a421c498768621872e403f,
         type: 2}
       propertyPath: inputCmds.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4814797979836970, guid: f421481d36a421c498768621872e403f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1062,6 +1062,12 @@ Prefab:
       propertyPath: inputCmds.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: a6028720a1462ad4ba0dc31a6ba239b3,
+        type: 2}
+    - target: {fileID: 114674567295373036, guid: f421481d36a421c498768621872e403f,
+        type: 2}
+      propertyPath: inputCmds.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: e7cffd70d3c00f9469d5250a27ca547c,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f421481d36a421c498768621872e403f, type: 2}
@@ -1560,8 +1566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 279.18292
-    y: 99.86584
+    x: 217.18292
+    y: 70.86584
     width: 124
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1649,7 +1655,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 109
   indentLevel: 0
-  storyText: "{s}{s=25}\u6211\u771F\u4ED6\u5ABD\u5929\u624D\uFF0C\u63A5\u4E0B\u4F86\u767B\u5165GameWeb\u4F86\u770B\u770B\u6709\u4EC0\u9EBC\u53EF\u4EE5\u76DC\u7684\u5427\uFF0C\u5E0C\u671B\u4ED6\u9084\u6709\u7559\u4E00\u4E9B\u9EDE\u6578"
+  storyText: "{s}{s=25}\u6211\u771F\u4ED6\u5ABD\u5929\u624D\uFF0C\u63A5\u4E0B\u4F86{color=yellow}open
+    GameWeb{/color}\u4F86\u767B\u5165\u770B\u770B\u6709\u4EC0\u9EBC\u53EF\u4EE5\u76DC\u7684\u5427\n{wc}\u5E0C\u671B\u4ED6\u9084\u6709\u7559\u4E00\u4E9B\u9EDE\u6578"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1715,8 +1722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 180.18292
-    y: 183.86584
+    x: 131.18292
+    y: 146.86584
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1783,7 +1790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 113
   indentLevel: 0
-  storyText: "{s}{s=25}\u9EDE\u6578\u9084\u771F\u4E0D\u5C11\uFF0C2000\u9EDE\u81F3\u5C11\u53EF\u4EE5\u8F49\u6210200\u6B50\u5143\u5427"
+  storyText: "{s}{s=25}\u9EDE\u6578\u9084\u771F\u4E0D\u5C11\uFF0C2000\u9EDE\u81F3\u5C11\u53EF\u4EE5\u8F49\u6210200\u82F1\u938A\u5427"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1837,8 +1844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 318.18292
-    y: 177.86584
+    x: 306.18292
+    y: 142.86584
     width: 157
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1879,7 +1886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 119
   indentLevel: 0
-  storyText: '{s}{s=25}......{/s}?!?!?!'
+  storyText: '{s}{s=25}......{s=60}?!?!?!'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1958,8 +1965,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 406.18292
-    y: 82.86584
+    x: 374.18292
+    y: 66.86584
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2216,7 +2223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 30.817093, y: 78.13416}
+  scrollPos: {x: 31.099178, y: 78.491005}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 352
@@ -2228,9 +2235,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1705812761}
+  - {fileID: 1705812755}
   selectedCommands:
-  - {fileID: 1705812757}
+  - {fileID: 1705812752}
   variables: []
   description: 
   stepPause: 0
@@ -2780,7 +2787,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000029082174
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 114498704083369924, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
@@ -2840,7 +2847,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 14.999989
+      value: -0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 1066685077457524, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}
       propertyPath: m_IsActive
@@ -2889,7 +2896,7 @@ Prefab:
     - target: {fileID: 224135809479772268, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 4.999817
+      value: 4.999878
       objectReference: {fileID: 0}
     - target: {fileID: 114764281323972288, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}

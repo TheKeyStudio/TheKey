@@ -37,9 +37,10 @@ public class Reading : PlayerState
         controller.SetMoveAnimation(false);
     }
 
-    public override void ReadBook()
+    public override bool ReadBook()
     {
         //ReadBook() had been called when the player is reading, means close the book
         controller.PlayerState = new Normal(controller);
+        return true;
     }
 }

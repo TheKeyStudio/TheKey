@@ -14,7 +14,7 @@ public class ClearCmd : TerminalInputCommand
         }
         else
         {
-            controller.LogString("Clear don't not support argurment");
+            controller.LogString("Clear don't not support argurment", "red", "3");
         }
     }
 }

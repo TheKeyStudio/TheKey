@@ -61,10 +61,11 @@ public class AutoMove : PlayerState {
         
     }
 
-    public override void ReadBook()
+    public override bool ReadBook()
     {
         controller.RemoveFocus();
         controller.PlayerState = new Reading(controller);
+        return true;
     }
     public override void Jump()
     {

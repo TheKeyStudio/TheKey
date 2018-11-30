@@ -43,9 +43,10 @@ public class Normal : PlayerState
         }
     }
 
-    public override void ReadBook()
+    public override bool ReadBook()
     {
         controller.PlayerState = new Reading(controller);
+        return true;
     }
     public override void Jump()
     {
