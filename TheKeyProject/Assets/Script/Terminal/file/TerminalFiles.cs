@@ -14,8 +14,13 @@ public abstract class TerminalFiles : ScriptableObject {
 
     protected void SetData()
     {
+        if (eventCodes == null)
+        {
+            return;
+        }
         EventDataManager eventDataMgr;
         eventDataMgr = GameManager.instance.EventDataManager;
+        
         for (int i = 0; i < eventCodes.Length; i++)
         {
             eventDataMgr.SetDataOrNew(eventNames[i], eventCodes[i]);
