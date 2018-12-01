@@ -360,9 +360,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 474591168}
-  selectedCommands:
-  - {fileID: 474591195}
+  - {fileID: 474591173}
+  selectedCommands: []
   variables:
   - {fileID: 474591175}
   - {fileID: 474591188}
@@ -1706,8 +1705,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 979733059}
+  selectedCommands:
+  - {fileID: 979733063}
   variables:
   - {fileID: 979733087}
   - {fileID: 979733060}
@@ -1734,7 +1735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u521D\u6B21\u898B\u9762, \u6211\u662F\u5C0F\u4E11\u5148\u751F,
+  storyText: "{s}{s=25}\u521D\u6B21\u898B\u9762, \u6211\u662F\u5C0F\u4E11\u5148\u751F,
     \u6B61\u8FCE\u4F60\u4F86\u5230\u5BC6\u78BC\u4E16\u754C\u3002\r\n"
   description: 
   character: {fileID: 1137343945}
@@ -1893,7 +1894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 113
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u5BC6\u78BC\u4E16\u754C\u7E3D\u5171\u5206\u70BA\u4E03\u500B\u95DC\u5361,
+  storyText: "{s}{s=25}\u5BC6\u78BC\u4E16\u754C\u7E3D\u5171\u5206\u70BA\u4E03\u500B\u95DC\u5361,
     \u6BCF\u500B\u95DC\u5361\u4F3C\u4E4E\u90FD\u96B1\u85CF\u4E00\u4E9B\u8A0A\u606F\n\u800C\u4E14\u95DC\u5361\u90FD\u662F\u548C\u5BC6\u78BC\u5B78\u76F8\u95DC\u7684"
   description: 
   character: {fileID: 1137343945}
@@ -1961,7 +1962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u6C92\u932F, \u9019\u88E1\u662F\u5BC6\u78BC\u4E16\u754C{wc}\n\u6709\u8457\u8A31\u591A\u7684\u95DC\u5361\u7B49\u8457\u50CF\u4F60\u9019\u6A23\u7684\u6311\u6230\u8005\u4F86\u6311\u6230\u5462\n"
+  storyText: "{s}{s=25}\u6C92\u932F, \u9019\u88E1\u662F\u5BC6\u78BC\u4E16\u754C{wc}\n\u6709\u8457\u8A31\u591A\u7684\u95DC\u5361\u7B49\u8457\u50CF\u4F60\u9019\u6A23\u7684\u6311\u6230\u8005\u4F86\u6311\u6230\u5462\n"
   description: 
   character: {fileID: 1137343945}
   portrait: {fileID: 21300000, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
@@ -2087,10 +2088,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u795D\u4F60\u597D\u904B, \u5C0F\u5B50\u3002\u5F88\u4E45\u6C92\u6709\u4EBA\u9032\u4F86\u5BC6\u78BC\u4E16\u754C\u4E86{wc}\n\u671F\u5F85\u4F60\u7684\u8868\u73FE\n"
+  storyText: "{s}{s=25}\u795D\u4F60\u597D\u904B, \u5C0F\u5B50\u3002\u5F88\u4E45\u6C92\u6709\u4EBA\u9032\u4F86\u5BC6\u78BC\u4E16\u754C\u4E86{wc}\n\u671F\u5F85\u4F60\u7684\u8868\u73FE\n"
   description: 
   character: {fileID: 1137343945}
-  portrait: {fileID: 21300000, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
+  portrait: {fileID: 21300002, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2113,7 +2114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u5F80\u524D\u8D70\u4F60\u5C07\u6703\u770B\u5230\u4E00\u9053\u9580{wi},
+  storyText: "{s}{s=25}\u5F80\u524D\u8D70\u4F60\u5C07\u6703\u770B\u5230\u4E00\u9053\u9580{wi},
     \u9032\u53BB\u4E4B\u5F8C\u5C31\u958B\u59CB\u4F60\u7684\u65C5\u7A0B\u4E86"
   description: 
   character: {fileID: 1137343945}
@@ -2140,7 +2141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u56DE\u53BB\u7684\u65B9\u6CD5\u9084\u662F\u6709\u7684\u5566{wi},
+  storyText: "{s}{s=25}\u56DE\u53BB\u7684\u65B9\u6CD5\u9084\u662F\u6709\u7684\u5566{wi},
     \u6211\u5C31\u7C21\u55AE\u8AAA\u660E\u4E00\u4E0B\u5427"
   description: 
   character: {fileID: 1137343945}
@@ -2193,10 +2194,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: "{s}{s=25}{color=yellow}\u54C8\u54C8\u54C8\u54C8\uFF0C\u73FE\u5728\u7684\u4F60\u6C92\u8FA6\u6CD5\u56DE\u53BB\u5594{wc}\n\u9664\u975E\u4F60\u628A\u5BC6\u78BC\u4E16\u754C\u7684\u95DC\u5361\u7834\u5B8C\uFF0C\u5426\u5247\u5C31\u8981\u6C38\u9060\u88AB\u56F0\u5728\u9019\u88E1\u4E86\u5462\r\n"
+  storyText: "{s}{s=25}\u54C8\u54C8\u54C8\u54C8\uFF0C\u73FE\u5728\u7684\u4F60\u6C92\u8FA6\u6CD5\u56DE\u53BB\u5594{wc}\n\u9664\u975E\u4F60\u628A\u5BC6\u78BC\u4E16\u754C\u7684\u95DC\u5361\u7834\u5B8C\uFF0C\u5426\u5247\u5C31\u8981\u6C38\u9060\u88AB\u56F0\u5728\u9019\u88E1\u4E86\u5462\r\n"
   description: 
   character: {fileID: 1137343945}
-  portrait: {fileID: 21300000, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
+  portrait: {fileID: 21300002, guid: 95d674bbf22929247a594b7aa918853e, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2521,7 +2522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 474591166}
+  selectedFlowchart: {fileID: 979733057}
 --- !u!4 &1041787349
 Transform:
   m_ObjectHideFlags: 1

@@ -1647,15 +1647,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.089779
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.33039272
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9.96875
       objectReference: {fileID: 0}
     - target: {fileID: 4691093046926862, guid: 92f43f09dce7f784dae7415b0b47c75e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1699,7 +1699,7 @@ Prefab:
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 20474124618832882, guid: 92f43f09dce7f784dae7415b0b47c75e,
         type: 2}
@@ -1821,11 +1821,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 122.39482, y: 51.918877}
+  scrollPos: {x: 110.11065, y: 27.45112}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 358
-  zoom: 0.7900002
+  zoom: 0.8800002
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1833,6 +1833,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
+  - {fileID: 808630180}
   - {fileID: 808630202}
   selectedCommands: []
   variables:
@@ -2793,8 +2794,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 213.67424
-    y: 171.65881
+    x: 214.94006
+    y: 169.12717
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3533,7 +3534,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 573.69507
     y: 147.31332
-    width: 137.34175
+    width: 134.09088
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -4088,7 +4089,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 559.06586
     y: 203.23375
-    width: 147.46832
+    width: 143.1818
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4175,7 +4176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 98
   indentLevel: 0
-  storyText: "{s} {s=25}\u5764\u6210\u8AAA:\u73FE\u5728\u4E0D\u80FD\u958B\u555F \u4E0D\u670D\u4F86\u8FAF "
+  storyText: "{s}{s=25}\u4E0A\u9762\u7684\u7192\u5E55\u6C92\u53CD\u61C9"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4264,9 +4265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 216.04439
+    x: 217.31021
     y: 76.7912
-    width: 124.683525
+    width: 120.45453
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
