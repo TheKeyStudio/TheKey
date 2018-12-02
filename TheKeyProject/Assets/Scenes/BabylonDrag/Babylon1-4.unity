@@ -145,7 +145,7 @@ RectTransform:
   m_GameObject: {fileID: 61300899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_Children:
   - {fileID: 571879992}
   m_Father: {fileID: 1032995537}
@@ -2577,8 +2577,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.13333334}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.5176471}
+    m_HighlightedColor: {r: 0.8537736, g: 1, b: 0.9818589, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3795,6 +3795,7 @@ GameObject:
   - component: {fileID: 1932833225}
   - component: {fileID: 1932833224}
   - component: {fileID: 1932833227}
+  - component: {fileID: 1932833228}
   m_Layer: 5
   m_Name: "\u7B54\u6848\u5340"
   m_TagString: Untagged
@@ -3901,6 +3902,17 @@ MonoBehaviour:
   - {fileID: 983542232}
   - {fileID: 354491479}
   isAllAnswersCorret: 0
+--- !u!114 &1932833228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932833222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f21e844fafa29408640ee9d23c41eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1962544435 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224287400371818186, guid: 1321be88336d1634e90a1f6f05b9742a,

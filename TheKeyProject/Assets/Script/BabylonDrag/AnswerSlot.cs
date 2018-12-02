@@ -23,7 +23,7 @@ public class AnswerSlot : Slot, IDropHandler {
     public void OnDrop(PointerEventData eventData)
     {
         Clear();
-        Babylon.itemBeingDragged.transform.SetParent(transform);
+        Babylon.itemBeingChoose.transform.SetParent(transform);
     }
 
     public void Clear()
@@ -32,5 +32,9 @@ public class AnswerSlot : Slot, IDropHandler {
         {
             Destroy(transform.GetChild(0).gameObject);
         }
+    }
+    public void Put(GameObject babyloneObj)
+    {
+        babyloneObj.transform.SetParent(transform);
     }
 }

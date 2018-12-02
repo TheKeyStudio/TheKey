@@ -2,11 +2,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Babylon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Babylon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private int number;
-    public static GameObject itemBeingDragged;
+    public static GameObject itemBeingChoose;
     Transform startParent;
+    private bool clickMode = true;
 
     public int Number
     {
@@ -18,7 +19,8 @@ public class Babylon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        itemBeingDragged = gameObject;
+        clickMode = false;
+        itemBeingChoose = gameObject;
         startParent = transform.parent;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
@@ -30,11 +32,29 @@ public class Babylon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        itemBeingDragged = null;
+        itemBeingChoose = null;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         if (transform.parent == startParent)
         {
             Destroy(gameObject);
+        }
+        clickMode = true;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (clickMode)
+        {
+            AnswerSlotClickHandler.instance.Put(itemBeingChoose);
+            itemBeingChoose = null;
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (clickMode)
+        {
+            itemBeingChoose = gameObject;
         }
     }
 }
