@@ -9,6 +9,7 @@ public class BabylonAnswerChecker : MonoBehaviour {
     public Image img;
     public List<AnswerSlot> answerSlots;
     [SerializeField] private bool isAllAnswersCorret;
+    bool done = false;
 
     public void CheckAllAnswers()               //判斷是否全部正確
     {
@@ -26,15 +27,20 @@ public class BabylonAnswerChecker : MonoBehaviour {
 
     public void Iscorrect()             //答案驗證
     {
-        if (isAllAnswersCorret)
+        if (!done)
         {
-            Flowchart.BroadcastFungusMessage("strong_box_correct_answer");
-            img.color = Color.green;
-        }
-        else
-        {
-            img.color = Color.red;
-            Flowchart.BroadcastFungusMessage("strong_box_wrong_answer");
+            if (isAllAnswersCorret)
+            {
+
+                Flowchart.BroadcastFungusMessage("strong_box_correct_answer");
+                img.color = Color.green;
+                done = true;
+            }
+            else
+            {
+                img.color = Color.red;
+                Flowchart.BroadcastFungusMessage("strong_box_wrong_answer");
+            }
         }
     }
 

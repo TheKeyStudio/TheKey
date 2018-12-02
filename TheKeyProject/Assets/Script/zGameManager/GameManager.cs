@@ -63,9 +63,21 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.RightShift) && Input.GetKeyDown(KeyCode.KeypadPlus))
+        if(Input.GetKey(KeyCode.RightShift))
         {
-            NextLevel();
+            if (Input.GetKeyDown(KeyCode.KeypadPlus))
+            {
+                NextLevel();
+            }
+            if (Input.GetKeyDown(KeyCode.KeypadMinus))
+            {
+                level--;
+            }
+            if (Input.GetKeyDown(KeyCode.KeypadDivide))
+            {
+                SceneManager.LoadScene("Main1");
+                EscStack.instance.popAble = true;
+            }
         }
     }
 

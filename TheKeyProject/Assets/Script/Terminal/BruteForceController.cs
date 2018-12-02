@@ -48,7 +48,7 @@ public class BruteForceController: MonoBehaviour {
         bool found = false;
         foreach (string password in passwordTexts)
         {
-            controller.LogString("Trying password: " + password, "red", "3");
+            controller.LogString("Trying password: " + password, "white", "3");
             controller.DisplayLoggedText();
             Debug.Log(loadingTime);
             yield return new WaitForSeconds(loadingTime);

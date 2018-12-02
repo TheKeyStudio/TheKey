@@ -1457,8 +1457,6 @@ GameObject:
   - component: {fileID: 1705812787}
   - component: {fileID: 1705812786}
   - component: {fileID: 1705812785}
-  - component: {fileID: 1705812784}
-  - component: {fileID: 1705812783}
   - component: {fileID: 1705812782}
   - component: {fileID: 1705812781}
   - component: {fileID: 1705812780}
@@ -1656,7 +1654,7 @@ MonoBehaviour:
   itemId: 109
   indentLevel: 0
   storyText: "{s}{s=25}\u6211\u771F\u4ED6\u5ABD\u5929\u624D\uFF0C\u63A5\u4E0B\u4F86{color=yellow}open
-    GameWeb{/color}\u4F86\u767B\u5165\u770B\u770B\u6709\u4EC0\u9EBC\u53EF\u4EE5\u76DC\u7684\u5427\n{wc}\u5E0C\u671B\u4ED6\u9084\u6709\u7559\u4E00\u4E9B\u9EDE\u6578"
+    GameWeb{/color} \u4F86\u767B\u5165\u770B\u770B\u6709\u4EC0\u9EBC\u53EF\u4EE5\u76DC\u7684\u5427\n{wc}\u5E0C\u671B\u4ED6\u9084\u6709\u7559\u4E00\u4E9B\u9EDE\u6578"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2174,7 +2172,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1705812759}
   commandList:
-  - {fileID: 1705812784}
   - {fileID: 1705812753}
   - {fileID: 1705812738}
   - {fileID: 1705812743}
@@ -2182,7 +2179,6 @@ MonoBehaviour:
   - {fileID: 1705812766}
   - {fileID: 1705812765}
   - {fileID: 1705812764}
-  - {fileID: 1705812783}
 --- !u!114 &1705812769
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2235,9 +2231,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1705812755}
-  selectedCommands:
-  - {fileID: 1705812752}
+  - {fileID: 1705812768}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2483,38 +2478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 138
-  indentLevel: 0
-  targetObject: {fileID: 805921370}
-  methodName: ClosePop
-  delay: 0
---- !u!114 &1705812783
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1705812737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 137
-  indentLevel: 0
-  targetObject: {fileID: 805921370}
-  methodName: OpenPop
-  delay: 0
---- !u!114 &1705812784
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1705812737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 136
   indentLevel: 0
   targetObject: {fileID: 805921370}
   methodName: ClosePop
@@ -2777,17 +2740,17 @@ Prefab:
     - target: {fileID: 224093966242895216, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224093966242895216, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114498704083369924, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
@@ -2847,7 +2810,7 @@ Prefab:
     - target: {fileID: 224973191144723994, guid: 12c158a5c04e58143a2d56248b70df05,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 14.999977
+      value: -0.000012397766
       objectReference: {fileID: 0}
     - target: {fileID: 1066685077457524, guid: 12c158a5c04e58143a2d56248b70df05, type: 2}
       propertyPath: m_IsActive
