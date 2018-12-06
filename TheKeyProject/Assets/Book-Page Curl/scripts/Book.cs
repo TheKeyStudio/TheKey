@@ -53,6 +53,7 @@ public class Book : MonoBehaviour
     public Image Right;
     public Image RightNext;
     public UnityEvent OnFlip;
+    public AudioSource flipSound;
     float radius1, radius2;
     //Spine Bottom
     Vector3 sb;
@@ -345,6 +346,7 @@ public class Book : MonoBehaviour
     }
     void Flip()
     {
+        flipSound.PlayOneShot(flipSound.clip);
         if (mode == FlipMode.RightToLeft)
             currentPage += 2;
         else
