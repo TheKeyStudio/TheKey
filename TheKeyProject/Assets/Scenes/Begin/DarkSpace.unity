@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 474591191}
   - component: {fileID: 474591195}
   - component: {fileID: 474591198}
+  - component: {fileID: 474591201}
   m_Layer: 0
   m_Name: "\u958B\u59CB\u6D41\u7A0B"
   m_TagString: Untagged
@@ -360,7 +361,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 474591173}
+  - {fileID: 474591197}
   selectedCommands: []
   variables:
   - {fileID: 474591175}
@@ -472,6 +473,7 @@ MonoBehaviour:
   - {fileID: 474591193}
   - {fileID: 474591167}
   - {fileID: 474591192}
+  - {fileID: 474591201}
   - {fileID: 474591172}
 --- !u!114 &474591169
 MonoBehaviour:
@@ -518,7 +520,7 @@ MonoBehaviour:
   storyText: "{s}{s=25}\u982D\u597D\u75DB...."
   description: "\u5C0F\u660E"
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 8300000, guid: 798a0da79ad0a2d45b270278954e67c3, type: 3}
   showAlways: 1
   showCount: 1
@@ -681,7 +683,7 @@ MonoBehaviour:
   storyText: "{s}{s=25}\u4EC0\u9EBC\u8072\u97F3?"
   description: 
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -724,7 +726,7 @@ MonoBehaviour:
   storyText: "{s}{s=25}\u5947\u602A...\u7B46\u8A18\u672C\u88E1\u9762\u600E\u9EBC\u90FD\u662F\u7A7A\u767D\u7684"
   description: 
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -750,7 +752,7 @@ MonoBehaviour:
   storyText: "\u524D\u9762\u51FA\u73FE\u4E86\u71C8\u5149{wi}, \u597D\u50CF\u9084\u6709\u4EBA\u5F71\u7684\u6A23\u5B50"
   description: 
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -851,7 +853,7 @@ MonoBehaviour:
   storyText: "\u554A, \u9019\u662F\u5C0F\u83EF\u7D66\u6211\u7684\u7B46\u8A18\u672C"
   description: 
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1017,7 +1019,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &474591191
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
@@ -1044,12 +1046,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   indentLevel: 0
-  storyText: "{s}{s=25}\u9019\u88E1\u662F\u54EA\u88E1? \u6211\u600E\u9EBC\u6703\u5728\u9019\u88E1?{wc}\n\u6211\u8A18\u5F97\u525B\u525B\u9084\u5728\u5716\u66F8\u9928\u627E\u95DC\u65BC\u5BC6\u78BC\u5B78\u7684\u66F8\u554A{wi},
-    \u7136\u5F8C\u64BF\u8D77\u4E86\u4E00\u672C\u66F8...{wc}\n\u96E3\u9053\u90A3\u672C\u66F8\u6240\u5BEB\u7684\"\u610F\u60F3\u4E0D\u5230\u7684\u4E8B\"\u5C31\u662F\u6307\u9019\u4EF6\u4E8B?
-    {wc}\n\u5929\u554A! \u6211\u8981\u600E\u9EBC\u96E2\u958B\u9019\u88E1!! "
+  storyText: "{s}{s=25}\u9019\u88E1\u662F\u54EA\u88E1? \u6211\u600E\u9EBC\u6703\u5728\u9019\u88E1?{wc}\n\u6211\u8A18\u5F97\u525B\u525B\u9084\u5728\u5716\u66F8\u9928\u627E\u95DC\u65BC\u5BC6\u78BC\u5B78\u7684\u66F8{wi},
+    \u7136\u5F8C\u64BF\u8D77\u4E86\u4E00\u672C\u66F8...{wc}"
   description: "\u5C0F\u660E"
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1110,7 +1111,7 @@ MonoBehaviour:
     floatVal: 0
 --- !u!114 &474591195
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
@@ -1165,7 +1166,7 @@ MonoBehaviour:
   - {fileID: 474591200}
 --- !u!114 &474591198
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
@@ -1213,6 +1214,33 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &474591201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 474591165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 53
+  indentLevel: 0
+  storyText: "{s}{s=25}\u96E3\u9053\u90A3\u672C\u66F8\u6240\u5BEB\u7684\"\u610F\u60F3\u4E0D\u5230\u7684\u4E8B\"\u5C31\u662F\u6307\u9019\u4EF6\u4E8B?
+    {wc}\n\u5929\u554A! \u6211\u8981\u600E\u9EBC\u96E2\u958B\u9019\u88E1!! "
+  description: "\u5C0F\u660E"
+  character: {fileID: 1095114416}
+  portrait: {fileID: 21300000, guid: 04e61c80c05c4084890709a1f2dcad7a, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1001 &493576393
 Prefab:
   m_ObjectHideFlags: 0
@@ -1697,7 +1725,7 @@ MonoBehaviour:
   scrollPos: {x: -167.81862, y: -10.407863}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 419
+  blockViewHeight: 322
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -1763,8 +1791,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 283.9249
-    y: 99.890335
+    x: 282.9249
+    y: 100.890335
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1939,7 +1967,7 @@ MonoBehaviour:
     {wc}\u5FEB\u8DDF\u6211\u8AAA\u8981\u600E\u9EBC\u56DE\u53BB\r\n"
   description: 
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 04e61c80c05c4084890709a1f2dcad7a, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2018,7 +2046,7 @@ MonoBehaviour:
     \r"
   description: 
   character: {fileID: 1095114416}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1

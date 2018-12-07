@@ -1772,19 +1772,6 @@ GameObject:
   - component: {fileID: 808630159}
   - component: {fileID: 808630151}
   - component: {fileID: 808630149}
-  - component: {fileID: 808630169}
-  - component: {fileID: 808630168}
-  - component: {fileID: 808630167}
-  - component: {fileID: 808630166}
-  - component: {fileID: 808630164}
-  - component: {fileID: 808630160}
-  - component: {fileID: 808630128}
-  - component: {fileID: 808630156}
-  - component: {fileID: 808630154}
-  - component: {fileID: 808630152}
-  - component: {fileID: 808630150}
-  - component: {fileID: 808630130}
-  - component: {fileID: 808630157}
   - component: {fileID: 808630171}
   - component: {fileID: 808630176}
   - component: {fileID: 808630174}
@@ -1821,11 +1808,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 110.11065, y: 27.45112}
+  scrollPos: {x: 86.3777, y: 10.580655}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 358
-  zoom: 0.8800002
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -1833,9 +1820,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 808630180}
-  - {fileID: 808630202}
-  selectedCommands: []
+  - {fileID: 808630139}
+  selectedCommands:
+  - {fileID: 808630138}
   variables:
   - {fileID: 808630153}
   description: 
@@ -1861,11 +1848,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "{s}{s=25}\u73FE\u5728\u6642\u9593\u662F10:30\u5206...\n{wc}\u597D\u5947\u602A\u7684\u7A7A\u9593...\n{wc}\u4E0A\u4E00\u6B21\u9032\u4F86\u9084\u662F\u665A\u4E0A,
-    \u800C\u5916\u9762\u662F\u508D\u665A"
+  storyText: "{s}{s=25}\u73FE\u5728\u6642\u9593\u662F10:30\u5206..."
   description: 
   character: {fileID: 435743445}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1931,35 +1917,6 @@ Transform:
   m_Father: {fileID: 2041884571}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &808630128
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 279.53433
-    y: 277.21542
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 142
-  blockName: ItemGet
-  description: 
-  eventHandler: {fileID: 808630157}
-  commandList:
-  - {fileID: 808630156}
-  - {fileID: 808630154}
-  - {fileID: 808630152}
-  - {fileID: 808630150}
-  - {fileID: 808630130}
 --- !u!114 &808630129
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1974,69 +1931,6 @@ MonoBehaviour:
   parentBlock: {fileID: 808630218}
   clickableObject: {fileID: 1903126488}
   waitFrames: 1
---- !u!114 &808630130
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 140
-  indentLevel: 0
-  variable: {fileID: 808630153}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &808630131
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2064,10 +1958,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "{s} {s=25}\u9019\u53EA\u662F\u4E00\u74F6\u559D\u5149\u7684\u6D77x\u6839"
+  storyText: "{s}{s=25}\u9019\u53EA\u662F\u4E00\u74F6\u559D\u5149\u7684\u6D77x\u6839"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 435743445}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2090,8 +1984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -77.16978
-    y: 70.69247
+    x: 408.83023
+    y: 275.69247
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2132,10 +2026,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: "{s} {s=25}\u62BD\u5C5C\u88E1\u9762\u6C92\u6709\u4EFB\u4F55\u6771\u897F"
+  storyText: "{s}{s=25}\u62BD\u5C5C\u88E1\u9762\u6C92\u6709\u4EFB\u4F55\u6771\u897F"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 435743445}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2200,10 +2094,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "{s} {s=25}\u96FB\u8166\u958B\u6A5F\u4E2D\uFF0C\u9280\u5E55\u597D\u50CF\u986F\u793A\u4E86\u67D0\u4E9B\u8A0A\u606F"
+  storyText: "{s}{s=25}\u4E3B\u6A5F\u958B\u6A5F\u4E2D\uFF0C\u96FB\u8166\u597D\u50CF\u53EF\u4EE5\u4F7F\u7528"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 435743445}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2296,10 +2190,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 103
   indentLevel: 0
-  storyText: "{s} {s=25}\u6AAF\u71C8\u6B63\u7167\u4EAE\u8457\u623F\u9593"
+  storyText: "{s}{s=25}...\u53EA\u662F\u500B\u684C\u71C8, \u6C92\u4EC0\u9EBC\u7279\u5225"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 435743445}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2407,32 +2301,6 @@ MonoBehaviour:
   parentBlock: {fileID: 808630161}
   clickableObject: {fileID: 1363179446}
   waitFrames: 1
---- !u!114 &808630150
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 139
-  indentLevel: 0
-  storyText: "\u7372\u5F97\u6469\u65AF\u5BC6\u78BC"
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &808630151
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2449,32 +2317,6 @@ MonoBehaviour:
   targetObject: {fileID: 1363179441}
   methodName: Open
   delay: 0
---- !u!114 &808630152
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 138
-  indentLevel: 0
-  storyText: "\u9019\u662F...\u6469\u65AF\u5BC6\u78BC\uFF1F"
-  description: 
-  character: {fileID: 435743445}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &808630153
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2489,69 +2331,6 @@ MonoBehaviour:
   scope: 2
   key: Talking
   value: 0
---- !u!114 &808630154
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 137
-  indentLevel: 0
-  variable: {fileID: 808630153}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &808630155
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2615,33 +2394,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &808630156
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 136
-  indentLevel: 0
-  sayDialog: {fileID: 651104064}
---- !u!114 &808630157
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 808630128}
-  message: ItemGet
 --- !u!114 &808630158
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2768,19 +2520,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &808630160
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 808630169}
-  message: ItemGone
 --- !u!114 &808630161
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2883,69 +2622,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &808630164
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 134
-  indentLevel: 0
-  variable: {fileID: 808630153}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &808630165
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2971,137 +2647,6 @@ MonoBehaviour:
   eventHandler: {fileID: 808630162}
   commandList:
   - {fileID: 808630163}
---- !u!114 &808630166
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 133
-  indentLevel: 0
-  storyText: "\u5728\u9019\u88E1\u767C\u73FE\u6469\u65AF\u5BC6\u78BC\u7684\u5C0D\u7167\u5716...\u96D6\u7136\u6211\u628A\u5B83\u593E\u5728\u7B46\u8A18\u672C\u4E0A\uFF0C\u4F46\u6703\u7528\u5F97\u4E0A\u55CE\uFF1F"
-  description: 
-  character: {fileID: 435743445}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &808630167
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 132
-  indentLevel: 0
-  variable: {fileID: 808630153}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
-  animatorData:
-    animatorRef: {fileID: 0}
-    animatorVal: {fileID: 0}
-  audioSourceData:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 0}
-  colorData:
-    colorRef: {fileID: 0}
-    colorVal: {r: 0, g: 0, b: 0, a: 0}
-  gameObjectData:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  materialData:
-    materialRef: {fileID: 0}
-    materialVal: {fileID: 0}
-  objectData:
-    objectRef: {fileID: 0}
-    objectVal: {fileID: 0}
-  rigidbody2DData:
-    rigidbody2DRef: {fileID: 0}
-    rigidbody2DVal: {fileID: 0}
-  spriteData:
-    spriteRef: {fileID: 0}
-    spriteVal: {fileID: 0}
-  textureData:
-    textureRef: {fileID: 0}
-    textureVal: {fileID: 0}
-  transformData:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 0}
-  vector2Data:
-    vector2Ref: {fileID: 0}
-    vector2Val: {x: 0, y: 0}
-  vector3Data:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &808630168
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 131
-  indentLevel: 0
-  sayDialog: {fileID: 651104064}
---- !u!114 &808630169
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 808630122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 407.91675
-    y: 279.8577
-    width: 120
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 141
-  blockName: ItemGone
-  description: 
-  eventHandler: {fileID: 808630160}
-  commandList:
-  - {fileID: 808630168}
-  - {fileID: 808630167}
-  - {fileID: 808630166}
-  - {fileID: 808630164}
 --- !u!114 &808630170
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3532,9 +3077,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 573.69507
+    x: 574.8314
     y: 147.31332
-    width: 134.09088
+    width: 126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -3702,7 +3247,7 @@ MonoBehaviour:
   storyText: '{s}{s=25}PLAN...?'
   description: 
   character: {fileID: 435743445}
-  portrait: {fileID: 21300000, guid: 31e332c096267c54ba1ec59c520ccc74, type: 3}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4087,9 +3632,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 559.06586
-    y: 203.23375
-    width: 143.1818
+    x: 561.33856
+    y: 204.37012
+    width: 134
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4178,8 +3723,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "{s}{s=25}\u4E0A\u9762\u7684\u7192\u5E55\u6C92\u53CD\u61C9"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 435743445}
+  portrait: {fileID: 21300000, guid: c608892ac168d694da57470326a6d847, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4267,7 +3812,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 217.31021
     y: 76.7912
-    width: 120.45453
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
