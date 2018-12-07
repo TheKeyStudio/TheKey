@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour {
                 SceneManager.LoadScene("Main1");
                 EscStack.instance.popAble = true;
             }
-            if (Input.GetKeyDown(KeyCode.Keypad9))
+            if (Input.GetKeyDown(KeyCode.KeypadMultiply))
             {
                 SceneManager.LoadScene("Item");
                 EscStack.instance.popAble = true;
