@@ -242,7 +242,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114883972691714020, guid: 7fb65e803bd40b2478790c2159ac9af0,
+        type: 2}
+      propertyPath: hintCard.HintCardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aef1846ec80a8934e961b0a780008324,
+        type: 3}
+    - target: {fileID: 114883972691714020, guid: 7fb65e803bd40b2478790c2159ac9af0,
+        type: 2}
+      propertyPath: hintCard.HintCardDescriptSprite
+      value: 
+      objectReference: {fileID: 21300002, guid: aef1846ec80a8934e961b0a780008324,
+        type: 3}
+    - target: {fileID: 114883972691714020, guid: 7fb65e803bd40b2478790c2159ac9af0,
+        type: 2}
+      propertyPath: hintCard.HintCardCode
+      value: stickMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 114883972691714020, guid: 7fb65e803bd40b2478790c2159ac9af0,
+        type: 2}
+      propertyPath: hintCard.CodeName
+      value: "\u8DF3\u821E\u5C0F\u4EBA"
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114588999232469458, guid: 7fb65e803bd40b2478790c2159ac9af0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7fb65e803bd40b2478790c2159ac9af0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &323871780
@@ -293,6 +316,28 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114628110053196860, guid: fe5bf4d34001356439dd210e45c2cc84,
+        type: 2}
+      propertyPath: hintCard.HintCardSprite
+      value: 
+      objectReference: {fileID: 21300002, guid: aad2114e9a2264a4a94a1e6621a46c13,
+        type: 3}
+    - target: {fileID: 114628110053196860, guid: fe5bf4d34001356439dd210e45c2cc84,
+        type: 2}
+      propertyPath: hintCard.HintCardDescriptSprite
+      value: 
+      objectReference: {fileID: 21300010, guid: aad2114e9a2264a4a94a1e6621a46c13,
+        type: 3}
+    - target: {fileID: 114628110053196860, guid: fe5bf4d34001356439dd210e45c2cc84,
+        type: 2}
+      propertyPath: hintCard.HintCardCode
+      value: morse
+      objectReference: {fileID: 0}
+    - target: {fileID: 114628110053196860, guid: fe5bf4d34001356439dd210e45c2cc84,
+        type: 2}
+      propertyPath: hintCard.CodeName
+      value: "\u6469\u65AF\u5BC6\u78BC"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe5bf4d34001356439dd210e45c2cc84, type: 2}
@@ -779,6 +824,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 114177835447657110, guid: 5dafa7026dcde4b49984217e0bf5ce34,
+        type: 2}
+      propertyPath: hintCard.HintCardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aad2114e9a2264a4a94a1e6621a46c13,
+        type: 3}
+    - target: {fileID: 114177835447657110, guid: 5dafa7026dcde4b49984217e0bf5ce34,
+        type: 2}
+      propertyPath: hintCard.HintCardDescriptSprite
+      value: 
+      objectReference: {fileID: 21300008, guid: aad2114e9a2264a4a94a1e6621a46c13,
+        type: 3}
+    - target: {fileID: 114177835447657110, guid: 5dafa7026dcde4b49984217e0bf5ce34,
+        type: 2}
+      propertyPath: hintCard.CodeName
+      value: babylon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114177835447657110, guid: 5dafa7026dcde4b49984217e0bf5ce34,
+        type: 2}
+      propertyPath: hintCard.HintCardCode
+      value: babylon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5dafa7026dcde4b49984217e0bf5ce34, type: 2}
   m_IsPrefabParent: 0
@@ -1188,48 +1255,6 @@ Transform:
   m_Father: {fileID: 150746228}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1175650973
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939073733336034, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-      propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5d1c439ca882f084d97a6cc49e3ce4d9, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1379492414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2024,28 @@ Prefab:
         type: 2}
       propertyPath: itemGetMsgReceivedName
       value: ItemGet
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512475841166728, guid: fb409b219b0bfb14bbd529303efacd40,
+        type: 2}
+      propertyPath: hintCard.HintCardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6a55e0708247b54a9478386645d1c88,
+        type: 3}
+    - target: {fileID: 114512475841166728, guid: fb409b219b0bfb14bbd529303efacd40,
+        type: 2}
+      propertyPath: hintCard.HintCardDescriptSprite
+      value: 
+      objectReference: {fileID: 21300002, guid: e6a55e0708247b54a9478386645d1c88,
+        type: 3}
+    - target: {fileID: 114512475841166728, guid: fb409b219b0bfb14bbd529303efacd40,
+        type: 2}
+      propertyPath: hintCard.HintCardCode
+      value: caesar
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512475841166728, guid: fb409b219b0bfb14bbd529303efacd40,
+        type: 2}
+      propertyPath: hintCard.CodeName
+      value: "\u51F1\u6492\u5BC6\u78BC"
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114562019287770612, guid: fb409b219b0bfb14bbd529303efacd40, type: 2}

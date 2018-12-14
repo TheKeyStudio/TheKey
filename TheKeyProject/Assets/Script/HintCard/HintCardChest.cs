@@ -52,7 +52,7 @@ public class HintCardChest : KeyboardInteractable
         if(!hintCard.Unlocked && text.Equals(hintCard.HintCardCode, StringComparison.InvariantCultureIgnoreCase))
         {
             BookManager.instance.AddPage(hintCard.HintCardSprite);
-            HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
+            HintCardManager.instance.UnlockHintCard(hintCard.CodeName);
             hintCard.Unlocked = true;
             Destroy(gameObject);
             Debug.Log("Unlocked " + hintCard.HintCardCode);

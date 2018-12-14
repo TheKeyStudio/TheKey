@@ -6,8 +6,8 @@ public class DestoryIfAlreadyUnlocked : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        HintCard hintCard = GetComponent<HintCard>();
-        if (hintCard.Unlocked)
+        HintCardPickUp hintCard = GetComponent<HintCardPickUp>();
+        if (hintCard.IsUnlocked())
         {
             Destroy(gameObject);
         }

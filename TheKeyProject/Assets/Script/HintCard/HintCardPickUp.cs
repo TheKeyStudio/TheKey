@@ -6,28 +6,37 @@ using UnityEngine;
 
 public class HintCardPickUp : MonoBehaviour
 {
-    private HintCard hintCard;
+    [SerializeField]private HintCard hintCard;
     public string itemGetMsgReceivedName = "ItemGet";
     public string itemGoneMsgReceivedName = "ItemGone";
 
+    HintCardManager hintCardManager;
+
     public void Start()
     {
-        hintCard = GetComponent<HintCard>();
+        hintCardManager = GameManager.instance.HintCardManager;
+    }
+
+    private void Update()
+    {
+        hintCard.Unlocked = hintCardManager.IsUnlocked(hintCard.CodeName);
     }
 
     public void Pickup()
     {
         if (!hintCard.Unlocked)
         {
-            BookManager.instance.AddPage(hintCard.HintCardSprite);
-            BookManager.instance.AddPage(hintCard.HintCardDescriptSprite);
-            HintCardManager.instance.UnlockHintCard(hintCard.HintCardCode);
-            hintCard.Unlocked = true;
+            hintCardManager.UnlockHintCard(hintCard.CodeName);
             Flowchart.BroadcastFungusMessage(itemGetMsgReceivedName);
         }
         else
         {
             Flowchart.BroadcastFungusMessage(itemGoneMsgReceivedName);
         }
+    }
+
+    public bool IsUnlocked()
+    {
+        return hintCard.Unlocked;
     }
 }

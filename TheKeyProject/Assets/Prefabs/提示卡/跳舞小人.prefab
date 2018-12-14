@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 4542987465590752}
   - component: {fileID: 212048712604172124}
   - component: {fileID: 58919789391194244}
-  - component: {fileID: 114588999232469458}
   - component: {fileID: 114883972691714020}
   - component: {fileID: 114138981717730878}
   - component: {fileID: 114260000130967730}
@@ -152,23 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592720442b6a47049b1087f2424e9339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114588999232469458
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1922231885896536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7f5a55ad35c9748b16948766018e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  codeName: "\u8DF3\u821E\u5C0F\u4EBA"
-  hintCardCode: stickman
-  hintCardSprite: {fileID: 21300000, guid: aef1846ec80a8934e961b0a780008324, type: 3}
-  hintCardDescriptSprite: {fileID: 21300002, guid: aef1846ec80a8934e961b0a780008324,
-    type: 3}
-  unlocked: 0
 --- !u!114 &114883972691714020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6634adc5e41e45bf98bfe092c42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintCard: {fileID: 11400000, guid: 495ffa4ffaecf5047bb980cdd2d5cab3, type: 2}
   itemGetMsgReceivedName: ItemGet
   itemGoneMsgReceivedName: ItemGone
 --- !u!212 &212048712604172124

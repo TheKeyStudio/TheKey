@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
     [SerializeField] private EventDataManager eventDataManager;
+    [SerializeField] private HintCardManager hintCardManager;
     [SerializeField] private int totalLevel;
     [SerializeField] private int level = 0; //記錄每個關卡是否已經被解了，例如第一關解題成功，level = 0 + 1
     [SerializeField] private int terminalLogin = 1; //記錄每個Terminal Login，初始值為1,因為1-1沒有Terminal Login
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour {
         {
             instance = this;
             eventDataManager = GetComponent<EventDataManager>();
+            hintCardManager = GetComponent<HintCardManager>();
             npcData = new NpcData();
             DefaultSetting();
             DontDestroyOnLoad(this);
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour {
             }
             if (Input.GetKeyDown(KeyCode.KeypadDivide))
             {
-                SceneManager.LoadScene("Main1");
+                SceneManager.LoadScene("TestingSaveSystem");
                 EscStack.instance.popAble = true;
             }
             if (Input.GetKeyDown(KeyCode.KeypadMultiply))
@@ -131,5 +133,54 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Get Event data manager");
             return eventDataManager;
         }
+    }
+
+    public int TotalLevel
+    {
+        get
+        {
+            return totalLevel;
+        }
+    }
+
+    public int Level
+    {
+        get
+        {
+            return level;
+        }
+    }
+
+    public HintCardManager HintCardManager
+    {
+        get
+        {
+            return hintCardManager;
+        }
+    }
+
+    public GameManagerData SaveGame()
+    {
+        return new GameManagerData(this);
+    }
+
+    public void LoadGame(GameManagerData memento)
+    {
+        Debug.Log(memento);
+        eventDataManager.LoadMemento(memento.eventDataManager);
+        hintCardManager.LoadMemento(memento.hintCardManager);
+        totalLevel = memento.totalLevel;
+        level = memento.level;
+        terminalLogin = memento.terminalLogin;
+
+        isFirstTimeGoIntoDarkSpace = memento.isFirstTimeGoIntoDarkSpace;
+        talkedWithClown = memento.talkedWithClown;
+
+        sawTheGhost = memento.sawTheGhost;
+        getTutorial = memento.getTutorial;
+
+        npcData = memento.npcData;
+
+        currentSceneName = memento.currentSceneName;
     }
 }

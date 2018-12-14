@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 4566011151041686}
   - component: {fileID: 212321426088516284}
   - component: {fileID: 58478712792881788}
-  - component: {fileID: 114109868875809336}
   - component: {fileID: 114512475841166728}
   - component: {fileID: 114413078172500968}
   - component: {fileID: 114578346900725208}
@@ -128,23 +127,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114109868875809336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1776486781758176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7f5a55ad35c9748b16948766018e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  codeName: "\u51F1\u85A9\u5BC6\u78BC"
-  hintCardCode: Caesar
-  hintCardSprite: {fileID: 21300000, guid: e6a55e0708247b54a9478386645d1c88, type: 3}
-  hintCardDescriptSprite: {fileID: 21300002, guid: e6a55e0708247b54a9478386645d1c88,
-    type: 3}
-  unlocked: 0
 --- !u!114 &114413078172500968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6634adc5e41e45bf98bfe092c42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintCard: {fileID: 11400000, guid: 658c03a31bd4ccd41b5af0b7b8b3eee6, type: 2}
   itemGetMsgReceivedName: GetCaser
   itemGoneMsgReceivedName: ItemGone
 --- !u!114 &114562019287770612

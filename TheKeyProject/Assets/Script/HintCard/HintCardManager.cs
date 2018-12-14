@@ -7,19 +7,23 @@ public class HintCardManager : MonoBehaviour {
     public static HintCardManager instance;
 
     [SerializeField]
+    private List<HintCard> HintCards = new List<HintCard>();
+    [SerializeField]
     private List<string> unlockedHintCards = new List<string>();
 
-
-    private void Awake()
+    public List<string> UnlockedHintCards
     {
-        if (instance == null)
+        get
         {
-            instance = this;
-            DontDestroyOnLoad(this);
+            return unlockedHintCards;
         }
-        else if (this != instance)
+    }
+
+    private void Start()
+    {
+        foreach(HintCard card in HintCards)
         {
-            Destroy(gameObject);
+            card.Unlocked = false;
         }
     }
 
@@ -30,6 +34,40 @@ public class HintCardManager : MonoBehaviour {
 
     public void UnlockHintCard(string hintCardCode)
     {
-        unlockedHintCards.Add(hintCardCode);
+        HintCard hintCard = FindHintCardByCode(hintCardCode);
+        if(hintCard != null)
+        {
+            BookManager.instance.AddPage(hintCard.HintCardSprite);
+            BookManager.instance.AddPage(hintCard.HintCardDescriptSprite);
+            unlockedHintCards.Add(hintCardCode);
+            hintCard.Unlocked = true;
+        }
+    }
+
+    public HintCardManagerDataMemento SaveMemento()
+    {
+        return new HintCardManagerDataMemento(this);
+    }
+
+    public void LoadMemento(HintCardManagerDataMemento memento)
+    {
+        foreach (string hintCard in memento.unlockedHintCards)
+        {
+            UnlockHintCard(hintCard);
+        }
+    }
+
+    private HintCard FindHintCardByCode(string code)
+    {
+        HintCard found = null;
+        foreach(HintCard card in HintCards)
+        {
+            if (card.CodeName.Equals(code))
+            {
+                found = card;
+                break;
+            }
+        }
+        return found;
     }
 }

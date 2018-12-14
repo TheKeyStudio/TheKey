@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114974205293415782}
   - component: {fileID: 114413432449609468}
   - component: {fileID: 114653346350749060}
+  - component: {fileID: 114179721837423146}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,6 +44,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114179721837423146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553707401008526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d0f288a2f407a459260579e98f5ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HintCards:
+  - {fileID: 11400000, guid: 325c6bb42b6353e49987fb94791c4a17, type: 2}
+  - {fileID: 11400000, guid: 658c03a31bd4ccd41b5af0b7b8b3eee6, type: 2}
+  - {fileID: 11400000, guid: 058f369567c26d3449fa3522c89ce3a1, type: 2}
+  - {fileID: 11400000, guid: 495ffa4ffaecf5047bb980cdd2d5cab3, type: 2}
+  unlockedHintCards: []
 --- !u!114 &114413432449609468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventDataManager: {fileID: 0}
+  hintCardManager: {fileID: 0}
   totalLevel: 7
   level: 0
   terminalLogin: 1
@@ -98,3 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackLength: 0
+  popAble: 1

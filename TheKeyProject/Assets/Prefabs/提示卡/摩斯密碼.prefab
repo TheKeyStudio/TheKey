@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4170227056993578}
   - component: {fileID: 212215806902959650}
   - component: {fileID: 58844615697251122}
-  - component: {fileID: 114077225341881308}
   - component: {fileID: 114628110053196860}
   - component: {fileID: 114684911104353682}
   - component: {fileID: 114387389486154248}
@@ -126,23 +125,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114077225341881308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1272264620505780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7f5a55ad35c9748b16948766018e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  codeName: "\u6469\u65AF\u5BC6\u78BC"
-  hintCardCode: Morse
-  hintCardSprite: {fileID: 21300002, guid: aad2114e9a2264a4a94a1e6621a46c13, type: 3}
-  hintCardDescriptSprite: {fileID: 21300010, guid: aad2114e9a2264a4a94a1e6621a46c13,
-    type: 3}
-  unlocked: 0
 --- !u!114 &114387389486154248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd6634adc5e41e45bf98bfe092c42cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintCard: {fileID: 11400000, guid: 058f369567c26d3449fa3522c89ce3a1, type: 2}
   itemGetMsgReceivedName: ItemGet
   itemGoneMsgReceivedName: ItemGone
 --- !u!114 &114684911104353682
