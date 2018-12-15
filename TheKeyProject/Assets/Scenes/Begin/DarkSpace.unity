@@ -409,9 +409,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 474591168}
-  selectedCommands:
-  - {fileID: 474591187}
+  - {fileID: 474591184}
+  selectedCommands: []
   variables:
   - {fileID: 474591175}
   - {fileID: 474591188}
@@ -1793,7 +1792,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 979733059}
   selectedCommands:
-  - {fileID: 979733064}
+  - {fileID: 979733075}
   variables:
   - {fileID: 979733087}
   - {fileID: 979733060}
@@ -1995,7 +1994,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &979733064
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979733056}
@@ -2592,7 +2591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 979733057}
+  selectedFlowchart: {fileID: 474591166}
 --- !u!4 &1041787349
 Transform:
   m_ObjectHideFlags: 1
@@ -3631,7 +3630,7 @@ Prefab:
     - target: {fileID: 114686693134681022, guid: 4c546d4e290949f4793781ada13e88ce,
         type: 2}
       propertyPath: isFirstTimeGoIntoDarkSpace
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114686693134681022, guid: 4c546d4e290949f4793781ada13e88ce,
         type: 2}
