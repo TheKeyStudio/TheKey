@@ -44,6 +44,8 @@ public class EventDataManager : MonoBehaviour {
         }
 
         eventDataDict[key] = newValue;
+
+        SaveSystemManager.Save();
     }
 
     private void NewEventData(string key, int value)

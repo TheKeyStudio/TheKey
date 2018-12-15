@@ -27,6 +27,8 @@ public class HintCardPickUp : MonoBehaviour
         if (!hintCard.Unlocked)
         {
             hintCardManager.UnlockHintCard(hintCard.CodeName);
+
+            SaveSystemManager.Save();
             Flowchart.BroadcastFungusMessage(itemGetMsgReceivedName);
         }
         else

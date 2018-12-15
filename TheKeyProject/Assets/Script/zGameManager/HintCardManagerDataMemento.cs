@@ -9,7 +9,7 @@ public class HintCardManagerDataMemento{
 
     public HintCardManagerDataMemento(HintCardManager mgr)
     {
-        unlockedHintCards = mgr.UnlockedHintCards;
+        unlockedHintCards = mgr.UnlockedHintCardsCode;
     }
 
 }

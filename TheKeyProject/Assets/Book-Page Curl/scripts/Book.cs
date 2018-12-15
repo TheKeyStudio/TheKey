@@ -418,7 +418,7 @@ public class Book : MonoBehaviour
     
     public void Refresh()
     {
-        bookPages = BookManager.instance.bookPages;
+        bookPages = BookManager.instance.GetBookPages();
         UpdateSprites();
     }
     

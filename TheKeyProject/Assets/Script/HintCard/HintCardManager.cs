@@ -9,9 +9,18 @@ public class HintCardManager : MonoBehaviour {
     [SerializeField]
     private List<HintCard> HintCards = new List<HintCard>();
     [SerializeField]
-    private List<string> unlockedHintCards = new List<string>();
+    private List<string> unlockedHintCardsCode = new List<string>();
+    private List<HintCard> unlockedHintCards = new List<HintCard>();
 
-    public List<string> UnlockedHintCards
+    public List<string> UnlockedHintCardsCode
+    {
+        get
+        {
+            return unlockedHintCardsCode;
+        }
+    }
+
+    public List<HintCard> UnlockedHintCards
     {
         get
         {
@@ -29,7 +38,7 @@ public class HintCardManager : MonoBehaviour {
 
     public bool IsUnlocked(string hintCardCode)
     {
-        return unlockedHintCards.Contains(hintCardCode);
+        return unlockedHintCardsCode.Contains(hintCardCode);
     }
 
     public void UnlockHintCard(string hintCardCode)
@@ -37,9 +46,8 @@ public class HintCardManager : MonoBehaviour {
         HintCard hintCard = FindHintCardByCode(hintCardCode);
         if(hintCard != null)
         {
-            BookManager.instance.AddPage(hintCard.HintCardSprite);
-            BookManager.instance.AddPage(hintCard.HintCardDescriptSprite);
-            unlockedHintCards.Add(hintCardCode);
+            unlockedHintCardsCode.Add(hintCardCode);
+            unlockedHintCards.Add(hintCard);
             hintCard.Unlocked = true;
         }
     }

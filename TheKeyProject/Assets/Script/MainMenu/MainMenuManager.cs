@@ -31,6 +31,12 @@ public class MainMenuManager : MonoBehaviour {
         started = true;
     }
 
+    public void LoadGame()
+    {
+        SaveSystemManager.Load();
+        sceneName = GameManager.instance.CurrentSceneName;
+        StartGame();
+    }
 
     public void ToNextScene()
     {

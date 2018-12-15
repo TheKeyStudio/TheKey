@@ -23,7 +23,7 @@ public class TalkedWithClownInDarkSpace : OnceTimeGameStart {
     protected override void DoneTalking()
     {
         GameManager.instance.talkedWithClown = true;
-
+        SaveSystemManager.Save();
         DestorySelfIfDone();
     }
 }

@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour {
             }
             if (Input.GetKeyDown(KeyCode.KeypadDivide))
             {
-                SceneManager.LoadScene("TestingSaveSystem");
+                SceneManager.LoadScene("Main1");
                 EscStack.instance.popAble = true;
             }
             if (Input.GetKeyDown(KeyCode.KeypadMultiply))
@@ -101,6 +101,8 @@ public class GameManager : MonoBehaviour {
     public void NextLevel()
     {
         level++;
+
+        SaveSystemManager.Save();
     }
 
     public int GetCurrentLevel()
@@ -123,6 +125,8 @@ public class GameManager : MonoBehaviour {
         set
         {
             terminalLogin = value;
+
+            SaveSystemManager.Save();
         }
     }
 
@@ -161,6 +165,7 @@ public class GameManager : MonoBehaviour {
 
     public GameManagerData SaveGame()
     {
+        RefreshSceneName();
         return new GameManagerData(this);
     }
 

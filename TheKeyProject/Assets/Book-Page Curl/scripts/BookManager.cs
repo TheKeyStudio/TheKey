@@ -23,6 +23,17 @@ public class BookManager : MonoBehaviour {
         }
     }
 
+    public List<Sprite> GetBookPages()
+    {
+        HintCardManager hintCardManager = GameManager.instance.HintCardManager;
+        foreach(HintCard hintCard in hintCardManager.UnlockedHintCards)
+        {
+            AddPage(hintCard.HintCardSprite);
+            AddPage(hintCard.HintCardDescriptSprite);
+        }
+        return bookPages;
+    }
+
     public void AddPage(Sprite bookpage)
     {   
         bookPages.Add(bookpage);

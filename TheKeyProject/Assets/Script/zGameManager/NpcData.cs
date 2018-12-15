@@ -14,6 +14,8 @@ public class NpcData{
         set
         {
             isNpcTalked = value;
+
+            SaveSystemManager.Save();
         }
     }
 
@@ -27,6 +29,8 @@ public class NpcData{
         set
         {
             lastEventCode = value;
+
+            SaveSystemManager.Save();
         }
     }
 }

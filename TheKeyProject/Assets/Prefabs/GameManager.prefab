@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114413432449609468}
   - component: {fileID: 114653346350749060}
   - component: {fileID: 114179721837423146}
+  - component: {fileID: 114288590077506498}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -61,6 +62,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 058f369567c26d3449fa3522c89ce3a1, type: 2}
   - {fileID: 11400000, guid: 495ffa4ffaecf5047bb980cdd2d5cab3, type: 2}
   unlockedHintCards: []
+--- !u!114 &114288590077506498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553707401008526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734ddea9d6b9de142a50664d49d92c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114413432449609468
 MonoBehaviour:
   m_ObjectHideFlags: 1
