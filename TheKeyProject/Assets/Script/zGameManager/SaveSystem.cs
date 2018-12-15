@@ -45,7 +45,6 @@ public static class SaveSystem{
         Debug.Log(path);
         formatter.Serialize(stream, data);
         stream.Close();
-
     }
 
     public static bool IsFileExist(string filename)

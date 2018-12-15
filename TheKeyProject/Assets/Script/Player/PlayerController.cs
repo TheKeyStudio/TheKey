@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
         playerMotor = GetComponent<PlayerMotor>();
 
         playerState = new Normal(this);
+
+        SaveSystemManager.Save();
     }
 
     private void Start()

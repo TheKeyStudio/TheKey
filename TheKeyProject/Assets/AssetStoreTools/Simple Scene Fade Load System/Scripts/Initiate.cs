@@ -34,6 +34,5 @@ public static class Initiate
 
     public static void DoneFading() {
         areWeFading = false;
-        SaveSystemManager.Save();
     }
 }
