@@ -17,13 +17,14 @@ public class TalkedWithClownInDarkSpace : OnceTimeGameStart {
         if(!gameManager.talkedWithClown && !gameManager.isFirstTimeGoIntoDarkSpace)
         {
             clown.SetActive(true);
+            clown.SetActive(false);
+            clown.SetActive(true);
         }
     }
 
     protected override void DoneTalking()
     {
         GameManager.instance.talkedWithClown = true;
-        SaveSystemManager.Save();
         DestorySelfIfDone();
     }
 }

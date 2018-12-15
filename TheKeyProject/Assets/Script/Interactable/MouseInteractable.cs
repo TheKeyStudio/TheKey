@@ -16,10 +16,12 @@ public class MouseInteractable : Clickable2D, Interactable{
 
     protected virtual void Update()
     {
+        
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
+        
     }
 
     protected override void DoPointerClick()

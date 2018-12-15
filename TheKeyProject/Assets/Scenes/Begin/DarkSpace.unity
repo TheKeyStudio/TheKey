@@ -409,8 +409,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 474591184}
-  selectedCommands: []
+  - {fileID: 474591168}
+  selectedCommands:
+  - {fileID: 474591202}
   variables:
   - {fileID: 474591175}
   - {fileID: 474591188}
@@ -513,6 +514,7 @@ MonoBehaviour:
   eventHandler: {fileID: 474591196}
   commandList:
   - {fileID: 474591187}
+  - {fileID: 474591202}
   - {fileID: 474591195}
   - {fileID: 474591171}
   - {fileID: 474591191}
@@ -633,7 +635,6 @@ MonoBehaviour:
   - {fileID: 474591181}
   - {fileID: 474591190}
   - {fileID: 474591189}
-  - {fileID: 474591202}
 --- !u!114 &474591174
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1201,8 +1202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 134.93417
-    y: 173.95973
+    x: 136.11064
+    y: 175.1362
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1292,7 +1293,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &474591202
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
@@ -1301,7 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 54
+  itemId: 116
   indentLevel: 0
   targetObject: {fileID: 100969088}
   methodName: Save
@@ -1758,6 +1759,7 @@ GameObject:
   - component: {fileID: 979733062}
   - component: {fileID: 979733063}
   - component: {fileID: 979733064}
+  - component: {fileID: 979733065}
   m_Layer: 0
   m_Name: "\u5C0F\u4E11\u5C0D\u8A71"
   m_TagString: Untagged
@@ -1792,7 +1794,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 979733059}
   selectedCommands:
-  - {fileID: 979733075}
+  - {fileID: 979733065}
   variables:
   - {fileID: 979733087}
   - {fileID: 979733060}
@@ -1875,6 +1877,7 @@ MonoBehaviour:
   - {fileID: 979733074}
   - {fileID: 979733091}
   - {fileID: 979733062}
+  - {fileID: 979733065}
 --- !u!114 &979733060
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2006,6 +2009,22 @@ MonoBehaviour:
   itemId: 114
   indentLevel: 0
   sayDialog: {fileID: 1236623718}
+--- !u!114 &979733065
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979733056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 115
+  indentLevel: 0
+  targetObject: {fileID: 100969088}
+  methodName: Save
+  delay: 0
 --- !u!114 &979733069
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3573,12 +3592,12 @@ Prefab:
     - target: {fileID: 212606122983489342, guid: 489d92202a4725e4c932bb8fa924492a,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: -892812411
+      value: -980494291
       objectReference: {fileID: 0}
     - target: {fileID: 212606122983489342, guid: 489d92202a4725e4c932bb8fa924492a,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 489d92202a4725e4c932bb8fa924492a, type: 2}

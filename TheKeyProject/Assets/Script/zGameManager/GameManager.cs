@@ -124,9 +124,12 @@ public class GameManager : MonoBehaviour {
 
         set
         {
-            terminalLogin = value;
+            if(value != terminalLogin)
+            {
+                terminalLogin = value;
 
-            SaveSystemManager.Save();
+                SaveSystemManager.Save();
+            }
         }
     }
 

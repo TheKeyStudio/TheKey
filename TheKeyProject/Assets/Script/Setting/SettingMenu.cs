@@ -27,7 +27,6 @@ public class SettingMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        SaveSystemManager.Save();
         Application.Quit();
     }
 }

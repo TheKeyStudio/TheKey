@@ -15,7 +15,6 @@ public class FirstTimeGoIntoDarkSpace : OnceTimeGameStart {
     protected override void DoneTalking()
     {
         GameManager.instance.isFirstTimeGoIntoDarkSpace = false;
-        SaveSystemManager.Save();
         DestorySelfIfDone();
     }
 }
