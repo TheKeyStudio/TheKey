@@ -411,7 +411,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 474591168}
   selectedCommands:
-  - {fileID: 474591195}
+  - {fileID: 474591187}
   variables:
   - {fileID: 474591175}
   - {fileID: 474591188}
@@ -502,8 +502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 89.44229
-    y: 98.647064
+    x: 90.61876
+    y: 97.4706
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1293,7 +1293,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &474591202
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474591165}
@@ -1562,26 +1562,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1136318491321538, guid: 489d92202a4725e4c932bb8fa924492a,
     type: 2}
   m_PrefabInternal: {fileID: 2010857577}
+--- !u!114 &753121914 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114045783062646488, guid: 489d92202a4725e4c932bb8fa924492a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010857577}
+  m_Script: {fileID: 11500000, guid: d49695fa9f98f5549a823397db3f9a2a, type: 3}
 --- !u!4 &753121916 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4530845982454564, guid: 489d92202a4725e4c932bb8fa924492a,
     type: 2}
   m_PrefabInternal: {fileID: 2010857577}
---- !u!114 &753121917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 753121912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abd39f204f904a64396953b7f9c2fe1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickEnabled: 1
-  hoverCursor: {fileID: 2800000, guid: 607dc0af5340554439d33f0925908584, type: 3}
-  useEventSystem: 0
-  interactDistance: 3
 --- !u!1 &808397468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1758,7 @@ GameObject:
   - component: {fileID: 979733060}
   - component: {fileID: 979733062}
   - component: {fileID: 979733063}
+  - component: {fileID: 979733064}
   m_Layer: 0
   m_Name: "\u5C0F\u4E11\u5C0D\u8A71"
   m_TagString: Untagged
@@ -1800,7 +1792,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 979733059}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 979733064}
   variables:
   - {fileID: 979733087}
   - {fileID: 979733060}
@@ -1866,6 +1859,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 979733069}
   commandList:
+  - {fileID: 979733064}
   - {fileID: 979733093}
   - {fileID: 979733058}
   - {fileID: 979733073}
@@ -1999,6 +1993,20 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &979733064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979733056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 114
+  indentLevel: 0
+  sayDialog: {fileID: 1236623718}
 --- !u!114 &979733069
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2011,7 +2019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 979733059}
-  clickableObject: {fileID: 753121917}
+  clickableObject: {fileID: 753121914}
   waitFrames: 1
 --- !u!114 &979733071
 MonoBehaviour:
@@ -3558,6 +3566,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114045783062646488, guid: 489d92202a4725e4c932bb8fa924492a,
+        type: 2}
+      propertyPath: hoverCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 607dc0af5340554439d33f0925908584, type: 3}
+    - target: {fileID: 212606122983489342, guid: 489d92202a4725e4c932bb8fa924492a,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -892812411
+      objectReference: {fileID: 0}
+    - target: {fileID: 212606122983489342, guid: 489d92202a4725e4c932bb8fa924492a,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 489d92202a4725e4c932bb8fa924492a, type: 2}
   m_IsPrefabParent: 0
@@ -3608,7 +3631,7 @@ Prefab:
     - target: {fileID: 114686693134681022, guid: 4c546d4e290949f4793781ada13e88ce,
         type: 2}
       propertyPath: isFirstTimeGoIntoDarkSpace
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114686693134681022, guid: 4c546d4e290949f4793781ada13e88ce,
         type: 2}
