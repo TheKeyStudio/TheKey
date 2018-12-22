@@ -26,6 +26,7 @@ public class BookManager : MonoBehaviour {
     public List<Sprite> GetBookPages()
     {
         HintCardManager hintCardManager = GameManager.instance.HintCardManager;
+        bookPages.Clear();
         foreach(HintCard hintCard in hintCardManager.UnlockedHintCards)
         {
             AddPage(hintCard.HintCardSprite);
