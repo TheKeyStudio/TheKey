@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 415484025}
   - component: {fileID: 415484032}
   - component: {fileID: 415484040}
+  - component: {fileID: 415484041}
   m_Layer: 0
   m_Name: "\u66F8\u672C\u5287\u60C5"
   m_TagString: Untagged
@@ -725,7 +726,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 415484036}
   selectedCommands:
-  - {fileID: 415484025}
+  - {fileID: 415484040}
   variables:
   - {fileID: 415484026}
   - {fileID: 415484039}
@@ -771,7 +772,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 415484022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
@@ -1041,7 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 12.5
+    x: 11.5
     y: 86
     width: 120
     height: 40
@@ -1070,6 +1071,7 @@ MonoBehaviour:
   - {fileID: 415484028}
   - {fileID: 415484027}
   - {fileID: 415484025}
+  - {fileID: 415484041}
   - {fileID: 415484046}
 --- !u!4 &415484037
 Transform:
@@ -1118,7 +1120,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 415484022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
@@ -1127,6 +1129,22 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 623410399}
   methodName: Save
+  delay: 0
+--- !u!114 &415484041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415484022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 146
+  indentLevel: 0
+  targetObject: {fileID: 1961763049}
+  methodName: ToNextSceneWithFade
   delay: 0
 --- !u!114 &415484042
 MonoBehaviour:
@@ -1822,6 +1840,10 @@ Prefab:
     - target: {fileID: 4858990592419252, guid: 66f807fa86a1a274ca00563501a90539, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627115714667150, guid: 66f807fa86a1a274ca00563501a90539, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66f807fa86a1a274ca00563501a90539, type: 2}
@@ -3638,9 +3660,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0900cc90c55ad5d4098786c2e37e7f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: DarkSpace
+  nextScene: Ending
   color: {r: 0, g: 0, b: 0, a: 1}
-  fadeDamp: 0.5
+  fadeDamp: 1
 --- !u!1 &2014383551
 GameObject:
   m_ObjectHideFlags: 0

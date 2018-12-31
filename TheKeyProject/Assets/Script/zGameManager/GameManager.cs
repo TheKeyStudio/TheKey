@@ -90,7 +90,12 @@ public class GameManager : MonoBehaviour {
 
     public void RefreshSceneName()
     {
-        currentSceneName = SceneManager.GetActiveScene().name;
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (!sceneName[0].Equals('T') && !sceneName[0].Equals('B') && !sceneName.Equals("T1-7"))
+        {
+            currentSceneName = sceneName;
+        }
+        
     }
 
     void DefaultSetting()

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SaveSystemManager : MonoBehaviour {
     [SerializeField] private static string fileName = "gm.ray";
-    private void Update()
-    {
-    }
 
     public static void Save()
     {
