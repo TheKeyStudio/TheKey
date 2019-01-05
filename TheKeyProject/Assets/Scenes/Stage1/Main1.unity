@@ -3233,6 +3233,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1310936456}
+  - {fileID: 643469884}
+  - {fileID: 635344136}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3333,10 +3335,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635344135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999992, y: 0.9999992, z: 1.0000058}
+  m_LocalPosition: {x: 14.64, y: 0.93, z: 0}
+  m_LocalScale: {x: 0.76097, y: 0.76097, z: 0.66857}
   m_Children: []
-  m_Father: {fileID: 1310936456}
+  m_Father: {fileID: 618136142}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &635344137
@@ -3484,11 +3486,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643469882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.64, y: 0.93, z: 0}
+  m_LocalScale: {x: 0.7609706, y: 0.7609706, z: 0.66856605}
   m_Children: []
-  m_Father: {fileID: 1310936456}
+  m_Father: {fileID: 618136142}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645225705
@@ -5186,11 +5188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 227.99854, y: 16.59996}
+  scrollPos: {x: 184.0462, y: -62.356216}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 352
-  zoom: 0.79000026
+  zoom: 0.8200001
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5200,7 +5202,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 851516970}
   selectedCommands:
-  - {fileID: 851516899}
+  - {fileID: 851516939}
   variables:
   - {fileID: 850561184}
   description: 
@@ -5829,7 +5831,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 208.72888
     y: 74.78472
-    width: 144.93668
+    width: 141.46341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5924,7 +5926,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &851516939
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 851516892}
@@ -6456,7 +6458,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 202.62521
     y: 119.1175
-    width: 144.93668
+    width: 141.46341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6616,8 +6618,8 @@ MonoBehaviour:
   - {fileID: 851516899}
   - {fileID: 851516898}
   - {fileID: 851516896}
-  - {fileID: 851517065}
   - {fileID: 851516939}
+  - {fileID: 851517065}
   - {fileID: 851516971}
   - {fileID: 851516986}
 --- !u!114 &851516971
@@ -6982,7 +6984,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 205.44861
     y: 176.647
-    width: 144.93668
+    width: 141.46341
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7832,7 +7834,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 82.64822
     y: -0.2556014
-    width: 128.48099
+    width: 125.60975
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7929,8 +7931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 67.6839
-    y: 172.11761
+    x: 68.6839
+    y: 171.11761
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9028,7 +9030,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 408.71503
     y: 226.48967
-    width: 122.15188
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12232,8 +12234,6 @@ Transform:
   m_LocalScale: {x: 0.7609706, y: 0.7609706, z: 0.66856605}
   m_Children:
   - {fileID: 643422640}
-  - {fileID: 643469884}
-  - {fileID: 635344136}
   m_Father: {fileID: 618136142}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

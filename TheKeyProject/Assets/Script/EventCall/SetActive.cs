@@ -9,6 +9,7 @@ public class SetActive : EventDataTrigger {
     protected override void Init()
     {
         int eventCode = eventDataGetter.GetData();
+        Debug.Log("Event code:" + eventCode);
         if (eventCode >= active.Length || eventCode < 0)
         {
             return;

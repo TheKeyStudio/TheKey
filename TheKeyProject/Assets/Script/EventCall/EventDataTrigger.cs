@@ -13,5 +13,11 @@ public abstract class EventDataTrigger : MonoBehaviour {
         Init();
     }
 
+    private void OnEnable()
+    {
+        eventDataGetter = GetComponent<EventDataGetter>();
+        Init();
+    }
+
     protected abstract void Init();
 }
