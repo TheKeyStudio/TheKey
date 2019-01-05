@@ -414,12 +414,10 @@ public class Book : MonoBehaviour
         if (onFinish != null)
             onFinish();
     }
-
     
     public void Refresh()
     {
         bookPages = BookManager.instance.GetBookPages();
         UpdateSprites();
     }
-    
 }

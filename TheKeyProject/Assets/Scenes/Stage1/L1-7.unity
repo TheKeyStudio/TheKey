@@ -1619,9 +1619,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 808630202}
+  - {fileID: 808630130}
   selectedCommands:
-  - {fileID: 808630200}
+  - {fileID: 808630131}
   variables:
   - {fileID: 808630153}
   description: 
@@ -1769,8 +1769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -165.69905
-    y: 325.396
+    x: -164.69905
+    y: 324.396
     width: 127
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   - {fileID: 808630155}
 --- !u!114 &808630158
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 808630122}
@@ -4043,7 +4043,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &808630200
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 808630122}
@@ -4598,7 +4598,7 @@ MonoBehaviour:
   message: LookInObject
 --- !u!114 &808630219
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 808630122}
@@ -6795,7 +6795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abfbec5d3e43a0e47a48167c99c98249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Input1-7
+  sceneName: BInput1-7
 --- !u!61 &1663252555
 BoxCollider2D:
   m_ObjectHideFlags: 0
