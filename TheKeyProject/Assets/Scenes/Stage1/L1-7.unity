@@ -5527,7 +5527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1342584560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5543,8 +5543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -471.4, y: -30.100006}
+  m_AnchoredPosition: {x: 0, y: 36.5}
+  m_SizeDelta: {x: -130, y: -149.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1342584561
 MonoBehaviour:
@@ -5565,7 +5565,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b286d5e509e16a047bf0dadef02c9ca0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5d1927eae7b06740bf5eebdd2895c25, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7643,8 +7643,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1998074544}
   - component: {fileID: 1998074543}
-  - component: {fileID: 1998074546}
   - component: {fileID: 1998074545}
+  - component: {fileID: 1998074546}
   m_Layer: 0
   m_Name: "\u95DC\u9375\u7DDA\u7D22"
   m_TagString: Untagged
@@ -7687,7 +7687,7 @@ SpriteRenderer:
   m_SortingLayerID: -892812411
   m_SortingLayer: 3
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: b286d5e509e16a047bf0dadef02c9ca0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5d1927eae7b06740bf5eebdd2895c25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7704,7 +7704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1998074542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4439697, y: -1.5754671, z: 0}
+  m_LocalPosition: {x: -4.78, y: -1.5754671, z: 0}
   m_LocalScale: {x: 0.10971345, y: 0.10971345, z: 0.10971345}
   m_Children: []
   m_Father: {fileID: 1008134758}
@@ -7744,14 +7744,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.81, y: 12.21}
+    oldSize: {x: 18.02, y: 7.57}
     newSize: {x: 2.54, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.81, y: 12.21}
+  m_Size: {x: 18.02, y: 7.57}
   m_EdgeRadius: 0
 --- !u!1001 &2010957549
 Prefab:
