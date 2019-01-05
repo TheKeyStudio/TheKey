@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 73
   indentLevel: 0
-  storyText: "{s}{s=25}\u55EF......\n{wc}\u9019\u8207\u6469\u65AF\u5BC6\u78BC\u3001\u51F1\u6492\u5BC6\u78BC\u9084\u6709\u53E4\u5DF4\u6BD4\u502B\u6709\u95DC\u5462"
+  storyText: "{s}{s=25}\u55EF......\n{wc}\u9019\u8207\u6469\u65AF\u5BC6\u78BC\u3001\u51F1\u6492\u5BC6\u78BC\u3001\u8DF3\u821E\u5C0F\u4EBA\u548C\u53E4\u5DF4\u6BD4\u502B\u6709\u95DC\u5462"
   description: 
   character: {fileID: 170380038}
   portrait: {fileID: 21300000, guid: 6c142a5b74f12304b913b1fed10cd254, type: 3}
@@ -267,7 +267,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 220894992}
   selectedCommands:
-  - {fileID: 220894997}
+  - {fileID: 220894978}
   variables: []
   description: 
   stepPause: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &220894996
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 220894975}
@@ -742,7 +742,7 @@ MonoBehaviour:
     floatVal: 0
 --- !u!114 &220894999
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 220894975}
@@ -785,7 +785,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &220895001
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 220894975}
@@ -812,8 +812,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 233.35364
-    y: 69.70729
+    x: 234.35364
+    y: 71.70729
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
