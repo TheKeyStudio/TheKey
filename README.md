@@ -1,6 +1,8 @@
-# TheKey
-Project by The Key Studio from Yuntech
+# Download
+https://rayfv.itch.io/the-key
 
+# TheKey
+A game project by TheKey Studio from Yuntech
 
 # Assets
 ## Sound / Audio
